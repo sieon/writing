@@ -1,0 +1,81 @@
+
+@import "../custom";
+@import "../variables";
+@import "../bootstrap/mixins";
+
+.card-title a {
+  color: #333;
+}
+
+.card-inverse {
+  color: rgba(255,255,255,.65);
+
+  .card-header,
+  .card-footer {
+    background-color: transparent;
+    border-color: rgba(255,255,255,.2);
+  }
+  .card-header,
+  .card-footer,
+  .card-title,
+  .card-blockquote {
+    color: #fff;
+  }
+  .card-link,
+  .card-text,
+  .card-subtitle,
+  .card-blockquote .blockquote-footer {
+    color: rgba(255,255,255,.65);
+  }
+  .card-link {
+    @include hover-focus {
+      color: $card-inverse-link-hover-color;
+    }
+  }
+
+  a {
+    color: #fff;
+    //text-decoration: $link-decoration;
+
+    @include hover-focus {
+      color: #999;
+      text-decoration: none;
+    }
+  }
+
+}
+
+
+.card-img-overlay-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, .3);
+  padding: $card-spacer-y $card-spacer-x;
+}
+
+.card-img-overlay-left {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  background: rgba(0, 0, 0, .5);
+  padding: $card-spacer-y $card-spacer-x;
+}
+
+.card-img-overlay-right {
+  position: absolute;
+  top:0;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  background: rgba(0, 0, 0, .5);
+  padding: $card-spacer-y $card-spacer-x;
+}
+
+.card-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.1);
+}

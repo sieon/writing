@@ -1,0 +1,155 @@
+/**
+ * 11.4 - Comments
+ */
+
+.comments-area {
+	margin: 0;
+}
+
+.comment-respond {
+  margin-bottom: 1rem;
+}
+
+.comment-list + .comment-respond,
+.comment-navigation + .comment-respond {
+	padding-top: 1rem;
+}
+
+.comments-title {
+	margin-bottom: 1rem;
+}
+
+.comment-list {
+	list-style: none;
+	margin: 0;
+  padding-left: 0;
+	article,
+	.pingback,
+	.trackback {
+		border-bottom: 1px solid #d1d1d1;
+		padding: 1rem 0;
+	}
+	.children {
+		list-style: none;
+		margin: 0;
+	}
+}
+
+.comment-author {
+	color: #1a1a1a;
+	margin-bottom: 0.4375em;
+	.avatar {
+	 float: left;
+	 height: 28px;
+	 margin-right: 0.875em;
+	 position: relative;
+	 width: 28px;
+ }
+}
+.comment-meta {
+  font-size: .85rem;
+}
+.comment-metadata,
+.pingback .edit-link {
+	color: #999;
+}
+
+.comment-metadata {
+	margin-bottom: .5rem;
+}
+
+.comment-metadata a,
+.pingback .comment-edit-link {
+	color: #999;
+}
+
+.comment-metadata a:hover,
+.comment-metadata a:focus,
+.pingback .comment-edit-link:hover,
+.pingback .comment-edit-link:focus {
+	color: #007acc;
+}
+
+.comment-metadata .edit-link,
+.pingback .edit-link {
+	display: inline-block;
+}
+
+.comment-content {
+  color: #666;
+  font-size: .85rem;
+	ul,
+	ol {
+		margin: 0 0 1.5em 1.25em;
+	}
+
+	li > ul,
+	li > ol {
+		margin-bottom: 0;
+	}
+}
+
+.comment-form {
+	padding-top: .5rem;
+	label {
+		color: #686868;
+		display: block;
+		font-size: 13px;
+		font-size: 0.8125rem;
+		letter-spacing: 0.076923077em;
+		line-height: 1.6153846154;
+		margin-bottom: 0.5384615385em;
+		text-transform: uppercase;
+	}
+}
+
+.comment-list .comment-form {
+	padding-bottom: .5rem;
+}
+
+.comment-notes,
+.comment-awaiting-moderation,
+.logged-in-as,
+.form-allowed-tags {
+	color: #686868;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	line-height: 1.6153846154;
+	margin-bottom: 2.1538461538em;
+}
+
+.no-comments {
+	border-top: 1px solid #d1d1d1;
+	font-weight: 700;
+	margin: 0;
+	padding-top: 1.75em;
+}
+
+.comment-navigation + .no-comments {
+	border-top: 0;
+	padding-top: 0;
+}
+
+.form-allowed-tags code {
+	font-family: Inconsolata, monospace;
+}
+
+.required {
+	color: #007acc;
+}
+
+.comment-reply-title {
+	margin-top: 1rem;
+	small {
+		font-size: 100%;
+	}
+	small a {
+	 	border: 0;
+	 	float: right;
+	 	overflow: hidden;
+	}
+	small a:hover,
+	small a:focus {
+		color: #1a1a1a;
+	}
+}

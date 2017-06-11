@@ -1,0 +1,86 @@
+.widget-search {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.widget {
+  padding: 1.25rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.widget-header {
+  padding: 0.75rem 1.25rem;
+  margin: -1.25rem -1.25rem 1.25rem -1.25rem;
+  background-color: #f7f7f9;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
+
+.widgets {
+  background: #efefef;
+  margin: 15px 0 0 0;
+  padding: 30px 0;
+  text-align: justify;
+}
+
+@media (max-width: 767px) {
+  .widget {
+      margin: 40px 0;
+  }
+}
+
+/*****************************
+ ~~ widgets (calendar)
+*****************************/
+
+table#wp-calendar {
+  width: 100%;
+}
+
+table#wp-calendar caption {
+  font-weight: bold;
+  text-align: center;
+}
+
+/*****************************
+ ~~ widgets (tag cloud)
+*****************************/
+.tagcloud a {
+  padding: 5px 15px;
+  border: 1px solid #68727d;
+  border-radius: 15px;
+  color: #68727d;
+  margin-bottom: 10px;
+  display: inline-block; }
+
+.tagcloud a:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+/* Make sure select elements fit in widgets. */
+.widget select,
+.card select,
+.widget_categories select,
+.widget_archive select {
+	max-width: 100%;
+}
+
+.widget_archive a,
+.widget_categories a,
+.widget_meta a {
+  color: #333;
+  text-decoration: none; }
+  .widget_archive a:focus,
+  .widget_archive a:hover,
+  .widget_categories a:focus,
+  .widget_categories a:hover,
+  .widget_meta a:focus,
+  .widget_meta a:hover {
+    color: #0275d8;
+    text-decoration: none; }

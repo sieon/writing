@@ -1,0 +1,128 @@
+/*****************************
+~~ Post Format: quote
+*****************************/
+
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
+/*****************************
+~~ Post Format: image
+*****************************/
+
+.post_format-post-format-image img {
+  border: 1px solid #ccc;
+  padding: 0.5em 10px;
+}
+
+/*****************************
+~~ Post Format: chat
+*****************************/
+
+.post_format-post-format-chat {
+  background: #f9f9f9;
+font-family:monospace;
+}
+
+/*****************************
+~~ Post Format: Aside
+*****************************/
+
+.post_format-post-format-aside {
+  background: #fff;
+  padding: 20px 20px 20px 50px;
+  -webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 2px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+/*****************************
+~~ Post Format: link
+*****************************/
+
+.post_format-post-format-link a {
+  color: #5bc0de;
+}
+
+.post_format-post-format-link a:visited {
+  color: #348aa3;
+}
+
+.post_format-post-format-link a:hover  {
+  color: #4bacc9;
+  text-decoration: underline;
+}
+
+.post_format-post-format-link a:active {
+}
+
+/*****************************
+~~ Post Format: Gallery
+*****************************/
+
+@media (max-width:768px){
+  .post_format-post-format-gallery > div > dl.gallery-item {
+      width: 100% !important;
+  }
+}
+
+@media (min-width:768px){
+  .post_format-post-format-gallery > div > dl.gallery-item {
+      width: 33% !important;
+  }
+}
+
+.post_format-post-format-gallery > div > dl.gallery-item > dt > a > img {
+  background-color: #fff;
+  border: 1px solid #ddd !important;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.post_format-post-format-gallery > div > dl.gallery-item:hover > dt > a > img,
+.post_format-post-format-gallery > div > dl.gallery-item:focus > dt > a > img,
+.post_format-post-format-gallery > div > dl.gallery-item:active > dt > a > img {
+  border-color: #337ab7;
+}
+
+/*****************************
+~~ Video (Post format)
+*****************************/
+
+.video-wrapper {
+  width: 100%;
+  max-width: 720px;
+  float: none;
+  display: block;
+  margin: 0 auto;
+}
+
+.video-wrapper .video-inner {
+  width: 100%;
+  padding: 0 0 56.25% 0;
+  position: relative;
+}
+
+.video-wrapper .video-inner iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

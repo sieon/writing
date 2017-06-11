@@ -1,0 +1,222 @@
+@import "../custom";
+@import "../variables";
+@import "../bootstrap/mixins";
+
+body {
+  padding-top: 3.76rem;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word; }
+
+.admin-bar .navbar {
+  margin-top: 32px;
+}
+
+.navbar {
+  background: #fff;
+}
+
+/**
+ * 设置背景
+ */
+
+.main-content,
+.jumbotron {
+  background: #fff;
+  box-shadow: 0 2px 16px rgb(229, 236, 237), 0 0 1px rgb(229, 236, 237), 0 0 1px rgb(229, 236, 237);
+  opacity: 0.9;
+}
+
+.main-content {
+  padding: 1.25rem 1rem;
+  //border-radius: 0.3rem;
+}
+
+.jumbotron {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+/**
+ * Front Page
+ */
+
+.related-posts .card {
+  border: 0;
+  background-color: inherit;
+  .card-text {
+    margin-top: .5rem;
+    a {
+      color: #333;
+      text-decoration: $link-decoration;
+      transition: all 0.3s ease;
+
+      @include hover-focus {
+        color: $link-color;
+        text-decoration: $link-decoration;
+      }
+    }
+  }
+}
+
+/** post-tags **/
+
+.post-tags,
+.hot-tags {
+  .btn {
+    border-radius: 80px;
+  }
+}
+
+.hot-tags {
+  a {
+    margin-top: 5px ;
+    margin-bottom: 5px;
+  }
+}
+
+.jumbotron {
+  background-color: #f7f7f9;
+}
+
+.screen-reader-text {
+  @include sr-only();
+  @include sr-only-focusable();
+}
+
+.navbar-nav .nav-link,
+.navbar-nav .text-center {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.border-bottom-1 {
+  border-bottom: 1px solid #eee;
+}
+
+.text-weakest {
+  color: #999; }
+
+.header-bg {
+  background-image: url('../img/bg.jpg');
+  background-position: center bottom;
+  background-size: cover;
+  margin-top: 0;
+  height: 180px;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%; }
+
+@media (max-width: 768px) {
+  #sticky-posts {
+    margin-top: 1rem; } }
+
+.avatar {
+  border-radius: 50%;
+}
+.comment {
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.shadow {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5); }
+
+/*****************************
+ ~~ WordPress Config Specific
+
+ .sticky {
+   background-color: #FFEBCD;
+ }
+*****************************/
+
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+
+.hide-bullets {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.hide-bullets li.col-sm-4 {
+  padding: 0;
+}
+
+/*****************
+ ~~ Blog (home)
+*****************************/
+
+article.post {
+  margin: 20px 0;
+
+}
+
+/*****************************
+ ~~ admin
+*****************************/
+
+.admin-bar .navbar-fixed-top {
+    margin-top: 32px;
+}
+
+/*****************************
+ ~~ 404 (error)
+*****************************/
+
+body.error404 {
+    background: #563D7C;
+    color: #f7f7f7;
+}
+
+/*****************************
+~~ Posts display (list / grid)
+*****************************/
+
+#display {
+    margin: 0 0 40px 8px;
+}
+
+#display a {
+    font-size: 16px;
+}
+
+div#post-metadata {
+    display: none;
+}
+
+/**tag**/
+.tag-tip {
+  font-size: 1.1rem;
+  color: #68727d; }
+
+
+.widget_lean_posts .card,
+.related-posts .card {
+  margin-bottom: 20px;
+}
+
+.card .card-block ul {
+  margin-bottom: 0; //覆盖默认的margin-bottom
+}
+
+.card {
+  margin-bottom: 1rem;
+}
+
+.widget_calendar .table {
+  margin-bottom: 0;
+}
