@@ -6,8 +6,6 @@ get_header(); ?>
 
 <?php if ( have_posts() ) : ?>
 
-
-
 <div id="primary" class="container mt-5">
 	<div class="row">
 

@@ -2,7 +2,6 @@
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-
 <div class="container mt-5" id="site-content">
   <div class="main-content row">
     <div class="col-lg-8">

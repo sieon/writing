@@ -1,6 +1,5 @@
 <?php get_header();?>
 
-<!-- .col-  .col-sm-	.col-md-	.col-lg-	.col-xl--->
 <?php while ( have_posts() ) : the_post(); ?>
   <div class="container mt-5">
     <div class="main-content row">
