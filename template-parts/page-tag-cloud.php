@@ -1,19 +1,11 @@
 <?php
 /**
  * Template Name: 标签云
- *
- * @package leanstrap
- * @since leanstrap 0.5
  */
 get_header(); ?>
-
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1>标签云</h1>
-    </div>
-</div>
-<div class="container">
-  <div class="entry-content pb-4">
+<div class="main-content container mt-5">
+  <h1 class="page-title mb-4">标签云</h1>
+  <div class="entry-content">
     <?php //lean_wp_tag_cloud();
     $poststags= get_tags();
     if ( $poststags ) {
@@ -25,5 +17,4 @@ get_header(); ?>
     } ?>
   </div>
 </div>
-
 <?php get_footer(); ?>
