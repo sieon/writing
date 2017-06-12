@@ -1,16 +1,8 @@
 <?php
 /**
  * The template part for displaying a message that posts cannot be found.
- *
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
- *
- * @package lean
  */
 ?>
-
-
-
-
 
 <div class="no-results not-found container mt-4">
 	<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>

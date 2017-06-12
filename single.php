@@ -13,12 +13,10 @@
         </header>
         <?php
         // 显示页面内容
-        lean_set_post_views(get_the_ID());
         get_template_part( 'formats/format', get_post_format() ); ?>
 
         <?php // 显示标签
         $posttags = get_the_tags();
-        // var_dump( $posttags );
         if ( $posttags ) {
           echo '<div class="post-tags mb-5 text-center">';
           foreach( $posttags as $tag ) {
