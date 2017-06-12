@@ -21,10 +21,10 @@ class d_tag extends WP_Widget {
 		$link = $instance['link'];
 
 		$mo='';
-		if( $more!='' && $link!='' ) $mo='<a class="btn" href="'.$link.'">'.$more.'</a>';
+		if( $more!='' && $link!='' ) $mo='<small><a class="float-right" href="'.$link.'">'.$more.'</a></small>';
 
 		echo $before_widget;
-		echo $before_title.$mo.$title.$after_title;
+		echo $before_title.$title.$mo.$after_title;
 		echo '<div class="hot-tags">';
 		$tags_list = get_tags('orderby=count&order=DESC&number='.$count.'&offset='.$offset);
 		if ($tags_list) {
