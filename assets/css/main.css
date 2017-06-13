@@ -291,12 +291,6 @@ div#post-metadata {
   background-color: #f7f7f9;
   border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
 
-.widgets {
-  background: #efefef;
-  margin: 15px 0 0 0;
-  padding: 30px 0;
-  text-align: justify; }
-
 @media (max-width: 767px) {
   .widget {
     margin: 40px 0; } }
@@ -606,6 +600,9 @@ blockquote p {
   float: left;
   padding: 10px;
   border: 0; }
+
+.posts-list h3 {
+  font-size: 1.25rem; }
 
 /**
  * 11.4 - Comments

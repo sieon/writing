@@ -90,7 +90,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 1rem;
   font-weight: normal;
-  line-height: 1.8;
+  line-height: 1.5;
   color: #292b2c;
   background-color: #fff; }
 
@@ -342,19 +342,19 @@ h1, h2, h3, h4, h5, h6,
   color: inherit; }
 
 h1, .h1 {
-  font-size: 1.8rem; }
+  font-size: 2.5rem; }
 
 h2, .h2 {
-  font-size: 1.6rem; }
+  font-size: 2rem; }
 
 h3, .h3 {
-  font-size: 1.4rem; }
+  font-size: 1.75rem; }
 
 h4, .h4 {
-  font-size: 1.25rem; }
+  font-size: 1.5rem; }
 
 h5, .h5 {
-  font-size: 1rem; }
+  font-size: 1.25rem; }
 
 h6, .h6 {
   font-size: 1rem; }
@@ -2512,7 +2512,7 @@ tbody.collapse.show {
 .custom-control {
   position: relative;
   display: inline-flex;
-  min-height: 1.8rem;
+  min-height: 1.5rem;
   padding-left: 1.5rem;
   margin-right: 1rem; }
 
@@ -2535,7 +2535,7 @@ tbody.collapse.show {
 
 .custom-control-indicator {
   position: absolute;
-  top: 0.4rem;
+  top: 0.25rem;
   left: 0;
   display: block;
   width: 1rem;
@@ -2727,8 +2727,8 @@ tbody.collapse.show {
 
 .navbar-brand {
   display: inline-block;
-  padding-top: 0.275rem;
-  padding-bottom: 0.275rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
   margin-right: 1rem;
   font-size: 1.25rem;
   line-height: inherit;
@@ -3670,7 +3670,7 @@ button.close {
 
 .modal-title {
   margin-bottom: 0;
-  line-height: 1.8; }
+  line-height: 1.5; }
 
 .modal-body {
   position: relative;
@@ -3713,7 +3713,7 @@ button.close {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
-  line-height: 1.8;
+  line-height: 1.5;
   text-align: left;
   text-align: start;
   text-decoration: none;
@@ -3795,7 +3795,7 @@ button.close {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
-  line-height: 1.8;
+  line-height: 1.5;
   text-align: left;
   text-align: start;
   text-decoration: none;

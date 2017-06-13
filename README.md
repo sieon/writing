@@ -13,6 +13,6 @@
 如果你对该主题有建议，请在该页面下面留言：
 http://qingzhuti.com/writing
 
-## Changelog
+## 更新日志
 - 0.6.3
   - 压缩了一下主题大小
