@@ -15,4 +15,4 @@ http://qingzhuti.com/writing
 
 ## Changelog
 - 0.6.3
- - 压缩了一下主题大小
+  - 压缩了一下主题大小
