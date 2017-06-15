@@ -13,6 +13,24 @@
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
   margin-bottom: 1rem;
+  ul {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 0;
+    li {
+      line-height: 2;
+      a {
+        color: #333;
+        text-decoration: $link-decoration;
+        transition: all 0.3s ease;
+
+        @include hover-focus {
+          color: $link-color;
+          text-decoration: $link-decoration;
+        }
+      }
+    }
+  }
 }
 
 .widget-header {
@@ -64,16 +82,9 @@ table#wp-calendar caption {
 	max-width: 100%;
 }
 
-.widget_archive a,
-.widget_categories a,
-.widget_meta a {
-  color: #333;
-  text-decoration: none; }
-  .widget_archive a:focus,
-  .widget_archive a:hover,
-  .widget_categories a:focus,
-  .widget_categories a:hover,
-  .widget_meta a:focus,
-  .widget_meta a:hover {
-    color: #0275d8;
-    text-decoration: none; }
+.widget_recent_entries {
+  span {
+    font-size: 85%;
+    color: #666;
+  }
+}

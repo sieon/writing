@@ -284,6 +284,19 @@ div#post-metadata {
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
   margin-bottom: 1rem; }
+  .widget ul {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 0; }
+    .widget ul li {
+      line-height: 2; }
+      .widget ul li a {
+        color: #333;
+        text-decoration: none;
+        transition: all 0.3s ease; }
+        .widget ul li a:focus, .widget ul li a:hover {
+          color: #0275d8;
+          text-decoration: none; }
 
 .widget-header {
   padding: 0.75rem 1.25rem;
@@ -326,20 +339,9 @@ table#wp-calendar caption {
 .widget_archive select {
   max-width: 100%; }
 
-.widget_archive a,
-.widget_categories a,
-.widget_meta a {
-  color: #333;
-  text-decoration: none; }
-
-.widget_archive a:focus,
-.widget_archive a:hover,
-.widget_categories a:focus,
-.widget_categories a:hover,
-.widget_meta a:focus,
-.widget_meta a:hover {
-  color: #0275d8;
-  text-decoration: none; }
+.widget_recent_entries span {
+  font-size: 85%;
+  color: #666; }
 
 /*--------------------------------------------------------------
 # Alignments
