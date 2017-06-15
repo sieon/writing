@@ -12,7 +12,7 @@
         </header>
         <?php
         // 显示页面内容
-        get_template_part( 'formats/format', get_post_format() ); ?>
+        get_template_part( 'template-parts/formats/format', get_post_format() ); ?>
 
         <?php // 显示标签
         $posttags = get_the_tags();
