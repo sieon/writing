@@ -8,7 +8,7 @@
  *
  * CODEX REF
  * https://developer.wordpress.org/themes/functionality/post-formats/
- * 
+ *
  * @author
  * @copyright
  * @link
@@ -27,4 +27,4 @@
     </section>
 </article>
 
-<?php edit_post_link( 'Edit', '<span class="edit-link">', '</span>' ); ?>
+<?php edit_post_link( '编辑', '<span class="edit-link">', '</span>' ); ?>

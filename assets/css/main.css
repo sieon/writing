@@ -62,19 +62,17 @@ body {
   width: 1px;
   height: 1px;
   padding: 0;
+  margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  clip-path: inset(50%);
   border: 0; }
   .screen-reader-text:active, .screen-reader-text:focus {
     position: static;
     width: auto;
     height: auto;
+    margin: 0;
     overflow: visible;
-    clip: auto;
-    white-space: normal;
-    clip-path: none; }
+    clip: auto; }
 
 .navbar-nav .nav-link,
 .navbar-nav .text-center {
@@ -793,23 +791,28 @@ blockquote p {
   box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.1); }
 
 .dropdown .dropdown-menu .nav-item .nav-link {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1000;
-  display: none;
-  float: left;
-  min-width: 10rem;
-  padding: 0.5rem 0;
-  margin: 0.125rem 0 0;
-  font-size: 1rem;
+  display: block;
+  width: 100%;
+  padding: 3px 1.5rem;
+  clear: both;
+  font-weight: normal;
   color: #292b2c;
-  text-align: left;
-  list-style: none;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 0.25rem; }
+  text-align: inherit;
+  white-space: nowrap;
+  background: none;
+  border: 0; }
+  .dropdown .dropdown-menu .nav-item .nav-link:focus, .dropdown .dropdown-menu .nav-item .nav-link:hover {
+    color: #1d1e1f;
+    text-decoration: none;
+    background-color: #f7f7f9; }
+  .dropdown .dropdown-menu .nav-item .nav-link.active, .dropdown .dropdown-menu .nav-item .nav-link:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #0275d8; }
+  .dropdown .dropdown-menu .nav-item .nav-link.disabled, .dropdown .dropdown-menu .nav-item .nav-link:disabled {
+    color: #636c72;
+    cursor: not-allowed;
+    background-color: transparent; }
 
 /*****************************
  ~~ html specific

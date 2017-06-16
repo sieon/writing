@@ -30,4 +30,4 @@
     </section>
 </article>
 
-<?php edit_post_link( 'Edit', '<span class="edit-link">', '</span>' ); ?>
+<?php edit_post_link( '编辑', '<span class="edit-link">', '</span>' ); ?>

@@ -1,4 +1,3 @@
-
 @import "../custom";
 @import "../variables";
 @import "../mixins";
@@ -29,7 +28,7 @@
   }
   .card-link {
     @include hover-focus {
-      color: $card-inverse-link-hover-color;
+      color: $card-link-hover-color;
     }
   }
 
