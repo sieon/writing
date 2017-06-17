@@ -35,41 +35,6 @@ body {
 .jumbotron {
   background-color: #f7f7f9; }
 
-.screen-reader-text {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0; }
-  .screen-reader-text:active, .screen-reader-text:focus {
-    position: static;
-    width: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    clip: auto; }
-
-.navbar-nav .nav-link,
-.navbar-nav .text-center {
-  padding-top: 1rem;
-  padding-bottom: 1rem; }
-
-.border-bottom-1 {
-  border-bottom: 1px solid #eee; }
-
-.text-weakest {
-  color: #999; }
-
-.header-bg {
-  background-image: url("../img/bg.jpg");
-  background-position: center bottom;
-  background-size: cover;
-  margin-top: 0;
-  height: 180px; }
-
 img {
   display: block;
   height: auto;
@@ -164,7 +129,7 @@ div#post-metadata {
 /**
  * 设置背景
  */
-.main,
+.site-main,
 .jumbotron {
   background: #fff;
   box-shadow: 0 2px 16px #e5eced, 0 0 1px #e5eced, 0 0 1px #e5eced;
@@ -174,7 +139,7 @@ div#post-metadata {
   margin-bottom: 0;
   border-radius: 0; }
 
-.main {
+.site-main {
   padding: 1.25rem 1rem; }
 
 .home .entry:first-child {
@@ -817,6 +782,23 @@ blockquote p {
     color: #636c72;
     cursor: not-allowed;
     background-color: transparent; }
+
+.screen-reader-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; }
+  .screen-reader-text:active, .screen-reader-text:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto; }
 
 /*****************************
  ~~ html specific

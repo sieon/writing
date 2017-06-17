@@ -6,7 +6,7 @@ body {
   padding-top: 3.76rem;
   -ms-word-wrap: break-word;
   word-wrap: break-word; }
-  
+
 /**
  * Front Page
  */
@@ -47,32 +47,6 @@ body {
 
 .jumbotron {
   background-color: #f7f7f9;
-}
-
-.screen-reader-text {
-  @include sr-only();
-  @include sr-only-focusable();
-}
-
-.navbar-nav .nav-link,
-.navbar-nav .text-center {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.border-bottom-1 {
-  border-bottom: 1px solid #eee;
-}
-
-.text-weakest {
-  color: #999; }
-
-.header-bg {
-  background-image: url('../img/bg.jpg');
-  background-position: center bottom;
-  background-size: cover;
-  margin-top: 0;
-  height: 180px;
 }
 
 img {

@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 <div class="container mt-4">
-  <div class="main">
+  <div class="site-main">
     <div class="row">
-      <div class="col-lg-8">
+      <main class="col-lg-8">
         <?php if ( have_posts() ) :?>
           <div class="posts-list">
             <?php  while ( have_posts() ) : the_post();
@@ -17,7 +17,7 @@
           get_template_part( 'template-parts/content', 'none' );
         endif;
         ?>
-      </div><!--/.col-8-->
+      </main><!--/.col-8-->
       <?php get_sidebar();?>
     </div><!--/.row-->
   </div>
