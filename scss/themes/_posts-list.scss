@@ -10,3 +10,26 @@
 .posts-list h3 {
   font-size: 1.25rem;
 }
+
+
+/**
+ * Related Posts
+ */
+
+.related-posts .card {
+  border: 0;
+  background-color: inherit;
+  .card-text {
+    margin-top: .5rem;
+    a {
+      color: #333;
+      text-decoration: $link-decoration;
+      transition: all 0.3s ease;
+
+      @include hover-focus {
+        color: $link-color;
+        text-decoration: $link-decoration;
+      }
+    }
+  }
+}

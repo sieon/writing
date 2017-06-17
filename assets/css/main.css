@@ -7,22 +7,6 @@ body {
   -ms-word-wrap: break-word;
   word-wrap: break-word; }
 
-/**
- * Front Page
- */
-.related-posts .card {
-  border: 0;
-  background-color: inherit; }
-  .related-posts .card .card-text {
-    margin-top: .5rem; }
-    .related-posts .card .card-text a {
-      color: #333;
-      text-decoration: none;
-      transition: all 0.3s ease; }
-      .related-posts .card .card-text a:focus, .related-posts .card .card-text a:hover {
-        color: #0275d8;
-        text-decoration: none; }
-
 /** post-tags **/
 .post-tags .btn,
 .hot-tags .btn {
@@ -287,17 +271,18 @@ table#wp-calendar caption {
 /*****************************
  ~~ widgets (tag cloud)
 *****************************/
-.tagcloud a {
-  padding: 5px 15px;
-  border: 1px solid #68727d;
-  border-radius: 15px;
-  color: #68727d;
-  margin-bottom: 10px;
-  display: inline-block; }
-
-.tagcloud a:hover {
-  opacity: 0.8;
-  text-decoration: none; }
+.tagcloud {
+  margin-bottom: -10px; }
+  .tagcloud a {
+    padding: 5px 15px;
+    border: 1px solid #68727d;
+    border-radius: 80px;
+    color: #68727d;
+    margin-bottom: 10px;
+    display: inline-block; }
+  .tagcloud a:hover {
+    opacity: 0.8;
+    text-decoration: none; }
 
 /* Make sure select elements fit in widgets. */
 .widget select,
@@ -574,6 +559,22 @@ blockquote p {
   font-size: 1.25rem; }
 
 /**
+ * Related Posts
+ */
+.related-posts .card {
+  border: 0;
+  background-color: inherit; }
+  .related-posts .card .card-text {
+    margin-top: .5rem; }
+    .related-posts .card .card-text a {
+      color: #333;
+      text-decoration: none;
+      transition: all 0.3s ease; }
+      .related-posts .card .card-text a:focus, .related-posts .card .card-text a:hover {
+        color: #0275d8;
+        text-decoration: none; }
+
+/**
  * 11.4 - Comments
  */
 .comments-area {
@@ -698,66 +699,6 @@ blockquote p {
   .comment-reply-title small a:hover,
   .comment-reply-title small a:focus {
     color: #1a1a1a; }
-
-.nav-borderprimary .nav-item.active {
-  border-bottom: 2px solid #0275d8; }
-
-.card-title a {
-  color: #333; }
-
-.card-inverse {
-  color: rgba(255, 255, 255, 0.65); }
-  .card-inverse .card-header,
-  .card-inverse .card-footer {
-    background-color: transparent;
-    border-color: rgba(255, 255, 255, 0.2); }
-  .card-inverse .card-header,
-  .card-inverse .card-footer,
-  .card-inverse .card-title,
-  .card-inverse .card-blockquote {
-    color: #fff; }
-  .card-inverse .card-link,
-  .card-inverse .card-text,
-  .card-inverse .card-subtitle,
-  .card-inverse .card-blockquote .blockquote-footer {
-    color: rgba(255, 255, 255, 0.65); }
-  .card-inverse .card-link:focus, .card-inverse .card-link:hover {
-    color: #fff; }
-  .card-inverse a {
-    color: #fff; }
-    .card-inverse a:focus, .card-inverse a:hover {
-      color: #999;
-      text-decoration: none; }
-
-.card-img-overlay-bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.3);
-  padding: 0.75rem 1.25rem; }
-
-.card-img-overlay-left {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 50%;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 0.75rem 1.25rem; }
-
-.card-img-overlay-right {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 50%;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 0.75rem 1.25rem; }
-
-.card-header {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.1); }
 
 .dropdown .dropdown-menu .nav-item .nav-link {
   display: block;

@@ -7,20 +7,20 @@
 @import "variables";
 @import "mixins";
 
-@import "themes/wp-main";
+@import "themes/main";
 @import "themes/layouts";
 @import "themes/navbar";
 @import "themes/entry";
 @import "themes/widget";
-@import "themes/wp-align";
-@import "themes/wp-media";
-@import "themes/wp-captions";
-@import "themes/wp-galleries";
-@import "themes/wp-post-format";
+@import "themes/align";
+@import "themes/media";
+@import "themes/captions";
+@import "themes/galleries";
+@import "themes/post-format";
 @import "themes/posts-list";
 @import "themes/comments";
 @import "themes/nav";
-@import "themes/card";
+//@import "themes/card";
 @import "themes/dropdown";
 @import "themes/screen-reader-text";
 @import "themes/footer";
