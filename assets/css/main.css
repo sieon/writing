@@ -264,6 +264,9 @@ div#post-metadata {
 table#wp-calendar {
   width: 100%; }
 
+td#next {
+  text-align: right; }
+
 table#wp-calendar caption {
   font-weight: bold;
   text-align: center; }
