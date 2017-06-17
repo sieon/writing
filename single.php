@@ -2,7 +2,7 @@
 
 <?php while ( have_posts() ) : the_post(); ?>
   <div class="container mt-5">
-    <div class="main-content row">
+    <div class="main row">
       <div class="col-lg-8">
         <header class="entry-header">
           <?php the_title('<h1 class="mb-4">', '</h1>'); ?>

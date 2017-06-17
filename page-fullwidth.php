@@ -6,7 +6,7 @@ get_header(); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-<div class="main-content container p-a mt-5" id="site-content">
+<div class="main container p-a mt-5" id="site-content">
 
   <h1 class="mb-3"><?php the_title(); ?></h1>
 

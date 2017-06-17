@@ -3,7 +3,7 @@
  * Template Name: 标签云
  */
 get_header(); ?>
-<div class="main-content container mt-5">
+<div class="main container mt-5">
   <h1 class="page-title mb-4">标签云</h1>
   <div class="entry-content">
     <?php //lean_wp_tag_cloud();

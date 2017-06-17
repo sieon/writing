@@ -18,14 +18,14 @@ function related_posts( $post_num = 6 ) {
         query_posts($args);
         while( have_posts() ) { the_post(); ?>
           <div class="col-md-4 col-6">
-            <div class="card entry">
+            <div class="card">
 							<?php if(has_post_thumbnail()) : ?>
-	              <a class="post-thumbnail" href="<?php the_permalink(); ?>">
+	              <a class="entry-img" href="<?php the_permalink(); ?>">
 	                <?php the_post_thumbnail('medium', ['class' => 'card-img']); ?>
 	              </a>
 
 							<?php else: ?>
-								<a class="post-thumbnail" href="<?php the_permalink(); ?>">
+								<a class="entry-img" href="<?php the_permalink(); ?>">
 							    <img src="<?php echo THEME_URI;?>/assets/img/placeholder.png" class="card-img-top"/>
 							  </a>
 							<?php endif; ?>
@@ -54,12 +54,12 @@ function related_posts( $post_num = 6 ) {
           <div class="col-md-4 col-6">
             <div class="card">
 							<?php if(has_post_thumbnail()) : ?>
-	              <a class="post-thumbnail" href="<?php the_permalink(); ?>">
+	              <a class="entry-img" href="<?php the_permalink(); ?>">
 	                <?php the_post_thumbnail('medium', ['class' => 'card-img']); ?>
 	              </a>
 
 							<?php else: ?>
-								<a class="post-thumbnail" href="<?php the_permalink(); ?>">
+								<a class="entry-img" href="<?php the_permalink(); ?>">
 							    <img src="<?php echo THEME_URI;?>/assets/img/placeholder.png" class="card-img-top"/>
 							  </a>
 							<?php endif; ?>

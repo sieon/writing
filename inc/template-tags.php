@@ -502,18 +502,6 @@ function lean_category_transient_flusher() {
 add_action( 'edit_category', 'lean_category_transient_flusher' );
 add_action( 'save_post',     'lean_category_transient_flusher' );
 
-
-// add custom active class in menu items 多余的 active
-/** function lean_custom_active_item_class($classes = array(), $menu_item = false)
-{
-    if (in_array('current-menu-item', $menu_item->classes)) {
-        $classes[] = 'active';
-    }
-    return $classes;
-}
-add_filter('nav_menu_css_class', 'lean_custom_active_item_class', 10, 2);**/
-
-
 if ( ! function_exists( 'lean_post_thumbnail' ) ) :
 /**
  * Display an optional post thumbnail.
@@ -592,7 +580,7 @@ if ( ! function_exists( 'lean_excerpt_more' ) && ! is_admin() ) :
  *
  * Create your own lean_excerpt_more() function to override in a child theme.
  *
- * @since Twenty Sixteen 1.0
+ * @since 0.1
  *
  * @return string 'Continue reading' link prepended with an ellipsis.
  */
@@ -602,7 +590,8 @@ function lean_excerpt_more() {
 		/* translators: %s: Name of current post */
 		sprintf( __( '阅读全文<span class="sr-only sr-only-focusable"> "%s"</span>', 'lean' ), get_the_title( get_the_ID() ) )
 	);
-	return ' &hellip; ' . $link;
+	//return ' &hellip; ' . $link;
+  return ' &hellip; ';
 }
 add_filter( 'excerpt_more', 'lean_excerpt_more' );
 endif;

@@ -6,36 +6,7 @@ body {
   padding-top: 3.76rem;
   -ms-word-wrap: break-word;
   word-wrap: break-word; }
-
-.admin-bar .navbar {
-  margin-top: 32px;
-}
-
-.navbar {
-  background: #fff;
-}
-
-/**
- * 设置背景
- */
-
-.main-content,
-.jumbotron {
-  background: #fff;
-  box-shadow: 0 2px 16px rgb(229, 236, 237), 0 0 1px rgb(229, 236, 237), 0 0 1px rgb(229, 236, 237);
-  opacity: 0.9;
-}
-
-.main-content {
-  padding: 1.25rem 1rem;
-  //border-radius: 0.3rem;
-}
-
-.jumbotron {
-  margin-bottom: 0;
-  border-radius: 0;
-}
-
+  
 /**
  * Front Page
  */
@@ -115,10 +86,6 @@ img {
 
 .avatar {
   border-radius: 50%;
-}
-.comment {
-  -ms-word-wrap: break-word;
-  word-wrap: break-word;
 }
 
 .shadow {

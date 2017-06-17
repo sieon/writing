@@ -3,7 +3,7 @@
 <?php if ( have_posts() ) : ?>
 
 <div class="container mt-5">
-  <div class="main-content row">
+  <div class="main row">
     <div class="col-lg-8">
 
           <p class="tag-tip"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;标签</p>

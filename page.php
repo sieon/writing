@@ -1,13 +1,12 @@
 <?php get_header(); ?>
 
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-<div class="container mt-5" id="site-content">
-  <div class="main-content row">
+
+<div class="container mt-5">
+  <div class="main row">
     <div class="col-lg-8">
-
+      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
       <h1 class="page-title mb-3"><?php the_title(); ?></h1>
-
       <div class="entry-content">
         <?php the_content(); ?>
       </div>

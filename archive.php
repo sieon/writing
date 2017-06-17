@@ -5,7 +5,7 @@
 
 
 <div class="container mt-5">
-  <div class="main-content row">
+  <div class="main row">
     <div class="col-lg-8">
 
 

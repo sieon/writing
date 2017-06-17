@@ -7,28 +7,6 @@ body {
   -ms-word-wrap: break-word;
   word-wrap: break-word; }
 
-.admin-bar .navbar {
-  margin-top: 32px; }
-
-.navbar {
-  background: #fff; }
-
-/**
- * 设置背景
- */
-.main-content,
-.jumbotron {
-  background: #fff;
-  box-shadow: 0 2px 16px #e5eced, 0 0 1px #e5eced, 0 0 1px #e5eced;
-  opacity: 0.9; }
-
-.main-content {
-  padding: 1.25rem 1rem; }
-
-.jumbotron {
-  margin-bottom: 0;
-  border-radius: 0; }
-
 /**
  * Front Page
  */
@@ -102,10 +80,6 @@ img {
     margin-top: 1rem; } }
 .avatar {
   border-radius: 50%; }
-
-.comment {
-  -ms-word-wrap: break-word;
-  word-wrap: break-word; }
 
 .shadow {
   position: absolute;
@@ -187,21 +161,70 @@ div#post-metadata {
 .widget_calendar .table {
   margin-bottom: 0; }
 
+/**
+ * 设置背景
+ */
+.main,
+.jumbotron {
+  background: #fff;
+  box-shadow: 0 2px 16px #e5eced, 0 0 1px #e5eced, 0 0 1px #e5eced;
+  opacity: 0.9; }
+
+.jumbotron {
+  margin-bottom: 0;
+  border-radius: 0; }
+
+.main {
+  padding: 1.25rem 1rem; }
+
+.home .entry:first-child {
+  margin-top: -1rem; }
+
+.admin-bar .navbar {
+  margin-top: 32px; }
+
 .navbar {
+  background: #fff;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1); }
 
 /***entry-content ***/
-.entry.media {
-  padding: 1rem 0;
+.entry {
+  padding: 1.25rem 0;
   border-bottom: 1px solid #e6dfdf;
   transition: all 0.3s ease; }
 
-.entry.media:hover {
+.entry:hover {
   background: #eee; }
 
-.entry-header h1 {
-  margin-bottom: 28px; }
+.entry-title {
+  margin-bottom: .75rem; }
+  .entry-title a {
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease; }
+  .entry-title .entry-title a:focus,
+  .entry-title .entry-title a:hover {
+    color: #0275d8;
+    text-decoration: none; }
 
+.entry-excerpt {
+  color: #828a92; }
+  .entry-excerpt p:last-child {
+    margin-bottom: 0; }
+
+.entry-img {
+  display: block;
+  overflow: hidden; }
+
+.entry-img img {
+  transition: all .5s ease; }
+
+.entry-img:hover img {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  transform: scale(1.1); }
+
+/** 文章页 **/
 .entry-header::after {
   display: block;
   width: 160px;
@@ -210,19 +233,6 @@ div#post-metadata {
   background: #efefef;
   content: "";
   margin-top: 1rem; }
-
-.entry-title a {
-  color: #333;
-  text-decoration: none;
-  transition: all 0.3s ease; }
-
-.entry-title a:focus, .entry-title a:hover {
-  color: #0275d8;
-  text-decoration: none; }
-
-.entry-excerpt {
-  color: #828a92;
-  font-size: .85rem; }
 
 .entry-content h2 {
   margin: 30px 0;
@@ -249,7 +259,8 @@ div#post-metadata {
 .entry-footer,
 .entry-meta {
   color: #999;
-  font-size: 85%; }
+  font-size: 85%;
+  margin-bottom: .5rem; }
   .entry-footer a,
   .entry-meta a {
     color: #999;
@@ -260,13 +271,6 @@ div#post-metadata {
     .entry-meta a:hover {
       color: #0275d8;
       text-decoration: none; }
-
-.widget_most_comments_posts_list .entry-title {
-  font-weight: 400;
-  font-size: .85rem; }
-
-.entry .img-box {
-  width: 33.3333%; }
 
 .widget-search {
   position: relative;
