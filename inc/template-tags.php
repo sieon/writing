@@ -266,7 +266,7 @@ function lean_entry_meta() {
   echo the_category(' ');
 
   if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-    echo '<span class="comments-link float-right">';
+    echo '<span class="comments-link hidden-sm-down float-right">';
     comments_popup_link( sprintf( __( '去抢首评', 'lean' ), get_the_title() ) );
     // comments_popup_link( sprintf( __( '去抢首评<span class="sr-only sr-only-focusable"> on %s</span>', 'lean' ), get_the_title() ) );
     echo '</span>';

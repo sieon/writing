@@ -104,31 +104,57 @@ div#post-metadata {
 .home .entry:first-child {
   margin-top: -1rem; }
 
-.entry-title a,
-.entry-footer a,
-.entry-meta a,
-.widget ul li a,
-.related-posts .card-text a {
-  text-decoration: none;
-  transition: all 0.3s ease; }
-  .entry-title a:focus, .entry-title a:hover,
-  .entry-footer a:focus,
-  .entry-footer a:hover,
-  .entry-meta a:focus,
-  .entry-meta a:hover,
-  .widget ul li a:focus,
-  .widget ul li a:hover,
-  .related-posts .card-text a:focus,
-  .related-posts .card-text a:hover {
-    color: #0275d8;
-    text-decoration: none; }
-
 .admin-bar .fixed-top {
   margin-top: 32px; }
 
 .navbar {
   background: #fff;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1); }
+
+.dropdown .dropdown-menu .nav-item .nav-link {
+  display: block;
+  width: 100%;
+  padding: 3px 1.5rem;
+  clear: both;
+  font-weight: normal;
+  color: #292b2c;
+  text-align: inherit;
+  white-space: nowrap;
+  background: none;
+  border: 0; }
+  .dropdown .dropdown-menu .nav-item .nav-link:focus, .dropdown .dropdown-menu .nav-item .nav-link:hover {
+    color: #1d1e1f;
+    text-decoration: none;
+    background-color: #f7f7f9; }
+  .dropdown .dropdown-menu .nav-item .nav-link.active, .dropdown .dropdown-menu .nav-item .nav-link:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #0275d8; }
+  .dropdown .dropdown-menu .nav-item .nav-link.disabled, .dropdown .dropdown-menu .nav-item .nav-link:disabled {
+    color: #636c72;
+    cursor: not-allowed;
+    background-color: transparent; }
+
+.search .posts-list h2 {
+  font-size: 1.15rem; }
+
+.posts-list h2 {
+  font-size: 1.25rem; }
+
+@media (max-width: 576px) {
+  .posts-list h2 {
+    font-size: 1rem;
+    font-weight: 400; } }
+/**
+ * Related Posts
+ */
+.related-posts .card {
+  border: 0;
+  background-color: inherit; }
+  .related-posts .card .card-text {
+    margin-top: .5rem; }
+    .related-posts .card .card-text a {
+      color: #333; }
 
 /***entry-content ***/
 .entry {
@@ -335,6 +361,25 @@ a img.aligncenter {
 .wp-caption.alignright {
   margin: 5px 0 20px 20px; }
 
+.entry-title a,
+.entry-footer a,
+.entry-meta a,
+.widget ul li a,
+.related-posts .card-text a {
+  text-decoration: none;
+  transition: all 0.3s ease; }
+  .entry-title a:focus, .entry-title a:hover,
+  .entry-footer a:focus,
+  .entry-footer a:hover,
+  .entry-meta a:focus,
+  .entry-meta a:hover,
+  .widget ul li a:focus,
+  .widget ul li a:hover,
+  .related-posts .card-text a:focus,
+  .related-posts .card-text a:hover {
+    color: #0275d8;
+    text-decoration: none; }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -529,23 +574,6 @@ blockquote p {
   top: 0;
   left: 0; }
 
-.search .posts-list h2 {
-  font-size: 1.15rem; }
-
-.posts-list h2 {
-  font-size: 1.25rem; }
-
-/**
- * Related Posts
- */
-.related-posts .card {
-  border: 0;
-  background-color: inherit; }
-  .related-posts .card .card-text {
-    margin-top: .5rem; }
-    .related-posts .card .card-text a {
-      color: #333; }
-
 /**
  * 11.4 - Comments
  */
@@ -671,30 +699,6 @@ blockquote p {
   .comment-reply-title small a:hover,
   .comment-reply-title small a:focus {
     color: #1a1a1a; }
-
-.dropdown .dropdown-menu .nav-item .nav-link {
-  display: block;
-  width: 100%;
-  padding: 3px 1.5rem;
-  clear: both;
-  font-weight: normal;
-  color: #292b2c;
-  text-align: inherit;
-  white-space: nowrap;
-  background: none;
-  border: 0; }
-  .dropdown .dropdown-menu .nav-item .nav-link:focus, .dropdown .dropdown-menu .nav-item .nav-link:hover {
-    color: #1d1e1f;
-    text-decoration: none;
-    background-color: #f7f7f9; }
-  .dropdown .dropdown-menu .nav-item .nav-link.active, .dropdown .dropdown-menu .nav-item .nav-link:active {
-    color: #fff;
-    text-decoration: none;
-    background-color: #0275d8; }
-  .dropdown .dropdown-menu .nav-item .nav-link.disabled, .dropdown .dropdown-menu .nav-item .nav-link:disabled {
-    color: #636c72;
-    cursor: not-allowed;
-    background-color: transparent; }
 
 .screen-reader-text {
   position: absolute;
