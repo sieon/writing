@@ -32,28 +32,12 @@ img {
   height: auto;
   max-width: 100%; }
 
-@media (max-width: 768px) {
-  #sticky-posts {
-    margin-top: 1rem; } }
-
 .avatar {
   border-radius: 50%;
 }
 
-.shadow {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  background: rgba(0, 0, 0, 0.5); }
-
 /*****************************
  ~~ WordPress Config Specific
-
- .sticky {
-   background-color: #FFEBCD;
- }
 *****************************/
 
 .size-auto,
@@ -82,14 +66,6 @@ ul.hide-bullets li.col-sm-4 {
 article.post {
   margin: 20px 0;
 
-}
-
-/*****************************
- ~~ admin
-*****************************/
-
-.admin-bar .navbar-fixed-top {
-    margin-top: 32px;
 }
 
 /*****************************
@@ -122,20 +98,16 @@ div#post-metadata {
   font-size: 1.1rem;
   color: #68727d; }
 
-
 .widget_lean_posts .card,
 .related-posts .card {
   margin-bottom: 20px;
 }
 
-.card .card-block ul {
-  margin-bottom: 0; //覆盖默认的margin-bottom
-}
-
 .card {
   margin-bottom: 1rem;
-}
-
-.widget_calendar .table {
-  margin-bottom: 0;
+  .card-block {
+    ul {
+      margin-bottom: 0; //覆盖默认的margin-bottom
+    }
+  }
 }

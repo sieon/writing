@@ -13,13 +13,6 @@
   margin-bottom: .75rem;
   a {
     color: #333;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-  .entry-title a:focus,
-  .entry-title a:hover {
-    color: #0275d8;
-    text-decoration: none;
   }
 }
 
@@ -88,12 +81,5 @@
   margin-bottom: .5rem;
   a {
     color: #999;
-    text-decoration: $link-decoration;
-    transition: all 0.3s ease;
-
-    @include hover-focus {
-      color: $link-color;
-      text-decoration: $link-decoration;
-    }
   }
 }

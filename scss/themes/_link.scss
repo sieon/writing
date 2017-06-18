@@ -1,0 +1,15 @@
+.entry-title,
+.entry-footer,
+.entry-meta,
+.widget ul li,
+.related-posts .card-text {
+  a {
+    text-decoration: $link-decoration;
+    transition: all 0.3s ease;
+
+    @include hover-focus {
+      color: $link-color;
+      text-decoration: $link-decoration;
+    }
+  }
+}

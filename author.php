@@ -46,17 +46,20 @@ get_header();
   			</header><!-- .page-header -->
 
         <h2>最近发表的文章</h2>
-        <?php if ( have_posts() ) : ?>
-        <?php  while ( have_posts() ) : the_post(); ?>
-           <?php get_template_part( 'template-parts/posts', 'list' ); ?>
-          <?php endwhile; ?>
-          <div class="pagination pt-2 mt-2">
-            <?php lean_pagination();?>
-          </div>
-          <?php else : ?>
-       <?php get_template_part( 'template-parts/content', 'none' ); ?>
-       <?php endif;     // Reset Post Data
-         wp_reset_postdata();?>
+
+        <div class="posts-list">
+          <?php if ( have_posts() ) : ?>
+          <?php  while ( have_posts() ) : the_post(); ?>
+             <?php get_template_part( 'template-parts/posts', 'list' ); ?>
+            <?php endwhile; ?>
+            <div class="pagination pt-2 mt-2">
+              <?php lean_pagination();?>
+            </div>
+            <?php else : ?>
+          <?php get_template_part( 'template-parts/content', 'none' ); ?>
+          <?php endif;     // Reset Post Data
+           wp_reset_postdata();?>
+        </div>
 
   		</main><!-- #main -->
 

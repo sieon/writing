@@ -21,13 +21,6 @@
       line-height: 2;
       a {
         color: #333;
-        text-decoration: $link-decoration;
-        transition: all 0.3s ease;
-
-        @include hover-focus {
-          color: $link-color;
-          text-decoration: $link-decoration;
-        }
       }
     }
   }
@@ -51,6 +44,7 @@
 
 table#wp-calendar {
   width: 100%;
+  margin-bottom: 0;
 }
 
 td#next {

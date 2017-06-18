@@ -24,26 +24,11 @@ img {
   height: auto;
   max-width: 100%; }
 
-@media (max-width: 768px) {
-  #sticky-posts {
-    margin-top: 1rem; } }
 .avatar {
   border-radius: 50%; }
 
-.shadow {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  background: rgba(0, 0, 0, 0.5); }
-
 /*****************************
  ~~ WordPress Config Specific
-
- .sticky {
-   background-color: #FFEBCD;
- }
 *****************************/
 .size-auto,
 .size-full,
@@ -66,12 +51,6 @@ ul.hide-bullets li.col-sm-4 {
 *****************************/
 article.post {
   margin: 20px 0; }
-
-/*****************************
- ~~ admin
-*****************************/
-.admin-bar .navbar-fixed-top {
-  margin-top: 32px; }
 
 /*****************************
  ~~ 404 (error)
@@ -101,14 +80,10 @@ div#post-metadata {
 .related-posts .card {
   margin-bottom: 20px; }
 
-.card .card-block ul {
-  margin-bottom: 0; }
-
 .card {
   margin-bottom: 1rem; }
-
-.widget_calendar .table {
-  margin-bottom: 0; }
+  .card .card-block ul {
+    margin-bottom: 0; }
 
 /**
  * 设置背景
@@ -129,7 +104,26 @@ div#post-metadata {
 .home .entry:first-child {
   margin-top: -1rem; }
 
-.admin-bar .navbar {
+.entry-title a,
+.entry-footer a,
+.entry-meta a,
+.widget ul li a,
+.related-posts .card-text a {
+  text-decoration: none;
+  transition: all 0.3s ease; }
+  .entry-title a:focus, .entry-title a:hover,
+  .entry-footer a:focus,
+  .entry-footer a:hover,
+  .entry-meta a:focus,
+  .entry-meta a:hover,
+  .widget ul li a:focus,
+  .widget ul li a:hover,
+  .related-posts .card-text a:focus,
+  .related-posts .card-text a:hover {
+    color: #0275d8;
+    text-decoration: none; }
+
+.admin-bar .fixed-top {
   margin-top: 32px; }
 
 .navbar {
@@ -148,13 +142,7 @@ div#post-metadata {
 .entry-title {
   margin-bottom: .75rem; }
   .entry-title a {
-    color: #333;
-    text-decoration: none;
-    transition: all 0.3s ease; }
-  .entry-title .entry-title a:focus,
-  .entry-title .entry-title a:hover {
-    color: #0275d8;
-    text-decoration: none; }
+    color: #333; }
 
 .entry-excerpt {
   color: #828a92; }
@@ -212,14 +200,7 @@ div#post-metadata {
   margin-bottom: .5rem; }
   .entry-footer a,
   .entry-meta a {
-    color: #999;
-    text-decoration: none;
-    transition: all 0.3s ease; }
-    .entry-footer a:focus, .entry-footer a:hover,
-    .entry-meta a:focus,
-    .entry-meta a:hover {
-      color: #0275d8;
-      text-decoration: none; }
+    color: #999; }
 
 .widget-search {
   position: relative;
@@ -242,12 +223,7 @@ div#post-metadata {
     .widget ul li {
       line-height: 2; }
       .widget ul li a {
-        color: #333;
-        text-decoration: none;
-        transition: all 0.3s ease; }
-        .widget ul li a:focus, .widget ul li a:hover {
-          color: #0275d8;
-          text-decoration: none; }
+        color: #333; }
 
 .widget-header {
   padding: 0.75rem 1.25rem;
@@ -262,7 +238,8 @@ div#post-metadata {
  ~~ widgets (calendar)
 *****************************/
 table#wp-calendar {
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 0; }
 
 td#next {
   text-align: right; }
@@ -552,13 +529,10 @@ blockquote p {
   top: 0;
   left: 0; }
 
-.posts-card .card {
-  width: 50%;
-  float: left;
-  padding: 10px;
-  border: 0; }
+.search .posts-list h2 {
+  font-size: 1.15rem; }
 
-.posts-list h3 {
+.posts-list h2 {
   font-size: 1.25rem; }
 
 /**
@@ -570,12 +544,7 @@ blockquote p {
   .related-posts .card .card-text {
     margin-top: .5rem; }
     .related-posts .card .card-text a {
-      color: #333;
-      text-decoration: none;
-      transition: all 0.3s ease; }
-      .related-posts .card .card-text a:focus, .related-posts .card .card-text a:hover {
-        color: #0275d8;
-        text-decoration: none; }
+      color: #333; }
 
 /**
  * 11.4 - Comments
