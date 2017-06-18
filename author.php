@@ -21,7 +21,7 @@ get_header();
               $author_name ) : get_userdata( intval( $author ) );
             ?>
 
-            <h1><?php esc_html_e( '作者：', 'lean' ); ?><?php echo esc_html( $curauth->nickname ); ?></h1>
+            <h1 class="page-title"><?php esc_html_e( '作者：', 'lean' ); ?><?php echo esc_html( $curauth->nickname ); ?></h1>
 
             <dl>
               <?php if ( ! empty( $curauth->user_url ) ) : ?>

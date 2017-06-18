@@ -5,7 +5,7 @@
     <div class="site-main">
       <div class="row">
         <div class="col-lg-8">
-          <header class="entry-header">
+          <header class="page-header">
             <?php the_title('<h1 class="mb-4">', '</h1>'); ?>
             <p class="entry-meta mb-3">
               <?php lean_entry_meta(); ?>

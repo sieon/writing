@@ -39,15 +39,6 @@
 
 /** 文章页 **/
 
-.entry-header::after {
-  display: block;
-  width: 160px;
-  height: 4px;
-  border-radius: 3px;
-  background: #efefef;
-  content: "";
-  margin-top: 1rem; }
-
 .entry-content h2 {
   margin: 30px 0;
   font-weight: bold;

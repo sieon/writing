@@ -6,10 +6,12 @@
   <div class="site-main">
     <div class="row">
       <div class="col-lg-8">
-        <?php
-        lean_the_archive_title( '<h1 class="page-title">', '</h1>' );
-        lean_the_archive_description( '<p class="page-subtitle mb-3">', '</p>' );
-        ?>
+        <header class="page-header">
+          <?php
+          lean_the_archive_title( '<h1 class="page-title">', '</h1>' );
+          lean_the_archive_description( '<div class="text-muted mb-3">', '</div>' );
+          ?>
+        </header>
 
         <div class="posts-list">
           <?php

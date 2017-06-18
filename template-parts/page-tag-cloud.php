@@ -5,7 +5,9 @@
 get_header(); ?>
 <div class="container mt-5">
   <div class="site-main">
-    <h1 class="page-title mb-4">标签云</h1>
+    <div class="page-header mb-4">
+      <h1 class="page-title">标签云</h1>
+    </div>
     <div class="entry-content">
       <?php //lean_wp_tag_cloud();
       $poststags= get_tags();

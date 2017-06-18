@@ -8,7 +8,10 @@ get_header(); ?>
 
 <div class="container mt-5">
   <div class="site-main">
-    <h1 class="mb-3"><?php the_title(); ?></h1>
+
+    <div class="page-header mb-4">
+      <h1 class="page-title"><?php the_title(); ?></h1>
+    </div>
 
     <div class="entry-content">
       <?php

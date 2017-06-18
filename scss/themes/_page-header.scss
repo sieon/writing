@@ -1,0 +1,9 @@
+.page-header::after {
+  display: block;
+  width: 160px;
+  height: 4px;
+  border-radius: 3px;
+  background: #efefef;
+  content: "";
+  margin-top: 1rem;
+}
