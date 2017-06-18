@@ -44,7 +44,7 @@ get_header();
         <div class="posts-list">
           <?php if ( have_posts() ) : ?>
           <?php  while ( have_posts() ) : the_post(); ?>
-             <?php get_template_part( 'template-parts/posts', 'list' ); ?>
+             <?php get_template_part( 'template-parts/posts', get_post_format() ); ?>
             <?php endwhile; ?>
             <div class="pagination pt-2 mt-2">
               <?php lean_pagination();?>

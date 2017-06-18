@@ -18,7 +18,7 @@
         <?php if ( have_posts() ) : ?>
         <div class="posts-list">
           <?php while ( have_posts() ) : the_post();?>
-            <?php get_template_part( 'template-parts/posts', 'list' ); ?>
+            <?php get_template_part( 'template-parts/posts', get_post_format() ); ?>
           <?php endwhile; ?>
         </div>
           <div class="pagination pt-2 mt-2">
