@@ -15,12 +15,6 @@ get_header();
     <div class="row">
   		<main class="col-lg-8 ">
   			<header class="media">
-          <div class="d-flex mr-3">
-            <?php if ( ! empty( $curauth->ID ) ) : ?>
-              <?php echo get_avatar( $curauth->ID ,48); ?>
-            <?php endif; ?>
-          </div>
-
           <div class="media-body">
             <?php
             $curauth = ( isset( $_GET['author_name'] ) ) ? get_user_by( 'slug',
