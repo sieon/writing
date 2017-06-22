@@ -26,10 +26,10 @@
     <?php else : ?>
         <a href="<?php echo $link_url[0]; ?>" target="_self"><?php the_title(); ?></a>
     <?php endif; ?>
-    <span class="ml-2 entry-meta"><?php the_time(); ?></span>
-    <?php //edit_post_link( '编辑', '<span class="edit-link float-right">', '</span>' ); ?>
+
   </header>
-  <div class="entry-excerpt">
-    <?php the_excerpt(); ?>
-  </div>
+  <div class="entry-meta"><?php lean_entry_meta(); ?></div>
+  <div class="entry-excerpt hidden-sm-down">
+		<?php the_excerpt(); ?>
+	</div>
 </article>
