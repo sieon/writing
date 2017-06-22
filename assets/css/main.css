@@ -7,6 +7,9 @@ body {
   -ms-word-wrap: break-word;
   word-wrap: break-word; }
 
+.bg-white {
+  background-color: #fff; }
+
 /** post-tags **/
 .post-tags .btn,
 .hot-tags .btn {
@@ -108,7 +111,6 @@ div#post-metadata {
   margin-top: 32px; }
 
 .navbar {
-  background: #fff;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1); }
 
 .dropdown .dropdown-menu .nav-item .nav-link {
