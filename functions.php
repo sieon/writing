@@ -35,3 +35,9 @@ require THEME_DIR . '/inc/template-tags.php'; //模板常用标签
 require THEME_DIR . '/inc/pagination.php';// 支持 Bs4 翻页
 require THEME_DIR . '/inc/related-posts.php';// 相关文章
 require THEME_DIR . '/inc/get-avatar.php'; //头像
+
+// Helper library for the theme customizer.
+require THEME_DIR . '/inc/customizer-library/customizer-library.php';
+
+// Define options for the theme customizer.
+require THEME_DIR . '/inc/customizer-options.php';
