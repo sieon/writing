@@ -6,7 +6,6 @@
         <?php
         $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
         $args = array(
-          'caller_get_posts' => 1,
           'paged'=> $paged,
           'tax_query' => array(
             array(
