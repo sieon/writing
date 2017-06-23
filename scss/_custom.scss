@@ -14,9 +14,13 @@ $font-size-h6: 1rem !default;
 
 $grid-gutter-width-base:     20px !default;
 
-
 $spacer: 1rem !default;
-// Navbar
 
-$navbar-padding-y:                  0;
+$white:  #fff !default;
+$black:  #000 !default;
+
+// Navbar
 $navbar-padding-x:                  $spacer !default;
+$navbar-padding-y:                  0;
+$navbar-inverse-color:              $white !default;
+$navbar-light-color:                $black !default;
