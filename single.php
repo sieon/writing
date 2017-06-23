@@ -25,6 +25,8 @@
             echo '</div>';
           } ?>
 
+          <?php //lean_the_post_navigation(); ?>
+
           <?php
           //相关文章
           related_posts(); ?>
