@@ -154,6 +154,29 @@ function customizer_library_lean_options() {
 		'choices' => $navbar_inverse_choices,
 		'default' => 'navbar-light'
 	);
+
+	// More Examples
+	$section = '文章列表';
+
+	$sections[] = array(
+		'id' => $section,
+		'title' => __( '文章列表', 'lean' ),
+		'priority' => '90'
+	);
+
+	$posts_list_excerpt_choices = array(
+		'yes'=> '是',
+		'no' => '否'
+	);
+
+	$options['posts_list_excerpt'] = array(
+		'id' => 'posts_list_excerpt',
+		'label'   => __( '是否显示文章简介', 'lean' ),
+		'section' => $section,
+		'type'    => 'radio',
+		'choices' => $posts_list_excerpt_choices,
+		'default' => 'yes'
+	);
 	//
 	// $options['example-textarea'] = array(
 	// 	'id' => 'example-textarea',

@@ -5,6 +5,9 @@
  */
 ?>
 
+
+
+
 <?php if(has_post_thumbnail()) : ?>
 <div class="entry">
 	<div class="row">
@@ -22,9 +25,16 @@
 				<?php lean_entry_meta(); ?>
 			</div>
 
-			<div class="entry-excerpt hidden-sm-down">
-				<?php the_excerpt(); ?>
-			</div>
+
+			<?php if ( get_theme_mod( 'posts_list_excerpt')==yes ) { ?>
+				<div class="entry-excerpt hidden-sm-down">
+					<?php the_excerpt(); ?>
+				</div>
+			<?php } else {
+				echo '';
+			 } ?>
+
+
 		</div>
 	</div><!-- ./row -->
 </div>
@@ -38,8 +48,12 @@
 		<?php lean_entry_meta(); ?>
 	</div>
 
-	<div class="entry-excerpt hidden-sm-down">
-		<?php the_excerpt(); ?>
-	</div>
+	<?php if ( get_theme_mod( 'posts_list_excerpt')==yes ) { ?>
+		<div class="entry-excerpt hidden-sm-down">
+			<?php the_excerpt(); ?>
+		</div>
+	<?php } else {
+		echo '';
+	 } ?>
 </div><!-- ./entry -->
 <?php endif; ?>
