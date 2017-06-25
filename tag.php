@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-
-
 <div class="container mt-5">
   <div class="site-main">
     <div class="row">
