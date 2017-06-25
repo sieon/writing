@@ -303,6 +303,9 @@ table#wp-calendar caption {
   font-size: 85%;
   color: #666; }
 
+.comment-author-link {
+  margin-right: .25rem; }
+
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
@@ -379,6 +382,14 @@ a img.aligncenter {
   .widget ul li a:hover,
   .related-posts .card-text a:focus,
   .related-posts .card-text a:hover {
+    color: #0275d8;
+    text-decoration: none; }
+
+.widget_recent_comments .recentcomments a {
+  color: #0275d8;
+  text-decoration: none;
+  transition: all 0.3s ease; }
+  .widget_recent_comments .recentcomments a:focus, .widget_recent_comments .recentcomments a:hover {
     color: #0275d8;
     text-decoration: none; }
 
