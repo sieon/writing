@@ -4,9 +4,21 @@
  */
 function lean_scripts() {
 
-  wp_enqueue_style( 'lean-bootstrap', THEME_URI . '/assets/css/bootstrap-1.css'); //20170613
+  switch (get_theme_mod( 'style-colors')) {
+    case 'style-white':
+      wp_enqueue_style( 'lean-toolkit', THEME_URI . '/assets/css/toolkit.css');
+      break;
+
+    case 'style-success':
+      wp_enqueue_style( 'lean-toolkit', THEME_URI . '/assets/css/toolkit1.css');
+      break;
+
+    default:
+      wp_enqueue_style( 'lean-toolkit', THEME_URI . '/assets/css/toolkit.css');
+      break;
+  }
+
 	wp_enqueue_style( 'lean-font-awesome', THEME_URI . '/assets/css/font-awesome.min.css');
-  wp_enqueue_style( 'lean-main', THEME_URI . '/assets/css/main-1.css');
 
 	wp_enqueue_script( 'lean-jquery', THEME_URI . '/assets/js/jquery.js', array(), '20170613', true );
   //wp_enqueue_script( 'lean-popper', THEME_URI . '/assets/js/popper.js', array(), '20170416', true );

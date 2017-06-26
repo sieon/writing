@@ -8,7 +8,24 @@
 </head>
 <body <?php body_class( $class ); ?> >
   <header class="header">
-    <nav class="navbar navbar-toggleable-md <?php echo get_theme_mod( 'navbar-inverse' ); ?> fixed-top <?php echo get_theme_mod( 'navbar-bg' ); ?>" id="primary-navbar" role="navigation">
+    <nav class="navbar navbar-toggleable-md <?php
+    switch (get_theme_mod( 'style-colors')) {
+      case 'style-white':
+        echo 'navbar-light bg-white';
+        break;
+
+      case 'style-primary':
+        echo 'navbar-inverse bg-primary';
+        break;
+
+      case 'style-success':
+        echo 'navbar-inverse bg-success';
+        break;
+
+      default:
+        echo 'navbar-light bg-white';
+        break;
+    } ?> fixed-top" id="primary-navbar" role="navigation">
       <div class="container">
         <div class="text-center pb-2 pt-2">
           <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>

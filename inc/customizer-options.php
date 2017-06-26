@@ -91,11 +91,11 @@ function customizer_library_lean_options() {
 	// );
 
 	// More Examples
-	$section = '导航颜色';
+	$section = '主题配色';
 
 	$sections[] = array(
 		'id' => $section,
-		'title' => __( '导航颜色', 'lean' ),
+		'title' => __( '主题配色', 'lean' ),
 		'priority' => '90'
 	);
 
@@ -120,41 +120,57 @@ function customizer_library_lean_options() {
 	// 	'type'    => 'checkbox',
 	// 	'default' => 0,
 	// );
+	//
 
-
-	$navbar_bg_choices = array(
-		'bg-white'=> '白',
-		'bg-faded' => '浅灰',
-		'bg-primary' => '蓝',
-		'bg-info' => '浅蓝',
-		'bg-success' => '绿',
-		'bg-warning' => '橙',
-		'bg-danger' => '红',
-		'bg-inverse' => '黑'
+	$style_clolors_choices = array(
+		'style-white'=> '白',
+		'style-primary' => '蓝',
+		'style-success' => '绿'
 	);
 
-	$options['navbar-bg'] = array(
-		'id' => 'navbar-bg',
-		'label'   => __( '导航背景色', 'lean' ),
+	$options['style-colors'] = array(
+		'id' => 'style-colors',
+		'label'   => __( '主题色', 'lean' ),
 		'section' => $section,
 		'type'    => 'select',
-		'choices' => $navbar_bg_choices,
-		'default' => 'bg-white'
+		'choices' => $style_clolors_choices,
+		'default' => 'style-white'
 	);
 
-	$navbar_inverse_choices = array(
-		'navbar-light'=> '浅色导航',
-		'navbar-inverse' => '反色导航（除白和浅灰外这里必选反色导航。）'
-	);
 
-	$options['navbar-inverse'] = array(
-		'id' => 'navbar-inverse',
-		'label'   => __( '反色导航', 'lean' ),
-		'section' => $section,
-		'type'    => 'radio',
-		'choices' => $navbar_inverse_choices,
-		'default' => 'navbar-light'
-	);
+	// $navbar_bg_choices = array(
+	// 	'bg-white'=> '白',
+	// 	'bg-faded' => '浅灰',
+	// 	'bg-primary' => '蓝',
+	// 	'bg-info' => '浅蓝',
+	// 	'bg-success' => '绿',
+	// 	'bg-warning' => '橙',
+	// 	'bg-danger' => '红',
+	// 	'bg-inverse' => '黑'
+	// );
+	//
+	// $options['navbar-bg'] = array(
+	// 	'id' => 'navbar-bg',
+	// 	'label'   => __( '导航背景色', 'lean' ),
+	// 	'section' => $section,
+	// 	'type'    => 'select',
+	// 	'choices' => $navbar_bg_choices,
+	// 	'default' => 'bg-white'
+	// );
+	//
+	// $navbar_inverse_choices = array(
+	// 	'navbar-light'=> '浅色导航',
+	// 	'navbar-inverse' => '反色导航（除白和浅灰外这里必选反色导航。）'
+	// );
+	//
+	// $options['navbar-inverse'] = array(
+	// 	'id' => 'navbar-inverse',
+	// 	'label'   => __( '反色导航', 'lean' ),
+	// 	'section' => $section,
+	// 	'type'    => 'radio',
+	// 	'choices' => $navbar_inverse_choices,
+	// 	'default' => 'navbar-light'
+	// );
 
 	// More Examples
 	$section = '文章列表';
