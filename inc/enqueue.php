@@ -4,7 +4,7 @@
  */
 function lean_scripts() {
 
-  wp_enqueue_style( 'lean-bootstrap', THEME_URI . '/assets/css/bootstrap.css'); //20170613
+  wp_enqueue_style( 'lean-bootstrap', THEME_URI . '/assets/css/bootstrap-1.css'); //20170613
 	wp_enqueue_style( 'lean-font-awesome', THEME_URI . '/assets/css/font-awesome.min.css');
   wp_enqueue_style( 'lean-main', THEME_URI . '/assets/css/main.css');
 
