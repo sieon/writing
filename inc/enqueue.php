@@ -5,13 +5,22 @@
 function lean_scripts() {
 
   switch (get_theme_mod( 'style-colors')) {
-    case 'style-white':
-      wp_enqueue_style( 'lean-toolkit', THEME_URI . '/assets/css/toolkit.css');
-      break;
 
     case 'style-success':
       wp_enqueue_style( 'lean-toolkit', THEME_URI . '/assets/css/toolkit1.css');
       break;
+
+      case 'style-danger':
+        wp_enqueue_style( 'lean-toolkit', THEME_URI . '/assets/css/toolkit2.css');
+        break;
+
+        case 'style-warning':
+          wp_enqueue_style( 'lean-toolkit', THEME_URI . '/assets/css/toolkit3.css');
+          break;
+
+          case 'style-info':
+            wp_enqueue_style( 'lean-toolkit', THEME_URI . '/assets/css/toolkit4.css');
+            break;
 
     default:
       wp_enqueue_style( 'lean-toolkit', THEME_URI . '/assets/css/toolkit.css');

@@ -124,8 +124,13 @@ function customizer_library_lean_options() {
 
 	$style_clolors_choices = array(
 		'style-white'=> '白',
+		'style-faded' => '浅灰',
 		'style-primary' => '蓝',
-		'style-success' => '绿'
+		'style-info' => '浅蓝',
+		'style-inverse' => '黑',
+		'style-success' => '绿',
+		'style-warning' => '橙',
+		'style-danger' => '红'
 	);
 
 	$options['style-colors'] = array(

@@ -1,0 +1,49 @@
+// Bootstrap overrides
+//
+// Copy variables from `_variables.scss` to this file to override default values
+// without modifying source files.
+
+$line-height-base: 1.8 !default;
+
+$font-size-h1: 1.8rem !default;
+$font-size-h2: 1.4rem !default;
+$font-size-h3: 1.25rem !default;
+$font-size-h4: 1rem !default;
+$font-size-h5: 1rem !default;
+$font-size-h6: 1rem !default;
+
+$grid-gutter-width-base:     20px !default;
+
+$spacer: 1rem !default;
+
+$white:  #fff !default;
+$black:  #000 !default;
+
+// Navbar
+$navbar-padding-x:                  $spacer !default;
+$navbar-padding-y:                  0;
+$navbar-inverse-color:              $white !default;
+$navbar-light-color:                $black !default;
+
+// Links
+//
+// Style anchor elements.
+$green:  #5cb85c !default;
+$red:    #d9534f !default;
+$orange: #f0ad4e !default;
+
+$brand-success:             $green !default;
+$brand-danger:             $red !default;
+$brand-warning:             $orange !default;
+
+$link-color:            $brand-warning !default;
+$link-decoration:       none !default;
+$link-hover-color:      darken($link-color, 15%) !default;
+$link-hover-decoration: underline !default;
+
+$component-active-bg:    $brand-warning !default;
+
+$dropdown-link-active-bg:        $component-active-bg !default;
+
+$pagination-active-bg:                 $brand-warning !default;
+$pagination-active-border:             $brand-warning !default;

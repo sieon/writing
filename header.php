@@ -14,6 +14,26 @@
         echo 'navbar-light bg-white';
         break;
 
+        case 'style-faded':
+          echo 'navbar-light bg-faded';
+          break;
+
+          case 'style-inverse':
+            echo 'navbar-inverse bg-inverse';
+            break;
+
+            case 'style-danger':
+              echo 'navbar-inverse bg-danger';
+              break;
+
+              case 'style-warning':
+                echo 'navbar-inverse bg-warning';
+                break;
+
+                case 'style-info':
+                  echo 'navbar-inverse bg-info';
+                  break;
+
       case 'style-primary':
         echo 'navbar-inverse bg-primary';
         break;
