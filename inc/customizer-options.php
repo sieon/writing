@@ -127,6 +127,7 @@ function customizer_library_lean_options() {
 		'bg-faded' => '浅灰',
 		'bg-primary' => '蓝',
 		'bg-info' => '浅蓝',
+		'bg-success' => '绿',
 		'bg-warning' => '橙',
 		'bg-danger' => '红',
 		'bg-inverse' => '黑'
