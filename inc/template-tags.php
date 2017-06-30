@@ -193,7 +193,11 @@ function lean_entry_meta() {
     }
   }
 
-  echo '<time class="time">' . the_time() . '</time>&nbsp;&bull;&nbsp;';
+  echo '<time class="time">' . the_time() . '</time>';
+  //   }
+
+  if (!is_author()) {
+  echo '&nbsp;&bull;&nbsp;';
 
   //echo '<span class="post-views"> <i class="fa fa-eye" aria-hidden="true"></i> '.lean_get_post_views(get_the_ID()).'</span>';
 
@@ -203,11 +207,11 @@ function lean_entry_meta() {
   // if ( ! empty( $categories ) ) {
   //   foreach( $categories as $category ) {
   //     $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( '查看 %s 下的所有文章', 'lean' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
-  //   }
   //   echo trim( $output, $separator );
   // }
 
-  echo the_category(' ');
+    echo the_category(' ');
+  }
 
   if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
     echo '<span class="comments-link hidden-sm-down float-right">';

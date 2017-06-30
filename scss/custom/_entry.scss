@@ -9,10 +9,13 @@
   background: #eee;
 }
 
-.entry-title {
-  margin-bottom: .75rem;
-  a {
-    color: #333;
+.entry-title a {
+  color: #333;
+}
+
+.posts-list {
+  .entry-title {
+    margin-bottom: .75rem;
   }
 }
 

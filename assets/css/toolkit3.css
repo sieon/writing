@@ -6816,10 +6816,11 @@ div#post-metadata {
 .entry:hover {
   background: #eee; }
 
-.entry-title {
+.entry-title a {
+  color: #333; }
+
+.posts-list .entry-title {
   margin-bottom: .75rem; }
-  .entry-title a {
-    color: #333; }
 
 .entry-excerpt {
   color: #828a92; }

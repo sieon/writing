@@ -13,13 +13,16 @@
   .card-title {
     font-size: 1rem;
     font-weight: 400;
+    padding: 0;
     margin-bottom: 0;
+    a {
+      color: #444;
+    }
   }
   .entry-excerpt {
     margin-bottom: 0;
   }
-  .entry-meta {
+  .entry-footer {
     margin-bottom: 0;
-    font-size: 85%;
   }
 }
