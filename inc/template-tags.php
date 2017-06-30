@@ -183,12 +183,14 @@ function lean_entry_meta() {
 		printf( '<span class="sticky-post hidden-sm-down">%s<span class="oblique-line">&nbsp;&bull;&nbsp;</span></span> ', __( '特色', 'lean' ) );
 	}
 
-  if ( is_singular() || is_multi_author() ) {
-    printf( '<span class="byline hidden-sm-down"><span class="author vcard"><span class="sr-only sr-only-focusable">%1$s </span><a class="url" href="%2$s">%3$s</a>&nbsp;&bull;&nbsp;</span></span>',
-      _x( '作者', 'Used before post author name.', 'lean' ),
-      esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-      get_the_author()
-    );
+  if (!is_author()) {
+    if ( is_singular() || is_multi_author() ) {
+      printf( '<span class="byline hidden-sm-down"><span class="author vcard"><span class="sr-only sr-only-focusable">%1$s </span><a class="url" href="%2$s">%3$s</a>&nbsp;&bull;&nbsp;</span></span>',
+        _x( '作者', 'Used before post author name.', 'lean' ),
+        esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+        get_the_author()
+      );
+    }
   }
 
   echo '<time class="time">' . the_time() . '</time>&nbsp;&bull;&nbsp;';

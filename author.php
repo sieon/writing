@@ -10,56 +10,46 @@
 get_header();
 ?>
 
-<div class="container mt-5">
-  <div class="site-main">
-    <div class="row">
-  		<main class="col-lg-8 ">
-  			<header class="media">
-          <div class="media-body">
-            <?php
-            $curauth = ( isset( $_GET['author_name'] ) ) ? get_user_by( 'slug',
-              $author_name ) : get_userdata( intval( $author ) );
-            ?>
+<div class="bg-faded pt-3 pb-3 text-center">
+  <div class="container">
+    <div class="pt-3">
 
-            <h1 class="page-title"><?php esc_html_e( '作者：', 'lean' ); ?><?php echo esc_html( $curauth->nickname ); ?></h1>
+      <?php echo get_avatar( get_the_author_meta( $curauth->ID ), 80 ); ?>
 
-            <dl>
-              <?php if ( ! empty( $curauth->user_url ) ) : ?>
-                <dt><?php esc_html_e( '网站', 'lean' ); ?></dt>
-                <dd>
-                  <a href="<?php echo esc_url( $curauth->user_url ); ?>"><?php echo esc_html( $curauth->user_url ); ?></a>
-                </dd>
-              <?php endif; ?>
+      <?php $curauth = ( isset( $_GET['author_name'] ) ) ? get_user_by( 'slug', $author_name ) : get_userdata( intval( $author ) ); ?>
 
-              <?php if ( ! empty( $curauth->user_description ) ) : ?>
-                <dt><?php esc_html_e( '个人信息', 'lean' ); ?></dt>
-                <dd><?php echo esc_html( $curauth->user_description ); ?></dd>
-              <?php endif; ?>
-            </dl>
-          </div>
-  			</header><!-- .page-header -->
+      <h1 class="author-name mt-2"><?php echo esc_html( $curauth->nickname ); ?></h1>
 
-        <h2>最近发表的文章</h2>
+      <?php if ( ! empty( $curauth->user_description ) ) : ?>
+        <p class="mt-1"><?php echo esc_html( $curauth->user_description ); ?></p>
+      <?php endif; ?>
 
-        <div class="posts-list">
-          <?php if ( have_posts() ) : ?>
+    </div>
+  </div>
+</div><!-- .page-header -->
+
+<div class="container mt-3">
+	<main>
+    <?php if ( have_posts() ) : ?>
+
+      <div class="posts-card">
+        <div class="row">
           <?php  while ( have_posts() ) : the_post(); ?>
-             <?php get_template_part( 'template-parts/posts', get_post_format() ); ?>
-            <?php endwhile; ?>
-            <div class="pagination pt-2 mt-2">
-              <?php lean_pagination();?>
-            </div>
-            <?php else : ?>
-          <?php get_template_part( 'template-parts/content', 'none' ); ?>
-          <?php endif;     // Reset Post Data
-           wp_reset_postdata();?>
+            <?php get_template_part( 'template-parts/posts-card', get_post_format() ); ?>
+          <?php endwhile; ?>
         </div>
+      </div>
 
-  		</main><!-- #main -->
+      <div class="pagination pt-2 mt-2">
+        <?php lean_pagination();?>
+      </div>
 
-      <?php get_sidebar();?>
-  	</div> <!-- .row -->
-  </div><!-- .site-main -->
+    <?php else : ?>
+      <?php get_template_part( 'template-parts/content', 'none' ); ?>
+    <?php endif;     // Reset Post Data
+    wp_reset_postdata();?>
+
+	</main><!-- #main -->
 </div><!-- Container end -->
 
 <?php get_footer(); ?>

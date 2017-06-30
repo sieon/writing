@@ -7353,6 +7353,16 @@ blockquote p {
   .comment-reply-title small a:focus {
     color: #1a1a1a; }
 
+.avatar-80 {
+  margin: 0 auto; }
+
+.posts-card .col-lg-4 {
+  margin-bottom: 20px; }
+.posts-card .card {
+  height: 100%; }
+.posts-card .entry-meta {
+  margin-bottom: 0; }
+
 .screen-reader-text {
   position: absolute;
   width: 1px;
