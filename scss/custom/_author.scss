@@ -3,13 +3,23 @@
 }
 
 .posts-card {
+  .col-lg-3,
   .col-lg-4 {
     margin-bottom: 20px;
   }
   .card {
     height: 100%;
   }
+  .card-title {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+  .entry-excerpt {
+    margin-bottom: 0;
+  }
   .entry-meta {
     margin-bottom: 0;
+    font-size: 85%;
   }
 }

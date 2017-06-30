@@ -3042,12 +3042,12 @@ tbody.collapse.show {
   display: flex;
   flex-direction: column;
   background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 0.25rem; }
 
 .card-block {
   flex: 1 1 auto;
-  padding: 1.25rem; }
+  padding: 0.75rem; }
 
 .card-title {
   margin-bottom: 0.75rem; }
@@ -3062,7 +3062,7 @@ tbody.collapse.show {
 .card-link:hover {
   text-decoration: none; }
 .card-link + .card-link {
-  margin-left: 1.25rem; }
+  margin-left: 0.75rem; }
 
 .card > .list-group:first-child .list-group-item:first-child {
   border-top-right-radius: 0.25rem;
@@ -3072,29 +3072,29 @@ tbody.collapse.show {
   border-bottom-left-radius: 0.25rem; }
 
 .card-header {
-  padding: 0.75rem 1.25rem;
+  padding: 0.75rem 0.75rem;
   margin-bottom: 0;
-  background-color: #f7f7f9;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
   .card-header:first-child {
     border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0; }
 
 .card-footer {
-  padding: 0.75rem 1.25rem;
-  background-color: #f7f7f9;
-  border-top: 1px solid rgba(0, 0, 0, 0.125); }
+  padding: 0.75rem 0.75rem;
+  background-color: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.05); }
   .card-footer:last-child {
     border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px); }
 
 .card-header-tabs {
-  margin-right: -0.625rem;
+  margin-right: -0.375rem;
   margin-bottom: -0.75rem;
-  margin-left: -0.625rem;
+  margin-left: -0.375rem;
   border-bottom: 0; }
 
 .card-header-pills {
-  margin-right: -0.625rem;
-  margin-left: -0.625rem; }
+  margin-right: -0.375rem;
+  margin-left: -0.375rem; }
 
 .card-primary {
   background-color: #0275d8;
@@ -7356,12 +7356,24 @@ blockquote p {
 .avatar-80 {
   margin: 0 auto; }
 
+.posts-card .col-lg-3,
 .posts-card .col-lg-4 {
   margin-bottom: 20px; }
 .posts-card .card {
   height: 100%; }
-.posts-card .entry-meta {
+.posts-card .card-title {
+  font-size: 1rem;
+  font-weight: 400;
   margin-bottom: 0; }
+.posts-card .entry-excerpt {
+  margin-bottom: 0; }
+.posts-card .entry-meta {
+  margin-bottom: 0;
+  font-size: 85%; }
+
+.card-footer {
+  border-top: 0;
+  padding: 0 0.75rem 0.75rem 0.75rem; }
 
 .screen-reader-text {
   position: absolute;
