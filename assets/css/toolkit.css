@@ -3240,7 +3240,7 @@ tbody.collapse.show {
           border-radius: 0; } }
 @media (min-width: 576px) {
   .card-columns {
-    column-count: 3;
+    column-count: 4;
     column-gap: 1.25rem; }
     .card-columns .card {
       display: inline-block;
@@ -7354,14 +7354,15 @@ blockquote p {
   .comment-reply-title small a:focus {
     color: #1a1a1a; }
 
-.avatar-80 {
-  margin: 0 auto; }
-
 .posts-card .col-lg-3,
 .posts-card .col-lg-4 {
-  margin-bottom: 20px; }
-.posts-card .card {
+  margin-bottom: 20px;
   height: 100%; }
+.posts-card .card-text {
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px; }
 .posts-card .card-title {
   font-weight: 400; }
   .posts-card .card-title a {
@@ -7372,9 +7373,16 @@ blockquote p {
 .profile-header {
   background-size: cover;
   height: 400px;
-  color: #fff; }
+  color: #fff;
+  display: table-cell;
+  width: 1000000px;
+  text-align: center;
+  vertical-align: middle; }
+  .profile-header .avatar {
+    margin: 0 auto;
+    margin-bottom: 2rem; }
 
-.phc {
+.profile-header-container {
   max-width: 300px;
   margin: 0 auto; }
 

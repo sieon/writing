@@ -10,23 +10,23 @@
 get_header();
 ?>
 
-<div class="profile-header text-center" <?php if ( get_theme_mod( 'author_bg') ) { echo 'style="background-image:url(' . esc_url( get_theme_mod( 'author_bg' ) ) . ');'; } else { echo ''; } ?>>
-  <div class="contaniner">
-    <div class="phc">
+<div class="profile-header" <?php if ( get_theme_mod( 'author_bg') ) { echo 'style="background-image:url(' . esc_url( get_theme_mod( 'author_bg' ) ) . ');"'; } else { echo ''; } ?>>
+  <div class="container">
+    <div class="profile-header-container">
       <?php echo get_avatar( get_the_author_meta( $curauth->ID ), 80 ); ?>
 
       <?php $curauth = ( isset( $_GET['author_name'] ) ) ? get_user_by( 'slug', $author_name ) : get_userdata( intval( $author ) ); ?>
 
-      <h1 class="author-name mt-2"><?php echo esc_html( $curauth->nickname ); ?></h1>
+      <h1 class="profile-header-author mt-2"><?php echo esc_html( $curauth->nickname ); ?></h1>
 
       <?php if ( ! empty( $curauth->user_description ) ) : ?>
-        <p class="mt-1"><?php echo esc_html( $curauth->user_description ); ?></p>
+        <p class="profile-header-bio"><?php echo esc_html( $curauth->user_description ); ?></p>
       <?php endif; ?>
     </div>
   </div>
 </div><!-- .profile-header -->
 
-<div class="container mt-3">
+<div class="container mt-4">
 	<main>
     <?php
     $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
@@ -55,7 +55,7 @@ get_header();
     if ( $the_query->have_posts() ) : ?>
 
       <div class="posts-card">
-        <div class="row">
+        <div class="card-columns">
           <?php  while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
             <?php get_template_part( 'template-parts/posts-card', get_post_format() ); ?>
           <?php endwhile; ?>

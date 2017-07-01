@@ -7,28 +7,23 @@
 
 <?php if(has_post_thumbnail()) : ?>
 
-<div class="col-lg-3 col-md-6">
-
 	<div class="card">
-		<a class="entry-img" href="<?php the_permalink(); ?>">
+		<a href="<?php the_permalink(); ?>">
 	    <?php
 	      the_post_thumbnail('medium', ['class' => 'img-fluid card-img-top']);
 	    ?>
 	  </a>
 		<div class="card-block">
-			<?php the_title( sprintf( '<p class="card-text entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></p>' ); ?>
+			<?php the_title( sprintf( '<p class="card-text"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></p>' ); ?>
 		</div>
 		<div class="card-footer entry-footer">
 			<?php lean_entry_meta(); ?>
 		</div>
 	</div>
 
-</div>
-
 <?php else: ?>
-<div class="col-lg-3 col-md-6">
 	<div class="card">
-		<!-- <a class="entry-img" href="<?php //the_permalink(); ?>">
+		<!-- <a href="<?php //the_permalink(); ?>">
 			<img src="<?php //echo THEME_URI;?>/assets/img/placeholder.png" class="card-img-top"/>
 		</a> -->
 		<div class="card-block">
@@ -46,6 +41,6 @@
 		<div class="card-footer entry-footer">
 			<?php lean_entry_meta(); ?>
 		</div>
-	</div><!-- ./entry -->
-</div>
+	</div>
+
 <?php endif; ?>

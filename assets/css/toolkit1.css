@@ -3042,12 +3042,12 @@ tbody.collapse.show {
   display: flex;
   flex-direction: column;
   background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 0.25rem; }
 
 .card-block {
   flex: 1 1 auto;
-  padding: 1.25rem; }
+  padding: 1rem; }
 
 .card-title {
   margin-bottom: 0.75rem; }
@@ -3062,7 +3062,7 @@ tbody.collapse.show {
 .card-link:hover {
   text-decoration: none; }
 .card-link + .card-link {
-  margin-left: 1.25rem; }
+  margin-left: 1rem; }
 
 .card > .list-group:first-child .list-group-item:first-child {
   border-top-right-radius: 0.25rem;
@@ -3072,29 +3072,29 @@ tbody.collapse.show {
   border-bottom-left-radius: 0.25rem; }
 
 .card-header {
-  padding: 0.75rem 1.25rem;
+  padding: 0.75rem 1rem;
   margin-bottom: 0;
-  background-color: #f7f7f9;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
   .card-header:first-child {
     border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0; }
 
 .card-footer {
-  padding: 0.75rem 1.25rem;
-  background-color: #f7f7f9;
-  border-top: 1px solid rgba(0, 0, 0, 0.125); }
+  padding: 0.75rem 1rem;
+  background-color: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.05); }
   .card-footer:last-child {
     border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px); }
 
 .card-header-tabs {
-  margin-right: -0.625rem;
+  margin-right: -0.5rem;
   margin-bottom: -0.75rem;
-  margin-left: -0.625rem;
+  margin-left: -0.5rem;
   border-bottom: 0; }
 
 .card-header-pills {
-  margin-right: -0.625rem;
-  margin-left: -0.625rem; }
+  margin-right: -0.5rem;
+  margin-left: -0.5rem; }
 
 .card-primary {
   background-color: #0275d8;
@@ -3240,7 +3240,7 @@ tbody.collapse.show {
           border-radius: 0; } }
 @media (min-width: 576px) {
   .card-columns {
-    column-count: 3;
+    column-count: 4;
     column-gap: 1.25rem; }
     .card-columns .card {
       display: inline-block;
@@ -7053,7 +7053,7 @@ object {
 
 .card-footer {
   border-top: 0;
-  padding: 0 1.25rem 0.75rem 1.25rem; }
+  padding: 0 1rem 0.75rem 1rem; }
 
 /*--------------------------------------------------------------
 ## Captions
@@ -7357,6 +7357,38 @@ blockquote p {
   .comment-reply-title small a:hover,
   .comment-reply-title small a:focus {
     color: #1a1a1a; }
+
+.posts-card .col-lg-3,
+.posts-card .col-lg-4 {
+  margin-bottom: 20px;
+  height: 100%; }
+.posts-card .card-text {
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px; }
+.posts-card .card-title {
+  font-weight: 400; }
+  .posts-card .card-title a {
+    color: #444; }
+.posts-card .entry-footer {
+  margin-bottom: 0; }
+
+.profile-header {
+  background-size: cover;
+  height: 400px;
+  color: #fff;
+  display: table-cell;
+  width: 1000000px;
+  text-align: center;
+  vertical-align: middle; }
+  .profile-header .avatar {
+    margin: 0 auto;
+    margin-bottom: 2rem; }
+
+.profile-header-container {
+  max-width: 300px;
+  margin: 0 auto; }
 
 .screen-reader-text {
   position: absolute;

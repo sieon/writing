@@ -1,14 +1,14 @@
-.avatar-80 {
-  margin: 0 auto;
-}
-
 .posts-card {
   .col-lg-3,
   .col-lg-4 {
     margin-bottom: 20px;
-  }
-  .card {
     height: 100%;
+  }
+  .card-text {
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
   }
   .card-title {
     //font-size: 1rem;
@@ -26,9 +26,17 @@
   background-size: cover;
   height: 400px;
   color: #fff;
+  display: table-cell;
+  width: 1000000px;
+  text-align: center;
+  vertical-align: middle;
+  .avatar {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
 }
 
-.phc {
+.profile-header-container {
   max-width: 300px;
   margin: 0 auto;
 }

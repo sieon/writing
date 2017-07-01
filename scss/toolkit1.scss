@@ -6,6 +6,7 @@
  */
 
 // Core variables and mixins
+@import "custom";
 @import "custom-1";
 @import "variables";
 //@import "bootstrap/variables";
@@ -75,5 +76,6 @@
 @import "custom/theme-galleries";
 @import "custom/theme-post-format";
 @import "custom/theme-comments";
+@import "custom/author";
 @import "custom/theme-screen-reader-text";
 @import "custom/theme-footer";
