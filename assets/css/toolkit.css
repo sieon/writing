@@ -7363,16 +7363,20 @@ blockquote p {
 .posts-card .card {
   height: 100%; }
 .posts-card .card-title {
-  font-size: 1rem;
-  font-weight: 400;
-  padding: 0;
-  margin-bottom: 0; }
+  font-weight: 400; }
   .posts-card .card-title a {
     color: #444; }
-.posts-card .entry-excerpt {
-  margin-bottom: 0; }
 .posts-card .entry-footer {
   margin-bottom: 0; }
+
+.profile-header {
+  background-size: cover;
+  height: 400px;
+  color: #fff; }
+
+.phc {
+  max-width: 300px;
+  margin: 0 auto; }
 
 .card-footer {
   border-top: 0;

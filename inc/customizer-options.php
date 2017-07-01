@@ -199,6 +199,26 @@ function customizer_library_lean_options() {
 		'choices' => $posts_list_excerpt_choices,
 		'default' => 'yes'
 	);
+
+
+	// File Upload
+	$section = '作者页面背景';
+
+	$sections[] = array(
+		'id' => $section,
+		'title' => __( '作者页面背景图', 'lean' ),
+		'priority' => '100',
+		'description' => __( 'Example section description.', 'lean' )
+	);
+
+	$options['author_bg'] = array(
+		'id' => 'author_bg',
+		'label'   => __( '作者头部图片', 'lean' ),
+		'section' => $section,
+		'type'    => 'image',
+		'default' => ''
+	);
+
 	//
 	// $options['example-textarea'] = array(
 	// 	'id' => 'example-textarea',

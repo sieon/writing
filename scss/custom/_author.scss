@@ -11,18 +11,24 @@
     height: 100%;
   }
   .card-title {
-    font-size: 1rem;
+    //font-size: 1rem;
     font-weight: 400;
-    padding: 0;
-    margin-bottom: 0;
     a {
       color: #444;
     }
   }
-  .entry-excerpt {
-    margin-bottom: 0;
-  }
   .entry-footer {
     margin-bottom: 0;
   }
+}
+
+.profile-header {
+  background-size: cover;
+  height: 400px;
+  color: #fff;
+}
+
+.phc {
+  max-width: 300px;
+  margin: 0 auto;
 }

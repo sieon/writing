@@ -16,7 +16,7 @@
 	    ?>
 	  </a>
 		<div class="card-block">
-			<?php the_title( sprintf( '<h2 class="card-title entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+			<?php the_title( sprintf( '<p class="card-text entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></p>' ); ?>
 		</div>
 		<div class="card-footer entry-footer">
 			<?php lean_entry_meta(); ?>
@@ -28,16 +28,16 @@
 <?php else: ?>
 <div class="col-lg-3 col-md-6">
 	<div class="card">
-		<a class="entry-img" href="<?php the_permalink(); ?>">
-			<img src="<?php echo THEME_URI;?>/assets/img/placeholder.png" class="card-img-top"/>
-		</a>
+		<!-- <a class="entry-img" href="<?php //the_permalink(); ?>">
+			<img src="<?php //echo THEME_URI;?>/assets/img/placeholder.png" class="card-img-top"/>
+		</a> -->
 		<div class="card-block">
 			<?php the_title( sprintf( '<h2 class="card-title entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 			<?php if ( get_theme_mod( 'posts_list_excerpt')==yes ) { ?>
-				<div class="entry-excerpt hidden-sm-down">
-					<?php the_excerpt(); ?>
-				</div>
+				<p class="entry-excerpt hidden-sm-down">
+					<?php echo wp_trim_words( get_the_excerpt(), 120, '...' );?>
+				</p>
 			<?php } else {
 				echo '';
 			 } ?>
