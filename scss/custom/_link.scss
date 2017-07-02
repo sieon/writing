@@ -1,5 +1,22 @@
 .entry-title,
-.entry-footer,
+.posts-card .card-text {
+  color: #333;
+  a {
+    color: #333;
+  }
+}
+
+.posts-card .card-footer,
+.entry-meta {
+  color: #aaa;
+  font-size: 85%;
+  a {
+    color: #aaa;
+  }
+}
+
+.entry-title,
+.posts-card .card-footer,
 .entry-meta,
 .widget ul li,
 .related-posts .card-text {

@@ -6731,21 +6731,9 @@ div#post-metadata {
 /**
  * 设置背景
  */
-.site-main,
-.jumbotron {
-  background: #fff;
-  box-shadow: 0 2px 16px #e5eced, 0 0 1px #e5eced, 0 0 1px #e5eced;
-  opacity: 0.9; }
-
 .jumbotron {
   margin-bottom: 0;
   border-radius: 0; }
-
-.site-main {
-  padding: 1.25rem 1rem; }
-
-.home .entry:first-child {
-  margin-top: -1rem; }
 
 .admin-bar .fixed-top {
   margin-top: 32px; }
@@ -6812,12 +6800,12 @@ div#post-metadata {
   padding: 1.25rem 0;
   border-bottom: 1px solid #e6dfdf;
   transition: all 0.3s ease; }
+  .entry .row > div[class*='col-'] {
+    display: flex;
+    flex: 1 0 auto; }
 
 .entry:hover {
   background: #eee; }
-
-.entry-title a {
-  color: #333; }
 
 .posts-list .entry-title {
   margin-bottom: .75rem; }
@@ -6861,15 +6849,6 @@ div#post-metadata {
 .entry-content ol li {
   font-size: 1rem;
   line-height: 1.8; }
-
-.entry-footer,
-.entry-meta {
-  color: #999;
-  font-size: 85%;
-  margin-bottom: .5rem; }
-  .entry-footer a,
-  .entry-meta a {
-    color: #999; }
 
 .widget-search {
   position: relative;
@@ -7007,16 +6986,31 @@ a img.aligncenter {
 .wp-caption.alignright {
   margin: 5px 0 20px 20px; }
 
+.entry-title,
+.posts-card .card-text {
+  color: #333; }
+  .entry-title a,
+  .posts-card .card-text a {
+    color: #333; }
+
+.posts-card .card-footer,
+.entry-meta {
+  color: #aaa;
+  font-size: 85%; }
+  .posts-card .card-footer a,
+  .entry-meta a {
+    color: #aaa; }
+
 .entry-title a,
-.entry-footer a,
+.posts-card .card-footer a,
 .entry-meta a,
 .widget ul li a,
 .related-posts .card-text a {
   text-decoration: none;
   transition: all 0.3s ease; }
   .entry-title a:focus, .entry-title a:hover,
-  .entry-footer a:focus,
-  .entry-footer a:hover,
+  .posts-card .card-footer a:focus,
+  .posts-card .card-footer a:hover,
   .entry-meta a:focus,
   .entry-meta a:hover,
   .widget ul li a:focus,
@@ -7092,6 +7086,9 @@ object {
 .card-footer {
   border-top: 0;
   padding: 0 1rem 0.75rem 1rem; }
+
+.card {
+  width: 100%; }
 
 /*--------------------------------------------------------------
 ## Galleries
@@ -7358,10 +7355,9 @@ blockquote p {
   .comment-reply-title small a:focus {
     color: #1a1a1a; }
 
-.posts-card .col-lg-3,
-.posts-card .col-lg-4 {
-  margin-bottom: 20px;
-  height: 100%; }
+.posts-card .row > div[class*='col-'] {
+  display: flex;
+  flex: 1 0 auto; }
 .posts-card .card-text {
   -webkit-margin-before: 0px;
   -webkit-margin-after: 0px;
@@ -7371,8 +7367,11 @@ blockquote p {
   font-weight: 400; }
   .posts-card .card-title a {
     color: #444; }
-.posts-card .entry-footer {
+.posts-card .card-footer {
+  color: #999;
   margin-bottom: 0; }
+  .posts-card .card-footer a {
+    color: #aaa; }
 
 .profile-header {
   background-size: cover;

@@ -1,8 +1,7 @@
 .posts-card {
-  .col-lg-3,
-  .col-lg-4 {
-    margin-bottom: 20px;
-    height: 100%;
+  .row > div[class*='col-'] {
+    display: flex;
+    flex:1 0 auto;
   }
   .card-text {
     -webkit-margin-before: 0px;
@@ -17,8 +16,12 @@
       color: #444;
     }
   }
-  .entry-footer {
+  .card-footer {
+    color: #999;
     margin-bottom: 0;
+    a {
+      color: #aaa;
+    }
   }
 }
 

@@ -3,14 +3,14 @@
   padding: 1.25rem 0;
   border-bottom: 1px solid rgb(230, 223, 223);
   transition: all 0.3s ease;
+  .row > div[class*='col-'] {
+    display: flex;
+    flex:1 0 auto;
+  }
 }
 
 .entry:hover {
   background: #eee;
-}
-
-.entry-title a {
-  color: #333;
 }
 
 .posts-list {
@@ -66,14 +66,4 @@
 .entry-content ol li {
   font-size: 1rem;
   line-height: 1.8;
-}
-
-.entry-footer,
-.entry-meta {
-  color: #999;
-  font-size: 85%;
-  margin-bottom: .5rem;
-  a {
-    color: #999;
-  }
 }

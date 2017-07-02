@@ -55,9 +55,11 @@ get_header();
     if ( $the_query->have_posts() ) : ?>
 
       <div class="posts-card">
-        <div class="card-columns">
-          <?php  while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-            <?php get_template_part( 'template-parts/posts-card', get_post_format() ); ?>
+        <div class="row">
+          <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+            <div class="col-lg-3">
+              <?php get_template_part( 'template-parts/posts-card', get_post_format() ); ?>
+            </div>
           <?php endwhile; ?>
         </div>
       </div>
