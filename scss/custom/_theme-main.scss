@@ -103,12 +103,3 @@ div#post-metadata {
 .related-posts .card {
   margin-bottom: 20px;
 }
-
-.card {
-  margin-bottom: 1rem;
-  .card-block {
-    ul {
-      margin-bottom: 0; //覆盖默认的margin-bottom
-    }
-  }
-}

@@ -19,17 +19,25 @@
     }
 ?>
 
-<article class="entry">
-  <header class="entry-header">
-    <?php if($external) : ?>
-        <a href="<?php echo $link_url[0]; ?>" target="_blank" rel="nofollow"><?php the_title(); ?> <i class="fa fa-external-link" aria-hidden="true"></i></a>
-    <?php else : ?>
-        <a href="<?php echo $link_url[0]; ?>" target="_self"><?php the_title(); ?></a>
-    <?php endif; ?>
+<article class="card border-0">
+  <div class="card-block">
+    <h2 class="card-title">
+      <?php if($external) : ?>
+          <a href="<?php echo $link_url[0]; ?>" target="_blank" rel="nofollow"><?php the_title(); ?> <i class="fa fa-external-link" aria-hidden="true"></i></a>
+      <?php else : ?>
+          <a href="<?php echo $link_url[0]; ?>" target="_self"><?php the_title(); ?></a>
+      <?php endif; ?>
 
-  </header>
-  <div class="entry-meta"><?php lean_entry_meta(); ?></div>
-  <div class="entry-excerpt hidden-sm-down">
-		<?php the_excerpt(); ?>
-	</div>
+    </h2>
+    <div class="entry-meta mb-1"><?php lean_entry_meta(); ?></div>
+
+    <?php if ( get_theme_mod( 'posts_list_excerpt')==yes ) { ?>
+      <p class="card-text entry-excerpt hidden-sm-down">
+        <?php echo wp_trim_words( get_the_excerpt(), 120, '...' );?>
+      </p>
+    <?php } else {
+      echo '';
+     } ?>
+
+  </div>
 </article>

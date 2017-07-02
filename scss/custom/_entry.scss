@@ -1,16 +1,11 @@
 /***entry-content ***/
 .entry {
   padding: 1.25rem 0;
-  border-bottom: 1px solid rgb(230, 223, 223);
-  transition: all 0.3s ease;
+  
   .row > div[class*='col-'] {
     display: flex;
     flex:1 0 auto;
   }
-}
-
-.entry:hover {
-  background: #eee;
 }
 
 .posts-list {

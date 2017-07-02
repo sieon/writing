@@ -5,4 +5,20 @@
 
 .card {
   width: 100%;
+  margin-bottom: 1rem;
+  .card-block {
+    ul {
+      margin-bottom: 0; //覆盖默认的margin-bottom
+    }
+  }
+}
+
+.posts-list {
+  .card {
+    border-bottom: 1px solid rgb(230, 223, 223);
+    transition: all 0.3s ease;
+  }
+  .card:hover {
+    background: #eee;
+  }
 }

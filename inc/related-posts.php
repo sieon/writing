@@ -2,7 +2,7 @@
 
 function related_posts( $post_num = 6 ) {
 	global $post;
-    echo '<div class="related-posts mb-5"><h4 class="mb-3">你可能喜欢：</h4><div class="row">';
+    echo '<div class="card related-posts mb-5 border-0"><div class="card-block"><h4 class="mb-3">你可能喜欢：</h4><div class="row">';
     $exclude_id = $post->ID;
     $posttags = get_the_tags(); $i = 0;
     if ( $posttags ) {
@@ -73,5 +73,5 @@ function related_posts( $post_num = 6 ) {
 		wp_reset_query();
     }
     if ( $i  == 0 )  echo '<div class="col-12"><p>没有相关文章!</p></div>';
-    echo '</div></div>';
+    echo '</div></div></div>';
 }

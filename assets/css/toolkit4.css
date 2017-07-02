@@ -6723,17 +6723,12 @@ div#post-metadata {
 .related-posts .card {
   margin-bottom: 20px; }
 
-.card {
-  margin-bottom: 1rem; }
-  .card .card-block ul {
-    margin-bottom: 0; }
-
-/**
- * 设置背景
- */
 .jumbotron {
   margin-bottom: 0;
   border-radius: 0; }
+
+.main-content {
+  background-color: #fff; }
 
 .admin-bar .fixed-top {
   margin-top: 32px; }
@@ -6786,6 +6781,9 @@ div#post-metadata {
     .related-posts .card .card-text a {
       color: #333; }
 
+.page-header {
+  padding: 1rem; }
+
 .page-header::after {
   display: block;
   width: 160px;
@@ -6797,15 +6795,10 @@ div#post-metadata {
 
 /***entry-content ***/
 .entry {
-  padding: 1.25rem 0;
-  border-bottom: 1px solid #e6dfdf;
-  transition: all 0.3s ease; }
+  padding: 1.25rem 0; }
   .entry .row > div[class*='col-'] {
     display: flex;
     flex: 1 0 auto; }
-
-.entry:hover {
-  background: #eee; }
 
 .posts-list .entry-title {
   margin-bottom: .75rem; }
@@ -6986,9 +6979,11 @@ a img.aligncenter {
 .wp-caption.alignright {
   margin: 5px 0 20px 20px; }
 
+.posts-list .card-title,
 .entry-title,
 .posts-card .card-text {
   color: #333; }
+  .posts-list .card-title a,
   .entry-title a,
   .posts-card .card-text a {
     color: #333; }
@@ -7088,7 +7083,16 @@ object {
   padding: 0 1rem 0.75rem 1rem; }
 
 .card {
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 1rem; }
+  .card .card-block ul {
+    margin-bottom: 0; }
+
+.posts-list .card {
+  border-bottom: 1px solid #e6dfdf;
+  transition: all 0.3s ease; }
+.posts-list .card:hover {
+  background: #eee; }
 
 /*--------------------------------------------------------------
 ## Galleries
@@ -7375,6 +7379,7 @@ blockquote p {
 
 .profile-header {
   background-size: cover;
+  background-color: #8d9093;
   height: 400px;
   color: #fff;
   display: table-cell;

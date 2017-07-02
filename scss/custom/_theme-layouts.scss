@@ -1,13 +1,10 @@
-/**
- * 设置背景
- */
-.site-main,
-.jumbotron {
-  //box-shadow: 0 2px 16px rgb(229, 236, 237), 0 0 1px rgb(229, 236, 237), 0 0 1px rgb(229, 236, 237);
-  //opacity: 0.9;
-}
-
 .jumbotron {
   margin-bottom: 0;
   border-radius: 0;
+}
+
+.main-content {
+  background-color: #fff;
+  // box-shadow: 0 2px 16px rgb(229, 236, 237), 0 0 1px rgb(229, 236, 237), 0 0 1px rgb(229, 236, 237);
+  // opacity: 0.9;
 }

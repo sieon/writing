@@ -5,55 +5,56 @@
  */
 ?>
 
-
-
-
 <?php if(has_post_thumbnail()) : ?>
-<div class="entry">
-	<div class="row">
-		<div class="col-4">
-			<a class="entry-img" href="<?php the_permalink(); ?>">
-		    <?php
-		      the_post_thumbnail('medium', ['class' => 'img-fluid']);
-		    ?>
-		  </a>
-		</div>
-		<div class="col-8">
-			<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-			<div class="entry-meta">
-				<?php lean_entry_meta(); ?>
+<div class="card border-0">
+	<div class="card-block">
+		<div class="row">
+			<div class="col-4">
+				<a class="entry-img" href="<?php the_permalink(); ?>">
+					<?php
+						the_post_thumbnail('medium', ['class' => 'img-fluid']);
+					?>
+				</a>
 			</div>
+			<div class="col-8">
+				<?php the_title( sprintf( '<h2 class="card-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-
-			<?php if ( get_theme_mod( 'posts_list_excerpt')==yes ) { ?>
-				<div class="entry-excerpt hidden-sm-down">
-					<?php the_excerpt(); ?>
+				<div class="entry-meta mb-1">
+					<?php lean_entry_meta(); ?>
 				</div>
-			<?php } else {
-				echo '';
-			 } ?>
 
 
-		</div>
-	</div><!-- ./row -->
+				<?php if ( get_theme_mod( 'posts_list_excerpt')==yes ) { ?>
+					<p class="card-text entry-excerpt hidden-sm-down">
+						<?php echo wp_trim_words( get_the_excerpt(), 120, '...' );?>
+					</p>
+				<?php } else {
+					echo '';
+				 } ?>
+
+			</div>
+		</div><!-- ./row -->
+	</div>
 </div>
 
 <?php else: ?>
 
-<div class="entry">
-	<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+<div class="card border-0">
+	<div class="card-block">
+		<?php the_title( sprintf( '<h2 class="card-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-	<div class="entry-meta">
-		<?php lean_entry_meta(); ?>
+		<p class="entry-meta">
+			<?php lean_entry_meta(); ?>
+		</p>
+
+		<?php if ( get_theme_mod( 'posts_list_excerpt')==yes ) { ?>
+			<div class="entry-excerpt hidden-sm-down">
+				<?php the_excerpt(); ?>
+			</div>
+		<?php } else {
+			echo '';
+		 } ?>
+
 	</div>
-
-	<?php if ( get_theme_mod( 'posts_list_excerpt')==yes ) { ?>
-		<div class="entry-excerpt hidden-sm-down">
-			<?php the_excerpt(); ?>
-		</div>
-	<?php } else {
-		echo '';
-	 } ?>
 </div><!-- ./entry -->
 <?php endif; ?>
