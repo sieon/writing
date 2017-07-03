@@ -6,7 +6,7 @@ get_header(); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-<div class="container mt-5">
+<div class="container mt-4">
   <div class="site-main">
     <main class="main-content">
       <div class="page-header mb-4">

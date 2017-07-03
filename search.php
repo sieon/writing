@@ -6,7 +6,7 @@ get_header(); ?>
 
 <?php if ( have_posts() ) : ?>
 
-<div class="container mt-5">
+<div class="container mt-4">
 	<div class="site-main">
 		<div class="row">
 			<main class="main col-lg-8 offset-md-2">

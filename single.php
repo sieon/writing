@@ -1,7 +1,7 @@
 <?php get_header();?>
 
 <?php while ( have_posts() ) : the_post(); ?>
-  <div class="container mt-5">
+  <div class="container mt-4">
     <div class="site-main">
       <div class="row">
         <div class="col-lg-8">
