@@ -10,7 +10,8 @@
   display: flex;
   flex-direction: column;
   background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 1px solid #e7eaf1;
+  box-shadow: 0 1px 3px rgba(0, 37, 55, .05);
   border-radius: 0.25rem;
   margin-bottom: 1rem;
   ul {

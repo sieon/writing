@@ -6728,13 +6728,17 @@ div#post-metadata {
   border-radius: 0; }
 
 .main-content {
-  background-color: #fff; }
+  background-color: #fff;
+  border: 1px solid #e7eaf1;
+  box-shadow: 0 1px 3px rgba(0, 37, 55, 0.05);
+  border-radius: 0.25rem; }
 
 .admin-bar .fixed-top {
   margin-top: 32px; }
 
 .navbar {
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1); }
+  border-bottom: 1px solid rgba(30, 35, 42, 0.06);
+  box-shadow: 0 1px 3px 0 rgba(0, 34, 77, 0.05); }
 
 .dropdown .dropdown-menu .nav-item .nav-link {
   display: block;
@@ -6854,7 +6858,8 @@ div#post-metadata {
   display: flex;
   flex-direction: column;
   background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 1px solid #e7eaf1;
+  box-shadow: 0 1px 3px rgba(0, 37, 55, 0.05);
   border-radius: 0.25rem;
   margin-bottom: 1rem; }
   .widget ul {
