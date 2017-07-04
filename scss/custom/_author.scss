@@ -1,7 +1,14 @@
 .posts-card {
   .row > div[class*='col-'] {
     display: flex;
-    flex:1 0 auto;
+    //flex:1 0 auto;
+  }
+  .card {
+    margin-bottom: 1rem;
+  }
+  .card:hover {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .08);
+    border-color: rgba(0, 0, 0, .08)
   }
   .card-text {
     -webkit-margin-before: 0px;

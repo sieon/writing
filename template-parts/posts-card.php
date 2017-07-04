@@ -8,7 +8,7 @@
 <?php if(has_post_thumbnail()) : ?>
 
 	<div class="card">
-		<a href="<?php the_permalink(); ?>">
+		<a class="entry-img" href="<?php the_permalink(); ?>">
 	    <?php
 	      the_post_thumbnail('medium', ['class' => 'img-fluid card-img-top']);
 	    ?>

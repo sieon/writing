@@ -1,7 +1,7 @@
 /***entry-content ***/
 .entry {
   padding: 1.25rem 0;
-  
+
   .row > div[class*='col-'] {
     display: flex;
     flex:1 0 auto;
@@ -9,6 +9,10 @@
 }
 
 .posts-list {
+  .card-block {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
   .entry-title {
     margin-bottom: .75rem;
   }

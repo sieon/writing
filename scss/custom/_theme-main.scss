@@ -8,6 +8,13 @@ body {
   background-color: #fff;
 }
 
+.border-b-1 {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid #e7eaf1;
+}
+
 /** post-tags **/
 
 .post-tags,

@@ -6650,6 +6650,12 @@ body {
 .bg-white {
   background-color: #fff; }
 
+.border-b-1 {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid #e7eaf1; }
+
 /** post-tags **/
 .post-tags .btn,
 .hot-tags .btn {
@@ -6804,6 +6810,9 @@ div#post-metadata {
     display: flex;
     flex: 1 0 auto; }
 
+.posts-list .card-block {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem; }
 .posts-list .entry-title {
   margin-bottom: .75rem; }
 
@@ -6875,7 +6884,7 @@ div#post-metadata {
   padding: 0.75rem 1.25rem;
   margin: -1.25rem -1.25rem 1.25rem -1.25rem;
   background-color: #f7f7f9;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
+  border-bottom: 1px solid #e7eaf1; }
 
 @media (max-width: 767px) {
   .widget {
@@ -7349,8 +7358,12 @@ blockquote p {
     color: #1a1a1a; }
 
 .posts-card .row > div[class*='col-'] {
-  display: flex;
-  flex: 1 0 auto; }
+  display: flex; }
+.posts-card .card {
+  margin-bottom: 1rem; }
+.posts-card .card:hover {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.08); }
 .posts-card .card-text {
   -webkit-margin-before: 0px;
   -webkit-margin-after: 0px;
@@ -7388,8 +7401,7 @@ blockquote p {
   padding: 0 1rem 0.75rem 1rem; }
 
 .card {
-  width: 100%;
-  margin-bottom: 1rem; }
+  width: 100%; }
   .card .card-block ul {
     margin-bottom: 0; }
 
