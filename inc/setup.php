@@ -71,3 +71,31 @@ function lean_setup() {
 }
 endif; // lean_setup
 add_action( 'after_setup_theme', 'lean_setup' );
+
+
+/**
+ * WordPress 首页排除某些文章形式（Post Formats）
+ */
+function exclude_post_formats_from_homepage( $query ) {
+	if( $query->is_main_query() && $query->is_home() ) { //判断首页主查询
+		$tax_query = array( array(
+			'taxonomy' => 'post_format',
+			'field' => 'slug',
+			'terms' => array(
+				//请根据需要保留要排除的文章形式
+				//'post-format-aside',
+				//'post-format-audio',
+				//'post-format-chat',
+				//'post-format-gallery',
+				//'post-format-image',
+				'post-format-link',
+				//'post-format-quote',
+				'post-format-status',
+				//'post-format-video'
+				),
+			'operator' => 'NOT IN',
+			) );
+		$query->set( 'tax_query', $tax_query );
+	}
+}
+add_action( 'pre_get_posts', 'exclude_post_formats_from_homepage' );
