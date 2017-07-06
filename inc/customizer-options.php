@@ -22,18 +22,46 @@ function customizer_library_lean_options() {
 	$options['sections'] = $sections;
 
 	// Logo
-	$section = 'logo';
+	$section = '全局';
 
 	$sections[] = array(
 		'id' => $section,
-		'title' => __( 'Logo', 'lean' ),
+		'title' => __( '全局', 'lean' ),
 		'priority' => '30',
-		'description' => __( '建议高度为30，宽度不限。', 'lean' )
+		'description' => __( 'logo建议高度为30，宽度不限。', 'lean' )
 	);
 
 	$options['logo'] = array(
 		'id' => 'logo',
 		'label'   => __( 'Logo', 'lean' ),
+		'section' => $section,
+		'type'    => 'image',
+		'default' => ''
+	);
+
+	$style_clolors_choices = array(
+		'style-white'=> '白',
+		'style-faded' => '浅灰',
+		'style-primary' => '蓝',
+		'style-info' => '浅蓝',
+		'style-inverse' => '黑',
+		'style-success' => '绿',
+		'style-warning' => '橙',
+		'style-danger' => '红'
+	);
+
+	$options['style-colors'] = array(
+		'id' => 'style-colors',
+		'label'   => __( '主题色', 'lean' ),
+		'section' => $section,
+		'type'    => 'select',
+		'choices' => $style_clolors_choices,
+		'default' => 'style-white'
+	);
+
+	$options['author_bg'] = array(
+		'id' => 'author_bg',
+		'label'   => __( '作者头部图片', 'lean' ),
 		'section' => $section,
 		'type'    => 'image',
 		'default' => ''
@@ -91,13 +119,13 @@ function customizer_library_lean_options() {
 	// );
 
 	// More Examples
-	$section = '主题配色';
-
-	$sections[] = array(
-		'id' => $section,
-		'title' => __( '主题配色', 'lean' ),
-		'priority' => '90'
-	);
+	// $section = '主题配色';
+	//
+	// $sections[] = array(
+	// 	'id' => $section,
+	// 	'title' => __( '主题配色', 'lean' ),
+	// 	'priority' => '90'
+	// );
 
 	// $options['example-text'] = array(
 	// 	'id' => 'example-text',
@@ -121,26 +149,6 @@ function customizer_library_lean_options() {
 	// 	'default' => 0,
 	// );
 	//
-
-	$style_clolors_choices = array(
-		'style-white'=> '白',
-		'style-faded' => '浅灰',
-		'style-primary' => '蓝',
-		'style-info' => '浅蓝',
-		'style-inverse' => '黑',
-		'style-success' => '绿',
-		'style-warning' => '橙',
-		'style-danger' => '红'
-	);
-
-	$options['style-colors'] = array(
-		'id' => 'style-colors',
-		'label'   => __( '主题色', 'lean' ),
-		'section' => $section,
-		'type'    => 'select',
-		'choices' => $style_clolors_choices,
-		'default' => 'style-white'
-	);
 
 
 	// $navbar_bg_choices = array(
@@ -193,7 +201,7 @@ function customizer_library_lean_options() {
 
 	$options['posts_list_excerpt'] = array(
 		'id' => 'posts_list_excerpt',
-		'label'   => __( '是否显示文章简介', 'lean' ),
+		'label'   => __( '列表是否简介', 'lean' ),
 		'section' => $section,
 		'type'    => 'radio',
 		'choices' => $posts_list_excerpt_choices,
@@ -203,25 +211,6 @@ function customizer_library_lean_options() {
 	$options['placeholder'] = array(
 		'id' => 'placeholder',
 		'label'   => __( '文章默认特色图像', 'lean' ),
-		'section' => $section,
-		'type'    => 'image',
-		'default' => ''
-	);
-
-
-	// File Upload
-	$section = '作者页面背景';
-
-	$sections[] = array(
-		'id' => $section,
-		'title' => __( '作者页面背景图', 'lean' ),
-		'priority' => '100',
-		'description' => __( 'Example section description.', 'lean' )
-	);
-
-	$options['author_bg'] = array(
-		'id' => 'author_bg',
-		'label'   => __( '作者头部图片', 'lean' ),
 		'section' => $section,
 		'type'    => 'image',
 		'default' => ''
