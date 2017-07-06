@@ -8,6 +8,7 @@
           $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
           $args = array(
             'paged'=> $paged,
+            'ignore_sticky_posts' => 1,
             'tax_query' => array(
               array(
                 'taxonomy' => 'post_format',
