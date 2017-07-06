@@ -34,7 +34,9 @@
 
              <?php
              //相关文章
-             related_posts(); ?>
+             if ( !has_post_format( 'link' )&&!has_post_format( 'status' ) ) {
+               related_posts();
+             } ?>
 
              <?php // 加载评论
              if ( comments_open() || get_comments_number() ) :
