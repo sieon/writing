@@ -47,12 +47,21 @@
         break;
     } ?> fixed-top" id="primary-navbar" role="navigation">
       <div class="container">
-        <div class="text-center pb-2 pt-2">
-          <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+
+
+          <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+
+            <?php if ( get_theme_mod( 'logo') ) {
+              echo '<img src="' . esc_url( get_theme_mod( 'logo' ) ) . '" alt=">' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '">';
+            } else {
+              echo esc_attr( get_bloginfo( 'name', 'display' ) );
+            } ?>
+
+          </a>
+
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-        </div>
 
           <?php wp_nav_menu(
   					array(

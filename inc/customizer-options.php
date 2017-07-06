@@ -21,23 +21,23 @@ function customizer_library_lean_options() {
 	// Adds the sections to the $options array
 	$options['sections'] = $sections;
 
-	// // Logo
-	// $section = 'logo';
-	//
-	// $sections[] = array(
-	// 	'id' => $section,
-	// 	'title' => __( 'Image Example', 'lean' ),
-	// 	'priority' => '30',
-	// 	'description' => __( 'Example section description.', 'lean' )
-	// );
-	//
-	// $options['logo'] = array(
-	// 	'id' => 'logo',
-	// 	'label'   => __( 'Logo', 'lean' ),
-	// 	'section' => $section,
-	// 	'type'    => 'image',
-	// 	'default' => ''
-	// );
+	// Logo
+	$section = 'logo';
+
+	$sections[] = array(
+		'id' => $section,
+		'title' => __( 'Logo', 'lean' ),
+		'priority' => '30',
+		'description' => __( '建议高度为30，宽度不限。', 'lean' )
+	);
+
+	$options['logo'] = array(
+		'id' => 'logo',
+		'label'   => __( 'Logo', 'lean' ),
+		'section' => $section,
+		'type'    => 'image',
+		'default' => ''
+	);
 	//
 	// // File Upload
 	// $section = 'upload';

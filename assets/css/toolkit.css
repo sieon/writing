@@ -2802,7 +2802,7 @@ tbody.collapse.show {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 0 1rem; }
+  padding: 0.5rem 1rem; }
 
 .navbar-brand {
   display: inline-block;
@@ -6745,6 +6745,17 @@ div#post-metadata {
 .navbar {
   border-bottom: 1px solid rgba(30, 35, 42, 0.06);
   box-shadow: 0 1px 3px 0 rgba(0, 34, 77, 0.05); }
+
+.navbar-brand {
+  display: inline-block;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap; }
+  .navbar-brand:focus, .navbar-brand:hover {
+    text-decoration: none; }
 
 .dropdown .dropdown-menu .nav-item .nav-link {
   display: block;
