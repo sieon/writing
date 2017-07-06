@@ -178,11 +178,11 @@ function customizer_library_lean_options() {
 	// );
 
 	// More Examples
-	$section = '文章列表';
+	$section = '文章';
 
 	$sections[] = array(
 		'id' => $section,
-		'title' => __( '文章列表', 'lean' ),
+		'title' => __( '文章', 'lean' ),
 		'priority' => '90'
 	);
 
@@ -198,6 +198,14 @@ function customizer_library_lean_options() {
 		'type'    => 'radio',
 		'choices' => $posts_list_excerpt_choices,
 		'default' => 'yes'
+	);
+
+	$options['placeholder'] = array(
+		'id' => 'placeholder',
+		'label'   => __( '文章默认特色图像', 'lean' ),
+		'section' => $section,
+		'type'    => 'image',
+		'default' => ''
 	);
 
 
