@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-<?php if ( have_posts() ) : ?>
-
 <div class="container mt-4">
   <div class="site-main">
     <div class="row">
@@ -14,15 +12,16 @@
             ?>
           </header>
 
-              <div class="posts-list">
-                <?php
-                while ( have_posts() ) : the_post();
-                get_template_part( 'template-parts/posts', get_post_format() );
-              endwhile; ?>
-              </div>
-              <div class="pagination p-3">
-                <?php lean_pagination();?>
-              </div>
+          <?php if ( have_posts() ) : ?>
+            <div class="posts-list">
+              <?php
+              while ( have_posts() ) : the_post();
+              get_template_part( 'template-parts/posts', get_post_format() );
+            endwhile; ?>
+            </div>
+            <div class="pagination p-3">
+              <?php lean_pagination();?>
+            </div>
           <?php else : ?>
             <?php get_template_part( 'template-parts/content', 'none' ); ?>
           <?php endif; wp_reset_postdata();?>
