@@ -9,7 +9,7 @@ get_header(); ?>
 <div class="container mt-4">
 	<div class="site-main">
 		<div class="row">
-			<main class="main col-lg-8 offset-md-2">
+			<main class="col-lg-8 offset-md-2">
 
 				<h1 class="page-title mb-3"><?php printf( esc_html__( '“%s”的搜索结果：', 'lean' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 
