@@ -65,7 +65,7 @@ function lean_setup() {
 
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'lean_custom_background_args', array(
-		'default-color' => 'f5f5f5',
+		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
 }
