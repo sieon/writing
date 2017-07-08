@@ -28,16 +28,16 @@ function customizer_library_lean_options() {
 		'id' => $section,
 		'title' => __( '全局', 'lean' ),
 		'priority' => '30',
-		'description' => __( 'logo建议高度为30，宽度不限。', 'lean' )
+		'description' => __( '', 'lean' )
 	);
 
-	$options['logo'] = array(
-		'id' => 'logo',
-		'label'   => __( 'Logo', 'lean' ),
-		'section' => $section,
-		'type'    => 'image',
-		'default' => ''
-	);
+	// $options['logo'] = array(
+	// 	'id' => 'logo',
+	// 	'label'   => __( 'Logo', 'lean' ),
+	// 	'section' => $section,
+	// 	'type'    => 'image',
+	// 	'default' => ''
+	// );
 
 	$style_clolors_choices = array(
 		'style-white'=> '白',
