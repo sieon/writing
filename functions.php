@@ -15,6 +15,7 @@ require THEME_DIR . '/inc/enqueue.php';// 加载 js 和 css
  */
 require THEME_DIR . '/inc/widget.php'; // 注册小工具
 load_template( THEME_DIR . '/inc/widgets/tagcloud.php' );
+load_template( THEME_DIR . '/inc/widgets/posts-plus.php' );
 /**
  *   支持 Bootstrap
  */
