@@ -60,7 +60,7 @@ function lean_setup() {
 
 
   add_theme_support( 'post-formats', array(
-  'status','aside', 'image', 'video', 'audio', 'quote', 'link', 'gallery',
+		'aside', 'status', 'quote', 'link', 'image', 'gallery'
   ) );
 
 	// Set up the WordPress core custom background feature.
