@@ -9,7 +9,7 @@
             <p class="tag-tip"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;标签</p>
               <?php
             lean_the_archive_title( '<div class="page-title"><h1 class="d-inline">', '</h1>&nbsp;<span>相关的文章</span></div>' );
-            lean_the_archive_description( '<div class="mt-2 mb-3">', '</div>' );
+            lean_the_archive_description( '<div class="text-muted mt-2 mb-3">', '</div>' );
             ?>
           </div>
 
