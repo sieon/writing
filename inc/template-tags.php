@@ -147,12 +147,12 @@ function lean_the_post_navigation() {
 		return;
 	}
 	?>
-	<nav class="navigation post-navigation" role="navigation">
-		<h2 class="sr-only sr-only-focusable"><?php esc_html_e( 'Post navigation', 'lean' ); ?></h2>
+	<nav class="navigation post-navigation p-3" role="navigation">
+		<h4 class="sr-only sr-only-focusable"><?php esc_html_e( 'Post navigation', 'lean' ); ?></h3>
 		<div class="nav-links">
 			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', '%title' );
-				next_post_link( '<div class="nav-next">%link</div>', '%title' );
+				previous_post_link( '<div class="nav-previous btn btn-secondary btn-pills">%link</div>', '上一篇' );
+				next_post_link( '<div class="nav-next btn btn-secondary float-right">%link</div>', '下一篇' );
 			?>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
@@ -269,7 +269,7 @@ function lean_the_archive_title( $before = '', $after = '' ) {
 			$title = esc_html_x( 'Chats', 'post format archive title', 'lean' );
 		}
 	} elseif ( is_post_type_archive() ) {
-		$title = sprintf( esc_html__( 'Archives: %s', 'lean' ), post_type_archive_title( '', false ) );
+		$title = sprintf( esc_html__( '%s', 'lean' ), post_type_archive_title( '', false ) );
 	} elseif ( is_tax() ) {
 		$tax = get_taxonomy( get_queried_object()->taxonomy );
 		/* translators: 1: Taxonomy singular name, 2: Current taxonomy term */

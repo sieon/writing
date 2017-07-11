@@ -30,7 +30,7 @@
                  } ?>
 
 
-             <?php //lean_the_post_navigation(); ?>
+             <?php lean_the_post_navigation(); ?>
 
              <?php
              //相关文章
