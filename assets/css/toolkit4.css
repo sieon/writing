@@ -6997,11 +6997,11 @@ a img.aligncenter {
 .wp-caption.alignright {
   margin: 5px 0 20px 20px; }
 
-.posts-list .card-title,
+.card-title,
 .entry-title,
 .posts-card .card-text {
   color: #333; }
-  .posts-list .card-title a,
+  .card-title a,
   .entry-title a,
   .posts-card .card-text a {
     color: #333; }
@@ -7014,14 +7014,14 @@ a img.aligncenter {
   .entry-meta a {
     color: #aaa; }
 
-.entry-title a,
+.card-title a,
 .posts-card .card-footer a,
 .entry-meta a,
 .widget ul li a,
 .related-posts .card-text a {
   text-decoration: none;
   transition: all 0.3s ease; }
-  .entry-title a:focus, .entry-title a:hover,
+  .card-title a:focus, .card-title a:hover,
   .posts-card .card-footer a:focus,
   .posts-card .card-footer a:hover,
   .entry-meta a:focus,
