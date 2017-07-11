@@ -25,7 +25,6 @@ require THEME_DIR . '/inc/bootstrap.php'; //给日历添加样式
 /**
  *   功能与其他
  */
-require THEME_DIR . '/inc/nav-header.php'; // 不知道其作用
 require THEME_DIR . '/inc/extras.php'; //Custom functions that act independently of the theme templates.
 require THEME_DIR . '/inc/custom-comments.php'; //评论
 
