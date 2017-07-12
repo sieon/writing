@@ -7415,6 +7415,9 @@ blockquote p {
 .posts-list .card:hover {
   background: #eee; }
 
+.card-img-overlay {
+  background: rgba(5, 5, 5, 0.4); }
+
 .screen-reader-text {
   position: absolute;
   width: 1px;

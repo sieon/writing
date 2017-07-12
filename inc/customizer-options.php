@@ -201,11 +201,18 @@ function customizer_library_lean_options() {
 
 	$options['posts_list_excerpt'] = array(
 		'id' => 'posts_list_excerpt',
-		'label'   => __( '列表是否简介', 'lean' ),
+		'label'   => __( '列表是否摘要', 'lean' ),
 		'section' => $section,
 		'type'    => 'radio',
 		'choices' => $two_radio_choices,
 		'default' => 'yes'
+	);
+
+	$options['excerpt_length'] = array(
+		'id' => 'excerpt_length',
+		'label'   => __( '自动摘要字数限制', 'lean' ),
+		'section' => $section,
+		'type'    => 'text',
 	);
 
 	$options['placeholder'] = array(
