@@ -194,7 +194,7 @@ function customizer_library_lean_options() {
 		'priority' => '90'
 	);
 
-	$posts_list_excerpt_choices = array(
+	$two_radio_choices = array(
 		'yes'=> '是',
 		'no' => '否'
 	);
@@ -204,7 +204,7 @@ function customizer_library_lean_options() {
 		'label'   => __( '列表是否简介', 'lean' ),
 		'section' => $section,
 		'type'    => 'radio',
-		'choices' => $posts_list_excerpt_choices,
+		'choices' => $two_radio_choices,
 		'default' => 'yes'
 	);
 
@@ -214,6 +214,15 @@ function customizer_library_lean_options() {
 		'section' => $section,
 		'type'    => 'image',
 		'default' => ''
+	);
+
+	$options['related_posts'] = array(
+		'id' => 'related_posts',
+		'label'   => __( '是否显示相关文章', 'lean' ),
+		'section' => $section,
+		'type'    => 'radio',
+		'choices' => $two_radio_choices,
+		'default' => 'yes'
 	);
 
 	//
