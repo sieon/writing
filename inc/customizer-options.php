@@ -203,7 +203,7 @@ function customizer_library_lean_options() {
 		'id' => 'posts_list_excerpt',
 		'label'   => __( '列表是否摘要', 'lean' ),
 		'section' => $section,
-		'type'    => 'radio',
+		'type'    => 'select',
 		'choices' => $two_radio_choices,
 		'default' => 'yes'
 	);
@@ -227,9 +227,18 @@ function customizer_library_lean_options() {
 		'id' => 'related_posts',
 		'label'   => __( '是否显示相关文章', 'lean' ),
 		'section' => $section,
-		'type'    => 'radio',
+		'type'    => 'select',
 		'choices' => $two_radio_choices,
 		'default' => 'yes'
+	);
+
+	$options['post-nav'] = array(
+		'id' => 'post-nav',
+		'label'   => __( '是否显示上一篇／下一篇', 'lean' ),
+		'section' => $section,
+		'type'    => 'select',
+		'choices' => $two_radio_choices,
+		'default' => 'no'
 	);
 
 	//

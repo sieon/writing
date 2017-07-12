@@ -29,7 +29,10 @@
                    echo '</div>';
                  } ?>
 
-             <?php lean_the_post_navigation(); ?>
+             <?php //上一篇、下一篇
+             if ( get_theme_mod( 'post-nav')==yes ) {
+               lean_the_post_navigation();
+             } ?>
 
              <?php //相关文章
              if ( get_theme_mod( 'related_posts')==yes ) {
