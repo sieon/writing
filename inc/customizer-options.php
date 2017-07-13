@@ -199,6 +199,15 @@ function customizer_library_lean_options() {
 		'no' => '否'
 	);
 
+	$options['post-author'] = array(
+		'id' => 'post-author',
+		'label'   => __( 'Meta是否显示作者', 'lean' ),
+		'section' => $section,
+		'type'    => 'select',
+		'choices' => $two_radio_choices,
+		'default' => 'yes'
+	);
+
 	$options['posts_list_excerpt'] = array(
 		'id' => 'posts_list_excerpt',
 		'label'   => __( '列表是否摘要', 'lean' ),
