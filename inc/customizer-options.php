@@ -194,18 +194,25 @@ function customizer_library_lean_options() {
 		'priority' => '90'
 	);
 
-	$posts_list_excerpt_choices = array(
+	$two_radio_choices = array(
 		'yes'=> '是',
 		'no' => '否'
 	);
 
 	$options['posts_list_excerpt'] = array(
 		'id' => 'posts_list_excerpt',
-		'label'   => __( '列表是否简介', 'lean' ),
+		'label'   => __( '列表是否摘要', 'lean' ),
 		'section' => $section,
-		'type'    => 'radio',
-		'choices' => $posts_list_excerpt_choices,
+		'type'    => 'select',
+		'choices' => $two_radio_choices,
 		'default' => 'yes'
+	);
+
+	$options['excerpt_length'] = array(
+		'id' => 'excerpt_length',
+		'label'   => __( '自动摘要字数限制', 'lean' ),
+		'section' => $section,
+		'type'    => 'text',
 	);
 
 	$options['placeholder'] = array(
@@ -214,6 +221,24 @@ function customizer_library_lean_options() {
 		'section' => $section,
 		'type'    => 'image',
 		'default' => ''
+	);
+
+	$options['related_posts'] = array(
+		'id' => 'related_posts',
+		'label'   => __( '是否显示相关文章', 'lean' ),
+		'section' => $section,
+		'type'    => 'select',
+		'choices' => $two_radio_choices,
+		'default' => 'yes'
+	);
+
+	$options['post-nav'] = array(
+		'id' => 'post-nav',
+		'label'   => __( '是否显示上一篇／下一篇', 'lean' ),
+		'section' => $section,
+		'type'    => 'select',
+		'choices' => $two_radio_choices,
+		'default' => 'no'
 	);
 
 	//
