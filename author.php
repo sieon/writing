@@ -34,7 +34,7 @@ get_header();
       <div class="posts-card">
         <div class="row">
           <?php while ( have_posts() ) : the_post(); ?>
-            <div class="col-lg-3">
+            <div class="col-lg-4">
               <?php get_template_part( 'template-parts/posts-card', get_post_format() ); ?>
             </div>
           <?php endwhile; ?>

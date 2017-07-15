@@ -14,7 +14,7 @@
 	    ?>
 	  </a>
 		<div class="card-block">
-			<?php the_title( sprintf( '<p class="card-text"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></p>' ); ?>
+			<?php the_title( sprintf( '<h2 class="card-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 		</div>
 		<div class="card-footer">
 			<?php lean_entry_meta(); ?>
