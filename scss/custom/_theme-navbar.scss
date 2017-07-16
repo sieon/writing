@@ -7,17 +7,3 @@
   border-bottom: 1px solid rgba(30, 35, 42, .06);
   box-shadow: 0 1px 3px 0 rgba(0, 34, 77, .05);
 }
-
-.navbar-brand {
-  display: inline-block;
-  padding-top: .25rem;
-  padding-bottom: .25rem;
-  margin-right: $navbar-padding-x;
-  font-size: $font-size-lg;
-  line-height: inherit;
-  white-space: nowrap;
-
-  @include hover-focus {
-    text-decoration: none;
-  }
-}

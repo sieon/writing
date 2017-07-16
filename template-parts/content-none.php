@@ -28,9 +28,11 @@
 
 <?php else : ?>
 
-	<div class="container mt-4 p-3">
-		<p><?php esc_html_e( '似乎我们没能找到你要的东西。或许，你可以尝试搜索一下：', 'lean' ); ?></p>
-		<?php get_search_form(); ?>
+	<div class="card">
+		<div class="card-block">
+			<p class="card-text"><?php esc_html_e( '似乎我们没能找到你要的东西。或许，你可以尝试搜索一下：', 'lean' ); ?></p>
+			<?php get_search_form(); ?>
+		</div>
 	</div>
 
 <?php endif; ?>

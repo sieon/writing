@@ -282,7 +282,7 @@ body {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 1rem;
   font-weight: normal;
-  line-height: 1.8;
+  line-height: 1.5;
   color: #292b2c;
   background-color: #fff; }
 
@@ -2597,7 +2597,7 @@ tbody.collapse.show {
 .custom-control {
   position: relative;
   display: inline-flex;
-  min-height: 1.8rem;
+  min-height: 1.5rem;
   padding-left: 1.5rem;
   margin-right: 1rem;
   cursor: pointer; }
@@ -2623,7 +2623,7 @@ tbody.collapse.show {
 
 .custom-control-indicator {
   position: absolute;
-  top: 0.4rem;
+  top: 0.25rem;
   left: 0;
   display: block;
   width: 1rem;
@@ -3042,7 +3042,7 @@ tbody.collapse.show {
   display: flex;
   flex-direction: column;
   background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid #e7eaf1;
   border-radius: 0.25rem; }
 
 .card-block {
@@ -3075,14 +3075,14 @@ tbody.collapse.show {
   padding: 0.75rem 1rem;
   margin-bottom: 0;
   background-color: #fff;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+  border-bottom: 1px solid #e7eaf1; }
   .card-header:first-child {
     border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0; }
 
 .card-footer {
   padding: 0.75rem 1rem;
   background-color: #fff;
-  border-top: 1px solid rgba(0, 0, 0, 0.05); }
+  border-top: 1px solid #e7eaf1; }
   .card-footer:last-child {
     border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px); }
 
@@ -3761,7 +3761,7 @@ button.close {
 
 .modal-title {
   margin-bottom: 0;
-  line-height: 1.8; }
+  line-height: 1.5; }
 
 .modal-body {
   position: relative;
@@ -3805,7 +3805,7 @@ button.close {
   font-weight: normal;
   letter-spacing: normal;
   line-break: auto;
-  line-height: 1.8;
+  line-height: 1.5;
   text-align: left;
   text-align: start;
   text-decoration: none;
@@ -3887,7 +3887,7 @@ button.close {
   font-weight: normal;
   letter-spacing: normal;
   line-break: auto;
-  line-height: 1.8;
+  line-height: 1.5;
   text-align: left;
   text-align: start;
   text-decoration: none;
@@ -6643,9 +6643,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
     display: none !important; } }
 
 body {
-  padding-top: 3.76rem;
-  -ms-word-wrap: break-word;
-  word-wrap: break-word; }
+  padding-top: 3.58rem; }
 
 .bg-white {
   background-color: #fff; }
@@ -6726,11 +6724,8 @@ div#post-metadata {
   margin-bottom: 0;
   border-radius: 0; }
 
-.main-content {
-  background-color: #fff;
-  border: 1px solid #e7eaf1;
-  box-shadow: 0 1px 3px rgba(0, 37, 55, 0.05);
-  border-radius: 0.25rem; }
+.post-navigation {
+  border-bottom: 1px solid #eee; }
 
 .admin-bar .fixed-top {
   margin-top: 32px; }
@@ -6738,17 +6733,6 @@ div#post-metadata {
 .navbar {
   border-bottom: 1px solid rgba(30, 35, 42, 0.06);
   box-shadow: 0 1px 3px 0 rgba(0, 34, 77, 0.05); }
-
-.navbar-brand {
-  display: inline-block;
-  padding-top: .25rem;
-  padding-bottom: .25rem;
-  margin-right: 1rem;
-  font-size: 1.25rem;
-  line-height: inherit;
-  white-space: nowrap; }
-  .navbar-brand:focus, .navbar-brand:hover {
-    text-decoration: none; }
 
 .dropdown .dropdown-menu .nav-item .nav-link {
   display: block;
@@ -6774,52 +6758,21 @@ div#post-metadata {
     cursor: not-allowed;
     background-color: transparent; }
 
-.search .posts-list h2 {
-  font-size: 1.15rem; }
+.single-header {
+  background-color: #fff;
+  border-top-right-radius: calc(0.25rem - 1px);
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-bottom: 1px solid #e7eaf1; }
 
-.posts-list h2 {
-  font-size: 1.25rem; }
+.single-header-body {
+  padding: 1.25rem; }
 
-@media (max-width: 576px) {
-  .posts-list h2 {
-    font-size: 1rem;
-    font-weight: 400; } }
-/**
- * Related Posts
- */
-.related-posts .card {
-  border: 0;
-  background-color: inherit; }
-  .related-posts .card .card-text {
-    margin-top: .5rem; }
-    .related-posts .card .card-text a {
-      color: #333; }
-
-.page-header {
-  padding: 1rem; }
-
-.page-header::after {
-  display: block;
-  width: 160px;
-  height: 4px;
-  border-radius: 3px;
-  background: #efefef;
-  content: "";
-  margin-top: 1rem; }
+.single-header-border {
+  border: 1px solid #e7eaf1;
+  box-shadow: 0 1px 3px rgba(0, 37, 55, 0.05);
+  border-radius: calc(0.25rem - 1px); }
 
 /***entry-content ***/
-.entry {
-  padding: 1.25rem 0; }
-  .entry .row > div[class*='col-'] {
-    display: flex;
-    flex: 1 0 auto; }
-
-.posts-list .card-block {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem; }
-.posts-list .entry-title {
-  margin-bottom: .75rem; }
-
 .entry-excerpt {
   color: #828a92; }
   .entry-excerpt p:last-child {
@@ -6838,9 +6791,26 @@ div#post-metadata {
   transform: scale(1.1); }
 
 /** 文章页 **/
-.entry-content h2 {
-  margin: 30px 0;
-  font-weight: bold; }
+.entry-content {
+  /*****************************
+  ~~ Post Format: quote
+  *****************************/ }
+  .entry-content h2 {
+    margin: 30px 0;
+    font-weight: bold; }
+  .entry-content blockquote {
+    background: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: 1.5rem 1rem;
+    padding: 0.5rem 1rem;
+    quotes: "“" "”" "‘" "’"; }
+  .entry-content blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em; }
 
 .entry-content h2,
 .entry-content h3,
@@ -7063,18 +7033,24 @@ object {
   padding: 0 1rem 0.75rem 1rem; }
 
 .card {
+  margin-bottom: .75rem;
+  box-shadow: 0 1px 3px rgba(0, 37, 55, 0.05);
   width: 100%; }
   .card .card-block ul {
     margin-bottom: 0; }
 
-.posts-list .card {
-  border-bottom: 1px solid #e6dfdf;
-  transition: all 0.3s ease; }
-.posts-list .card:hover {
-  background: #eee; }
-
 .card-img-overlay {
   background: rgba(5, 5, 5, 0.4); }
+
+.related-posts {
+  border-bottom: 1px solid #eee; }
+  .related-posts .card {
+    border: 0;
+    box-shadow: 0 0px 0px rgba(0, 37, 55, 0.05); }
+    .related-posts .card .card-text {
+      margin-top: .5rem; }
+      .related-posts .card .card-text a {
+        color: #333; }
 
 /*--------------------------------------------------------------
 ## Captions
@@ -7152,24 +7128,6 @@ object {
 
 .gallery-caption {
   display: block; }
-
-/*****************************
-~~ Post Format: quote
-*****************************/
-blockquote {
-  background: #f9f9f9;
-  border-left: 10px solid #ccc;
-  margin: 1.5rem 1rem;
-  padding: 0.5rem 1rem;
-  quotes: "“" "”" "‘" "’"; }
-
-blockquote:before {
-  color: #ccc;
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em; }
 
 /*****************************
 ~~ Post Format: aside

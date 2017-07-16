@@ -19,7 +19,7 @@
     }
 ?>
 
-<article class="card border-0">
+<article class="card">
   <div class="card-block">
     <h2 class="card-title">
       <?php if($external) : ?>

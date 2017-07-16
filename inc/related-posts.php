@@ -2,7 +2,7 @@
 
 function related_posts( $post_num = 6 ) {
 	global $post;
-    echo '<div class="card related-posts mb-5 border-0"><div class="card-block"><h4 class="mb-3">你可能喜欢：</h4><div class="row">';
+    echo '<div class="related-posts card"><div class="card-block"><h4 class="card-title">你可能喜欢：</h4><div class="row">';
     $exclude_id = $post->ID;
     $posttags = get_the_tags(); $i = 0;
     if ( $posttags ) {

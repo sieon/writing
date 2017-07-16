@@ -18,7 +18,7 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div class="card comments-area border-0" id="comments">
+<div class="comments-area card" id="comments">
 	<div class="card-block">
 		<?php comment_form(); // Render comments form. ?>
 
@@ -28,7 +28,7 @@ if ( post_password_required() ) {
 
 			<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through. ?>
 				<nav class="comment-navigation" id="comment-nav-above">
-					<h1 class="sr-only sr-only-focusable"><?php esc_html_e( 'Comment navigation', 'lean' ); ?></h1>
+					<h3 class="sr-only sr-only-focusable"><?php esc_html_e( 'Comment navigation', 'lean' ); ?></h3>
 					<?php if ( get_previous_comments_link() ) { ?>
 						<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments',
 						'lean' ) ); ?></div>
@@ -73,6 +73,5 @@ if ( post_password_required() ) {
 			<p class="no-comments"><?php esc_html_e( '评论被关闭.', 'lean' ); ?></p>
 
 		<?php endif; ?>
-
 	</div>
 </div><!-- #comments -->

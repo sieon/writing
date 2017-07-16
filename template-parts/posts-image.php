@@ -6,7 +6,7 @@
 ?>
 
 <?php if(has_post_thumbnail()) : ?>
-<div class="card border-b-1">
+<div class="card">
 	<div class="card-block">
 
 		<?php the_title( sprintf( '<h2 class="card-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
@@ -34,7 +34,7 @@
 
 <?php else: ?>
 
-<div class="card border-b-1">
+<div class="card">
 	<div class="card-block">
 		<?php the_title( sprintf( '<h2 class="card-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 

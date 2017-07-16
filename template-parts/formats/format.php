@@ -19,10 +19,7 @@
 **/
 ?>
 
-<article <?php post_class('mb-5'); ?>>
-  <div class="entry-content">
-    <?php the_content(); ?>
-  </div>
+<article class="entry-content">
+  <?php the_content(); ?>
+  <?php edit_post_link( '编辑此文章', '<p class="edit-link">', '</p>' ); ?>
 </article>
-
-<?php edit_post_link( '编辑此文章', '<p class="edit-link mb-5">', '</p>' ); ?>

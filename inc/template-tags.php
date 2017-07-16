@@ -22,14 +22,17 @@ function lean_the_post_navigation() {
 		return;
 	}
 	?>
-	<nav class="navigation post-navigation p-3" role="navigation">
-		<h4 class="sr-only sr-only-focusable"><?php esc_html_e( 'Post navigation', 'lean' ); ?></h3>
-		<div class="nav-links">
-			<?php
-				previous_post_link( '<div class="nav-previous btn btn-secondary btn-pills">%link</div>', '上一篇' );
-				next_post_link( '<div class="nav-next btn btn-secondary float-right">%link</div>', '下一篇' );
-			?>
-		</div><!-- .nav-links -->
+	<nav class="post-navigation card" role="navigation">
+		<div class="card-block">
+			<h4 class="sr-only sr-only-focusable"><?php esc_html_e( 'Post navigation', 'lean' ); ?></h3>
+			<div class="nav-links">
+				<?php
+					previous_post_link( '<div class="nav-previous">上一篇：%link</div>', '%title' );
+					next_post_link( '<div class="nav-next">下一篇：%link</div>', '%title' );
+				?>
+			</div><!-- .nav-links -->
+
+		</div>
 	</nav><!-- .navigation -->
 	<?php
 }
