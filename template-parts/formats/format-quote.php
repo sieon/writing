@@ -19,12 +19,12 @@
 **/
 ?>
 
-<article>
-    <section>
-      <blockquote>
-        <cite><?php the_content(); ?></cite>
-      </blockquote>
-    </section>
+<article class="entry-content">
+  <section>
+    <blockquote>
+      <?php the_content(); ?>
+    </blockquote>
+  </section>
 </article>
 
 <?php edit_post_link( '编辑', '<span class="edit-link">', '</span>' ); ?>

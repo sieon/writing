@@ -6773,10 +6773,8 @@ div#post-metadata {
   border-radius: calc(0.25rem - 1px); }
 
 /***entry-content ***/
-.entry-excerpt {
-  color: #828a92; }
-  .entry-excerpt p:last-child {
-    margin-bottom: 0; }
+.entry-excerpt p:last-child {
+  margin-bottom: 0; }
 
 .entry-img {
   display: block;
@@ -6969,10 +6967,12 @@ a img.aligncenter {
 
 .card-title,
 .entry-title,
+.card-blockquote footer,
 .posts-card .card-text {
   color: #333; }
   .card-title a,
   .entry-title a,
+  .card-blockquote footer a,
   .posts-card .card-text a {
     color: #333; }
 
@@ -6986,6 +6986,7 @@ a img.aligncenter {
 
 .card-title a,
 .posts-card .card-footer a,
+.card-blockquote footer a,
 .entry-meta a,
 .widget ul li a,
 .related-posts .card-text a {
@@ -6994,6 +6995,8 @@ a img.aligncenter {
   .card-title a:focus, .card-title a:hover,
   .posts-card .card-footer a:focus,
   .posts-card .card-footer a:hover,
+  .card-blockquote footer a:focus,
+  .card-blockquote footer a:hover,
   .entry-meta a:focus,
   .entry-meta a:hover,
   .widget ul li a:focus,
@@ -7071,11 +7074,24 @@ object {
   padding: 0 1rem 0.75rem 1rem; }
 
 .card {
-  margin-bottom: .75rem;
+  margin-bottom: 1.25rem;
   box-shadow: 0 1px 3px rgba(0, 37, 55, 0.05);
   width: 100%; }
   .card .card-block ul {
     margin-bottom: 0; }
+
+.card-blockquote blockquote {
+  border-left: 10px solid #ccc;
+  margin: 1.5rem 1rem;
+  padding: 0.5rem 1rem;
+  quotes: "“" "”" "‘" "’"; }
+.card-blockquote blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em; }
 
 .card-img-overlay {
   background: rgba(5, 5, 5, 0.4); }

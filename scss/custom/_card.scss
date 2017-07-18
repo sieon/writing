@@ -4,13 +4,31 @@
 }
 
 .card {
-  margin-bottom: .75rem;
+  margin-bottom: 1.25rem;
   box-shadow: 0 1px 3px rgba(0, 37, 55, .05);
   width: 100%;
   .card-block {
     ul {
       margin-bottom: 0; //覆盖默认的margin-bottom
     }
+  }
+}
+
+.card-blockquote {
+  blockquote {
+    border-left: 10px solid #ccc;
+    margin: 1.5rem 1rem;
+    padding: 0.5rem 1rem;
+    quotes: "\201C""\201D""\2018""\2019";
+  }
+
+  blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
   }
 }
 

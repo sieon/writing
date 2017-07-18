@@ -19,12 +19,15 @@
 **/
 ?>
 
-<article class="entry-content">
-  <section>
+<article class="card">
+  <section class="card-block">
   	<blockquote>
-    	<?php the_content(); ?>
+      <p class="card-text entry-excerpt hidden-sm-down">
+        <?php echo wp_trim_words( get_the_excerpt(), get_theme_mod( 'excerpt_length'), '...' );?>
+      </p>
     </blockquote>
+    <div class="entry-meta">
+      <?php lean_entry_meta(); ?>
+    </div>
   </section>
 </article>
-
-<?php edit_post_link( '编辑', '<span class="edit-link">', '</span>' ); ?>

@@ -17,9 +17,9 @@
 				</a>
 			</div>
 			<div class="col-8">
-				<?php the_title( sprintf( '<h2 class="card-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+				<?php the_title( sprintf( '<h2 class="card-title mb-3"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-				<div class="entry-meta mb-1">
+				<div class="entry-meta mb-3">
 					<?php lean_entry_meta(); ?>
 				</div>
 
