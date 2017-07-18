@@ -8,7 +8,7 @@
 
                <?php while ( have_posts() ) : the_post(); ?>
 
-                 <?php get_template_part( 'template-parts/posts', get_post_format() ); ?>
+                 <?php get_template_part( 'template-parts/content', get_post_format() ); ?>
 
                  <?php
                  //上一篇、下一篇
