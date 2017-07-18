@@ -4,6 +4,8 @@
 }
 
 .card {
+  margin-bottom: .75rem;
+  box-shadow: 0 1px 3px rgba(0, 37, 55, .05);
   width: 100%;
   .card-block {
     ul {
@@ -12,16 +14,20 @@
   }
 }
 
-.posts-list {
-  .card {
-    border-bottom: 1px solid rgb(230, 223, 223);
-    transition: all 0.3s ease;
-  }
-  .card:hover {
-    background: #eee;
-  }
-}
-
 .card-img-overlay {
   background: rgba(5, 5, 5, 0.4);
+}
+
+.related-posts {
+  border-bottom: 1px solid #eee;
+  .card {
+    border: 0;
+    box-shadow: 0 0px 0px rgba(0, 37, 55, .05);
+    .card-text {
+      margin-top: .5rem;
+      a {
+        color: #333;
+      }
+    }
+  }
 }

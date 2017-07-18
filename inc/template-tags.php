@@ -22,14 +22,17 @@ function lean_the_post_navigation() {
 		return;
 	}
 	?>
-	<nav class="navigation post-navigation p-3" role="navigation">
-		<h4 class="sr-only sr-only-focusable"><?php esc_html_e( 'Post navigation', 'lean' ); ?></h3>
-		<div class="nav-links">
-			<?php
-				previous_post_link( '<div class="nav-previous btn btn-secondary btn-pills">%link</div>', '上一篇' );
-				next_post_link( '<div class="nav-next btn btn-secondary float-right">%link</div>', '下一篇' );
-			?>
-		</div><!-- .nav-links -->
+	<nav class="post-navigation card" role="navigation">
+		<div class="card-block">
+			<h4 class="sr-only sr-only-focusable"><?php esc_html_e( 'Post navigation', 'lean' ); ?></h3>
+			<div class="nav-links">
+				<?php
+					previous_post_link( '<div class="nav-previous">上一篇：%link</div>', '%title' );
+					next_post_link( '<div class="nav-next">下一篇：%link</div>', '%title' );
+				?>
+			</div><!-- .nav-links -->
+
+		</div>
 	</nav><!-- .navigation -->
 	<?php
 }
@@ -45,7 +48,9 @@ function lean_filter_time() {
 }
 add_filter('the_time','lean_filter_time');
 
-
+/**
+ *  Meta
+ */
 if ( ! function_exists( 'lean_entry_meta' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags.
@@ -58,33 +63,24 @@ function lean_entry_meta() {
 		printf( '<span class="sticky-post hidden-sm-down">%s<span class="oblique-line">&nbsp;&bull;&nbsp;</span></span> ', __( '特色', 'lean' ) );
 	}
 
+	if ( get_theme_mod( 'post-author') == yes ) {
+		if (!is_author()) {
+			if ( is_singular() || is_multi_author() ) {
+				printf( '<span class="post-author hidden-sm-down"><span class="author vcard"><span class="sr-only sr-only-focusable">%1$s </span><a class="url" href="%2$s">%3$s</a>&nbsp;&bull;&nbsp;</span></span>',
+					_x( '作者', 'Used before post author name.', 'lean' ),
+					esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+					get_the_author()
+				);
+			}
+		}
+	}
+
+	echo '<span class="post-time">';
+  echo the_time();
+	echo '</span>';
+
   if (!is_author()) {
-    if ( is_singular() || is_multi_author() ) {
-      printf( '<span class="byline hidden-sm-down"><span class="author vcard"><span class="sr-only sr-only-focusable">%1$s </span><a class="url" href="%2$s">%3$s</a>&nbsp;&bull;&nbsp;</span></span>',
-        _x( '作者', 'Used before post author name.', 'lean' ),
-        esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-        get_the_author()
-      );
-    }
-  }
-
-  echo '<time class="time">' . the_time() . '</time>';
-  //   }
-
-  if (!is_author()) {
-  echo '&nbsp;&bull;&nbsp;';
-
-  //echo '<span class="post-views"> <i class="fa fa-eye" aria-hidden="true"></i> '.lean_get_post_views(get_the_ID()).'</span>';
-
-  // $categories = get_the_category();
-  // $separator = ' ';
-  // $output = '';
-  // if ( ! empty( $categories ) ) {
-  //   foreach( $categories as $category ) {
-  //     $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( '查看 %s 下的所有文章', 'lean' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
-  //   echo trim( $output, $separator );
-  // }
-
+		echo '&nbsp;&bull;&nbsp;';
     echo the_category(' ');
   }
 

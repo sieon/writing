@@ -3,7 +3,10 @@
 // Copy variables from `_variables.scss` to this file to override default values
 // without modifying source files.
 
-$line-height-base: 1.8 !default;
+$single-header-bg: #fff !default;
+
+
+// $line-height-base: 1.8 !default;
 
 $font-size-h1: 1.8rem !default;
 $font-size-h2: 1.4rem !default;
@@ -25,7 +28,7 @@ $navbar-padding-x:                  $spacer !default;
 $navbar-inverse-color:              $white !default;
 $navbar-light-color:                $black !default;
 
-$card-border-color:        rgba($black,.05) !default;
+$card-border-color:        #e7eaf1 !default;
 $card-spacer-x:            1rem !default;
 $card-spacer-y:            .75rem !default;
 $card-cap-bg:              #fff !default;

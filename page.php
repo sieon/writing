@@ -5,20 +5,29 @@
     <div class="row">
       <div class="col-lg-8">
         <main class="main-content">
-          <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-            <div class="page-header">
-              <h1 class="card-title"><?php the_title(); ?></h1>
-            </div>
+          <div class="card">
+            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+              <div class="single-header">
+                <div class="single-header-body">
+                  <h1 class="single-header-title"><?php the_title(); ?></h1>
+                </div>
+              </div>
 
-            <div class="entry-content p-3">
-              <?php the_content(); ?>
+            <div class="card-block">
+              <div class="entry-content">
+                <?php the_content(); ?>
+              </div>
             </div>
-            <?php
-              // If comments are open or we have at least one comment, load up the comment template
-            //  if ( comments_open() || get_comments_number() ) :
-                comments_template();
-            //  endif;
-            ?>
+          </div>
+
+
+          <?php
+            // If comments are open or we have at least one comment, load up the comment template
+            if ( comments_open() || get_comments_number() ) :
+              comments_template();
+            endif;
+          ?>
+
           <?php endwhile;else: ?>
             <div class="jumbotron">
               <h1 class="container">oh,no!</h1>
