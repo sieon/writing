@@ -6771,9 +6771,6 @@ div#post-metadata {
   box-shadow: 0 1px 3px rgba(0, 37, 55, 0.05);
   border-radius: calc(0.25rem - 1px); }
 
-.entry-excerpt p:last-child {
-  margin-bottom: 0; }
-
 .entry-img {
   display: block;
   overflow: hidden; }
@@ -6791,6 +6788,7 @@ div#post-metadata {
 .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
   margin: 20px 0; }
 .entry-content p {
+  line-height: 2;
   margin-bottom: 1.25rem;
   -ms-word-wrap: break-word;
   word-wrap: break-word;
