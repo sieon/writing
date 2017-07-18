@@ -25,5 +25,6 @@
       <?php the_content(); ?>
       <?php the_title( sprintf( '<footer><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></footer>' ); ?>
     </blockquote>
+    <p class="entry-meta card-text mt-3"><?php lean_entry_meta(); ?></p>
   </section>
 </article>

@@ -21,7 +21,7 @@
 
 <article class="card">
   <div class="card-block">
-    <h2 class="card-title">
+    <h2 class="card-title mb-3">
       <?php if($external) : ?>
           <a href="<?php echo $link_url[0]; ?>" target="_blank" rel="nofollow"><?php the_title(); ?> <i class="fa fa-external-link" aria-hidden="true"></i></a>
       <?php else : ?>
@@ -29,7 +29,6 @@
       <?php endif; ?>
 
     </h2>
-    <div class="entry-meta mb-1"><?php lean_entry_meta(); ?></div>
 
     <?php if ( get_theme_mod( 'posts_list_excerpt')==yes ) { ?>
       <p class="card-text entry-excerpt hidden-sm-down">
@@ -38,6 +37,8 @@
     <?php } else {
       echo '';
      } ?>
+
+     <p class="entry-meta card-text"><?php lean_entry_meta(); ?></p>
 
   </div>
 </article>
