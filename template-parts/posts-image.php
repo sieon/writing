@@ -44,7 +44,6 @@
 				echo '';
 			 } ?>
 
-
 		</div>
 
 		<div class="card-footer">
