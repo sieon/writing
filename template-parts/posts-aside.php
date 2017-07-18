@@ -21,13 +21,13 @@
 
 <article class="card">
   <section class="card-block">
-  	<blockquote>
-      <p class="card-text entry-excerpt hidden-sm-down">
-        <?php echo wp_trim_words( get_the_excerpt(), get_theme_mod( 'excerpt_length'), '...' );?>
-      </p>
-    </blockquote>
-    <div class="entry-meta">
-      <?php lean_entry_meta(); ?>
+    <div class="entry-content">
+      <blockquote class="card-blockquote">
+        <?php the_content(); ?>
+      </blockquote>
     </div>
   </section>
+  <div class="card-footer">
+    <?php lean_entry_meta(); ?>
+  </div>
 </article>

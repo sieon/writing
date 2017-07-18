@@ -14,23 +14,23 @@
   }
 }
 
-.card-blockquote {
-  blockquote {
-    border-left: 10px solid #ccc;
-    margin: 1.5rem 1rem;
-    padding: 0.5rem 1rem;
-    quotes: "\201C""\201D""\2018""\2019";
-  }
-
-  blockquote:before {
-    color: #ccc;
-    content: open-quote;
-    font-size: 4em;
-    line-height: 0.1em;
-    margin-right: 0.25em;
-    vertical-align: -0.4em;
-  }
-}
+// .card-blockquote {
+//   blockquote {
+//     border-left: 10px solid #ccc;
+//     margin: 1.5rem 1rem;
+//     padding: 0.5rem 1rem;
+//     quotes: "\201C""\201D""\2018""\2019";
+//   }
+//
+//   blockquote:before {
+//     color: #ccc;
+//     content: open-quote;
+//     font-size: 4em;
+//     line-height: 0.1em;
+//     margin-right: 0.25em;
+//     vertical-align: -0.4em;
+//   }
+// }
 
 .card-img-overlay {
   background: rgba(5, 5, 5, 0.4);
