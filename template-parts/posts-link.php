@@ -33,7 +33,7 @@
 
     <?php if ( get_theme_mod( 'posts_list_excerpt')==yes ) { ?>
       <p class="card-text entry-excerpt hidden-sm-down">
-        <?php echo wp_trim_words( get_the_excerpt(), 120, '...' );?>
+        <?php echo wp_trim_words( get_the_excerpt(), get_theme_mod( 'excerpt_length'), '...' );?>
       </p>
     <?php } else {
       echo '';
