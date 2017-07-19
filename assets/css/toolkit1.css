@@ -7005,7 +7005,7 @@ object {
   padding: 0 1rem 0.75rem 1rem; }
 
 .card {
-  margin-bottom: 1.25rem;
+  margin-bottom: .75rem;
   box-shadow: 0 1px 3px rgba(0, 37, 55, 0.05);
   width: 100%; }
   .card .card-block ul {
