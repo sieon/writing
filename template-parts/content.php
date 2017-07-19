@@ -43,7 +43,7 @@
 					echo '</div>';
 				}
 			} ?>
-			
+
 		</div>
 
 		<?php else: // not single ?>
@@ -66,7 +66,7 @@
 					</p>
 
 					<?php if ( get_theme_mod( 'posts_list_excerpt')==yes ) { ?>
-					<p class="card-text line-clamp-2 text-overflow-ellipsis mt-3 hidden-sm-down">
+					<p class="card-text text-muted line-clamp-2 text-overflow-ellipsis mt-3 hidden-sm-down">
 						<?php echo wp_trim_words( get_the_excerpt(), get_theme_mod( 'excerpt_length'), '...' );?>
 					</p>
 					<?php } else {
