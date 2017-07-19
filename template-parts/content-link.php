@@ -27,6 +27,20 @@
     <?php the_title( '<h1 class="card-title mb-4">' ,'</h1>' ); ?>
 
     <div class="entry-content">
+      
+      <?php
+      if ( get_theme_mod( 'post-tags')==top ) {
+        $posttags = get_the_tags();
+        if ( $posttags ) {
+          echo '<div class="post-tags mb-3">';
+          foreach( $posttags as $tag ) {
+            echo '<a href="' . get_tag_link( $tag->term_id ) . '" class="btn btn-secondary btn-sm mr-3 mb-2">' . $tag->name . '</a>';
+          }
+          echo '</div>';
+        }
+      }
+      ?>
+
       <p>
         <?php if($external) : ?>
             <a href="<?php echo $link_url[0]; ?>" target="_blank" rel="nofollow"><?php the_title(); ?> <i class="fa fa-external-link" aria-hidden="true"></i></a>
@@ -34,6 +48,19 @@
             <a href="<?php echo $link_url[0]; ?>" target="_self"><?php the_title(); ?></a>
         <?php endif; ?>
       </p>
+
+      <?php
+      if ( get_theme_mod( 'post-tags')==bottom ) {
+        $posttags = get_the_tags();
+        if ( $posttags ) {
+          echo '<div class="post-tags mt-4 mb-3">';
+          foreach( $posttags as $tag ) {
+            echo '<a href="' . get_tag_link( $tag->term_id ) . '" class="btn btn-secondary btn-sm mr-2 mb-2">' . $tag->name . '</a>';
+          }
+          echo '</div>';
+        }
+      } ?>
+
     </div>
 
     <?php else: ?>
