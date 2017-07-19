@@ -19,9 +19,11 @@
 **/
 ?>
 
-<article class="card card-shadow">
+<article class="card card-shadow card-status">
   <div class="card-block">
-    <?php the_content(); ?>
-    <p class="entry-meta card-text"><?php lean_entry_meta(); ?></p>
+    <blockquote class="card-blockquote">
+      <?php the_content(); ?>
+      <footer><cite><a href="<?php echo get_permalink(); ?>"><?php the_time(); ?></a></cite></footer>
+    </blockquote>
   </div>
 </article>

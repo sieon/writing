@@ -1,20 +1,52 @@
+.card {
+  margin-bottom: .75rem;
+  width: 100%;
+}
+
+.card-block {
+  ul {
+    margin-bottom: 0; //覆盖默认的margin-bottom
+  }
+}
+
 .card-footer {
   border-top: 0;
   padding: 0 $card-spacer-x $card-spacer-y $card-spacer-x;
 }
 
-.card {
-  margin-bottom: .75rem;
-  width: 100%;
-  .card-block {
-    ul {
-      margin-bottom: 0; //覆盖默认的margin-bottom
+.card-shadow {
+  box-shadow: 0 1px 3px rgba(0, 37, 55, .05);
+}
+
+.card-img-overlay {
+  background: rgba(5, 5, 5, 0.4);
+}
+
+.related-posts {
+  border-bottom: 1px solid #eee;
+  .card {
+    border: 0;
+    .card-text {
+      margin-top: .5rem;
+      a {
+        color: #333;
+      }
     }
   }
 }
 
-.card-shadow {
-  box-shadow: 0 1px 3px rgba(0, 37, 55, .05);
+.card-aside {
+  background-color: #eee6e6;
+  border-color: #eee6e6;
+}
+
+.card-quote {
+  background-color: #eceeef;
+  border-color: #eceeef;
+}
+
+.card-status {
+  border-color: #eee;
 }
 
 .text-overflow-ellipsis {
@@ -31,24 +63,6 @@
   display: -webkit-box!important;
   -webkit-line-clamp: 2!important;
   -webkit-box-orient: vertical!important;
-}
-
-.card-img-overlay {
-  background: rgba(5, 5, 5, 0.4);
-}
-
-.related-posts {
-  border-bottom: 1px solid #eee;
-  .card {
-    border: 0;
-    box-shadow: 0 0px 0px rgba(0, 37, 55, .05);
-    .card-text {
-      margin-top: .5rem;
-      a {
-        color: #333;
-      }
-    }
-  }
 }
 
 .entry-img {
@@ -83,7 +97,6 @@
     margin-bottom: 1.25rem;
     -ms-word-wrap: break-word;
     word-wrap: break-word;
-    color: #3d464d;
   }
 
   ul li,ol li {

@@ -19,11 +19,11 @@
 **/
 ?>
 
-<article class="card card-shadow">
+<article class="card card-shadow card-quote">
   <section class="card-block">
     <blockquote class="card-blockquote">
       <?php the_content(); ?>
-      <?php the_title( sprintf( '<footer><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></footer>' ); ?>
+      <?php the_title( sprintf( '<footer><cite><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></cite></footer>' ); ?>
     </blockquote>
   </section>
 </article>

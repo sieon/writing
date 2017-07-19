@@ -63,24 +63,22 @@
 
     </div>
 
-    <?php else: ?>
-      <h2 class="card-title line-clamp-2 text-overflow-ellipsis mb-3">
-        <?php if($external) : ?>
-            <a href="<?php echo $link_url[0]; ?>" target="_blank" rel="nofollow"><?php the_title(); ?> <i class="fa fa-external-link" aria-hidden="true"></i></a>
-        <?php else : ?>
-            <a href="<?php echo $link_url[0]; ?>" target="_self"><?php the_title(); ?></a>
-        <?php endif; ?>
+  <?php else: ?>
+    <h2 class="card-title line-clamp-2 text-overflow-ellipsis mb-3">
+      <?php if($external) : ?>
+        <a href="<?php echo $link_url[0]; ?>" target="_blank" rel="nofollow"><?php the_title(); ?> <i class="fa fa-external-link" aria-hidden="true"></i></a>
+      <?php else : ?>
+        <a href="<?php echo $link_url[0]; ?>" target="_self"><?php the_title(); ?></a>
+      <?php endif; ?>
+    </h2>
 
-      </h2>
-
-      <?php if ( get_theme_mod( 'posts_list_excerpt')==yes ) { ?>
-        <p class="card-text line-clamp-2 text-overflow-ellipsis entry-excerpt hidden-sm-down">
-          <?php echo wp_trim_words( get_the_excerpt(), get_theme_mod( 'excerpt_length'), '...' );?>
-        </p>
+    <?php if ( get_theme_mod( 'posts_list_excerpt')==yes ) { ?>
+      <p class="card-text line-clamp-2 text-overflow-ellipsis entry-excerpt hidden-sm-down">
+        <?php echo wp_trim_words( get_the_excerpt(), get_theme_mod( 'excerpt_length'), '...' );?>
+      </p>
       <?php } else {
         echo '';
-       } ?>
+      } ?>
     <?php endif; // end is_single ?>
   </div>
-  <div class="card-footer"><?php lean_entry_meta(); ?></div>
 </article>

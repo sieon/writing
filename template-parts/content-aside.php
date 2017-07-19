@@ -19,7 +19,7 @@
 **/
 ?>
 
-<article class="card card-inverse card-danger">
+<article class="card card-shadow card-aside">
   <section class="card-block">
     <div class="entry-content">
       <blockquote class="card-blockquote">
