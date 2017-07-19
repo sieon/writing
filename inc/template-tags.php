@@ -63,17 +63,17 @@ function lean_entry_meta() {
 		printf( '<span class="sticky-post hidden-sm-down">%s<span class="oblique-line">&nbsp;&bull;&nbsp;</span></span> ', __( '特色', 'lean' ) );
 	}
 
-	if ( get_theme_mod( 'post-author') == yes ) {
-		if (!is_author()) {
-			if ( is_singular() || is_multi_author() ) {
-				printf( '<span class="post-author hidden-sm-down"><span class="author vcard"><span class="sr-only sr-only-focusable">%1$s </span><a class="url" href="%2$s">%3$s</a>&nbsp;&bull;&nbsp;</span></span>',
-					_x( '作者', 'Used before post author name.', 'lean' ),
-					esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-					get_the_author()
-				);
-			}
-		}
-	}
+	// if ( get_theme_mod( 'post-author') == yes ) {
+	// 	if (!is_author()) {
+	// 		if ( is_singular() || is_multi_author() ) {
+	// 			printf( '<span class="post-author hidden-sm-down"><span class="author vcard"><span class="sr-only sr-only-focusable">%1$s </span><a class="url" href="%2$s">%3$s</a>&nbsp;&bull;&nbsp;</span></span>',
+	// 				_x( '作者', 'Used before post author name.', 'lean' ),
+	// 				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+	// 				get_the_author()
+	// 			);
+	// 		}
+	// 	}
+	// }
 
 	echo '<span class="post-time">';
   echo the_time();
@@ -96,6 +96,35 @@ function lean_entry_meta() {
 }
 endif;
 
+
+/**
+ *  Meta
+ */
+if ( ! function_exists( 'lean_entry_meta2' ) ) :
+/**
+ * Prints HTML with meta information for the categories, tags.
+ *
+ * @since lean 1.0
+ */
+function lean_entry_meta2() {
+
+	if ( is_sticky() && is_home() && ! is_paged() ) {
+		printf( '<span class="sticky-post hidden-sm-down">%s<span class="oblique-line">&nbsp;&bull;&nbsp;</span></span> ', __( '特色', 'lean' ) );
+	}
+
+	echo '<span class="post-time">';
+  echo the_time();
+	echo '</span>';
+
+  if (!is_author()) {
+		echo '&nbsp;&bull;&nbsp;';
+    echo the_category(' ');
+  }
+
+	edit_post_link( '编辑', '&nbsp;&bull;&nbsp;<span class="edit-link">', '</span>' );
+
+}
+endif;
 
 if ( ! function_exists( 'lean_the_archive_title' ) ) :
 /**

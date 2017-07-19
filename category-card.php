@@ -15,7 +15,7 @@
       <div class="posts-card">
         <div class="row">
           <?php  while ( have_posts() ) : the_post(); ?>
-          <div class="col-lg-4">
+          <div class="col-lg-6">
             <?php
             get_template_part( 'template-parts/content-image', get_post_format() ); ?>
           </div>
