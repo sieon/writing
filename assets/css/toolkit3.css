@@ -7023,14 +7023,20 @@ object {
   .card .card-block ul {
     margin-bottom: 0; }
 
-.card-title {
-  max-height: 3.6rem; }
+.text-overflow-ellipsis {
+  text-overflow: ellipsis; }
 
-.card-title {
-  max-height: 3.6rem; }
+.nowrap {
+  overflow: hidden;
+  white-space: nowrap; }
 
-.card-title,
-.card-text {
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important; }
+
+.text-overflow- {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box !important;
@@ -7049,14 +7055,6 @@ object {
       margin-top: .5rem; }
       .related-posts .card .card-text a {
         color: #333; }
-
-.entry-excerpt {
-  max-height: 3rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box !important;
-  -webkit-line-clamp: 2 !important;
-  -webkit-box-orient: vertical !important; }
 
 .entry-img {
   display: block;

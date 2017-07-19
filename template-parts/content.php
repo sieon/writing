@@ -19,7 +19,7 @@
 			<?php the_content(); ?>
 		</div>
 
-		<?php else: ?>
+		<?php else: // not single ?>
 
 			<?php if( has_post_thumbnail() ) : ?>
 
@@ -32,14 +32,14 @@
 				</div>
 
 				<div class="col-8">
-					<?php the_title( sprintf( '<h2 class="card-title mb-3"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+					<?php the_title( sprintf( '<h2 class="card-title line-clamp-2 text-overflow-ellipsis mb-3"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 					<p class="card-text entry-meta">
 						<?php lean_entry_meta(); ?>
 					</p>
 
 					<?php if ( get_theme_mod( 'posts_list_excerpt')==yes ) { ?>
-					<p class="card-text mt-3 hidden-sm-down">
+					<p class="card-text line-clamp-2 text-overflow-ellipsis mt-3 hidden-sm-down">
 						<?php echo wp_trim_words( get_the_excerpt(), get_theme_mod( 'excerpt_length'), '...' );?>
 					</p>
 					<?php } else {
@@ -50,14 +50,14 @@
 
 			<?php else: ?>
 
-			<?php the_title( sprintf( '<h2 class="card-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+			<?php the_title( sprintf( '<h2 class="card-title line-clamp-2 text-overflow-ellipsis"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 			<p class="entry-meta">
 				<?php lean_entry_meta(); ?>
 			</p>
 
 			<?php if ( get_theme_mod( 'posts_list_excerpt')==yes ) { ?>
-			<p class="card-text entry-excerpt hidden-sm-down">
+			<p class="card-text entry-excerpt line-clamp-2 text-overflow-ellipsis hidden-sm-down">
 				<?php echo wp_trim_words( get_the_excerpt(), get_theme_mod( 'excerpt_length'), '...' );?>
 			</p>
 			<?php } else { echo ''; } ?>
