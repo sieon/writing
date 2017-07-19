@@ -84,7 +84,7 @@ function lean_entry_meta() {
     echo the_category(' ');
   }
 
-	edit_post_link( '编辑此文章', '&nbsp;&bull;&nbsp;<span class="edit-link">', '</span>' );
+	edit_post_link( '编辑', '&nbsp;&bull;&nbsp;<span class="edit-link">', '</span>' );
 
   if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
     echo '<span class="comments-link hidden-sm-down float-right">';
