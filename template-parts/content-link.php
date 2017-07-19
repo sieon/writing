@@ -19,7 +19,7 @@
     }
 ?>
 
-<article class="card">
+<article class="card card-shadow">
   <div class="card-block">
 
     <?php if( is_single() ): ?>
@@ -27,7 +27,7 @@
     <?php the_title( '<h1 class="card-title mb-4">' ,'</h1>' ); ?>
 
     <div class="entry-content">
-      
+
       <?php
       if ( get_theme_mod( 'post-tags')==top ) {
         $posttags = get_the_tags();

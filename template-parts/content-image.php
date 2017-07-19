@@ -5,7 +5,7 @@
  */
 ?>
 
-<div class="card">
+<div class="card card-shadow">
 	<div class="card-block">
 
 	<?php if( is_single() ): ?>

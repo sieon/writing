@@ -19,7 +19,7 @@
 **/
 ?>
 
-<article class="card">
+<article class="card card-shadow">
   <div class="card-block">
     <?php the_content(); ?>
     <p class="entry-meta card-text"><?php lean_entry_meta(); ?></p>

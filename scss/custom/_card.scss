@@ -5,13 +5,16 @@
 
 .card {
   margin-bottom: .75rem;
-  box-shadow: 0 1px 3px rgba(0, 37, 55, .05);
   width: 100%;
   .card-block {
     ul {
       margin-bottom: 0; //覆盖默认的margin-bottom
     }
   }
+}
+
+.card-shadow {
+  box-shadow: 0 1px 3px rgba(0, 37, 55, .05);
 }
 
 .text-overflow-ellipsis {
@@ -25,15 +28,6 @@
 
 .line-clamp-2 {
   overflow: hidden;
-  display: -webkit-box!important;
-  -webkit-line-clamp: 2!important;
-  -webkit-box-orient: vertical!important;
-}
-
-.text-overflow-{
-  //white-space: nowrap;  //单行时引用
-  overflow: hidden;
-  text-overflow: ellipsis;
   display: -webkit-box!important;
   -webkit-line-clamp: 2!important;
   -webkit-box-orient: vertical!important;

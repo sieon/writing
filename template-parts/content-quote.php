@@ -19,7 +19,7 @@
 **/
 ?>
 
-<article class="card">
+<article class="card card-shadow">
   <section class="card-block">
     <blockquote class="card-blockquote">
       <?php the_content(); ?>

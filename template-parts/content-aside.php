@@ -19,15 +19,13 @@
 **/
 ?>
 
-<article class="card">
+<article class="card card-inverse card-danger">
   <section class="card-block">
     <div class="entry-content">
       <blockquote class="card-blockquote">
         <?php the_content(); ?>
+        <footer class="text-right"><cite><a href="<?php echo get_permalink(); ?>" class="alert-link"><?php the_time(); ?></a></cite></footer>
       </blockquote>
     </div>
   </section>
-  <div class="card-footer">
-    <?php lean_entry_meta(); ?>
-  </div>
 </article>

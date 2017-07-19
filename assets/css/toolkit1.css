@@ -6980,10 +6980,12 @@ object {
 
 .card {
   margin-bottom: .75rem;
-  box-shadow: 0 1px 3px rgba(0, 37, 55, 0.05);
   width: 100%; }
   .card .card-block ul {
     margin-bottom: 0; }
+
+.card-shadow {
+  box-shadow: 0 1px 3px rgba(0, 37, 55, 0.05); }
 
 .text-overflow-ellipsis {
   text-overflow: ellipsis; }
@@ -6994,13 +6996,6 @@ object {
 
 .line-clamp-2 {
   overflow: hidden;
-  display: -webkit-box !important;
-  -webkit-line-clamp: 2 !important;
-  -webkit-box-orient: vertical !important; }
-
-.text-overflow- {
-  overflow: hidden;
-  text-overflow: ellipsis;
   display: -webkit-box !important;
   -webkit-line-clamp: 2 !important;
   -webkit-box-orient: vertical !important; }

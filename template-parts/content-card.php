@@ -5,7 +5,7 @@
  */
 ?>
 
-<div class="card">
+<div class="card card-shadow">
 	<?php if( has_post_thumbnail() ) : ?>
 
 		<a class="entry-img" href="<?php the_permalink(); ?>">
