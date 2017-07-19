@@ -14,23 +14,23 @@
   }
 }
 
-// .card-blockquote {
-//   blockquote {
-//     border-left: 10px solid #ccc;
-//     margin: 1.5rem 1rem;
-//     padding: 0.5rem 1rem;
-//     quotes: "\201C""\201D""\2018""\2019";
-//   }
-//
-//   blockquote:before {
-//     color: #ccc;
-//     content: open-quote;
-//     font-size: 4em;
-//     line-height: 0.1em;
-//     margin-right: 0.25em;
-//     vertical-align: -0.4em;
-//   }
-// }
+.card-title {
+  max-height: 3.6rem;
+}
+
+.card-title {
+  max-height: 3.6rem;
+}
+
+.card-title,
+.card-text {
+  //white-space: nowrap;  //单行时引用
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box!important;
+  -webkit-line-clamp: 2!important;
+  -webkit-box-orient: vertical!important;
+}
 
 .card-img-overlay {
   background: rgba(5, 5, 5, 0.4);
@@ -47,5 +47,57 @@
         color: #333;
       }
     }
+  }
+}
+
+
+.entry-excerpt {
+  max-height: 3rem;
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+  display: -webkit-box!important;
+  -webkit-line-clamp: 2!important;
+  -webkit-box-orient: vertical!important;
+}
+
+.entry-img {
+  display: block;
+  overflow:hidden;
+  img {
+    transition: all .5s ease;
+  }
+}
+
+.entry-img:hover img {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+// 文章页
+
+.entry-content {
+
+  h2 {
+    margin: 30px 0;
+    font-weight: bold;
+  }
+
+  h3,h4,h5,h6 {
+    margin: 20px 0;
+  }
+
+  p {
+    line-height: 2;
+    margin-bottom: 1.25rem;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    color: #3d464d;
+  }
+
+  ul li,ol li {
+    font-size: 1rem;
+    line-height: 1.8;
   }
 }

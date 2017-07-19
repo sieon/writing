@@ -59,22 +59,22 @@
 
 // Custom
 
-@import "custom/theme-main";
+@import "custom/main";
 @import "custom/layouts";
-@import "custom/theme-nav";
-@import "custom/theme-navbar";
-@import "custom/theme-dropdown";
+@import "custom/nav";
+@import "custom/navbar";
+@import "custom/dropdown";
 @import "custom/page-header";
-@import "custom/entry";
-@import "custom/theme-widget";
-@import "custom/theme-align";
+
+@import "custom/widget";
+@import "custom/align";
 @import "custom/link";
-@import "custom/theme-media";
-@import "custom/theme-captions";
+@import "custom/media";
+@import "custom/captions";
 @import "custom/card";
-@import "custom/theme-galleries";
-@import "custom/theme-post-format";
-@import "custom/theme-comments";
+@import "custom/galleries";
+@import "custom/post-format";
+@import "custom/comments";
 @import "custom/author";
-@import "custom/theme-screen-reader-text";
-@import "custom/theme-footer";
+@import "custom/screen-reader-text";
+@import "custom/footer";
