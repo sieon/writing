@@ -3,15 +3,24 @@
 *****************************/
 
 .footer {
-  background: #2a2730;
-  padding: 10px 0;
+  background: #fff;
+  padding: 1rem 0;
   font-size: 85%;
   p {
+    color: #666;
+  }
+  a {
+    color: #777;
+    opacity: 0.75;
+  }
+}
+
+.footer-inverse {
+  background: #2a2730;
+  p {
     color: #99979c;
-    margin-bottom: 0;
   }
   a {
     color: #fff;
-    opacity: 0.75;
   }
 }

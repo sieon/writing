@@ -7350,14 +7350,20 @@ object {
  ~~ html specific
 *****************************/
 .footer {
-  background: #2a2730;
-  padding: 10px 0;
+  background: #fff;
+  padding: 1rem 0;
   font-size: 85%; }
   .footer p {
-    color: #99979c;
-    margin-bottom: 0; }
+    color: #666; }
   .footer a {
-    color: #fff;
+    color: #777;
     opacity: 0.75; }
+
+.footer-inverse {
+  background: #2a2730; }
+  .footer-inverse p {
+    color: #99979c; }
+  .footer-inverse a {
+    color: #fff; }
 
 /*# sourceMappingURL=toolkit1.css.map */
