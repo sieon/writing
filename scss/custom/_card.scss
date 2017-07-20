@@ -1,17 +1,21 @@
+.card {
+  margin-bottom: .75rem;
+  width: 100%;
+}
+
+.card-block {
+  ul {
+    margin-bottom: 0; //覆盖默认的margin-bottom
+  }
+}
+
 .card-footer {
   border-top: 0;
   padding: 0 $card-spacer-x $card-spacer-y $card-spacer-x;
 }
 
-.card {
-  margin-bottom: .75rem;
+.card-shadow {
   box-shadow: 0 1px 3px rgba(0, 37, 55, .05);
-  width: 100%;
-  .card-block {
-    ul {
-      margin-bottom: 0; //覆盖默认的margin-bottom
-    }
-  }
 }
 
 .card-img-overlay {
@@ -22,12 +26,81 @@
   border-bottom: 1px solid #eee;
   .card {
     border: 0;
-    box-shadow: 0 0px 0px rgba(0, 37, 55, .05);
     .card-text {
       margin-top: .5rem;
       a {
         color: #333;
       }
     }
+  }
+}
+
+.card-aside {
+  background-color: #eee6e6;
+  border-color: #eee6e6;
+}
+
+.card-quote {
+  background-color: #eceeef;
+  border-color: #eceeef;
+}
+
+.card-status {
+  border-color: #eee;
+}
+
+.text-overflow-ellipsis {
+  text-overflow: ellipsis;
+}
+
+.nowrap {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box!important;
+  -webkit-line-clamp: 2!important;
+  -webkit-box-orient: vertical!important;
+}
+
+.entry-img {
+  display: block;
+  overflow:hidden;
+  img {
+    transition: all .5s ease;
+  }
+}
+
+.entry-img:hover img {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+// 文章页
+
+.entry-content {
+
+  h2 {
+    margin: 30px 0;
+    font-weight: bold;
+  }
+
+  h3,h4,h5,h6 {
+    margin: 20px 0;
+  }
+
+  p {
+    line-height: 2;
+    margin-bottom: 1.25rem;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+  ul li,ol li {
+    font-size: 1rem;
+    line-height: 1.8;
   }
 }

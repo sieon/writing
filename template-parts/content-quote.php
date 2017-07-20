@@ -19,12 +19,11 @@
 **/
 ?>
 
-<article>
-    <section>
-      <blockquote>
-        <cite><?php the_content(); ?></cite>
-      </blockquote>
-    </section>
+<article class="card card-shadow card-quote">
+  <section class="card-block">
+    <blockquote class="card-blockquote">
+      <?php the_content(); ?>
+      <?php the_title( sprintf( '<footer><cite><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></cite></footer>' ); ?>
+    </blockquote>
+  </section>
 </article>
-
-<?php edit_post_link( '编辑', '<span class="edit-link">', '</span>' ); ?>

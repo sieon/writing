@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*!
  * Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors
@@ -6654,17 +6653,9 @@ body {
   border-right: 0;
   border-bottom: 1px solid #e7eaf1; }
 
-/** post-tags **/
-.post-tags .btn,
-.hot-tags .btn {
-  border-radius: 80px; }
-
 .hot-tags a {
   margin-top: 5px;
   margin-bottom: 5px; }
-
-.jumbotron {
-  background-color: #f7f7f9; }
 
 img {
   display: block;
@@ -6693,24 +6684,6 @@ img {
 ul.hide-bullets li.col-sm-4 {
   padding: 0; }
 
-/*****************
- ~~ Blog (home)
-*****************************/
-article.post {
-  margin: 20px 0; }
-
-/*****************************
-~~ Posts display (list / grid)
-*****************************/
-#display {
-  margin: 0 0 40px 8px; }
-
-#display a {
-  font-size: 16px; }
-
-div#post-metadata {
-  display: none; }
-
 /**tag**/
 .tag-tip {
   font-size: 1.1rem;
@@ -6719,10 +6692,6 @@ div#post-metadata {
 .widget_lean_posts .card,
 .related-posts .card {
   margin-bottom: 20px; }
-
-.jumbotron {
-  margin-bottom: 0;
-  border-radius: 0; }
 
 .post-navigation {
   border-bottom: 1px solid #eee; }
@@ -6771,64 +6740,6 @@ div#post-metadata {
   border: 1px solid #e7eaf1;
   box-shadow: 0 1px 3px rgba(0, 37, 55, 0.05);
   border-radius: calc(0.25rem - 1px); }
-
-/***entry-content ***/
-.entry-excerpt {
-  color: #828a92; }
-  .entry-excerpt p:last-child {
-    margin-bottom: 0; }
-
-.entry-img {
-  display: block;
-  overflow: hidden; }
-
-.entry-img img {
-  transition: all .5s ease; }
-
-.entry-img:hover img {
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  transform: scale(1.1); }
-
-/** 文章页 **/
-.entry-content {
-  /*****************************
-  ~~ Post Format: quote
-  *****************************/ }
-  .entry-content h2 {
-    margin: 30px 0;
-    font-weight: bold; }
-  .entry-content blockquote {
-    background: #f9f9f9;
-    border-left: 10px solid #ccc;
-    margin: 1.5rem 1rem;
-    padding: 0.5rem 1rem;
-    quotes: "“" "”" "‘" "’"; }
-  .entry-content blockquote:before {
-    color: #ccc;
-    content: open-quote;
-    font-size: 4em;
-    line-height: 0.1em;
-    margin-right: 0.25em;
-    vertical-align: -0.4em; }
-
-.entry-content h2,
-.entry-content h3,
-.entry-content h4,
-.entry-content h5,
-.entry-content h6 {
-  margin: 20px 0; }
-
-.entry-content p {
-  margin: 1em 0;
-  -ms-word-wrap: break-word;
-  word-wrap: break-word;
-  color: #3d464d; }
-
-.entry-content ul li,
-.entry-content ol li {
-  font-size: 1rem;
-  line-height: 1.8; }
 
 .widget-search {
   position: relative;
@@ -6968,32 +6879,42 @@ a img.aligncenter {
   margin: 5px 0 20px 20px; }
 
 .card-title,
-.entry-title,
+.card-blockquote footer,
 .posts-card .card-text {
   color: #333; }
   .card-title a,
-  .entry-title a,
+  .card-blockquote footer a,
   .posts-card .card-text a {
     color: #333; }
 
-.posts-card .card-footer,
+.card-inverse {
+  color: rgba(255, 255, 255, 0.65); }
+  .card-inverse .card-blockquote {
+    color: rgba(255, 255, 255, 0.65); }
+    .card-inverse .card-blockquote a {
+      color: rgba(255, 255, 255, 0.65); }
+
+.card-footer,
 .entry-meta {
   color: #aaa;
   font-size: 85%; }
-  .posts-card .card-footer a,
+  .card-footer a,
   .entry-meta a {
     color: #aaa; }
 
 .card-title a,
-.posts-card .card-footer a,
+.card-footer a,
+.card-blockquote footer a,
 .entry-meta a,
 .widget ul li a,
 .related-posts .card-text a {
   text-decoration: none;
   transition: all 0.3s ease; }
   .card-title a:focus, .card-title a:hover,
-  .posts-card .card-footer a:focus,
-  .posts-card .card-footer a:hover,
+  .card-footer a:focus,
+  .card-footer a:hover,
+  .card-blockquote footer a:focus,
+  .card-blockquote footer a:hover,
   .entry-meta a:focus,
   .entry-meta a:hover,
   .widget ul li a:focus,
@@ -7066,16 +6987,19 @@ object {
   margin: 0;
   padding: 0 4px 5px; }
 
+.card {
+  margin-bottom: .75rem;
+  width: 100%; }
+
+.card-block ul {
+  margin-bottom: 0; }
+
 .card-footer {
   border-top: 0;
   padding: 0 1rem 0.75rem 1rem; }
 
-.card {
-  margin-bottom: .75rem;
-  box-shadow: 0 1px 3px rgba(0, 37, 55, 0.05);
-  width: 100%; }
-  .card .card-block ul {
-    margin-bottom: 0; }
+.card-shadow {
+  box-shadow: 0 1px 3px rgba(0, 37, 55, 0.05); }
 
 .card-img-overlay {
   background: rgba(5, 5, 5, 0.4); }
@@ -7083,12 +7007,60 @@ object {
 .related-posts {
   border-bottom: 1px solid #eee; }
   .related-posts .card {
-    border: 0;
-    box-shadow: 0 0px 0px rgba(0, 37, 55, 0.05); }
+    border: 0; }
     .related-posts .card .card-text {
       margin-top: .5rem; }
       .related-posts .card .card-text a {
         color: #333; }
+
+.card-aside {
+  background-color: #eee6e6;
+  border-color: #eee6e6; }
+
+.card-quote {
+  background-color: #eceeef;
+  border-color: #eceeef; }
+
+.card-status {
+  border-color: #eee; }
+
+.text-overflow-ellipsis {
+  text-overflow: ellipsis; }
+
+.nowrap {
+  overflow: hidden;
+  white-space: nowrap; }
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important; }
+
+.entry-img {
+  display: block;
+  overflow: hidden; }
+  .entry-img img {
+    transition: all .5s ease; }
+
+.entry-img:hover img {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  transform: scale(1.1); }
+
+.entry-content h2 {
+  margin: 30px 0;
+  font-weight: bold; }
+.entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
+  margin: 20px 0; }
+.entry-content p {
+  line-height: 2;
+  margin-bottom: 1.25rem;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word; }
+.entry-content ul li, .entry-content ol li {
+  font-size: 1rem;
+  line-height: 1.8; }
 
 /*--------------------------------------------------------------
 ## Galleries
@@ -7358,14 +7330,20 @@ object {
  ~~ html specific
 *****************************/
 .footer {
-  background: #2a2730;
-  padding: 10px 0;
+  background: #fff;
+  padding: 1rem 0;
   font-size: 85%; }
   .footer p {
-    color: #99979c;
-    margin-bottom: 0; }
+    color: #666; }
   .footer a {
-    color: #fff;
+    color: #777;
     opacity: 0.75; }
+
+.footer-inverse {
+  background: #2a2730; }
+  .footer-inverse p {
+    color: #99979c; }
+  .footer-inverse a {
+    color: #fff; }
 
 /*# sourceMappingURL=toolkit4.css.map */

@@ -1,5 +1,5 @@
 .card-title,
-.entry-title,
+.card-blockquote footer,
 .posts-card .card-text {
   color: #333;
   a {
@@ -7,7 +7,18 @@
   }
 }
 
-.posts-card .card-footer,
+.card-inverse {
+  color: rgba(255,255,255,.65);
+
+  .card-blockquote {
+    color: rgba(255,255,255,.65);
+    a {
+      color: rgba(255,255,255,.65);
+    }
+  }
+}
+
+.card-footer,
 .entry-meta {
   color: #aaa;
   font-size: 85%;
@@ -17,7 +28,8 @@
 }
 
 .card-title,
-.posts-card .card-footer,
+.card-footer,
+.card-blockquote footer,
 .entry-meta,
 .widget ul li,
 .related-posts .card-text {

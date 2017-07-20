@@ -13,24 +13,12 @@ body {
   border-bottom: 1px solid #e7eaf1;
 }
 
-/** post-tags **/
-
-.post-tags,
-.hot-tags {
-  .btn {
-    border-radius: 80px;
-  }
-}
-
+// 标签云
 .hot-tags {
   a {
     margin-top: 5px ;
     margin-bottom: 5px;
   }
-}
-
-.jumbotron {
-  background-color: #f7f7f9;
 }
 
 img {
@@ -63,31 +51,6 @@ img {
 
 ul.hide-bullets li.col-sm-4 {
   padding: 0;
-}
-
-/*****************
- ~~ Blog (home)
-*****************************/
-
-article.post {
-  margin: 20px 0;
-
-}
-
-/*****************************
-~~ Posts display (list / grid)
-*****************************/
-
-#display {
-    margin: 0 0 40px 8px;
-}
-
-#display a {
-    font-size: 16px;
-}
-
-div#post-metadata {
-    display: none;
 }
 
 /**tag**/

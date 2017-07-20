@@ -7,7 +7,7 @@
           <div class="posts">
             <?php  while ( have_posts() ) : the_post();
               /* 显示内容 */
-              get_template_part( 'template-parts/posts', get_post_format() );
+              get_template_part( 'template-parts/content', get_post_format() );
             endwhile; ?>
           </div>
           <div class="pagination">

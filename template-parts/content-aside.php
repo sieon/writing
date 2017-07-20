@@ -1,10 +1,10 @@
 <?php
 /**
  *******************************************************************************
- * //formats/format-quote.php
+ * //formats/format-aside.php
  *******************************************************************************
  *
- * Post format for quote post.
+ * Post format for an aside post.
  *
  * CODEX REF
  * https://developer.wordpress.org/themes/functionality/post-formats/
@@ -19,14 +19,13 @@
 **/
 ?>
 
-<article class="card">
+<article class="card card-shadow card-aside">
   <section class="card-block">
-    <?php the_title( sprintf( '<h2 class="card-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-    <div class="entry-meta mb-3">
-      <?php lean_entry_meta(); ?>
+    <div class="entry-content">
+      <blockquote class="card-blockquote">
+        <?php the_content(); ?>
+        <footer class="text-right"><cite><a href="<?php echo get_permalink(); ?>" class="alert-link"><?php the_time(); ?></a></cite></footer>
+      </blockquote>
     </div>
-    <blockquote class="card-blockquote">
-      <?php the_content(); ?>
-    </blockquote>
   </section>
 </article>

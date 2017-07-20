@@ -241,6 +241,20 @@ function customizer_library_lean_options() {
 		'default' => 'yes'
 	);
 
+	$post_tags_radio_choices = array(
+		'top'=> '文章顶部',
+		'bottom' => '文章底部'
+	);
+
+	$options['post-tags'] = array(
+		'id' => 'post-tags',
+		'label'   => __( '标签位置', 'lean' ),
+		'section' => $section,
+		'type'    => 'select',
+		'choices' => $post_tags_radio_choices,
+		'default' => 'top'
+	);
+
 	$options['post-nav'] = array(
 		'id' => 'post-nav',
 		'label'   => __( '是否显示上一篇／下一篇', 'lean' ),

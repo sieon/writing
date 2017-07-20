@@ -52,7 +52,7 @@ function related_posts( $post_num = 6 ) {
 							  </a>
 							<?php endif; ?>
 
-              <p class="card-text">
+              <p class="card-text line-clamp-2 text-overflow-ellipsis">
                 <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
               </p>
             </div>
@@ -109,7 +109,7 @@ function related_posts( $post_num = 6 ) {
 
 							  </a>
 							<?php endif; ?>
-              <p class="card-text">
+              <p class="card-text line-clamp-2 text-overflow-ellipsis">
                 <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 							</p>
             </div>

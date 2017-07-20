@@ -1,10 +1,10 @@
 <?php
 /**
  *******************************************************************************
- * //formats/format-aside.php
+ * //formats/format-status.php
  *******************************************************************************
  *
- * Post format for an aside post.
+ * Post format for a status based post.
  *
  * CODEX REF
  * https://developer.wordpress.org/themes/functionality/post-formats/
@@ -19,12 +19,11 @@
 **/
 ?>
 
-<article>
-    <section>
-    	<blockquote id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        	<?php the_content(); ?>
-        </blockquote>
-    </section>
+<article class="card card-shadow card-status">
+  <div class="card-block">
+    <blockquote class="card-blockquote">
+      <?php the_content(); ?>
+      <footer><cite><a href="<?php echo get_permalink(); ?>"><?php the_time(); ?></a></cite></footer>
+    </blockquote>
+  </div>
 </article>
-
-<?php edit_post_link( '编辑', '<span class="edit-link">', '</span>' ); ?>
