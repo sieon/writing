@@ -441,19 +441,19 @@ h1, h2, h3, h4, h5, h6,
   color: inherit; }
 
 h1, .h1 {
-  font-size: 1.8rem; }
+  font-size: 2.5rem; }
 
 h2, .h2 {
-  font-size: 1.4rem; }
+  font-size: 2rem; }
 
 h3, .h3 {
-  font-size: 1.25rem; }
+  font-size: 1.75rem; }
 
 h4, .h4 {
-  font-size: 1rem; }
+  font-size: 1.5rem; }
 
 h5, .h5 {
-  font-size: 1rem; }
+  font-size: 1.25rem; }
 
 h6, .h6 {
   font-size: 1rem; }
@@ -613,24 +613,24 @@ pre {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 15px;
+  padding-left: 15px; }
   @media (min-width: 576px) {
     .container {
-      padding-right: 10px;
-      padding-left: 10px; } }
+      padding-right: 15px;
+      padding-left: 15px; } }
   @media (min-width: 768px) {
     .container {
-      padding-right: 10px;
-      padding-left: 10px; } }
+      padding-right: 15px;
+      padding-left: 15px; } }
   @media (min-width: 992px) {
     .container {
-      padding-right: 10px;
-      padding-left: 10px; } }
+      padding-right: 15px;
+      padding-left: 15px; } }
   @media (min-width: 1200px) {
     .container {
-      padding-right: 10px;
-      padding-left: 10px; } }
+      padding-right: 15px;
+      padding-left: 15px; } }
   @media (min-width: 576px) {
     .container {
       width: 540px;
@@ -652,46 +652,46 @@ pre {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 15px;
+  padding-left: 15px; }
   @media (min-width: 576px) {
     .container-fluid {
-      padding-right: 10px;
-      padding-left: 10px; } }
+      padding-right: 15px;
+      padding-left: 15px; } }
   @media (min-width: 768px) {
     .container-fluid {
-      padding-right: 10px;
-      padding-left: 10px; } }
+      padding-right: 15px;
+      padding-left: 15px; } }
   @media (min-width: 992px) {
     .container-fluid {
-      padding-right: 10px;
-      padding-left: 10px; } }
+      padding-right: 15px;
+      padding-left: 15px; } }
   @media (min-width: 1200px) {
     .container-fluid {
-      padding-right: 10px;
-      padding-left: 10px; } }
+      padding-right: 15px;
+      padding-left: 15px; } }
 
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -10px;
-  margin-left: -10px; }
+  margin-right: -15px;
+  margin-left: -15px; }
   @media (min-width: 576px) {
     .row {
-      margin-right: -10px;
-      margin-left: -10px; } }
+      margin-right: -15px;
+      margin-left: -15px; } }
   @media (min-width: 768px) {
     .row {
-      margin-right: -10px;
-      margin-left: -10px; } }
+      margin-right: -15px;
+      margin-left: -15px; } }
   @media (min-width: 992px) {
     .row {
-      margin-right: -10px;
-      margin-left: -10px; } }
+      margin-right: -15px;
+      margin-left: -15px; } }
   @media (min-width: 1200px) {
     .row {
-      margin-right: -10px;
-      margin-left: -10px; } }
+      margin-right: -15px;
+      margin-left: -15px; } }
 
 .no-gutters {
   margin-right: 0;
@@ -705,24 +705,24 @@ pre {
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-right: 10px;
-  padding-left: 10px; }
+  padding-right: 15px;
+  padding-left: 15px; }
   @media (min-width: 576px) {
     .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl {
-      padding-right: 10px;
-      padding-left: 10px; } }
+      padding-right: 15px;
+      padding-left: 15px; } }
   @media (min-width: 768px) {
     .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl {
-      padding-right: 10px;
-      padding-left: 10px; } }
+      padding-right: 15px;
+      padding-left: 15px; } }
   @media (min-width: 992px) {
     .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl {
-      padding-right: 10px;
-      padding-left: 10px; } }
+      padding-right: 15px;
+      padding-left: 15px; } }
   @media (min-width: 1200px) {
     .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl {
-      padding-right: 10px;
-      padding-left: 10px; } }
+      padding-right: 15px;
+      padding-left: 15px; } }
 
 .col {
   flex-basis: 0;
@@ -2994,7 +2994,7 @@ tbody.collapse.show {
   .navbar-light .navbar-toggler:hover {
     color: rgba(0, 0, 0, 0.9); }
 .navbar-light .navbar-nav .nav-link {
-  color: #000; }
+  color: rgba(0, 0, 0, 0.5); }
   .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
     color: rgba(0, 0, 0, 0.7); }
   .navbar-light .navbar-nav .nav-link.disabled {
@@ -3007,9 +3007,9 @@ tbody.collapse.show {
 .navbar-light .navbar-toggler {
   border-color: rgba(0, 0, 0, 0.1); }
 .navbar-light .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
 .navbar-light .navbar-text {
-  color: #000; }
+  color: rgba(0, 0, 0, 0.5); }
 
 .navbar-inverse .navbar-brand,
 .navbar-inverse .navbar-toggler {
@@ -3019,7 +3019,7 @@ tbody.collapse.show {
   .navbar-inverse .navbar-toggler:hover {
     color: white; }
 .navbar-inverse .navbar-nav .nav-link {
-  color: #fff; }
+  color: rgba(255, 255, 255, 0.5); }
   .navbar-inverse .navbar-nav .nav-link:focus, .navbar-inverse .navbar-nav .nav-link:hover {
     color: rgba(255, 255, 255, 0.75); }
   .navbar-inverse .navbar-nav .nav-link.disabled {
@@ -3032,9 +3032,9 @@ tbody.collapse.show {
 .navbar-inverse .navbar-toggler {
   border-color: rgba(255, 255, 255, 0.1); }
 .navbar-inverse .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
 .navbar-inverse .navbar-text {
-  color: #fff; }
+  color: rgba(255, 255, 255, 0.5); }
 
 .card {
   position: relative;
@@ -3046,7 +3046,7 @@ tbody.collapse.show {
 
 .card-block {
   flex: 1 1 auto;
-  padding: 1rem; }
+  padding: 1.25rem; }
 
 .card-title {
   margin-bottom: 0.75rem; }
@@ -3061,7 +3061,7 @@ tbody.collapse.show {
 .card-link:hover {
   text-decoration: none; }
 .card-link + .card-link {
-  margin-left: 1rem; }
+  margin-left: 1.25rem; }
 
 .card > .list-group:first-child .list-group-item:first-child {
   border-top-right-radius: 0.25rem;
@@ -3071,7 +3071,7 @@ tbody.collapse.show {
   border-bottom-left-radius: 0.25rem; }
 
 .card-header {
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 1.25rem;
   margin-bottom: 0;
   background-color: #fff;
   border-bottom: 1px solid #e7eaf1; }
@@ -3079,21 +3079,21 @@ tbody.collapse.show {
     border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0; }
 
 .card-footer {
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 1.25rem;
   background-color: #fff;
   border-top: 1px solid #e7eaf1; }
   .card-footer:last-child {
     border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px); }
 
 .card-header-tabs {
-  margin-right: -0.5rem;
+  margin-right: -0.625rem;
   margin-bottom: -0.75rem;
-  margin-left: -0.5rem;
+  margin-left: -0.625rem;
   border-bottom: 0; }
 
 .card-header-pills {
-  margin-right: -0.5rem;
-  margin-left: -0.5rem; }
+  margin-right: -0.625rem;
+  margin-left: -0.625rem; }
 
 .card-primary {
   background-color: #0275d8;
@@ -3206,9 +3206,9 @@ tbody.collapse.show {
       flex: 1 0 0;
       flex-direction: column; }
       .card-deck .card:not(:first-child) {
-        margin-left: 10px; }
+        margin-left: 15px; }
       .card-deck .card:not(:last-child) {
-        margin-right: 10px; } }
+        margin-right: 15px; } }
 @media (min-width: 576px) {
   .card-group {
     display: flex;
@@ -3239,7 +3239,7 @@ tbody.collapse.show {
           border-radius: 0; } }
 @media (min-width: 576px) {
   .card-columns {
-    column-count: 4;
+    column-count: 3;
     column-gap: 1.25rem; }
     .card-columns .card {
       display: inline-block;
@@ -6988,7 +6988,7 @@ object {
   padding: 0 4px 5px; }
 
 .card {
-  margin-bottom: .75rem;
+  margin-bottom: 20px;
   width: 100%; }
 
 .card-block ul {
@@ -6996,10 +6996,10 @@ object {
 
 .card-footer {
   border-top: 0;
-  padding: 0 1rem 0.75rem 1rem; }
+  padding: 0 1.25rem 0.75rem 1.25rem; }
 
 .card-shadow {
-  box-shadow: 0 1px 3px rgba(0, 37, 55, 0.05); }
+  box-shadow: 0 2px 4px rgba(0, 37, 55, 0.05); }
 
 .card-img-overlay {
   background: rgba(5, 5, 5, 0.4); }
