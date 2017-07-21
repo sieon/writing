@@ -47,7 +47,7 @@ add_filter( 'comment_form_defaults', 'bootstrap3_comment_form' );
 function bootstrap3_comment_form( $args ) {
 	$args['comment_field'] = '<div class="form-group comment-form-comment">
     <label for="comment">' . _x( '评论内容', 'noun', 'lean' ) . ( ' <span class="required">*</span>' ) . '</label>
-    <textarea class="form-control" id="comment" name="comment" aria-required="true" cols="45" rows="8"></textarea>
+    <textarea class="form-control" id="comment" name="comment" aria-required="true" cols="45" rows="3"></textarea>
     </div>';
 	$args['class_submit']  = 'btn btn-secondary'; // since WP 4.1.
 	return $args;
