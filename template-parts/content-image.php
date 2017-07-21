@@ -71,17 +71,19 @@
 				echo '';
 			 } ?>
 
-		</div>
+			 <p class="card-text mt-3">
+				 <small class="d-flex justify-content-between">
+					 <span><a href="<?php echo get_permalink(); ?>">阅读全文</a></span>
+					 <?php
+					 if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+						 echo '<span class="comments-link">';
+						 comments_popup_link( sprintf( __( '去抢首评', 'lean' ), get_the_title() ) );
+						 // comments_popup_link( sprintf( __( '去抢首评<span class="sr-only sr-only-focusable"> on %s</span>', 'lean' ), get_the_title() ) );
+						 echo '</span>';
+					 } ?>
+				 </small>
+			 </p>
 
-		<div class="card-footer">
-			<span><a href="<?php echo get_permalink(); ?>">阅读全文</a></span>
-			<?php
-			if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-				echo '<span class="comments-link float-right">';
-				comments_popup_link( sprintf( __( '去抢首评', 'lean' ), get_the_title() ) );
-				// comments_popup_link( sprintf( __( '去抢首评<span class="sr-only sr-only-focusable"> on %s</span>', 'lean' ), get_the_title() ) );
-				echo '</span>';
-			} ?>
 		</div>
 
 	<?php endif; // end is_single ?>
