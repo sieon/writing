@@ -497,8 +497,8 @@ pre {
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px; }
+  padding-right: 10px;
+  padding-left: 10px; }
   @media (min-width: 576px) {
     .container {
       width: 540px;
@@ -520,14 +520,14 @@ pre {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px; }
+  padding-right: 10px;
+  padding-left: 10px; }
 
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px; }
+  margin-right: -10px;
+  margin-left: -10px; }
 
 .no-gutters {
   margin-right: 0;
@@ -546,8 +546,8 @@ pre {
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px; }
+  padding-right: 10px;
+  padding-left: 10px; }
 
 .col {
   flex-basis: 0;
@@ -2625,7 +2625,7 @@ tbody.collapse.show {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 1px solid #e7eaf1;
   border-radius: 0.25rem; }
 
 .card-body {
@@ -2658,14 +2658,14 @@ tbody.collapse.show {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
   background-color: rgba(0, 0, 0, 0.03);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
+  border-bottom: 1px solid #e7eaf1; }
   .card-header:first-child {
     border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0; }
 
 .card-footer {
   padding: 0.75rem 1.25rem;
   background-color: rgba(0, 0, 0, 0.03);
-  border-top: 1px solid rgba(0, 0, 0, 0.125); }
+  border-top: 1px solid #e7eaf1; }
   .card-footer:last-child {
     border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px); }
 
@@ -2705,14 +2705,14 @@ tbody.collapse.show {
   .card-deck {
     display: flex;
     flex-flow: row wrap;
-    margin-right: -15px;
-    margin-left: -15px; }
+    margin-right: -10px;
+    margin-left: -10px; }
     .card-deck .card {
       display: flex;
       flex: 1 0 0%;
       flex-direction: column;
-      margin-right: 15px;
-      margin-left: 15px; } }
+      margin-right: 10px;
+      margin-left: 10px; } }
 @media (min-width: 576px) {
   .card-group {
     display: flex;
@@ -6276,22 +6276,11 @@ ul.hide-bullets li.col-sm-4 {
   font-size: 1.1rem;
   color: #68727d; }
 
-.widget_lean_posts .card,
-.related-posts .card {
-  margin-bottom: 20px; }
-
 body {
   padding-top: 3.5rem; }
 
-.post-navigation {
-  border-bottom: 1px solid #eee; }
-
 .admin-bar .fixed-top {
   margin-top: 32px; }
-
-.navbar {
-  border-bottom: 1px solid rgba(30, 35, 42, 0.06);
-  box-shadow: 0 1px 3px 0 rgba(0, 34, 77, 0.05); }
 
 .dropdown .dropdown-menu .nav-item .nav-link {
   display: block;
@@ -6320,13 +6309,13 @@ body {
   background-color: #fff;
   border-top-left-radius: calc(0.25rem - 1px);
   border-top-right-radius: calc(0.25rem - 1px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
+  border-bottom: 1px solid #e7eaf1; }
 
 .single-header-body {
   padding: 1.25rem; }
 
 .single-header-border {
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 1px solid #e7eaf1;
   box-shadow: 0 1px 3px rgba(0, 37, 55, 0.05);
   border-radius: calc(0.25rem - 1px); }
 
@@ -6467,49 +6456,30 @@ a img.aligncenter {
 .wp-caption.alignright {
   margin: 5px 0 20px 20px; }
 
-.card-title,
-.card-blockquote footer,
-.posts-card .card-text {
+.text-link-color {
   color: #333; }
-  .card-title a,
-  .card-blockquote footer a,
-  .posts-card .card-text a {
-    color: #333; }
+  .text-link-color a {
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease; }
+    .text-link-color a:focus, .text-link-color a:hover {
+      color: #007bff;
+      text-decoration: none; }
 
-.card-inverse {
-  color: rgba(255, 255, 255, 0.65); }
-  .card-inverse .card-blockquote {
-    color: rgba(255, 255, 255, 0.65); }
-    .card-inverse .card-blockquote a {
-      color: rgba(255, 255, 255, 0.65); }
+.text-link-color-muted {
+  color: #aaa; }
+  .text-link-color-muted a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.3s ease; }
+    .text-link-color-muted a:focus, .text-link-color-muted a:hover {
+      color: #007bff;
+      text-decoration: none; }
 
-.card-footer,
-.entry-meta {
-  color: #aaa;
-  font-size: 85%; }
-  .card-footer a,
-  .entry-meta a {
-    color: #aaa; }
-
-.card-title a,
-.card-footer a,
-.card-blockquote footer a,
-.entry-meta a,
-.widget ul li a,
-.related-posts .card-text a {
+.widget ul li a {
   text-decoration: none;
   transition: all 0.3s ease; }
-  .card-title a:focus, .card-title a:hover,
-  .card-footer a:focus,
-  .card-footer a:hover,
-  .card-blockquote footer a:focus,
-  .card-blockquote footer a:hover,
-  .entry-meta a:focus,
-  .entry-meta a:hover,
-  .widget ul li a:focus,
-  .widget ul li a:hover,
-  .related-posts .card-text a:focus,
-  .related-posts .card-text a:hover {
+  .widget ul li a:focus, .widget ul li a:hover {
     color: #007bff;
     text-decoration: none; }
 
@@ -6784,28 +6754,6 @@ object {
   .comment-reply-title small a:focus {
     color: #1a1a1a; }
 
-.posts-card .row > div[class*='col-'] {
-  display: flex; }
-.posts-card .card {
-  margin-bottom: 1rem; }
-.posts-card .card:hover {
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
-  border-color: rgba(0, 0, 0, 0.08); }
-.posts-card .card-text {
-  -webkit-margin-before: 0px;
-  -webkit-margin-after: 0px;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px; }
-.posts-card .card-title {
-  font-weight: 400; }
-  .posts-card .card-title a {
-    color: #444; }
-.posts-card .card-footer {
-  color: #999;
-  margin-bottom: 0; }
-  .posts-card .card-footer a {
-    color: #aaa; }
-
 .profile-header {
   background-size: cover;
   background-color: #8d9093;
@@ -6827,38 +6775,21 @@ object {
   margin-bottom: 20px;
   width: 100%; }
 
+.posts h2 {
+  font-size: 1.25rem; }
+.posts h3 {
+  font-size: 1.125rem; }
+.posts blockquote {
+  font-size: 1rem; }
+
 .card-block ul {
   margin-bottom: 0; }
-
-.card-footer {
-  border-top: 0;
-  padding: 0 1.25rem 0.75rem 1.25rem; }
 
 .card-shadow {
   box-shadow: 0 2px 4px rgba(0, 37, 55, 0.05); }
 
 .card-img-overlay {
   background: rgba(5, 5, 5, 0.4); }
-
-.related-posts {
-  border-bottom: 1px solid #eee; }
-  .related-posts .card {
-    border: 0; }
-    .related-posts .card .card-text {
-      margin-top: .5rem; }
-      .related-posts .card .card-text a {
-        color: #333; }
-
-.card-aside {
-  background-color: #eee6e6;
-  border-color: #eee6e6; }
-
-.card-quote {
-  background-color: #eceeef;
-  border-color: #eceeef; }
-
-.card-status {
-  border-color: #eee; }
 
 .text-overflow-ellipsis {
   text-overflow: ellipsis; }
