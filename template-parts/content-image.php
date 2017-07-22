@@ -57,7 +57,7 @@
 				<?php lean_entry_meta2(); ?>
 			</div>
 
-			<a class="entry-img mt-3" href="<?php the_permalink(); ?>">
+			<a class="d-block mt-3" href="<?php the_permalink(); ?>">
 				<?php
 					the_post_thumbnail('full', ['class' => 'card-img img-fluid']);
 				?>
