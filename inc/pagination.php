@@ -48,7 +48,7 @@ function lean_pagination() {
 	if ( ! in_array( 1, $links ) ) {
 		$class = 1 == $paged ? ' class="active page-item"' : ' class="page-item"';
 
-		printf( '<li %s><a class="page-link" href="%s"><i class="fa fa-step-backward" aria-hidden="true"></i></a></li>' . "\n",
+		printf( '<li %s><a class="page-link" href="%s">第一页</a></li>' . "\n",
 		$class, esc_url( get_pagenum_link( 1 ) ), '1' );
 
 		/**    Previous Post Link */
@@ -83,7 +83,7 @@ function lean_pagination() {
 		}
 
 		$class = $paged == $max ? ' class="active "' : ' class="page-item"';
-		printf( '<li %s><a class="page-link" href="%s" aria-label="Next"><span aria-hidden="true"><i class="fa fa-step-forward" aria-hidden="true"></i></span><span class="sr-only">%s</span></a></li>' . "\n",
+		printf( '<li %s><a class="page-link" href="%s" aria-label="Next"><span aria-hidden="true">最后一页</span><span class="sr-only">%s</span></a></li>' . "\n",
 		$class . '', esc_url( get_pagenum_link( esc_html( $max ) ) ), esc_html( $max ) );
 	}
 
