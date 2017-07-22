@@ -12,7 +12,7 @@
     </header>
 
     <?php if ( have_posts() ) : ?>
-      <div class="posts-card">
+      <div class="posts">
         <div class="card-columns">
           <?php  while ( have_posts() ) : the_post(); ?>
           <!-- <div class="col-lg-4"> -->

@@ -51,7 +51,7 @@
 
 	<?php else: ?>
 
-			<?php the_title( sprintf( '<h4 class="card-title line-clamp-2 text-overflow-ellipsis"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h4>' ); ?>
+			<?php the_title( sprintf( '<h2 class="card-title line-clamp-2 text-overflow-ellipsis"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 			<div class="entry-meta">
 				<?php lean_entry_meta2(); ?>

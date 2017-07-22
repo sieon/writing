@@ -3,6 +3,18 @@
   width: 100%;
 }
 
+.posts {
+  h2 {
+    font-size: $posts-h2;
+  }
+  h3 {
+    font-size: $posts-h3;
+  }
+  blockquote {
+    font-size: $posts-blockquote;
+  }
+}
+
 .card-block {
   ul {
     margin-bottom: 0; //覆盖默认的margin-bottom
@@ -36,17 +48,12 @@
 }
 
 .card-aside {
-  background-color: #eee6e6;
-  border-color: #eee6e6;
 }
 
 .card-quote {
-  background-color: #eceeef;
-  border-color: #eceeef;
 }
 
 .card-status {
-  border-color: #eee;
 }
 
 .text-overflow-ellipsis {
