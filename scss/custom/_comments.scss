@@ -2,10 +2,6 @@
  * 11.4 - Comments
  */
 
-.comments-area {
-	margin: 0;
-}
-
 .comment-respond {
   margin-bottom: 1rem;
 }
@@ -75,9 +71,23 @@
 	display: inline-block;
 }
 
+.comment-body {
+	position: relative;
+	.reply {
+		position: absolute;
+		right: 0;
+		top: 1rem;
+	}
+}
+
+
 .comment-content {
   color: #666;
-  font-size: .85rem;
+  font-size: 87.5%;
+
+	p:last-child {
+		margin-bottom: 0;
+	}
 	ul,
 	ol {
 		margin: 0 0 1.5em 1.25em;
@@ -138,8 +148,11 @@
 	color: #007acc;
 }
 
-.comment-reply-title {
+.comment-list .comment-reply-title {
 	margin-top: 1rem;
+}
+
+.comment-reply-title {
 	small {
 		font-size: 100%;
 	}
@@ -152,4 +165,8 @@
 	small a:focus {
 		color: #1a1a1a;
 	}
+}
+
+.fn {
+	margin-right: .5rem;
 }
