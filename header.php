@@ -65,22 +65,24 @@
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <?php wp_nav_menu(
-  					array(
-  						'theme_location'  => 'primary',
-  						'container_class' => 'collapse navbar-collapse',
-  						'container_id'    => 'navbarNavDropdown',
-  						'menu_class'      => 'navbar-nav',
-  						'fallback_cb'     => '',
-  						'menu_id'         => 'main-nav',
-  						'walker'          => new WP_Bootstrap_Navwalker(),
-  					)
-  				);
-          ?>
+          <div id="navbarNavDropdown" class="collapse navbar-collapse">
+            <?php wp_nav_menu(
+              array(
+                'theme_location'  => 'primary',
+                'container_class' => 'mr-auto',
+                'container_id'    => '',
+                'menu_class'      => 'navbar-nav mr-auto',
+                'fallback_cb'     => '',
+                'menu_id'         => 'main-nav',
+                'walker'          => new WP_Bootstrap_Navwalker(),
+              )
+            );
+            ?>
 
-          <form class="form-inline" role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
-            <input class="form-control mr-sm-2" type="text" placeholder="输入后按Enter" aria-label="Search" name="s">
-          </form>
+            <form class="form-inline" role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
+              <input class="form-control mr-sm-2" type="text" placeholder="输入后按Enter" aria-label="Search" name="s">
+            </form>
+          </div>
 
       </div>
     </nav>
