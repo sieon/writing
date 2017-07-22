@@ -12,8 +12,8 @@
 
 		<?php the_title( '<h1 class="card-title mb-4">' ,'</h1>' ); ?>
 
-		<p class="entry-meta">
-		<?php lean_entry_meta(); ?>
+		<p class="text-link-color-muted">
+			<small><?php lean_entry_meta(); ?></small>
 		</p>
 
 		<div class="entry-content">
@@ -51,10 +51,10 @@
 
 	<?php else: ?>
 
-			<?php the_title( sprintf( '<h2 class="card-title line-clamp-2 text-overflow-ellipsis"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+			<?php the_title( sprintf( '<h2 class="card-title text-link-color line-clamp-2 text-overflow-ellipsis"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-			<div class="entry-meta">
-				<?php lean_entry_meta2(); ?>
+			<div class="entry-meta text-link-color-muted">
+				<small><?php lean_entry_meta2(); ?></small>
 			</div>
 
 			<a class="d-block mt-3" href="<?php the_permalink(); ?>">
@@ -64,14 +64,14 @@
 			</a>
 
 			<?php if ( get_theme_mod( 'posts_list_excerpt')==yes ) { ?>
-				<p class="card-text text-muted line-clamp-2 text-overflow-ellipsis mt-3 hidden-sm-down">
+				<p class="card-text line-clamp-2 text-overflow-ellipsis mt-3 hidden-sm-down">
 					<?php echo wp_trim_words( get_the_excerpt(), get_theme_mod( 'excerpt_length'), '...' );?>
 				</p>
 			<?php } else {
 				echo '';
 			 } ?>
 
-			 <p class="card-text mt-3">
+			 <p class="card-text text-link-color-muted mt-3">
 				 <small class="d-flex justify-content-between">
 					 <span><a href="<?php echo get_permalink(); ?>">阅读全文</a></span>
 					 <?php

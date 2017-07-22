@@ -1,38 +1,34 @@
-.card-title,
-.card-blockquote footer,
-.posts-card .card-text {
+// link-color
+
+.text-link-color {
   color: #333;
   a {
     color: #333;
-  }
-}
+    text-decoration: $link-decoration;
+    transition: all 0.3s ease;
 
-.card-inverse {
-  color: rgba(255,255,255,.65);
-
-  .card-blockquote {
-    color: rgba(255,255,255,.65);
-    a {
-      color: rgba(255,255,255,.65);
+    @include hover-focus {
+      color: $link-color;
+      text-decoration: $link-decoration;
     }
   }
 }
 
-.card-footer,
-.entry-meta {
+.text-link-color-muted {
   color: #aaa;
-  font-size: 85%;
   a {
     color: #aaa;
+    text-decoration: $link-decoration;
+    transition: all 0.3s ease;
+
+    @include hover-focus {
+      color: $link-color;
+      text-decoration: $link-decoration;
+    }
   }
 }
 
-.card-title,
-.card-footer,
-.card-blockquote footer,
-.entry-meta,
-.widget ul li,
-.related-posts .card-text {
+.widget ul li {
   a {
     text-decoration: $link-decoration;
     transition: all 0.3s ease;

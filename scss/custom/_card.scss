@@ -21,30 +21,12 @@
   }
 }
 
-.card-footer {
-  border-top: 0;
-  padding: 0 $card-spacer-x $card-spacer-y $card-spacer-x;
-}
-
 .card-shadow {
   box-shadow: 0 2px 4px rgba(0, 37, 55, .05);
 }
 
 .card-img-overlay {
   background: rgba(5, 5, 5, 0.4);
-}
-
-.related-posts {
-  border-bottom: 1px solid #eee;
-  .card {
-    border: 0;
-    .card-text {
-      margin-top: .5rem;
-      a {
-        color: #333;
-      }
-    }
-  }
 }
 
 .card-aside {
