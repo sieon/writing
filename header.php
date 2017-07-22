@@ -78,6 +78,10 @@
   				);
           ?>
 
+          <form class="form-inline" role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
+            <input class="form-control mr-sm-2" type="text" placeholder="输入后按Enter" aria-label="Search" name="s">
+          </form>
+
       </div>
     </nav>
   </header><!-- ./header -->
