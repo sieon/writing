@@ -1,6 +1,6 @@
 .single-header {
-  background-color: $single-header-bg;
-  @include border-top-radius($card-border-radius-inner);
+  background-color: #fff;
+  @include border-top-radius($card-inner-border-radius);
   border-bottom: $card-border-width solid $card-border-color;
 }
 
@@ -12,5 +12,5 @@
 .single-header-border {
   border: $card-border-width solid $card-border-color;
   box-shadow: 0 1px 3px rgba(0, 37, 55, .05);
-  @include border-radius($card-border-radius-inner);
+  @include border-radius($card-inner-border-radius);
 }

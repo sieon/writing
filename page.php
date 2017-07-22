@@ -13,7 +13,7 @@
                 </div>
               </div>
 
-            <div class="card-block">
+            <div class="card-body">
               <div class="entry-content">
                 <?php the_content(); ?>
               </div>

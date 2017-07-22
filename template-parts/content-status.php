@@ -20,10 +20,10 @@
 ?>
 
 <article class="card card-shadow card-status">
-  <div class="card-block">
-    <blockquote class="card-blockquote">
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
       <?php the_content(); ?>
-      <footer><cite><a href="<?php echo get_permalink(); ?>"><?php the_time(); ?></a></cite></footer>
+      <footer class="blockquote-footer"><cite><a href="<?php echo get_permalink(); ?>"><?php the_time(); ?></a></cite></footer>
     </blockquote>
   </div>
 </article>

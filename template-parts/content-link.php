@@ -20,7 +20,7 @@
 ?>
 
 <article class="card card-shadow">
-  <div class="card-block">
+  <div class="card-body">
 
     <?php if( is_single() ): ?>
 

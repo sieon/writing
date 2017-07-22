@@ -13,12 +13,12 @@
 
     <?php if ( have_posts() ) : ?>
       <div class="posts-card">
-        <div class="row">
+        <div class="card-columns">
           <?php  while ( have_posts() ) : the_post(); ?>
-          <div class="col-lg-6">
+          <!-- <div class="col-lg-4"> -->
             <?php
             get_template_part( 'template-parts/content-image', get_post_format() ); ?>
-          </div>
+          <!-- </div> -->
           <?php endwhile; ?>
         </div>
       </div>

@@ -5,7 +5,7 @@
 .dropdown .dropdown-menu .nav-item .nav-link {
   display: block;
   width: 100%; // For `<button>`s
-  padding: 3px $dropdown-item-padding-x;
+  padding: $dropdown-item-padding-y $dropdown-item-padding-x;
   clear: both;
   font-weight: $font-weight-normal;
   color: $dropdown-link-color;
@@ -30,7 +30,6 @@
   &.disabled,
   &:disabled {
     color: $dropdown-link-disabled-color;
-    cursor: $cursor-disabled;
     background-color: transparent;
     // Remove CSS gradients if they're enabled
     @if $enable-gradients {

@@ -8,7 +8,7 @@
 </head>
 <body <?php body_class( $class ); ?> >
   <header class="header">
-    <nav class="navbar navbar-toggleable-md <?php
+    <nav class="navbar navbar-expand-lg <?php
     switch (get_theme_mod( 'style-colors')) {
       case 'style-white':
         echo 'navbar-light bg-white';
@@ -19,27 +19,27 @@
           break;
 
           case 'style-inverse':
-            echo 'navbar-inverse bg-inverse';
+            echo 'navbar-dark bg-inverse';
             break;
 
             case 'style-danger':
-              echo 'navbar-inverse bg-danger';
+              echo 'navbar-dark bg-danger';
               break;
 
               case 'style-warning':
-                echo 'navbar-inverse bg-warning';
+                echo 'navbar-dark bg-warning';
                 break;
 
                 case 'style-info':
-                  echo 'navbar-inverse bg-info';
+                  echo 'navbar-dark bg-info';
                   break;
 
       case 'style-primary':
-        echo 'navbar-inverse bg-primary';
+        echo 'navbar-dark bg-primary';
         break;
 
       case 'style-success':
-        echo 'navbar-inverse bg-success';
+        echo 'navbar-dark bg-success';
         break;
 
       default:

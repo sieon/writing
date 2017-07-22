@@ -6,7 +6,7 @@
 ?>
 
 <div class="card card-shadow">
-	<div class="card-block">
+	<div class="card-body">
 
 	<?php if( is_single() ): ?>
 
@@ -24,7 +24,7 @@
         if ( $posttags ) {
           echo '<div class="post-tags mb-3">';
           foreach( $posttags as $tag ) {
-            echo '<a href="' . get_tag_link( $tag->term_id ) . '" class="btn btn-secondary btn-sm mr-3 mb-2">' . $tag->name . '</a>';
+            echo '<a href="' . get_tag_link( $tag->term_id ) . '" class="btn btn-light btn-sm mr-3 mb-2">' . $tag->name . '</a>';
           }
           echo '</div>';
         }
@@ -39,7 +39,7 @@
         if ( $posttags ) {
           echo '<div class="post-tags mt-4 mb-3">';
           foreach( $posttags as $tag ) {
-            echo '<a href="' . get_tag_link( $tag->term_id ) . '" class="btn btn-secondary btn-sm mr-2 mb-2">' . $tag->name . '</a>';
+            echo '<a href="' . get_tag_link( $tag->term_id ) . '" class="btn btn-light btn-sm mr-2 mb-2">' . $tag->name . '</a>';
           }
           echo '</div>';
         }
@@ -51,7 +51,7 @@
 
 	<?php else: ?>
 
-			<?php the_title( sprintf( '<h2 class="card-title line-clamp-2 text-overflow-ellipsis"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+			<?php the_title( sprintf( '<h4 class="card-title line-clamp-2 text-overflow-ellipsis"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h4>' ); ?>
 
 			<div class="entry-meta">
 				<?php lean_entry_meta2(); ?>

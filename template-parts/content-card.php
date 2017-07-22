@@ -13,13 +13,13 @@
 	      the_post_thumbnail( 'medium', ['class' => 'img-fluid card-img-top'] );
 	    ?>
 	  </a>
-		<div class="card-block">
+		<div class="card-body">
 			<?php the_title( sprintf( '<h2 class="card-title line-clamp-2 text-overflow-ellipsis"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 		</div>
 
 	<?php else: // no thumbnail ?>
 
-		<div class="card-block">
+		<div class="card-body">
 			<?php the_title( sprintf( '<h2 class="card-title line-clamp-2 text-overflow-ellipsis"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 			<?php if ( get_theme_mod( 'posts_list_excerpt')==yes ) { ?>

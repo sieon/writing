@@ -23,7 +23,7 @@ function lean_the_post_navigation() {
 	}
 	?>
 	<nav class="post-navigation card" role="navigation">
-		<div class="card-block">
+		<div class="card-body">
 			<h4 class="sr-only sr-only-focusable"><?php esc_html_e( 'Post navigation', 'lean' ); ?></h3>
 			<div class="nav-links">
 				<?php

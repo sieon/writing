@@ -2,23 +2,3 @@
 //
 // Copy variables from `_variables.scss` to this file to override default values
 // without modifying source files.
-
-$single-header-bg: #fff !default;
-
-$white:  #fff !default;
-$black:  #000 !default;
-
-$card-border-color:        #e7eaf1 !default;
-$card-cap-bg:              #fff !default;
-
-
-// Grid containers
-//
-// Define the maximum width of `.container` for different screen sizes.
-
-$container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px
-) !default;

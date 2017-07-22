@@ -12,7 +12,7 @@ get_header(); ?>
         </div>
       </div>
 
-      <div class="card-block">
+      <div class="card-body">
         <div class="entry-content">
           <?php //lean_wp_tag_cloud();
           $poststags= get_tags();
