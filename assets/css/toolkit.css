@@ -389,7 +389,7 @@ hr {
 
 small,
 .small {
-  font-size: 80%;
+  font-size: 87.5%;
   font-weight: normal; }
 
 mark,
@@ -6631,9 +6631,6 @@ object {
 /**
  * 11.4 - Comments
  */
-.comments-area {
-  margin: 0; }
-
 .comment-respond {
   margin-bottom: 1rem; }
 
@@ -6691,9 +6688,18 @@ object {
 .pingback .edit-link {
   display: inline-block; }
 
+.comment-body {
+  position: relative; }
+  .comment-body .reply {
+    position: absolute;
+    right: 0;
+    top: 1rem; }
+
 .comment-content {
   color: #666;
-  font-size: .85rem; }
+  font-size: 87.5%; }
+  .comment-content p:last-child {
+    margin-bottom: 0; }
   .comment-content ul,
   .comment-content ol {
     margin: 0 0 1.5em 1.25em; }
@@ -6742,17 +6748,21 @@ object {
 .required {
   color: #007acc; }
 
-.comment-reply-title {
+.comment-list .comment-reply-title {
   margin-top: 1rem; }
-  .comment-reply-title small {
-    font-size: 100%; }
-  .comment-reply-title small a {
-    border: 0;
-    float: right;
-    overflow: hidden; }
-  .comment-reply-title small a:hover,
-  .comment-reply-title small a:focus {
-    color: #1a1a1a; }
+
+.comment-reply-title small {
+  font-size: 100%; }
+.comment-reply-title small a {
+  border: 0;
+  float: right;
+  overflow: hidden; }
+.comment-reply-title small a:hover,
+.comment-reply-title small a:focus {
+  color: #1a1a1a; }
+
+.fn {
+  margin-right: .5rem; }
 
 .profile-header {
   background-size: cover;
