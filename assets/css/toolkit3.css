@@ -2794,7 +2794,7 @@ tbody.collapse.show {
   z-index: 2;
   color: #fff;
   background-color: #f0ad4e;
-  border-color: #007bff; }
+  border-color: #f0ad4e; }
 .page-item.disabled .page-link {
   color: #868e96;
   pointer-events: none;
@@ -6550,12 +6550,20 @@ object {
   margin-bottom: 20px;
   width: 100%; }
 
-.posts h2 {
-  font-size: 1.25rem; }
-.posts h3 {
-  font-size: 1.125rem; }
 .posts blockquote {
   font-size: 1rem; }
+
+.card-img-right {
+  height: 100%;
+  border-top-right-radius: calc(0.25rem - 1px);
+  border-bottom-right-radius: calc(0.25rem - 1px); }
+
+.card-img-left {
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-bottom-left-radius: calc(0.25rem - 1px); }
+
+.card-horizontal {
+  flex-direction: row; }
 
 .card-block ul {
   margin-bottom: 0; }
