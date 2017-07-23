@@ -61,7 +61,7 @@
 				</div>
 
 				<div class="col-8">
-					<?php the_title( sprintf( '<h2 class="card-title text-link-color line-clamp-2 text-overflow-ellipsis mb-3"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+					<?php the_title( sprintf( '<h2 class="card-title h5 text-link-color line-clamp-2 text-overflow-ellipsis mb-3"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 					<?php if ( get_theme_mod( 'posts_list_excerpt')==yes ) { ?>
 					<p class="card-text line-clamp-2 text-overflow-ellipsis mt-3 hidden-sm-down">
@@ -82,7 +82,7 @@
 
 			<?php else: ?>
 
-			<?php the_title( sprintf( '<h2 class="card-title text-link-color line-clamp-2 text-overflow-ellipsis"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+			<?php the_title( sprintf( '<h2 class="card-title h5 text-link-color line-clamp-2 text-overflow-ellipsis"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 			<?php if ( get_theme_mod( 'posts_list_excerpt')==yes ) { ?>
 			<p class="card-text line-clamp-2 text-overflow-ellipsis hidden-sm-down">
