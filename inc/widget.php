@@ -36,7 +36,7 @@ function lean_widgets_init() {
   	'description'   => '这是默认全局的边栏。',
   	'before_widget' => '<aside class="widget %2$s">',
   	'after_widget'  => '</aside>',
-  	'before_title'  => '<h4 class="widget-header">',
+  	'before_title'  => '<h4 class="widget-header h6">',
   	'after_title'   => '</h4>',
   ) );
 }

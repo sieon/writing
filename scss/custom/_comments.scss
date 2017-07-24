@@ -153,17 +153,9 @@
 }
 
 .comment-reply-title {
-	small {
-		font-size: 100%;
-	}
+  font-size: $h6-font-size;
 	small a {
-	 	border: 0;
 	 	float: right;
-	 	overflow: hidden;
-	}
-	small a:hover,
-	small a:focus {
-		color: #1a1a1a;
 	}
 }
 
