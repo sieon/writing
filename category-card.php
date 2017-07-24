@@ -1,15 +1,16 @@
 <?php get_header(); ?>
 
+<header class="jumbotron bg-success text-white rounded-0 mb-3">
+  <div class="container">
+    <?php
+    lean_the_archive_title( '<h1>', '</h1>' );
+    lean_the_archive_description( '<div>', '</div>' );
+    ?>
+  </div>
+</header>
+
 <div class="container mt-4">
   <div class="main-content">
-    <header class="single-header single-header-border mb-3">
-      <div class="single-header-body">
-        <?php
-        lean_the_archive_title( '<h1 class="single-header-title">', '</h1>' );
-        lean_the_archive_description( '<div class="text-muted">', '</div>' );
-        ?>
-      </div>
-    </header>
 
     <?php if ( have_posts() ) : ?>
       <div class="posts">
