@@ -8,7 +8,7 @@
 </head>
 <body <?php body_class( $class ); ?> >
   <header class="header">
-    <nav class="navbar navbar-expand-lg <?php
+    <nav class="navbar navbar-expand-lg navbar-shadow <?php
     switch (get_theme_mod( 'style-colors')) {
       case 'style-white':
         echo 'navbar-light bg-white';
