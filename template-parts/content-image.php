@@ -55,7 +55,7 @@
 			<small><?php lean_entry_meta2(); ?></small>
 		</div>
 
-		<a href="<?php the_permalink(); ?>" class="card-img">
+		<a href="<?php the_permalink(); ?>" class="card-img entry-img">
 			<?php
 				the_post_thumbnail('full', ['class' => 'card-img img-fluid']);
 			?>
