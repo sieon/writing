@@ -1,16 +1,1 @@
-.single-header {
-  background-color: #fff;
-  @include border-top-radius($card-inner-border-radius);
-  border-bottom: $card-border-width solid $card-border-color;
-}
-
-.single-header-body {
-  //background-color: rgba(10, 10, 9, 0.26);
-  padding: 1.25rem;
-}
-
-.single-header-border {
-  border: $card-border-width solid $card-border-color;
-  box-shadow: 0 1px 3px rgba(0, 37, 55, .05);
-  @include border-radius($card-inner-border-radius);
-}
+// page-header
