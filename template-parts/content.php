@@ -64,7 +64,7 @@
 					<?php the_title( sprintf( '<h2 class="card-title h5 text-link-color line-clamp-2 text-overflow-ellipsis mb-3"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 					<?php if ( get_theme_mod( 'posts_list_excerpt')==yes ) { ?>
-					<p class="card-text line-clamp-2 text-overflow-ellipsis mt-3 hidden-sm-down">
+					<p class="card-text mt-3 hidden-sm-down">
 						<?php echo wp_trim_words( get_the_excerpt(), get_theme_mod( 'excerpt_length'), '...' );?>
 					</p>
 					<?php } else {
@@ -85,7 +85,7 @@
 			<?php the_title( sprintf( '<h2 class="card-title h5 text-link-color line-clamp-2 text-overflow-ellipsis"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 			<?php if ( get_theme_mod( 'posts_list_excerpt')==yes ) { ?>
-			<p class="card-text line-clamp-2 text-overflow-ellipsis hidden-sm-down">
+			<p class="card-text hidden-sm-down">
 				<?php echo wp_trim_words( get_the_excerpt(), get_theme_mod( 'excerpt_length'), '...' );?>
 			</p>
 			<?php } else { echo ''; } ?>
