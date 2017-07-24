@@ -14,12 +14,12 @@
         echo 'navbar-light bg-white';
         break;
 
-        case 'style-faded':
-          echo 'navbar-light bg-faded';
+        case 'style-light':
+          echo 'navbar-light bg-light';
           break;
 
-          case 'style-inverse':
-            echo 'navbar-dark bg-inverse';
+          case 'style-dark':
+            echo 'navbar-dark bg-dark';
             break;
 
             case 'style-danger':
