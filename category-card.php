@@ -1,6 +1,43 @@
 <?php get_header(); ?>
 
-<header class="jumbotron bg-success text-white rounded-0 mb-3">
+<header class="jumbotron <?php
+switch (get_theme_mod( 'style-colors')) {
+  case 'style-white':
+    echo 'bg-light';
+    break;
+
+    case 'style-light':
+      echo 'text-white bg-dark';
+      break;
+
+      case 'style-dark':
+        echo 'text-white bg-dark';
+        break;
+
+        case 'style-danger':
+          echo 'text-white bg-danger';
+          break;
+
+          case 'style-warning':
+            echo 'text-white bg-warning';
+            break;
+
+            case 'style-info':
+              echo 'text-white bg-info';
+              break;
+
+  case 'style-primary':
+    echo 'text-white bg-primary';
+    break;
+
+  case 'style-success':
+    echo 'text-white bg-success';
+    break;
+
+  default:
+    echo 'text-white bg-light';
+    break;
+} ?> rounded-0 mb-3 pb-5 pt-5">
   <div class="container">
     <?php
     lean_the_archive_title( '<h1>', '</h1>' );

@@ -6282,6 +6282,10 @@ body {
 .admin-bar .fixed-top {
   margin-top: 32px; }
 
+.navbar-shadow {
+  border-bottom: 1px solid rgba(30, 35, 42, 0.06);
+  box-shadow: 0 1px 3px 0 rgba(0, 34, 77, 0.05); }
+
 .dropdown .dropdown-menu .nav-item .nav-link {
   display: block;
   width: 100%;
@@ -6305,19 +6309,9 @@ body {
     color: #868e96;
     background-color: transparent; }
 
-.single-header {
-  background-color: #fff;
-  border-top-left-radius: calc(0.25rem - 1px);
-  border-top-right-radius: calc(0.25rem - 1px);
-  border-bottom: 1px solid #e7eaf1; }
-
-.single-header-body {
-  padding: 1.25rem; }
-
-.single-header-border {
-  border: 1px solid #e7eaf1;
-  box-shadow: 0 1px 3px rgba(0, 37, 55, 0.05);
-  border-radius: calc(0.25rem - 1px); }
+.jumbotron {
+  border-bottom: 1px solid #e7eaf1;
+  box-shadow: 0 1px 3px 0 rgba(0, 37, 55, 0.05); }
 
 .widget-search {
   position: relative;
@@ -6817,15 +6811,10 @@ object {
 .comment-list .comment-reply-title {
   margin-top: 1rem; }
 
-.comment-reply-title small {
-  font-size: 100%; }
-.comment-reply-title small a {
-  border: 0;
-  float: right;
-  overflow: hidden; }
-.comment-reply-title small a:hover,
-.comment-reply-title small a:focus {
-  color: #1a1a1a; }
+.comment-reply-title {
+  font-size: 1rem; }
+  .comment-reply-title small a {
+    float: right; }
 
 .fn {
   margin-right: .5rem; }
