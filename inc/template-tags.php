@@ -25,10 +25,10 @@ function lean_the_post_navigation() {
 	<nav class="post-navigation card" role="navigation">
 		<div class="card-body">
 			<h4 class="sr-only sr-only-focusable"><?php esc_html_e( 'Post navigation', 'lean' ); ?></h3>
-			<div class="nav-links">
+			<div class="nav-links clearfix">
 				<?php
-					previous_post_link( '<div class="nav-previous">上一篇：%link</div>', '%title' );
-					next_post_link( '<div class="nav-next">下一篇：%link</div>', '%title' );
+					previous_post_link( '<div class="nav-previous float-left">&larr; %link</div>', '%title' );
+					next_post_link( '<div class="nav-next float-right">%link &rarr;</div>', '%title' );
 				?>
 			</div><!-- .nav-links -->
 
