@@ -1,6 +1,9 @@
 // page-header
 
 .jumbotron {
-  border-bottom: 1px solid #e7eaf1;
+  border: 1px solid $card-border-color;
   box-shadow: 0 1px 3px 0 rgba(0,37,55,.05);
+  p:last-child {
+    margin-bottom: 0;
+  }
 }

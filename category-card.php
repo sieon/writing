@@ -1,54 +1,13 @@
 <?php get_header(); ?>
 
-<header class="jumbotron <?php
-switch (get_theme_mod( 'style-colors')) {
-  case 'style-white':
-    echo 'bg-light';
-    break;
-
-    case 'style-light':
-      echo 'text-white bg-dark';
-      break;
-
-      case 'style-dark':
-        echo 'text-white bg-dark';
-        break;
-
-        case 'style-danger':
-          echo 'text-white bg-danger';
-          break;
-
-          case 'style-warning':
-            echo 'text-white bg-warning';
-            break;
-
-            case 'style-info':
-              echo 'text-white bg-info';
-              break;
-
-  case 'style-primary':
-    echo 'text-white bg-primary';
-    break;
-
-  case 'style-success':
-    echo 'text-white bg-success';
-    break;
-
-  default:
-    echo 'text-white bg-light';
-    break;
-} ?> rounded-0 mb-3 pb-5 pt-5">
-  <div class="container">
-    <?php
-    lean_the_archive_title( '<h1>', '</h1>' );
-    lean_the_archive_description( '<div>', '</div>' );
-    ?>
-  </div>
-</header>
-
 <div class="container mt-4">
   <div class="main-content">
-
+    <header class="jumbotron bg-white card-shadow mb-3 pb-4 pt-4 pl-3">
+      <?php
+      lean_the_archive_title( '<h1>', '</h1>' );
+      lean_the_archive_description( '<div class="text-muted">', '</div>' );
+      ?>
+    </header>
     <?php if ( have_posts() ) : ?>
       <div class="posts">
         <div class="row-contanier">
