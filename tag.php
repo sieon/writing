@@ -7,7 +7,7 @@
     <div class="row">
       <div class="col-lg-8">
         <main class="main-content">
-          <header class="jumbotron bg-white card-shadow mb-3 pb-4 pt-4 pl-3">
+          <header class="jumbotron bg-white card-shadow mb-3 py-4 pl-3">
             <p class="tag-tip"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;标签</p>
             <?php
             lean_the_archive_title( '<div class="single-header-title"><h1 class="d-inline">', '</h1>&nbsp;<span>相关的文章</span></div>' );

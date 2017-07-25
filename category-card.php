@@ -2,7 +2,7 @@
 
 <div class="container mt-4">
   <div class="main-content">
-    <header class="jumbotron bg-white card-shadow mb-4 pb-4 pt-4 pl-3">
+    <header class="jumbotron bg-white card-shadow mb-4 py-4 pl-3">
       <?php
       lean_the_archive_title( '<h1>', '</h1>' );
       lean_the_archive_description( '<div class="text-muted">', '</div>' );
