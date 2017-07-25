@@ -13,7 +13,7 @@ get_header(); ?>
 
 				<h1 class="page-title mb-3"><?php printf( esc_html__( '“%s”的搜索结果：', 'lean' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 
-				<div class="posts-list">
+				<div class="posts">
 					<?php while ( have_posts() ) : the_post(); ?>
 						<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
 					<?php endwhile; ?>

@@ -41,10 +41,10 @@ function customizer_library_lean_options() {
 
 	$style_clolors_choices = array(
 		'style-white'=> '白',
-		'style-faded' => '浅灰',
+		'style-light' => '浅灰',
 		'style-primary' => '蓝',
 		'style-info' => '浅蓝',
-		'style-inverse' => '黑',
+		'style-dark' => '黑',
 		'style-success' => '绿',
 		'style-warning' => '橙',
 		'style-danger' => '红'
@@ -59,13 +59,13 @@ function customizer_library_lean_options() {
 		'default' => 'style-white'
 	);
 
-	$options['author_bg'] = array(
-		'id' => 'author_bg',
-		'label'   => __( '作者头部图片', 'lean' ),
-		'section' => $section,
-		'type'    => 'image',
-		'default' => ''
-	);
+	// $options['author_bg'] = array(
+	// 	'id' => 'author_bg',
+	// 	'label'   => __( '作者头部图片', 'lean' ),
+	// 	'section' => $section,
+	// 	'type'    => 'image',
+	// 	'default' => ''
+	// );
 	//
 	// // File Upload
 	// $section = 'upload';
@@ -199,14 +199,14 @@ function customizer_library_lean_options() {
 		'no' => '否'
 	);
 
-	$options['post-author'] = array(
-		'id' => 'post-author',
-		'label'   => __( 'Meta是否显示作者', 'lean' ),
-		'section' => $section,
-		'type'    => 'select',
-		'choices' => $two_radio_choices,
-		'default' => 'yes'
-	);
+	// $options['post-author'] = array(
+	// 	'id' => 'post-author',
+	// 	'label'   => __( 'Meta是否显示作者', 'lean' ),
+	// 	'section' => $section,
+	// 	'type'    => 'select',
+	// 	'choices' => $two_radio_choices,
+	// 	'default' => 'yes'
+	// );
 
 	$options['posts_list_excerpt'] = array(
 		'id' => 'posts_list_excerpt',
@@ -252,7 +252,7 @@ function customizer_library_lean_options() {
 		'section' => $section,
 		'type'    => 'select',
 		'choices' => $post_tags_radio_choices,
-		'default' => 'top'
+		'default' => 'bottom'
 	);
 
 	$options['post-nav'] = array(
@@ -261,7 +261,7 @@ function customizer_library_lean_options() {
 		'section' => $section,
 		'type'    => 'select',
 		'choices' => $two_radio_choices,
-		'default' => 'no'
+		'default' => 'yes'
 	);
 
 	//

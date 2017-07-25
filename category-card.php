@@ -2,23 +2,20 @@
 
 <div class="container mt-4">
   <div class="main-content">
-    <header class="single-header single-header-border mb-3">
-      <div class="single-header-body">
-        <?php
-        lean_the_archive_title( '<h1 class="single-header-title">', '</h1>' );
-        lean_the_archive_description( '<div class="text-muted">', '</div>' );
-        ?>
-      </div>
+    <header class="jumbotron bg-white card-shadow mb-4 py-4 pl-3">
+      <?php
+      lean_the_archive_title( '<h1>', '</h1>' );
+      lean_the_archive_description( '<div class="text-muted">', '</div>' );
+      ?>
     </header>
-
     <?php if ( have_posts() ) : ?>
-      <div class="posts-card">
+      <div class="posts posts-card">
         <div class="row">
           <?php  while ( have_posts() ) : the_post(); ?>
-          <div class="col-lg-6">
-            <?php
-            get_template_part( 'template-parts/content-image', get_post_format() ); ?>
-          </div>
+            <div class="col-lg-3">
+              <?php
+              get_template_part( 'template-parts/content-card', get_post_format() ); ?>
+            </div>
           <?php endwhile; ?>
         </div>
       </div>

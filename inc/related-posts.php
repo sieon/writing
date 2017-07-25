@@ -2,7 +2,7 @@
 
 function related_posts( $post_num = 6 ) {
 	global $post;
-    echo '<div class="related-posts card"><div class="card-block"><h4 class="card-title">你可能喜欢：</h4><div class="row">';
+    echo '<div class="related-posts card"><div class="card-body"><h3 class="card-title h6 mb-3">你可能喜欢：</h3><div class="row">';
     $exclude_id = $post->ID;
     $posttags = get_the_tags(); $i = 0;
     if ( $posttags ) {
@@ -14,45 +14,45 @@ function related_posts( $post_num = 6 ) {
             'ignore_sticky_posts' => 1,
             'orderby' => 'comment_date',
             'posts_per_page' => $post_num,
-						'tax_query' => array(
-              array(
-                'taxonomy' => 'post_format',
-                'field' => 'slug',
-                'terms' => array(
-                    //'post-format-aside',
-                    //'post-format-audio',
-                    //'post-format-chat',
-                    //'post-format-gallery',
-                    //'post-format-image',
-                    'post-format-link',
-                    //'post-format-quote',
-                    'post-format-status',
-                    //'post-format-video'
-                ),
-                'operator' => 'NOT IN'
-              )
-            )
+						// 'tax_query' => array(
+            //   array(
+            //     'taxonomy' => 'post_format',
+            //     'field' => 'slug',
+            //     'terms' => array(
+            //         'post-format-aside',
+            //         //'post-format-audio',
+            //         //'post-format-chat',
+            //         //'post-format-gallery',
+            //         //'post-format-image',
+            //         'post-format-link',
+            //         //'post-format-quote',
+            //         'post-format-status',
+            //         //'post-format-video'
+            //     ),
+            //     'operator' => 'NOT IN'
+            //   )
+            // )
         );
         query_posts($args);
         while( have_posts() ) { the_post(); ?>
           <div class="col-md-4 col-6">
-            <div class="card">
+            <div class="card border-0">
 							<?php if(has_post_thumbnail()) : ?>
 	              <a class="entry-img" href="<?php the_permalink(); ?>">
-	                <?php the_post_thumbnail('medium', ['class' => 'card-img-top']); ?>
+	                <?php the_post_thumbnail('medium', ['class' => 'card-img rounded-0']); ?>
 	              </a>
 
 							<?php else: ?>
 								<a class="entry-img" href="<?php the_permalink(); ?>">
 									<?php if ( get_theme_mod( 'placeholder') ) {
-			              echo '<img src="' . esc_url( get_theme_mod( 'placeholder' ) ) . '" alt="图片占位符" class="card-img-top">';
+			              echo '<img src="' . esc_url( get_theme_mod( 'placeholder' ) ) . '" alt="图片占位符" class="card-img rounded-0">';
 			            } else {
-			              echo '<img src="' . THEME_URI . '/assets/img/placeholder.png" alt="图片占位符" class="card-img-top">';
+			              echo '<img src="' . THEME_URI . '/assets/img/placeholder.png" alt="图片占位符" class="card-img rounded-0">';
 			            } ?>
 							  </a>
 							<?php endif; ?>
 
-              <p class="card-text line-clamp-2 text-overflow-ellipsis">
+              <p class="card-text text-link-color mt-2 line-clamp-2 text-overflow-ellipsis">
                 <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
               </p>
             </div>
@@ -70,46 +70,46 @@ function related_posts( $post_num = 6 ) {
             'ignore_sticky_posts' => 1,
             'orderby' => 'comment_date',
             'posts_per_page' => $post_num - $i,
-						'tax_query' => array(
-              array(
-                'taxonomy' => 'post_format',
-                'field' => 'slug',
-                'terms' => array(
-                    //'post-format-aside',
-                    //'post-format-audio',
-                    //'post-format-chat',
-                    //'post-format-gallery',
-                    //'post-format-image',
-                    'post-format-link',
-                    //'post-format-quote',
-                    'post-format-status',
-                    //'post-format-video'
-                ),
-                'operator' => 'NOT IN'
-              )
-            )
+						// 'tax_query' => array(
+            //   array(
+            //     'taxonomy' => 'post_format',
+            //     'field' => 'slug',
+            //     'terms' => array(
+            //         'post-format-aside',
+            //         //'post-format-audio',
+            //         //'post-format-chat',
+            //         //'post-format-gallery',
+            //         //'post-format-image',
+            //         'post-format-link',
+            //         //'post-format-quote',
+            //         'post-format-status',
+            //         //'post-format-video'
+            //     ),
+            //     'operator' => 'NOT IN'
+            //   )
+            // )
         );
         query_posts($args);
         while( have_posts() ) { the_post(); ?>
           <div class="col-md-4 col-6">
-            <div class="card">
+            <div class="card border-0">
 							<?php if(has_post_thumbnail()) : ?>
 	              <a class="entry-img" href="<?php the_permalink(); ?>">
-	                <?php the_post_thumbnail('medium', ['class' => 'card-img-top']); ?>
+	                <?php the_post_thumbnail('medium', ['class' => 'card-img rounded-0']); ?>
 	              </a>
 
 							<?php else: ?>
 								<a class="entry-img" href="<?php the_permalink(); ?>">
 
 									<?php if ( get_theme_mod( 'placeholder') ) {
-			              echo '<img src="' . esc_url( get_theme_mod( 'placeholder' ) ) . '" alt="图片占位符" class="card-img-top">';
+			              echo '<img src="' . esc_url( get_theme_mod( 'placeholder' ) ) . '" alt="图片占位符" class="card-img rounded-0">';
 			            } else {
-			              echo '<img src="' . THEME_URI . '/assets/img/placeholder.png" alt="图片占位符" class="card-img-top">';
+			              echo '<img src="' . THEME_URI . '/assets/img/placeholder.png" alt="图片占位符" class="card-img rounded-0">';
 			            } ?>
 
 							  </a>
 							<?php endif; ?>
-              <p class="card-text line-clamp-2 text-overflow-ellipsis">
+              <p class="card-text text-link-color mt-2 line-clamp-2 text-overflow-ellipsis">
                 <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 							</p>
             </div>

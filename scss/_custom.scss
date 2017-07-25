@@ -3,36 +3,12 @@
 // Copy variables from `_variables.scss` to this file to override default values
 // without modifying source files.
 
-$single-header-bg: #fff !default;
+$small-font-size: 87.5% !default;
 
+$grid-gutter-width: 20px !default;
 
-// $line-height-base: 1.8 !default;
+$posts-blockquote: 1rem !default;
 
-$font-size-h1: 1.8rem !default;
-$font-size-h2: 1.4rem !default;
-$font-size-h3: 1.25rem !default;
-$font-size-h4: 1rem !default;
-$font-size-h5: 1rem !default;
-$font-size-h6: 1rem !default;
-
-$grid-gutter-width-base:     20px !default;
-
-$spacer: 1rem !default;
-
-$white:  #fff !default;
-$black:  #000 !default;
-
-// Navbar
-$navbar-padding-x:                  $spacer !default;
-//$navbar-padding-y:                  0;
-$navbar-inverse-color:              $white !default;
-$navbar-light-color:                $black !default;
 
 $card-border-color:        #e7eaf1 !default;
-$card-spacer-x:            1rem !default;
-$card-spacer-y:            .75rem !default;
-$card-cap-bg:              #fff !default;
-
-$card-columns-count:        4 !default;
 $card-columns-gap:          1.25rem !default;
-$card-columns-margin:       $card-spacer-y !default;

@@ -4,14 +4,13 @@
   <div class="row">
     <div class="col-lg-8">
       <div class="main-content">
-            <header class="single-header single-header-border mb-3">
-              <div class="single-header-body">
-                <?php
-                lean_the_archive_title( '<h1 class="single-header-title">', '</h1>' );
-                lean_the_archive_description( '<div class="text-muted">', '</div>' );
-                ?>
-              </div>
-            </header>
+
+        <header class="jumbotron bg-white card-shadow mb-3 py-4 pl-3">
+          <?php
+          lean_the_archive_title( '<h1>', '</h1>' );
+          lean_the_archive_description( '<div class="text-muted">', '</div>' );
+          ?>
+        </header>
 
             <?php if ( have_posts() ) : ?>
               <div class="posts">

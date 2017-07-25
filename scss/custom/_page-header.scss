@@ -1,16 +1,9 @@
-.single-header {
-  background-color: $single-header-bg;
-  @include border-top-radius($card-border-radius-inner);
-  border-bottom: $card-border-width solid $card-border-color;
-}
+// page-header
 
-.single-header-body {
-  //background-color: rgba(10, 10, 9, 0.26);
-  padding: 1.25rem;
-}
-
-.single-header-border {
-  border: $card-border-width solid $card-border-color;
-  box-shadow: 0 1px 3px rgba(0, 37, 55, .05);
-  @include border-radius($card-border-radius-inner);
+.jumbotron {
+  border: 1px solid $card-border-color;
+  box-shadow: 0 1px 3px 0 rgba(0,37,55,.05);
+  p:last-child {
+    margin-bottom: 0;
+  }
 }

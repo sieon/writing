@@ -20,7 +20,7 @@
 ?>
 
 <article class="card card-shadow">
-  <div class="card-block">
+  <div class="card-body">
 
     <?php if( is_single() ): ?>
 
@@ -64,7 +64,7 @@
     </div>
 
   <?php else: ?>
-    <h2 class="card-title line-clamp-2 text-overflow-ellipsis mb-3">
+    <h2 class="card-title h5 line-clamp-2 text-overflow-ellipsis mb-3">
       <?php if($external) : ?>
         <a href="<?php echo $link_url[0]; ?>" target="_blank" rel="nofollow"><?php the_title(); ?> <i class="fa fa-external-link" aria-hidden="true"></i></a>
       <?php else : ?>

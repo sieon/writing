@@ -90,9 +90,8 @@ class LeanPostsList extends WP_Widget {
 			<ul class="list-unstyled">
 				<?php while ($posts->have_posts()): $posts->the_post(); ?>
 					<li>
-							<i class="fa fa-caret-right" aria-hidden="true"></i>&nbsp;&nbsp;
-							<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-							<?php if($instance['posts_date']) { ?><small class="text-muted"><?php the_time('j M, Y'); ?></small><?php } ?>
+						<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+						<?php if($instance['posts_date']) { ?><small class="text-muted"><?php the_time('j M, Y'); ?></small><?php } ?>
 					</li><!--./li-->
 				<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>

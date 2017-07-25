@@ -31,7 +31,7 @@ get_header();
     <?php
     if ( have_posts() ) : ?>
 
-      <div class="posts-card">
+      <div class="posts">
         <div class="row">
           <?php while ( have_posts() ) : the_post(); ?>
             <div class="col-lg-4">

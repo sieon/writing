@@ -17,7 +17,7 @@
 	    <div class="main-content text-center">
 				<div class="card">
 					<h1 class="card-header"><?php esc_html_e( '没有结果，请尝试其他关键词。', 'lean' ); ?></h1>
-					<div class="card-block pt-5 pb-5">
+					<div class="card-body pt-5 pb-5">
 						<?php get_search_form(); ?>
 					</div>
 				</div>
@@ -29,7 +29,7 @@
 <?php else : ?>
 
 	<div class="card card-shadow">
-		<div class="card-block">
+		<div class="card-body">
 			<p class="card-text"><?php esc_html_e( '似乎我们没能找到你要的东西。或许，你可以尝试搜索一下：', 'lean' ); ?></p>
 			<?php get_search_form(); ?>
 		</div>

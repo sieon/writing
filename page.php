@@ -7,13 +7,9 @@
         <main class="main-content">
           <div class="card">
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-              <div class="single-header">
-                <div class="single-header-body">
-                  <h1 class="single-header-title"><?php the_title(); ?></h1>
-                </div>
-              </div>
+            <h1 class="card-header bg-white py-4"><?php the_title(); ?></h1>
 
-            <div class="card-block">
+            <div class="card-body">
               <div class="entry-content">
                 <?php the_content(); ?>
               </div>

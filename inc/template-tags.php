@@ -23,12 +23,12 @@ function lean_the_post_navigation() {
 	}
 	?>
 	<nav class="post-navigation card" role="navigation">
-		<div class="card-block">
+		<div class="card-body">
 			<h4 class="sr-only sr-only-focusable"><?php esc_html_e( 'Post navigation', 'lean' ); ?></h3>
-			<div class="nav-links">
+			<div class="nav-links clearfix">
 				<?php
-					previous_post_link( '<div class="nav-previous">上一篇：%link</div>', '%title' );
-					next_post_link( '<div class="nav-next">下一篇：%link</div>', '%title' );
+					previous_post_link( '<div class="nav-previous float-left">&larr; %link</div>', '%title' );
+					next_post_link( '<div class="nav-next float-right">%link &rarr;</div>', '%title' );
 				?>
 			</div><!-- .nav-links -->
 
@@ -84,14 +84,14 @@ function lean_entry_meta() {
     echo the_category(' ');
   }
 
-	edit_post_link( '编辑', '&nbsp;&bull;&nbsp;<span class="edit-link">', '</span>' );
-
   if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-    echo '<span class="comments-link hidden-sm-down float-right">';
+    echo '<span class="ml-3 comments-link hidden-sm-down">';
     comments_popup_link( sprintf( __( '去抢首评', 'lean' ), get_the_title() ) );
     // comments_popup_link( sprintf( __( '去抢首评<span class="sr-only sr-only-focusable"> on %s</span>', 'lean' ), get_the_title() ) );
     echo '</span>';
   }
+
+	edit_post_link( '编辑', '<span class="edit-link hidden-sm-down">&nbsp;&bull;&nbsp;', '</span>' );
 
 }
 endif;

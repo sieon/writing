@@ -1,6 +1,27 @@
 .card {
-  margin-bottom: .75rem;
+  margin-bottom: 20px;
   width: 100%;
+}
+
+.posts {
+  blockquote {
+    font-size: $posts-blockquote;
+  }
+}
+
+.card-img-right {
+  height: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
+  @include border-right-radius($card-inner-border-radius);
+}
+
+.card-img-left {
+  //height: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
+  @include border-left-radius($card-inner-border-radius);
+}
+
+// Horizontal cards
+.card-horizontal {
+  flex-direction: row;
 }
 
 .card-block {
@@ -9,44 +30,21 @@
   }
 }
 
-.card-footer {
-  border-top: 0;
-  padding: 0 $card-spacer-x $card-spacer-y $card-spacer-x;
-}
-
 .card-shadow {
-  box-shadow: 0 1px 3px rgba(0, 37, 55, .05);
+  box-shadow: 0 2px 4px rgba(0, 37, 55, .05);
 }
 
 .card-img-overlay {
   background: rgba(5, 5, 5, 0.4);
 }
 
-.related-posts {
-  border-bottom: 1px solid #eee;
-  .card {
-    border: 0;
-    .card-text {
-      margin-top: .5rem;
-      a {
-        color: #333;
-      }
-    }
-  }
-}
-
 .card-aside {
-  background-color: #eee6e6;
-  border-color: #eee6e6;
 }
 
 .card-quote {
-  background-color: #eceeef;
-  border-color: #eceeef;
 }
 
 .card-status {
-  border-color: #eee;
 }
 
 .text-overflow-ellipsis {
@@ -83,9 +81,10 @@
 
 .entry-content {
 
+  font-size: 110%;
+
   h2 {
     margin: 30px 0;
-    font-weight: bold;
   }
 
   h3,h4,h5,h6 {
@@ -93,14 +92,13 @@
   }
 
   p {
-    line-height: 2;
+    line-height: 1.8;
     margin-bottom: 1.25rem;
     -ms-word-wrap: break-word;
     word-wrap: break-word;
   }
 
   ul li,ol li {
-    font-size: 1rem;
     line-height: 1.8;
   }
 }
