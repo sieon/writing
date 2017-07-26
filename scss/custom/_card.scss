@@ -9,21 +9,6 @@
   }
 }
 
-.card-img-right {
-  height: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
-  @include border-right-radius($card-inner-border-radius);
-}
-
-.card-img-left {
-  //height: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
-  @include border-left-radius($card-inner-border-radius);
-}
-
-// Horizontal cards
-.card-horizontal {
-  flex-direction: row;
-}
-
 .card-block {
   ul {
     margin-bottom: 0; //覆盖默认的margin-bottom
@@ -39,49 +24,22 @@
 }
 
 .card-aside {
+
 }
 
 .card-quote {
+
 }
 
 .card-status {
-}
 
-.text-overflow-ellipsis {
-  text-overflow: ellipsis;
-}
-
-.nowrap {
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.line-clamp-2 {
-  overflow: hidden;
-  display: -webkit-box!important;
-  -webkit-line-clamp: 2!important;
-  -webkit-box-orient: vertical!important;
-}
-
-.entry-img {
-  display: block;
-  overflow:hidden;
-  img {
-    transition: all .5s ease;
-  }
-}
-
-.entry-img:hover img {
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  transform: scale(1.1);
 }
 
 // 文章页
 
 .entry-content {
 
-  font-size: 110%;
+  font-size: 100%;
 
   h2 {
     margin: 30px 0;
@@ -104,27 +62,21 @@
 }
 
 .posts-card {
+
   .row > div[class*='col-'] {
     display: flex;
     //flex:1 0 auto;
   }
+
   .card {
     margin-bottom: 1rem;
   }
+
   .card:hover {
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .08);
     border-color: rgba(0, 0, 0, .08)
   }
 
-  .card-body {
-    padding: 12px 10px;
-  }
-  .card-text {
-    -webkit-margin-before: 0px;
-    -webkit-margin-after: 0px;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-  }
   .card-title {
     line-height: 1.5;
     //font-size: 1rem;
@@ -133,6 +85,7 @@
       color: #444;
     }
   }
+
   .card-footer {
     color: #999;
     margin-bottom: 0;
