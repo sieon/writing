@@ -7,3 +7,24 @@
     margin-bottom: 0;
   }
 }
+
+
+.profile-header {
+  background-size: cover;
+  background-color: rgb(141, 144, 147);
+  height: 400px;
+  color: #fff;
+  display: table-cell;
+  width: 1000000px;
+  text-align: center;
+  vertical-align: middle;
+  .avatar {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+}
+
+.profile-header-container {
+  max-width: 300px;
+  margin: 0 auto;
+}

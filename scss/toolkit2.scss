@@ -7,28 +7,8 @@
 
 // Core variables and mixins
 @import "custom";
-@import "custom-2";
+@import "custom-red";
 @import "bootstrap";
 
-
-// Custom
-
-@import "custom/main";
-@import "custom/layouts";
-@import "custom/nav";
-@import "custom/navbar";
-@import "custom/dropdown";
-@import "custom/page-header";
-
-@import "custom/widget";
-@import "custom/align";
-@import "custom/link";
-@import "custom/media";
-@import "custom/captions";
-@import "custom/card";
-@import "custom/galleries";
-@import "custom/post-format";
-@import "custom/comments";
-@import "custom/author";
-@import "custom/screen-reader-text";
-@import "custom/footer";
+// Style
+@import "style";

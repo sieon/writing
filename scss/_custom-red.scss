@@ -6,22 +6,18 @@
 // Links
 //
 // Style anchor elements.
-$green:  #5cb85c !default;
-$red:    #d9534f !default;
-$orange: #f0ad4e !default;
+$red:    #dc3545 !default;
 
-$brand-success:             $green !default;
 $brand-danger:             $red !default;
-$brand-warning:             $orange !default;
 
-$link-color:            $brand-warning !default;
+$link-color:            $brand-danger !default;
 $link-decoration:       none !default;
 $link-hover-color:      darken($link-color, 15%) !default;
 $link-hover-decoration: underline !default;
 
-$component-active-bg:    $brand-warning !default;
+$component-active-bg:    $brand-danger !default;
 
 $dropdown-link-active-bg:        $component-active-bg !default;
 
-$pagination-active-bg:                 $brand-warning !default;
-$pagination-active-border-color:             $brand-warning !default;
+$pagination-active-bg:                 $brand-danger !default;
+$pagination-active-border-color:             $brand-danger !default;
