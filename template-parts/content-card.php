@@ -14,19 +14,22 @@
 	    ?>
 	  </a>
 		<div class="card-body">
-			<?php the_title( sprintf( '<h2 class="card-title h6 line-clamp-2 text-overflow-ellipsis text-link-color mb-0"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+			<?php the_title( sprintf( '<p class="card-title line-clamp-2 text-overflow-ellipsis text-link-color mb-0"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></p>' ); ?>
 		</div>
 
 	<?php else: // no thumbnail ?>
 
-		<div class="card-body">
-			<?php the_title( sprintf( '<h2 class="card-title h6 line-clamp-2 text-overflow-ellipsis text-link-color"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+		<div class="card-body d-flex flex-column justify-content-center">
 
-				<p class="entry-excerpt hidden-sm-down line-clamp-2 text-overflow-ellipsis">
-					<?php echo wp_trim_words( get_the_excerpt(), get_theme_mod( 'excerpt_length'), '...' );?>
-				</p>
-		 </div>
+			<?php the_title( sprintf( '<h2 class="card-title h6 text-link-color line-clamp-2 text-overflow-ellipsis"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+
+			<p class="card-text entry-excerpt hidden-sm-down line-clamp-2 text-overflow-ellipsis text-muted">
+				<?php echo wp_trim_words( get_the_excerpt(), get_theme_mod( 'excerpt_length'), '...' );?>
+			</p>
+		</div>
+
 	<?php endif; ?>
+
 	<div class="card-footer text-link-color-muted bg-white border-top-0 pt-0">
 		<small class="d-flex justify-content-between">
 			<span><?php the_time(); ?></span>
