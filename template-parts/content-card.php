@@ -5,7 +5,7 @@
  */
 ?>
 
-<div class="card card-shadow">
+<div class="card">
 	<?php if( has_post_thumbnail() ) : ?>
 
 		<a class="card-img-top" href="<?php the_permalink(); ?>">
@@ -19,7 +19,7 @@
 
 	<?php else: // no thumbnail ?>
 
-		<div class="card-body">
+		<div class="card-body px-2">
 			<?php the_title( sprintf( '<h2 class="card-title h6 line-clamp-2 text-overflow-ellipsis text-link-color"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 				<p class="entry-excerpt hidden-sm-down line-clamp-2 text-overflow-ellipsis">
@@ -27,7 +27,7 @@
 				</p>
 		 </div>
 	<?php endif; ?>
-	<div class="card-footer text-link-color-muted">
+	<div class="card-footer text-link-color-muted bg-white border-top-0 pt-0 px-2">
 		<small class="d-flex justify-content-between">
 			<span><?php the_time(); ?></span>
 			<?php
