@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
-<header class="jumbotron bg-dark text-white border rounded-0 mb-4 border-0">
+<header class="jumbotron bg-secondary text-white border card-shadow rounded-0 mb-4 border-0">
   <div class="container">
     <?php
     lean_the_archive_title( '<h1>', '</h1><hr>' );
-    lean_the_archive_description( '<div class="text-muted">', '</div>' );
+    lean_the_archive_description( '<div>', '</div>' );
     ?>
   </div>
 </header>
