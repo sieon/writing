@@ -1,6 +1,9 @@
 .card {
   margin-bottom: 20px;
   width: 100%;
+  p:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .posts {

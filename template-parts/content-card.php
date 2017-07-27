@@ -23,7 +23,7 @@
 
 			<?php the_title( sprintf( '<h2 class="card-title h6 text-link-color line-clamp-2 text-overflow-ellipsis"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-			<p class="card-text entry-excerpt hidden-sm-down line-clamp-2 text-overflow-ellipsis text-muted">
+			<p class="card-text entry-excerpt hidden-sm-down line-clamp-4 text-overflow-ellipsis text-muted">
 				<?php echo wp_trim_words( get_the_excerpt(), get_theme_mod( 'excerpt_length'), '...' );?>
 			</p>
 		</div>
