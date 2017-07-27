@@ -8,44 +8,7 @@
 </head>
 <body <?php body_class( $class ); ?> >
   <header class="header">
-    <nav class="navbar navbar-expand-lg navbar-shadow <?php
-    switch (get_theme_mod( 'style-colors')) {
-      case 'style-white':
-        echo 'navbar-light bg-white';
-        break;
-
-        case 'style-light':
-          echo 'navbar-light bg-light';
-          break;
-
-          case 'style-dark':
-            echo 'navbar-dark bg-dark';
-            break;
-
-            case 'style-danger':
-              echo 'navbar-dark bg-danger';
-              break;
-
-              case 'style-warning':
-                echo 'navbar-dark bg-warning';
-                break;
-
-                case 'style-info':
-                  echo 'navbar-dark bg-info';
-                  break;
-
-      case 'style-primary':
-        echo 'navbar-dark bg-primary';
-        break;
-
-      case 'style-success':
-        echo 'navbar-dark bg-success';
-        break;
-
-      default:
-        echo 'navbar-light bg-white';
-        break;
-    } ?> fixed-top" id="primary-navbar" role="navigation">
+    <nav class="navbar navbar-expand-lg navbar-shadow <?php echo get_theme_mod( 'style-colors' ); ?> fixed-top" id="primary-navbar" role="navigation">
       <div class="container">
 
 

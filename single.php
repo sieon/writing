@@ -18,7 +18,9 @@
 
                <?php //相关文章
                if ( get_theme_mod( 'related_posts')==yes ) {
-                related_posts();
+                 if ( !has_post_format( 'aside' ) && !has_post_format( 'status' )) {
+                   related_posts();
+                 }
                } ?>
 
                <?php // 加载评论

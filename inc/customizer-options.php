@@ -40,14 +40,14 @@ function customizer_library_lean_options() {
 	// );
 
 	$style_clolors_choices = array(
-		'style-white'=> '白',
-		'style-light' => '浅灰',
-		'style-primary' => '蓝',
-		'style-info' => '浅蓝',
-		'style-dark' => '黑',
-		'style-success' => '绿',
-		'style-warning' => '橙',
-		'style-danger' => '红'
+		'navbar-light bg-white'=> '白',
+		'navbar-light bg-light' => '浅灰',
+		'navbar-dark bg-primary' => '蓝',
+		'navbar-dark bg-info' => '浅蓝',
+		'navbar-dark bg-dark' => '黑',
+		'navbar-dark bg-success' => '绿',
+		'navbar-dark bg-warning' => '橙',
+		'navbar-dark bg-danger' => '红'
 	);
 
 	$options['style-colors'] = array(
@@ -56,7 +56,7 @@ function customizer_library_lean_options() {
 		'section' => $section,
 		'type'    => 'select',
 		'choices' => $style_clolors_choices,
-		'default' => 'style-white'
+		'default' => 'navbar-light bg-white'
 	);
 
 	// $options['author_bg'] = array(
