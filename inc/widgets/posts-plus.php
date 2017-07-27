@@ -71,15 +71,15 @@ class LeanPostsList extends WP_Widget {
 					'taxonomy' => 'post_format',
 					'field' => 'slug',
 					'terms' => array(
-						//'post-format-aside',
-						//'post-format-audio',
-						//'post-format-chat',
-						//'post-format-gallery',
-						//'post-format-image',
-						'post-format-link',
-						//'post-format-quote',
-						'post-format-status',
-						//'post-format-video'
+							'post-format-aside',
+							//'post-format-audio',
+							//'post-format-chat',
+							//'post-format-gallery',
+							//'post-format-image',
+							'post-format-link',
+							//'post-format-quote',
+							'post-format-status',
+							//'post-format-video'
 					),
 					'operator' => 'NOT IN'
 				)
