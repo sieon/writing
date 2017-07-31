@@ -7,9 +7,9 @@
 <div class="card border-0">
 	<?php if( has_post_thumbnail() ) : ?>
 
-		<a class="card-img-top" href="<?php the_permalink(); ?>">
+		<a class="entry-img" href="<?php the_permalink(); ?>">
 	    <?php
-	      the_post_thumbnail( 'medium', ['class' => 'img-fluid card-img-top'] );
+	      the_post_thumbnail( 'medium', ['class' => 'card-img rounded-0'] );
 	    ?>
 	  </a>
 		<div class="card-body px-0 py-3">
