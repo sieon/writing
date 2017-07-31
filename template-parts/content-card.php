@@ -8,9 +8,9 @@
 <div class="card">
 	<?php if( has_post_thumbnail() ) : ?>
 
-		<a class="card-img-top" href="<?php the_permalink(); ?>">
+		<a class="entry-img card-img-top" href="<?php the_permalink(); ?>">
 	    <?php
-	      the_post_thumbnail( 'medium', ['class' => 'img-fluid card-img-top'] );
+	      the_post_thumbnail( 'medium', ['class' => 'card-img-top'] );
 	    ?>
 	  </a>
 		<div class="card-body">
