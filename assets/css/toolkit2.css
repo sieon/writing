@@ -88,7 +88,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 1rem;
   font-weight: normal;
-  line-height: 1.5;
+  line-height: 1.8;
   color: #212529;
   background-color: #fff; }
 
@@ -2172,7 +2172,7 @@ tbody.collapse.show {
 .custom-control {
   position: relative;
   display: inline-flex;
-  min-height: 1.5rem;
+  min-height: 1.8rem;
   padding-left: 1.5rem;
   margin-right: 1rem; }
 
@@ -2195,7 +2195,7 @@ tbody.collapse.show {
 
 .custom-control-indicator {
   position: absolute;
-  top: 0.25rem;
+  top: 0.4rem;
   left: 0;
   display: block;
   width: 1rem;
@@ -2388,8 +2388,8 @@ tbody.collapse.show {
 
 .navbar-brand {
   display: inline-block;
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
+  padding-top: 0.275rem;
+  padding-bottom: 0.275rem;
   margin-right: 1rem;
   font-size: 1.25rem;
   line-height: inherit;
@@ -2455,8 +2455,8 @@ tbody.collapse.show {
         right: 0;
         left: auto; }
       .navbar-expand-sm .navbar-nav .nav-link {
-        padding-right: .5rem;
-        padding-left: .5rem; }
+        padding-right: 0.5rem;
+        padding-left: 0.5rem; }
     .navbar-expand-sm > .container,
     .navbar-expand-sm > .container-fluid {
       flex-wrap: nowrap; }
@@ -2482,8 +2482,8 @@ tbody.collapse.show {
         right: 0;
         left: auto; }
       .navbar-expand-md .navbar-nav .nav-link {
-        padding-right: .5rem;
-        padding-left: .5rem; }
+        padding-right: 0.5rem;
+        padding-left: 0.5rem; }
     .navbar-expand-md > .container,
     .navbar-expand-md > .container-fluid {
       flex-wrap: nowrap; }
@@ -2509,8 +2509,8 @@ tbody.collapse.show {
         right: 0;
         left: auto; }
       .navbar-expand-lg .navbar-nav .nav-link {
-        padding-right: .5rem;
-        padding-left: .5rem; }
+        padding-right: 0.5rem;
+        padding-left: 0.5rem; }
     .navbar-expand-lg > .container,
     .navbar-expand-lg > .container-fluid {
       flex-wrap: nowrap; }
@@ -2536,8 +2536,8 @@ tbody.collapse.show {
         right: 0;
         left: auto; }
       .navbar-expand-xl .navbar-nav .nav-link {
-        padding-right: .5rem;
-        padding-left: .5rem; }
+        padding-right: 0.5rem;
+        padding-left: 0.5rem; }
     .navbar-expand-xl > .container,
     .navbar-expand-xl > .container-fluid {
       flex-wrap: nowrap; }
@@ -2561,8 +2561,8 @@ tbody.collapse.show {
       right: 0;
       left: auto; }
     .navbar-expand .navbar-nav .nav-link {
-      padding-right: .5rem;
-      padding-left: .5rem; }
+      padding-right: 0.5rem;
+      padding-left: 0.5rem; }
   .navbar-expand > .container,
   .navbar-expand > .container-fluid {
     flex-wrap: nowrap; }
@@ -3340,7 +3340,7 @@ button.close {
 
 .modal-title {
   margin-bottom: 0;
-  line-height: 1.5; }
+  line-height: 1.8; }
 
 .modal-body {
   position: relative;
@@ -3383,7 +3383,7 @@ button.close {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
-  line-height: 1.5;
+  line-height: 1.8;
   text-align: left;
   text-align: start;
   text-decoration: none;
@@ -3465,7 +3465,7 @@ button.close {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
-  line-height: 1.5;
+  line-height: 1.8;
   text-align: left;
   text-align: start;
   text-decoration: none;
@@ -6421,7 +6421,7 @@ table#wp-calendar caption {
   .tagcloud a {
     padding: 5px 15px;
     border: 1px solid #68727d;
-    border-radius: 80px;
+    border-radius: 4px;
     color: #68727d;
     margin-bottom: 10px;
     display: inline-block; }
