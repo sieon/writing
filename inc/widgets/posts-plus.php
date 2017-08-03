@@ -22,7 +22,7 @@ class LeanPostsList extends WP_Widget {
     return array(
       'title'       => '',
       // Posts
-      //'posts_thumb'     => 1,
+      'posts_thumb'     => 1,
       //'posts_category'  => 1,
       //'posts_excerpt'  => 0,
       'posts_date'    => 1,
@@ -87,15 +87,47 @@ class LeanPostsList extends WP_Widget {
 		) );
 	?>
 
-			<ul class="list-unstyled">
-				<?php while ($posts->have_posts()): $posts->the_post(); ?>
-					<li>
-						<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-						<?php if($instance['posts_date']) { ?><small class="text-muted"><?php the_time('j M, Y'); ?></small><?php } ?>
-					</li><!--./li-->
-				<?php endwhile; ?>
-				<?php wp_reset_postdata(); ?>
-			</ul><!--./ul-->
+	<?php if($instance['posts_thumb']){ ?>
+
+		<div class="row">
+			<?php while ($posts->have_posts()): $posts->the_post(); ?>
+				<div class="col-md-<?php if($instance['posts_col']) { echo $instance['posts_col']; } ?> col-6">
+					<div class="card border-0">
+
+						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="entry-img">
+							<?php if( has_post_thumbnail() ) : ?>
+								<?php the_post_thumbnail('medium', ['class' => 'card-img-top rounded-0']); ?>
+							<?php else: ?>
+								<?php if ( get_theme_mod( 'placeholder') ) {
+									echo '<img src="' . esc_url( get_theme_mod( 'placeholder' ) ) . '" alt="图片占位符" class="card-img rounded-0">';
+								} else {
+									echo '<img src="' . THEME_URI . '/assets/img/placeholder.png" alt="图片占位符" class="card-img rounded-0">';
+								} ?>
+							<?php endif; ?>
+						</a>
+
+						<p class="card-text text-link-color text-overflow-ellipsis line-clamp-2 mt-2">
+							<small>
+								<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+							</small>
+						</p>
+					</div>
+				</div><!---col -->
+			<?php endwhile; ?>
+			<?php wp_reset_postdata(); ?>
+		</div><!--row-->
+
+	<?php }else{ ?>
+		<ul class="list-unstyled">
+			<?php while ($posts->have_posts()): $posts->the_post(); ?>
+				<li>
+					<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+					<?php if($instance['posts_date']) { ?><small class="text-muted"><?php the_time('j M, Y'); ?></small><?php } ?>
+				</li><!--./li-->
+			<?php endwhile; ?>
+			<?php wp_reset_postdata(); ?>
+		</ul><!--./ul-->
+	<?php } ?>
 
 <?php
 		$output .= ob_get_clean();
@@ -109,7 +141,7 @@ class LeanPostsList extends WP_Widget {
 		$instance = $old;
 		$instance['title'] = strip_tags($new['title']);
 	// Posts
-		//$instance['posts_thumb'] = $new['posts_thumb']?1:0;
+		$instance['posts_thumb'] = $new['posts_thumb']?1:0;
 		//$instance['posts_category'] = $new['posts_category']?1:0;
     //$instance['posts_excerpt'] = $new['posts_excerpt']?1:0;
 		$instance['posts_date'] = $new['posts_date']?1:0;
@@ -144,6 +176,11 @@ class LeanPostsList extends WP_Widget {
 		</p>
 
 		<h4>文章列表</h4>
+
+		<p>
+			<input type="checkbox" class="checkbox" id="<?php echo esc_attr( $this->get_field_id('posts_thumb') ); ?>" name="<?php echo esc_attr( $this->get_field_name('posts_thumb') ); ?>" <?php checked( (bool) $instance["posts_thumb"], true ); ?>>
+			<label for="<?php echo esc_attr( $this->get_field_id('posts_thumb') ); ?>">显示缩略图</label>
+		</p>
 
 		<p>
 			<label style="width: 55%; display: inline-block;" for="<?php echo esc_attr( $this->get_field_id("posts_num") ); ?>">显示几篇</label>
