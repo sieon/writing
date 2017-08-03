@@ -36,7 +36,7 @@ function related_posts( $post_num = 6 ) {
         query_posts($args);
         while( have_posts() ) { the_post(); ?>
 					<div class="col-md-4 col-6">
-						<?php get_template_part( 'template-parts/related-posts', 'card'); ?>
+						<?php get_template_part( 'template-parts/related', 'posts'); ?>
 					</div>
             <?php
             $exclude_id .= ',' . $post->ID; $i ++;
