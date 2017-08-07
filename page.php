@@ -33,7 +33,11 @@
             <?php endif; ?>
         </main>
       </div>
-      <?php get_sidebar();?>
+      <div class="col-lg-4 hidden-md-down">
+        <div class="sidebar">
+          <?php if ( !dynamic_sidebar('sidebar-2') ) { _e('','lean'); } ?>
+        </div>
+      </div>
 
     </div>
   </div>

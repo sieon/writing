@@ -39,5 +39,14 @@ function lean_widgets_init() {
   	'before_title'  => '<h4 class="widget-header h6">',
   	'after_title'   => '</h4>',
   ) );
+  register_sidebar( array(
+    'name'          => esc_html__( '页面边栏', 'lean' ),
+    'id'            => 'sidebar-2',
+    'description'   => '这里只会在页面显示。',
+    'before_widget' => '<aside class="widget card-shadow %2$s">',
+    'after_widget'  => '</aside>',
+    'before_title'  => '<h4 class="widget-header h6">',
+    'after_title'   => '</h4>',
+  ) );
 }
 add_action( 'widgets_init', 'lean_widgets_init' );
