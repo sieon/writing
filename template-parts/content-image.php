@@ -4,7 +4,7 @@
  * @package lean
  */
 ?>
-<div class="card card-shadow">
+<div class="card l-shadow">
 	<div class="card-body">
 		<?php if(is_single()): ?>
 

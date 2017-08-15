@@ -19,7 +19,7 @@
 **/
 ?>
 
-<article class="card card-shadow card-status">
+<article class="card l-shadow card-status">
   <div class="card-body">
     <blockquote class="blockquote mb-0">
       <?php the_content(); ?>
