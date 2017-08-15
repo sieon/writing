@@ -1,0 +1,35 @@
+// 标签云
+.hot-tags {
+  a {
+    margin-top: 5px ;
+    margin-bottom: 5px;
+  }
+}
+
+/*****************************
+ ~~ WordPress Config Specific
+*****************************/
+
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+
+.hide-bullets {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.hide-bullets li.col-sm-4 {
+  padding: 0;
+}
+
+/**tag**/
+.tag-tip {
+  font-size: 1.1rem;
+  color: #68727d; }
