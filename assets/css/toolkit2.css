@@ -5,7 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*!
- * Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com)
+ * Bootstrap v4.0.0-beta (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors
  * Copyright 2011-2017 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -498,30 +498,28 @@ pre {
   margin-right: auto;
   margin-left: auto;
   padding-right: 10px;
-  padding-left: 10px; }
+  padding-left: 10px;
+  width: 100%; }
   @media (min-width: 576px) {
     .container {
-      width: 540px;
-      max-width: 100%; } }
+      max-width: 540px; } }
   @media (min-width: 768px) {
     .container {
-      width: 720px;
-      max-width: 100%; } }
+      max-width: 720px; } }
   @media (min-width: 992px) {
     .container {
-      width: 960px;
-      max-width: 100%; } }
+      max-width: 960px; } }
   @media (min-width: 1200px) {
     .container {
-      width: 1140px;
-      max-width: 100%; } }
+      max-width: 1140px; } }
 
 .container-fluid {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
   padding-right: 10px;
-  padding-left: 10px; }
+  padding-left: 10px;
+  width: 100%; }
 
 .row {
   display: flex;
@@ -1877,6 +1875,9 @@ tbody.collapse.show {
 .dropdown-toggle:empty::after {
   margin-left: 0; }
 
+.dropup .dropdown-menu {
+  margin-top: 0;
+  margin-bottom: 0.125rem; }
 .dropup .dropdown-toggle::after {
   border-top: 0;
   border-bottom: 0.3em solid; }
@@ -2379,12 +2380,6 @@ tbody.collapse.show {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between; }
-    @media (max-width: 575px) {
-      .navbar > .container,
-      .navbar > .container-fluid {
-        width: 100%;
-        margin-right: 0;
-        margin-left: 0; } }
 
 .navbar-brand {
   display: inline-block;
@@ -2416,7 +2411,8 @@ tbody.collapse.show {
   padding-bottom: 0.5rem; }
 
 .navbar-collapse {
-  flex-basis: 100%; }
+  flex-basis: 100%;
+  align-items: center; }
 
 .navbar-toggler {
   padding: 0.25rem 0.75rem;
@@ -2455,8 +2451,8 @@ tbody.collapse.show {
         right: 0;
         left: auto; }
       .navbar-expand-sm .navbar-nav .nav-link {
-        padding-right: 0.5rem;
-        padding-left: 0.5rem; }
+        padding-right: .5rem;
+        padding-left: .5rem; }
     .navbar-expand-sm > .container,
     .navbar-expand-sm > .container-fluid {
       flex-wrap: nowrap; }
@@ -2482,8 +2478,8 @@ tbody.collapse.show {
         right: 0;
         left: auto; }
       .navbar-expand-md .navbar-nav .nav-link {
-        padding-right: 0.5rem;
-        padding-left: 0.5rem; }
+        padding-right: .5rem;
+        padding-left: .5rem; }
     .navbar-expand-md > .container,
     .navbar-expand-md > .container-fluid {
       flex-wrap: nowrap; }
@@ -2509,8 +2505,8 @@ tbody.collapse.show {
         right: 0;
         left: auto; }
       .navbar-expand-lg .navbar-nav .nav-link {
-        padding-right: 0.5rem;
-        padding-left: 0.5rem; }
+        padding-right: .5rem;
+        padding-left: .5rem; }
     .navbar-expand-lg > .container,
     .navbar-expand-lg > .container-fluid {
       flex-wrap: nowrap; }
@@ -2536,8 +2532,8 @@ tbody.collapse.show {
         right: 0;
         left: auto; }
       .navbar-expand-xl .navbar-nav .nav-link {
-        padding-right: 0.5rem;
-        padding-left: 0.5rem; }
+        padding-right: .5rem;
+        padding-left: .5rem; }
     .navbar-expand-xl > .container,
     .navbar-expand-xl > .container-fluid {
       flex-wrap: nowrap; }
@@ -2561,8 +2557,8 @@ tbody.collapse.show {
       right: 0;
       left: auto; }
     .navbar-expand .navbar-nav .nav-link {
-      padding-right: 0.5rem;
-      padding-left: 0.5rem; }
+      padding-right: .5rem;
+      padding-left: .5rem; }
   .navbar-expand > .container,
   .navbar-expand > .container-fluid {
     flex-wrap: nowrap; }
@@ -3794,6 +3790,9 @@ a.bg-light:focus, a.bg-light:hover {
 a.bg-dark:focus, a.bg-dark:hover {
   background-color: #1d2124 !important; }
 
+.bg-white {
+  background-color: #fff !important; }
+
 .bg-transparent {
   background-color: transparent !important; }
 
@@ -3838,6 +3837,9 @@ a.bg-dark:focus, a.bg-dark:hover {
 
 .border-dark {
   border-color: #343a40 !important; }
+
+.border-white {
+  border-color: #fff !important; }
 
 .rounded {
   border-radius: 0.25rem !important; }
