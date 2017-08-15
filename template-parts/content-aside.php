@@ -19,7 +19,7 @@
 **/
 ?>
 
-<article class="card l-shadow card-aside">
+<article class="card l-shadow-v28 card-aside">
   <section class="card-body">
     <div class="entry-content">
       <blockquote class="blockquote mb-0">

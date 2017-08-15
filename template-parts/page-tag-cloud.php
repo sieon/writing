@@ -5,7 +5,7 @@
 get_header(); ?>
 <div class="container mt-4">
   <div class="site-main">
-    <main class="main-content card">
+    <main class="main-content card l-shadow-v28">
 
       <h1 class="card-header bg-white pt-4 pb-4">标签云</h1>
 

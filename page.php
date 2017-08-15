@@ -5,7 +5,7 @@
     <div class="row">
       <div class="col-lg-8">
         <main class="main-content">
-          <div class="card">
+          <div class="card l-shadow-v28">
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
             <h1 class="card-header bg-white py-4"><?php the_title(); ?></h1>
 
