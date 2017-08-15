@@ -220,8 +220,8 @@ table {
   border-collapse: collapse; }
 
 caption {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   color: #868e96;
   text-align: left;
   caption-side: bottom; }
@@ -1026,7 +1026,7 @@ pre {
   background-color: transparent; }
   .table th,
   .table td {
-    padding: 0.75rem;
+    padding: 0.5rem;
     vertical-align: top;
     border-top: 1px solid #e9ecef; }
   .table thead th {
@@ -6234,11 +6234,32 @@ a.text-dark:focus, a.text-dark:hover {
 .bg-white {
   background-color: #fff; }
 
-.border-b-1 {
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  border-bottom: 1px solid #e7eaf1; }
+.bg-gray200 {
+  background-color: #e9ecef; }
+
+.bg-gray300 {
+  background-color: #dee2e6; }
+
+.bg-gray400 {
+  background-color: #ced4da; }
+
+.bg-gray500 {
+  background-color: #adb5bd; }
+
+.bg-gray600 {
+  background-color: #868e96; }
+
+.bg-gray700 {
+  background-color: #495057; }
+
+.bg-gray800 {
+  background-color: #343a40; }
+
+.border-bottom-1 {
+  border-bottom: 1px solid #e9ecef; }
+
+.border-top-1 {
+  border-top: 1px solid #e9ecef; }
 
 .text-overflow-ellipsis {
   text-overflow: ellipsis; }
@@ -6396,15 +6417,24 @@ body {
   .widget-header:first-child {
     border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0; }
 
-@media (max-width: 767px) {
-  .widget {
-    margin: 40px 0; } }
+@media (min-width: 576px) {
+  .widget-deck {
+    display: flex;
+    flex-flow: row wrap;
+    margin-right: -15px;
+    margin-left: -15px; }
+    .widget-deck .widget {
+      display: flex;
+      flex: 1 0 0%;
+      flex-direction: column;
+      margin-right: 15px;
+      margin-left: 15px; } }
 /*****************************
  ~~ widgets (calendar)
 *****************************/
 table#wp-calendar {
-  width: 100%;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  font-size: 87.5%; }
 
 td#next {
   text-align: right; }
@@ -6510,6 +6540,16 @@ a img.aligncenter {
     text-decoration: none;
     transition: all 0.3s ease; }
     .text-link-color a:focus, .text-link-color a:hover {
+      color: #fd7e14;
+      text-decoration: none; }
+
+.text-link-color-muted {
+  color: #aaa; }
+  .text-link-color-muted a {
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.3s ease; }
+    .text-link-color-muted a:focus, .text-link-color-muted a:hover {
       color: #fd7e14;
       text-decoration: none; }
 
@@ -6891,16 +6931,6 @@ object {
 /*****************************
  ~~ html specific
 *****************************/
-.footer {
-  background: #fff;
-  padding: 1rem 0;
-  font-size: 85%; }
-  .footer p {
-    color: #666; }
-  .footer a {
-    color: #777;
-    opacity: 0.75; }
-
 .footer-inverse {
   background: #2a2730; }
   .footer-inverse p {

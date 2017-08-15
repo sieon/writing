@@ -28,6 +28,20 @@
   }
 }
 
+.text-link-color-muted {
+  color: #aaa;
+  a {
+    color: #aaa;
+    text-decoration: $link-decoration;
+    transition: all 0.3s ease;
+
+    @include hover-focus {
+      color: $link-color;
+      text-decoration: $link-decoration;
+    }
+  }
+}
+
 .widget ul li {
   a {
     text-decoration: $link-decoration;

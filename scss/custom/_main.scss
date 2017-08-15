@@ -2,11 +2,40 @@
   background-color: $white;
 }
 
-.border-b-1 {
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  border-bottom: 1px solid #e7eaf1;
+.bg-gray200 {
+  background-color: $gray-200;
+}
+
+.bg-gray300 {
+  background-color: $gray-300;
+}
+
+.bg-gray400 {
+  background-color: $gray-400;
+}
+
+.bg-gray500 {
+  background-color: $gray-500;
+}
+
+.bg-gray600 {
+  background-color: $gray-600;
+}
+
+.bg-gray700 {
+  background-color: $gray-700;
+}
+
+.bg-gray800 {
+  background-color: $gray-800;
+}
+
+.border-bottom-1 {
+  border-bottom: 1px solid #e9ecef;
+}
+
+.border-top-1 {
+  border-top: 1px solid #e9ecef;
 }
 
 .text-overflow-ellipsis {
