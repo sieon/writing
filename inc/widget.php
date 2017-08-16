@@ -48,14 +48,41 @@ function lean_widgets_init() {
     'before_title'  => '<h4 class="widget-header h6">',
     'after_title'   => '</h4>',
   ) );
-  register_sidebar( array(
-    'name'          => esc_html__( '底部', 'lean' ),
-    'id'            => 'sidebar-3',
-    'description'   => '这里只会在页面显示。',
-    'before_widget' => '<aside class="widget p-0 border-0 bg-transparent %2$s ">',
-    'after_widget'  => '</aside>',
-    'before_title'  => '<h4 class="widget-header bg-transparent mx-0 mt-0 px-0 border-bottom-0 pb-0 h6">',
-    'after_title'   => '</h4>',
-  ) );
+  // register_sidebar( array(
+  //   'name'          => esc_html__( '底部', 'lean' ),
+  //   'id'            => 'sidebar-3',
+  //   'description'   => '这里只会在页面显示。',
+  //   'before_widget' => '<aside class="widget p-0 border-0 bg-transparent %2$s ">',
+  //   'after_widget'  => '</aside>',
+  //   'before_title'  => '<h4 class="widget-header bg-transparent mx-0 mt-0 px-0 border-bottom-0 pb-0 h5 font-weight-bold">',
+  //   'after_title'   => '</h4>',
+  // ) );
+  // register_sidebar( array(
+  //   'name'          => esc_html__( '底部2', 'lean' ),
+  //   'id'            => 'sidebar-4',
+  //   'description'   => '这里只会在页面显示。',
+  //   'before_widget' => '<aside class="widget p-0 border-0 bg-transparent %2$s ">',
+  //   'after_widget'  => '</aside>',
+  //   'before_title'  => '<h4 class="widget-header bg-transparent mx-0 mt-0 px-0 border-bottom-0 pb-0 h5 font-weight-bold">',
+  //   'after_title'   => '</h4>',
+  // ) );
+  // register_sidebar( array(
+  //   'name'          => esc_html__( '底部3', 'lean' ),
+  //   'id'            => 'sidebar-5',
+  //   'description'   => '这里只会在页面显示。',
+  //   'before_widget' => '<aside class="widget p-0 border-0 bg-transparent %2$s ">',
+  //   'after_widget'  => '</aside>',
+  //   'before_title'  => '<h4 class="widget-header bg-transparent mx-0 mt-0 px-0 border-bottom-0 pb-0 h5 font-weight-bold">',
+  //   'after_title'   => '</h4>',
+  // ) );
+  // register_sidebar( array(
+  //   'name'          => esc_html__( '底部4', 'lean' ),
+  //   'id'            => 'sidebar-6',
+  //   'description'   => '这里只会在页面显示。',
+  //   'before_widget' => '<aside class="widget p-0 border-0 bg-transparent %2$s ">',
+  //   'after_widget'  => '</aside>',
+  //   'before_title'  => '<h4 class="widget-header bg-transparent mx-0 mt-0 px-0 border-bottom-0 pb-0 h6 font-weight-bold">',
+  //   'after_title'   => '</h4>',
+  // ) );
 }
 add_action( 'widgets_init', 'lean_widgets_init' );

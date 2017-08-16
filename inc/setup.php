@@ -45,8 +45,8 @@ function lean_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( '主导航', 'lean' )
-		//'blogroll' => esc_html__( '友情链接', 'lean' ),
+		'primary' => esc_html__( '主导航', 'lean' ),
+		'footer-nav' => esc_html__( '底部菜单', 'lean' ),
 		//'about' => esc_html__( '关于', 'lean' ),
 	) );
 
