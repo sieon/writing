@@ -47,7 +47,7 @@ function lean_setup() {
 	register_nav_menus( array(
 		'primary' => esc_html__( '主导航', 'lean' ),
 		'footer-nav' => esc_html__( '底部菜单', 'lean' ),
-		//'about' => esc_html__( '关于', 'lean' ),
+		'links' => esc_html__( '友情链接', 'lean' ),
 	) );
 
 	/*

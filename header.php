@@ -32,16 +32,16 @@
             <?php wp_nav_menu(
               array(
                 'theme_location'  => 'primary',
-                'container_class' => 'mr-auto',
-                'container_id'    => '',
-                'menu_class'      => 'navbar-nav mr-auto',
-                'fallback_cb'     => '',
-                'menu_id'         => 'main-nav',
-                'walker'          => new WP_Bootstrap_Navwalker(),
-              )
+                'depth'           => '2',
+                  'container'       => 'div',
+                  'container_class' => 'mr-auto',
+                  'container_id'    => '',
+                  'menu_class'      => 'navbar-nav mr-auto',
+                  'menu_id'         => 'main-nav',
+                'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+                'walker'          => new WP_Bootstrap_Navwalker())
             );
             ?>
-
             <form class="form-inline" role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
               <input class="form-control mr-sm-2" type="text" placeholder="搜索..." aria-label="搜索" name="s">
             </form>
