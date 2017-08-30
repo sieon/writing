@@ -3,7 +3,7 @@
 // Copy variables from `_variables.scss` to this file to override default values
 // without modifying source files.
 
-$small-font-size: 87.5% !default;
+//$small-font-size: 87.5% !default;
 //$line-height-base: 1.8 !default;
 
 //$navbar-padding-x: 3rem !default;
@@ -20,3 +20,20 @@ $card-columns-gap:         1.25rem !default;
 
 $table-cell-padding:            .5rem !default;
 $table-cell-padding-sm:         .3rem !default;
+
+// Color Gray
+$g-color-gray-light-v1: #bbb !default; // $g-color-gray-light-v3
+$g-color-gray-light-v2: #ccc !default; // $g-color-gray-light-v4
+$g-color-gray-light-v3: #ddd !default; // $g-color-gray-light-v6
+$g-color-gray-light-v4: #eee !default; // $g-color-gray-light-v7
+$g-color-gray-light-v5: #f7f7f7 !default; // $g-color-gray-light-v9
+
+$g-color-gray-dark-v1: #111 !default; // $g-color-gray-dark-v4:
+$g-color-gray-dark-v2: #333 !default; // $g-color-gray-dark-v2:
+$g-color-gray-dark-v3: #555 !default; // $g-color-gray-dark-v1:
+$g-color-gray-dark-v4: #777 !default; // $g-color-gray:
+$g-color-gray-dark-v5: #999 !default; // $g-color-gray-light-v1:
+
+.g-color-gray-light-v5 {
+  color: $g-color-gray-light-v5 !important;
+}
