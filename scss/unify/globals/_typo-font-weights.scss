@@ -1,0 +1,64 @@
+/*------------------------------------
+  Typography Font Weight
+------------------------------------*/
+.g-font {
+  &-weight-100 {
+    font-weight: 100; // Thin (Hairline)
+  }
+  &-weight-200 {
+    font-weight: 200; // Extra Light (Ultra Light)
+  }
+  &-weight-300 {
+    font-weight: 300; // Light
+  }
+  &-weight-400 {
+    font-weight: 400; // Normal
+  }
+  &-weight-500 {
+    font-weight: 500; // Medium
+  }
+  &-weight-600 {
+    font-weight: 600; // Semi Bold (Demi Bold)
+  }
+  &-weight-700 {
+    font-weight: 700; // Bold
+  }
+  &-weight-800 {
+    font-weight: 800; // Extra Bold (Ultra Bold)
+  }
+  &-weight-900 {
+    font-weight: 900; // Black (Heavy)
+  }
+}
+
+@media (min-width: $g-md) {
+  .g-font {
+    &-weight-100--md {
+      font-weight: 100; // Thin (Hairline)
+    }
+    &-weight-200--md {
+      font-weight: 200; // Extra Light (Ultra Light)
+    }
+    &-weight-300--md {
+      font-weight: 300; // Light
+    }
+    &-weight-400--md {
+      font-weight: 400; // Normal
+    }
+    &-weight-500--md {
+      font-weight: 500; // Medium
+    }
+    &-weight-600--md {
+      font-weight: 600; // Semi Bold (Demi Bold)
+    }
+    &-weight-700--md {
+      font-weight: 700; // Bold
+    }
+    &-weight-800--md {
+      font-weight: 800; // Extra Bold (Ultra Bold)
+    }
+    &-weight-900--md {
+      font-weight: 900; // Black (Heavy)
+    }
+  }
+}

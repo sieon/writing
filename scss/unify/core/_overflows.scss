@@ -1,0 +1,27 @@
+/*------------------------------------
+  Overflows
+------------------------------------*/
+.g-overflow-hidden {
+  overflow: hidden;
+}
+.g-overflow-visible {
+	overflow: visible;
+}
+.g-overflow-x-hidden {
+	overflow-x: hidden;
+}
+.g-overflow-x-scroll {
+	overflow-x: scroll;
+}
+
+@media (min-width: $g-md) {
+	.g-overflow-x-visible--md {
+		overflow-x: visible;
+	}
+}
+
+@media (min-width: $g-lg) {
+  .g-overflow-x-visible--lg {
+		overflow-x: visible;
+	}
+}

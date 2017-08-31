@@ -1,0 +1,59 @@
+/*------------------------------------
+  Defines
+------------------------------------*/
+
+// info-v1
+info-v1/info-v1-1
+– shortcode-blocks-news.html
+
+info-v1/info-v1-2
+info-v1/info-v1-3
+info-v1/info-v1-4
+info-v1/info-v1-5
+– shortcode-blocks-team.html
+
+
+//
+// info-v2
+info-v2/info-v2-1
+info-v2/info-v2-2
+– shortcode-blocks-icons.html
+
+
+//
+// info-v3
+info-v3/info-v3-1
+info-v3/info-v3-2
+info-v3/info-v3-3
+shortcode-blocks-banners.html
+
+
+//
+// info-v4
+info-v4/info-v4-1
+info-v4/info-v4-2
+info-v4/info-v4-3
+shortcode-blocks-pricing-tables.html
+
+
+//
+// info-v5
+info-v5/info-v5-1
+info-v5/info-v5-2
+info-v5/info-v5-3
+info-v5/info-v5-4
+info-v5/info-v5-5
+info-v5/info-v5-6
+shortcode-blocks-products.html
+
+
+//
+// info-v6
+info-v6/info-v6-1
+shortcode-blocks-team.html
+
+
+//
+// info-v8
+info-v8/info-v8-1
+secondary navigation

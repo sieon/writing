@@ -1,0 +1,48 @@
+/*------------------------------------
+  Tabs v5
+------------------------------------*/
+
+@media (min-width: $g-md) {
+  .u-tab-link-v5 {
+    position: relative;
+    display: inline-block;
+    min-height: 100%;
+    border-bottom: 2px solid transparent;
+    padding: 5px 0;
+    transition: none !important;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      display: none;
+      height: 0;
+      width: 0;
+      border: {
+        style: solid;
+        color: transparent;
+      }
+    }
+
+    &::before {
+      border-width: 8px 6px 0 6px;
+      margin-left: -6px;
+    }
+
+    &::after {
+      border-width: 6px 3px 0 3px;
+      border-top-color: $g-color-white;
+      margin-left: -3px;
+    }
+
+    &:hover,
+    &.active {
+      &::before,
+      &::after {
+        display: block;
+      }
+    }
+  }
+}

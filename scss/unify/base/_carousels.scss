@@ -1,0 +1,109 @@
+/*------------------------------------
+  Carousels
+------------------------------------*/
+
+.u-carousel {
+  &-v1 {
+    .js-prev,
+    .js-next {
+      opacity: 0;
+      transition: {
+        property: opacity;
+        duration: .2s;
+        timing-function: ease-in;
+      }
+    }
+
+    &:hover {
+      .js-prev,
+      .js-next {
+        opacity: 1;
+      }
+    }
+  }
+
+  &-v2 {
+    .slick {
+      &-slide {
+        padding: {
+          top: 4px;
+          bottom: 4px;
+        }
+        opacity: .5;
+        transform: scale(1);
+        transition: {
+          property: all;
+          duration: .4s;
+          timing-function: ease-in;
+        }
+      }
+
+      &-center {
+        padding: {
+          top: 0;
+          bottom: 0;
+        }
+        opacity: 1;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &-v3 {
+    .slick {
+      &-slide {
+        opacity: .5;
+        transition: {
+          property: opacity;
+          duration: .4s;
+          timing-function: ease-in;
+        }
+      }
+
+      &-center {
+        opacity: 1;
+      }
+    }
+  }
+
+  &-v4 {
+    .js-pagination {
+      opacity: 0;
+      transition: {
+        property: opacity;
+        duration: .2s;
+        timing-function: ease-in;
+      }
+    }
+
+    &:hover {
+      .js-pagination {
+        opacity: 1;
+      }
+    }
+  }
+
+  &-v5 {
+    .slick-list {
+      height: 100%;
+    }
+
+    .slick-track {
+      display: flex;
+      height: 100%;
+
+      .slick-slide {
+        display: flex;
+        height: auto;
+      }
+    }
+  }
+}
+
+.u-carousel-v11 .slick-slide {
+  opacity: .5;
+
+  &.slick-current {
+    opacity: 1;
+  }
+}

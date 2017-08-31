@@ -172,3 +172,82 @@
 .g-pos-rel {
     position: relative !important;
 }
+
+[class*="u-triangle-inclusive-v1"]:not([class*="__front"]):not([class*="__back"]), [class*="u-triangle-inclusive-v2"]:not([class*="__front"]):not([class*="__back"]) {
+    position: absolute;
+}
+
+.g-z-index-2 {
+    z-index: 2;
+}
+
+.g-top-30 {
+    top: 2.14286rem;
+}
+
+.u-triangle-inclusive-v1--left {
+    right: -14px;
+}
+
+.u-triangle-inclusive-v1--right {
+    left: -14px;
+}
+
+.u-triangle-inclusive-v1--left__front {
+    border-width: 14px 0 14px 14px;
+    border-style: solid;
+    border-color: transparent;
+}
+
+.u-triangle-inclusive-v1--left__front {
+    position: absolute;
+    top: 1px;
+    left: 0;
+}
+
+.g-brd-white-right {
+    border-right-color: #fff !important;
+}
+
+.g-brd-white-left {
+    border-left-color: #fff !important;
+}
+
+.u-triangle-inclusive-v1--left__back {
+    border-width: 15px 0 15px 15px;
+    border-style: solid;
+    border-color: transparent;
+}
+
+.g-brd-gray-light-v4-right {
+    border-right-color: #eee !important;
+}
+.g-brd-gray-light-v4-left {
+    border-left-color: #eee !important;
+}
+
+.u-triangle-inclusive-v1--right__front {
+    border-width: 14px 14px 14px 0;
+    border-style: solid;
+    border-color: transparent;
+}
+
+.u-triangle-inclusive-v1--right__front {
+    position: absolute;
+    top: 1px;
+    right: 0;
+}
+
+.u-triangle-inclusive-v1--right__back {
+    border-width: 15px 15px 15px 0;
+    border-style: solid;
+    border-color: transparent;
+}
+
+.g-brd-gray-light-v4-right {
+    border-right-color: #eee !important;
+}
+
+@media (max-width:767px){
+  .hidden-sm-down{display:none!important}
+}

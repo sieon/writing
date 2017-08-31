@@ -1,0 +1,31 @@
+/*--------------------------------------------------
+  Info Block v8-1
+----------------------------------------------------*/
+
+.u-hs-filter {
+  // border-bottom: solid 1px $g-color-gray-light-v4;
+  // padding-bottom: 5px;
+
+  a {
+    @include px-to-rem(padding, 5px 10px);
+    @include px-to-rem(font-size, 12px);
+    color: $g-color-gray-dark-v2;
+    border: solid 1px $g-color-gray-dark-v2;
+    text-transform: uppercase;
+    border-radius: .25rem;
+    transition: all .3s;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+    &:hover {
+      color: $g-color-white;
+      background-color: $g-color-gray-dark-v2;
+    }
+  }
+  .active a {
+    color: $g-color-white;
+    background: $g-color-gray-dark-v2;
+  }
+}

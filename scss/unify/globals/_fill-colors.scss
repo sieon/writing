@@ -1,0 +1,79 @@
+/* Primary Colors */
+.g-fill {
+  &-primary {
+    path,
+    polygon {
+      fill: $g-color-primary !important;
+    }
+
+    &--hover:hover {
+      path,
+      polygon {
+        fill: $g-color-primary !important;
+      }
+    }
+
+    &--hover-parent {
+      *:hover > * > & {
+        svg {
+          path,
+          polygon {
+            fill: $g-color-primary !important;
+          }
+        }
+      }
+    }
+  }
+
+  &-white {
+    path,
+    polygon {
+      fill: $g-color-white !important;
+    }
+
+    &--hover:hover {
+      path,
+      polygon {
+        fill: $g-color-white !important;
+      }
+    }
+
+    &--hover-parent {
+      *:hover > * > & {
+        svg {
+          path,
+          polygon {
+            fill: $g-color-white !important;
+          }
+        }
+      }
+    }
+  }
+
+  &-gray-light {
+    &-v4 {
+      path,
+      polygon {
+        fill: $g-color-gray-light-v4 !important;
+      }
+
+      &--hover:hover {
+        path,
+        polygon {
+          fill: $g-color-gray-light-v4 !important;
+        }
+      }
+
+      &--hover-parent {
+        *:hover > * > & {
+          svg {
+            path,
+            polygon {
+              fill: $g-color-gray-light-v4 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+/*------------------------------------
+  Positions
+------------------------------------*/
+.g-pos {
+  &-rel {
+    position: relative !important;
+  }
+
+  &-abs {
+    position: absolute !important;
+  }
+
+  &-stc {
+  	position: static !important;
+  }
+
+  &-fix {
+    position: fixed !important;
+  }
+}
+
+@media (min-width: $g-md) {
+  .g-pos {
+    &-rel--md {
+      position: relative !important;
+    }
+
+    &-fix--md {
+      position: fixed !important;
+    }
+
+    &-abs--md {
+      position: absolute !important;
+    }
+
+    &-fix--md {
+      position: fixed !important;
+    }
+  }
+}
+
+@media (min-width: $g-lg) {
+  .g-pos {
+    &-abs--lg {
+      position: absolute !important;
+    }
+  }
+}

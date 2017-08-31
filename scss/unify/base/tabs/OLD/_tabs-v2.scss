@@ -1,0 +1,17 @@
+/*------------------------------------
+  Tabs v2
+------------------------------------*/
+
+.u-tab-link-v2 {
+  display: block;
+  padding: 7px 14px;
+  border: {
+    width: 2px 1px 0 1px;
+    style: solid;
+    color: transparent;
+  }
+
+  .nav-inner & {
+    border: none;
+  }
+}

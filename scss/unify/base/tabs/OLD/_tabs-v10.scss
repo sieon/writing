@@ -1,0 +1,88 @@
+/*------------------------------------
+  Tabs v10
+------------------------------------*/
+
+@media (max-width: $g-md) {
+  .u-tab-link {
+    &-v10 {
+      &::before {
+        display: none;
+      }
+    }
+
+    &-icon-v10 {
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      vertical-align: middle;
+      margin-right: 5px;
+
+      i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      & + * {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+@media (min-width: $g-md) {
+  .u-tab-link-v10 {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    padding: 60px 20px 25px;
+    transition: none !important;
+
+    > * {
+      display: block;
+    }
+
+    i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &::before {
+      display: block;
+      width: 26px !important;
+      right: -26px !important;
+      background-image: linear-gradient(to bottom left, transparent 49.6%, $g-color-gray-dark-v2 50%),
+      linear-gradient(to top left, transparent 49.6%, $g-color-gray-dark-v2 50%);
+      background-size: 100% 50.8% !important;
+    }
+
+    &:hover,
+    &.active {
+      background-color: $g-color-primary !important;
+
+      &::before {
+        background-image: linear-gradient(to bottom left, transparent 49.6%, $g-color-primary 50%),
+        linear-gradient(to top left, transparent 49.6%, $g-color-primary 50%);
+      }
+    }
+  }
+
+  .u-tab-link-icon-v10 {
+    position: absolute;
+    left: 50%;
+    top: -35px;
+    width: 75px;
+    height: 75px;
+    border: {
+      width: 4px;
+      style: solid;
+      color: $g-color-white;
+    }
+    transform: translateX(-50%);
+  }
+}

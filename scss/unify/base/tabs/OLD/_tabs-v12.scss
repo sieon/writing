@@ -1,0 +1,19 @@
+/*------------------------------------
+  Tabs v12
+------------------------------------*/
+@media (min-width: $g-md) {
+  .u-tab-link-v12 {
+    display: block;
+    min-width: 120px;
+    text-align: center;
+    border: {
+      width: 1px 1px 0 0;
+      style: solid;
+    }
+    padding: 30px 10px;
+
+    *:first-child > & {
+      border-left: 1px solid;
+    }
+  }
+}

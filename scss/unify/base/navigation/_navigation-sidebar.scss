@@ -1,0 +1,12 @@
+/*------------------------------------
+  Sidebar Navigation
+------------------------------------*/
+
+.u-sidebar-navigation {
+	z-index: 3;
+
+	.active a,
+  a:hover {
+		color: $g-color-primary;
+	}
+}

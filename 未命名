@@ -1,0 +1,17 @@
+<!-- <hr class="g-brd-gray-light-v4">
+
+<div class="media g-font-size-12 small text-link-color-muted">
+  <?php
+  //$author_bio_avatar_size = apply_filters( 'lean_author_bio_avatar_size', 30 );
+  //echo get_avatar( get_the_author_meta( 'user_email' ), $author_bio_avatar_size,'',false, array('class'=>'d-flex mr-3 rounded-circle') );
+  ?>
+  <div class="media-body align-self-center text-uppercase">
+    <?php the_author(); ?>
+  </div>
+
+  <div class="align-self-center">
+    <a class="u-link-v5 g-color-main g-color-primary--hover g-mr-10" href="#">
+      <i class="fa fa-comments g-mr-2"></i> 16
+    </a>
+  </div>
+</div> -->
