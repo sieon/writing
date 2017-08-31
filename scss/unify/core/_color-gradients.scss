@@ -1,8 +1,0 @@
-/*------------------------------------
-  Gradient Colors
-------------------------------------*/
-/* Cyan Gradient */
-.g-color-cyan-gradient-opacity-v1 {
-  @include gradient-directional($start-color: rgba(#009, .55), $end-color: rgba(#00bed6, .6), $deg: 160deg);
-  @include gradient-text;
-}
