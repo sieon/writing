@@ -1,3 +1,18 @@
+@media (min-width: 768px) {
+  .height-90 {
+    height: 150px;
+  }
+}
+
+@media (max-width: 767px) {
+  .height-90 {
+    height: 60px;
+  }
+  .h5 {
+    font-size: 1rem;
+  }
+}
+
 /*------------------------------------
   Time Lines
 ------------------------------------*/
@@ -250,4 +265,12 @@
 
 @media (max-width:767px){
   .hidden-sm-down{display:none!important}
+}
+
+.text-828a92 {
+  color: #828a92;
+}
+
+.line-height-1-5 {
+  line-height: 1.5;
 }

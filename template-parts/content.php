@@ -4,11 +4,10 @@
  * @package lean
  */
 ?>
-<div class="card l-shadow-v28">
-	<div class="card-body">
 
 		<?php if(is_single()): ?>
-
+<div class="card l-shadow-v28">
+	<div class="card-body">
 		<?php the_title( '<h1 class="card-title mb-4">','</h1>' ); ?>
 
 		<p class="card-text text-link-color-muted">
@@ -48,41 +47,44 @@
 
 		</div>
 
-		<?php else: // not single ?>
+	</div>
+</div>
 
-			<?php if( has_post_thumbnail() ) : ?>
+<?php else: // not single ?>
 
-			<div class="row">
+	<?php if( has_post_thumbnail() ) : ?>
 
-				<div class="col-4">
-					<a class="entry-img" href="<?php the_permalink(); ?>">
-						<?php the_post_thumbnail('medium', ['class' => 'img-fluid']); ?>
-					</a>
-				</div>
+		<div class="row bg-white mb-4 py-4 mx-0 rounded l-shadow">
 
-				<div class="col-8">
-					<?php the_title( sprintf( '<h2 class="card-title h5 text-link-color line-clamp-2 text-overflow-ellipsis mb-3"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+			<div class="col-4 pl-3 pr-0">
+				<a href="<?php the_permalink(); ?>">
+					<div class="entry-img height-90" style="background-image:url('<?php $medium_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium');echo $medium_image_url[0]; ?>');background-size: cover;">
+					</div>
+				</a>
+			</div>
+
+			<div class="col-8 pl-4 pr-3">
+				<div class="entry-info">
+
+					<?php the_title( sprintf( '<h2 class="h5 line-height-1-5 text-link-color line-clamp-2 text-overflow-ellipsis mb-3"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 					<?php if ( get_theme_mod( 'posts_list_excerpt')==yes ) { ?>
-					<p class="card-text mt-3 hidden-sm-down">
+					<p class="mt-3 hidden-sm-down">
 						<?php echo wp_trim_words( get_the_excerpt(), get_theme_mod( 'excerpt_length'), '...' );?>
 					</p>
-					<?php } else {
-						echo '';
-					 } ?>
+					<?php } else { echo ''; } ?>
 
-					 <p class="card-text text-link-color-muted">
-		 				<small>
-		 					<?php lean_entry_meta(); ?>
-		 				</small>
-		 			</p>
-
+					 <p class="card-text text-link-color-muted small">
+						 <?php lean_entry_meta(); ?>
+					 </p>
 				</div>
-			</div><!-- ./row -->
+			</div>
+		</div><!-- ./row -->
 
-			<?php else: ?>
+	<?php else: ?>
 
-			<?php the_title( sprintf( '<h2 class="card-title h5 text-link-color line-clamp-2 text-overflow-ellipsis"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+		<div class="entry-info bg-white mb-4 py-3 px-3 rounded l-shadow">
+			<?php the_title( sprintf( '<h2 class="h5 text-link-color line-clamp-2 text-overflow-ellipsis"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 			<?php if ( get_theme_mod( 'posts_list_excerpt')==yes ) { ?>
 			<p class="card-text hidden-sm-down">
@@ -90,13 +92,11 @@
 			</p>
 			<?php } else { echo ''; } ?>
 
-			<p class="card-text text-link-color-muted">
-				<small>
-					<?php lean_entry_meta(); ?>
-				</small>
+			<p class="text-link-color-muted mb-0 small">
+				<?php lean_entry_meta(); ?>
 			</p>
+		</div>
 
-			<?php endif; //end thumbnail ?>
-		<?php endif; // end is_single ?>
-	</div>
-</div>
+	<?php endif; //end thumbnail ?>
+
+<?php endif; // end is_single ?>
