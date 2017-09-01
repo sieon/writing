@@ -5,7 +5,7 @@
  */
 ?>
 
-<div class="card">
+<div class="card l-shadow-v1-4">
 	<?php if( has_post_thumbnail() ) : ?>
 
 		<a class="entry-img card-img-top" href="<?php the_permalink(); ?>">
@@ -13,6 +13,7 @@
 	      the_post_thumbnail( 'medium', ['class' => 'card-img-top'] );
 	    ?>
 	  </a>
+
 		<div class="card-body">
 			<?php the_title( sprintf( '<p class="card-title line-clamp-2 text-overflow-ellipsis text-link-color mb-0"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></p>' ); ?>
 		</div>

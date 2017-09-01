@@ -1,16 +1,30 @@
 @media (min-width: 768px) {
   .height-90 {
-    height: 150px;
+    height: 120px;
   }
 }
 
 @media (max-width: 767px) {
   .height-90 {
-    height: 60px;
+    height: 120px;
   }
-  .h5 {
-    font-size: 1rem;
-  }
+}
+
+.u-info-v1-1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 40px;
+}
+
+.g-bg-gray-light-gradient-v1--after::after {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), #f7f7f7);
+}
+
+.g-bg-white-gradient-v1--after::after {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), white);
 }
 
 /*------------------------------------

@@ -6616,9 +6616,9 @@ table#wp-calendar caption {
       text-decoration: none; }
 
 .text-link-color-muted {
-  color: #aaa; }
+  color: #777; }
   .text-link-color-muted a {
-    color: #aaa;
+    color: #777;
     text-decoration: none;
     transition: all 0.3s ease; }
     .text-link-color-muted a:focus, .text-link-color-muted a:hover {
@@ -6626,9 +6626,9 @@ table#wp-calendar caption {
       text-decoration: none; }
 
 .text-link-color-muted {
-  color: #aaa; }
+  color: #777; }
   .text-link-color-muted a {
-    color: #aaa;
+    color: #777;
     text-decoration: none;
     transition: all 0.3s ease; }
     .text-link-color-muted a:focus, .text-link-color-muted a:hover {
@@ -7284,6 +7284,26 @@ a img.aligncenter {
 .text-gray800 {
   color: #343a40; }
 
+@media (min-width: 768px) {
+  .height-90 {
+    height: 180px; } }
+@media (max-width: 767px) {
+  .height-90 {
+    height: 180px; } }
+@media (max-width: 767px) {
+  .height-90 {
+    height: 180px; } }
+.u-info-v1-1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 40px; }
+
+.g-bg-gray-light-gradient-v1--after::after {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), #f7f7f7); }
+
 /*------------------------------------
   Time Lines
 ------------------------------------*/
@@ -7516,5 +7536,10 @@ a img.aligncenter {
 @media (max-width: 767px) {
   .hidden-sm-down {
     display: none !important; } }
+.text-828a92 {
+  color: #828a92; }
+
+.line-height-1-5 {
+  line-height: 1.5; }
 
 /*# sourceMappingURL=toolkit2.css.map */

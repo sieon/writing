@@ -25,17 +25,3 @@ img {
 .avatar {
   border-radius: 50%;
 }
-
-.entry-img {
-  display: block;
-  overflow:hidden;
-  img {
-    transition: all .5s ease;
-  }
-}
-
-.entry-img:hover img {
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  transform: scale(1.1);
-}

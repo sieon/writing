@@ -71,11 +71,6 @@
     transition: all .5s ease;
   }
 
-  .card:hover {
-    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, .08);
-    border-color: rgba(0, 0, 0, .08)
-  }
-
   .card-title {
     // line-height: 1.5;
     // //font-size: 1rem;
@@ -89,4 +84,9 @@
       color: #aaa;
     }
   }
+}
+
+.l-shadow--hover:hover {
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, .08);
+  border-color: rgba(0, 0, 0, .08)
 }
