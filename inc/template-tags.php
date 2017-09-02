@@ -39,11 +39,11 @@ endif;
  * 固定时间格式，只显示日期
  */
 
-function lean_filter_time() {
-  global $post ;
-  echo get_the_time(get_option('date_format'));
-}
-add_filter('the_time','lean_filter_time');
+// function lean_filter_time() {
+//   global $post ;
+//   echo get_the_time(get_option('date_format'));
+// }
+// add_filter('the_time','lean_filter_time');
 
 /**
  *  entry Meta
@@ -56,14 +56,16 @@ if ( ! function_exists( 'lean_entry_meta' ) ) :
  */
 function lean_entry_meta() {
 
-	echo '<li class="list-inline-item">';
-	the_time('F j, Y');
+	echo '<ul class="list-inline small l-link-v6"><li class="list-inline-item mr-3"><span class="oi oi-clock mr-1"></span>';
+	the_time('Y-m-d g:i');
 	echo '</li>';
 
   if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		echo '<li class="list-inline-item hidden-sm-down">';
-		comments_popup_link( '抢首评', '有 1 条评论', '有 % 条评论', '', '评论被关闭。');
-		echo '</li>';
+		echo '<li class="list-inline-item hidden-sm-down"><a class="l-link" href="';
+		comments_link();
+		echo '"><span class="oi oi-chat mr-1"></span>';
+		echo get_comments_number();
+		echo '</a></li></ul>';
   }
 
 	//edit_post_link( '编辑', '<li class="list-inline-item hidden-sm-down">', '</li>' );

@@ -10,7 +10,7 @@
 
           <header class="media bg-white l-shadow border rounded mb-4 p-4">
             <div class="bg-light p-4 d-flex mr-3">
-              <i class="fa fa-tag" aria-hidden="true" style="font-size:50px;color:#666;"></i>
+              <span class="oi oi-tag"></span>
             </div>
             <div class="media-body">
               <?php

@@ -2,7 +2,7 @@
   <!-- 复用的底部 -->
   <footer class="footer mt-3">
 
-    <div class="footer-b bg-light text-link-color-muted">
+    <div class="footer-b bg-light l-link-v3">
       <div class="container">
         <div class="footer-b-body py-4">
           <small>

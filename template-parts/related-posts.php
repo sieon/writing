@@ -14,7 +14,7 @@
 			</figure>
 	  </a>
 
-		<?php the_title( sprintf( '<p class="text-link-color line-clamp-2 text-overflow-ellipsis"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></p>' ); ?>
+		<?php the_title( sprintf( '<p class="l-link-dark line-clamp-2 text-overflow-ellipsis"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></p>' ); ?>
 
 	<?php else: // no thumbnail ?>
 
@@ -28,7 +28,7 @@
 			</figure>
 		</a>
 
-		<?php the_title( sprintf( '<p class="text-link-color line-clamp-2 text-overflow-ellipsis"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></p>' ); ?>
+		<?php the_title( sprintf( '<p class="l-link-dark line-clamp-2 text-overflow-ellipsis"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></p>' ); ?>
 
 	<?php endif; ?>
 

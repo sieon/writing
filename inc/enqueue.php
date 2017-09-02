@@ -22,7 +22,7 @@ function lean_scripts() {
     break;
   }
 
-	wp_enqueue_style( 'l-font-awesome', THEME_URI . '/assets/css/font-awesome.min.css');
+	wp_enqueue_style( 'l-font-awesome', THEME_URI . '/assets/css/open-iconic-bootstrap.min.css');
 
 	wp_enqueue_script( 'l-jquery', THEME_URI . '/assets/js/jquery-slim.min.js', array(), '20170823', true );
   wp_enqueue_script( 'l-popper', THEME_URI . '/assets/js/popper.min.js', array(), '20170416', true );

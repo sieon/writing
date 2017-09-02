@@ -9,7 +9,7 @@
 	<article class="w-100 mb-4 p-4 border rounded l-shadow-v28">
 		<?php the_title( '<h1 class="h2 mb-4">','</h1>' ); ?>
 
-		<p class="text-link-color-muted small"><?php lean_entry_meta(); ?></p>
+		<ul class="list-inline small"><?php lean_entry_meta(); ?></ul>
 
 		<div class="entry-content pt-3">
 
@@ -62,17 +62,17 @@
 					</figure>
 				</div>
 
-				<div class="col-sm-8 align-self-center">
+				<div class="col-sm-8">
 
-						<?php the_title( sprintf( '<h2 class="h5 line-height-1-5 text-link-color line-clamp-2 text-overflow-ellipsis mb-2"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-						<ul class="list-inline small">
-							<?php lean_entry_meta(); ?>
-						</ul>
-						<?php if ( get_theme_mod( 'posts_list_excerpt')==yes ) { ?>
-							<?php the_excerpt(); ?>
-						<?php } else { echo ''; } ?>
+					<?php the_title( sprintf( '<h2 class="h5 line-height-1-5 l-link-v9 line-clamp-2 text-overflow-ellipsis mb-3"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
+					<?php lean_entry_meta(); ?>
 
+					<?php if ( get_theme_mod( 'posts_list_excerpt')==yes ) { ?>
+					<p class="l-color-v7 hidden-sm-down mb-0">
+						<?php echo wp_trim_words( get_the_excerpt(), get_theme_mod( 'excerpt_length'), '...' );?>
+					</p>
+					<?php } else { echo ''; } ?>
 
 				</div>
 			</div><!-- ./row -->
@@ -81,17 +81,17 @@
 	<?php else: ?>
 
 		<article class="bg-white mb-4 p-4 rounded border l-shadow">
-			<?php the_title( sprintf( '<h2 class="h5 text-link-color line-clamp-2 text-overflow-ellipsis"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+
+			<?php the_title( sprintf( '<h2 class="h5 l-link-v9 line-clamp-2 text-overflow-ellipsis mb-3"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+
+			<?php lean_entry_meta(); ?>
 
 			<?php if ( get_theme_mod( 'posts_list_excerpt')==yes ) { ?>
-			<p class="card-text hidden-sm-down">
+			<p class="l-color-v7 mb-0 hidden-sm-down">
 				<?php echo wp_trim_words( get_the_excerpt(), get_theme_mod( 'excerpt_length'), '...' );?>
 			</p>
 			<?php } else { echo ''; } ?>
 
-			<p class="text-link-color-muted mb-0 small">
-				<?php lean_entry_meta(); ?>
-			</p>
 		</article>
 
 	<?php endif; //end thumbnail ?>
