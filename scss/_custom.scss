@@ -13,10 +13,34 @@ $h6-font-size: 1rem !default;
 //$small-font-size: 87.5% !default;
 //$line-height-base: 1.8 !default;
 
-//$navbar-padding-x: 3rem !default;
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 3)
+) !default;
+
+
+$nav-link-padding-y:            1rem !default;
+$nav-link-padding-x:            2rem !default;
+
+$navbar-padding-y:                  0 !default;
+$navbar-padding-x:                  $spacer !default;
+
 $navbar-nav-link-padding-x: .5rem !default;
 
+
+
 $grid-gutter-width: 20px !default;
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px
+) !default;
 
 $posts-blockquote: 1rem !default;
 

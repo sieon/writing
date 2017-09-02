@@ -8,13 +8,9 @@
 	<div class="card-body">
 		<?php if(is_single()): ?>
 
-		<?php the_title( '<h1 class="card-title mb-4">','</h1>' ); ?>
+		<?php the_title( '<h1 class="h2 card-title mb-4">','</h1>' ); ?>
 
-		<p class="card-text text-link-color-muted">
-			<small>
-				<?php lean_entry_meta(); ?>
-			</small>
-		</p>
+		<p class="card-text text-link-color-muted small"><?php lean_entry_meta(); ?></p>
 
 		<div class="entry-content pt-3">
 
@@ -24,7 +20,7 @@
 				if ( $posttags ) {
 					echo '<div class="post-tags mb-3">';
 					foreach( $posttags as $tag ) {
-						echo '<a href="' . get_tag_link( $tag->term_id ) . '" class="btn btn-light btn-sm mr-3 mb-2">' . $tag->name . '</a>';
+						echo '<a href="' . get_tag_link( $tag->term_id ) . '" class="btn btn-outline-danger btn-sm mr-3 mb-2">' . $tag->name . '</a>';
 					}
 					echo '</div>';
 				}

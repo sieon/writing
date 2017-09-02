@@ -18,60 +18,59 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div class="comments-area card" id="comments">
-	<div class="card-body">
-		<?php comment_form(); // Render comments form. ?>
+<div class="comments-area w-100 mb-4 p-4 border rounded l-shadow-v28" id="comments">
 
-		<?php // You can start editing here -- including this comment! ?>
+	<?php comment_form(); // Render comments form. ?>
 
-		<?php if ( have_comments() ) : ?>
+	<?php // You can start editing here -- including this comment! ?>
 
-			<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through. ?>
-				<nav class="comment-navigation" id="comment-nav-above">
-					<h3 class="sr-only sr-only-focusable"><?php esc_html_e( 'Comment navigation', 'lean' ); ?></h3>
-					<?php if ( get_previous_comments_link() ) { ?>
-						<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments',
-						'lean' ) ); ?></div>
-					<?php }
-	if ( get_next_comments_link() ) { ?>
-						<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;',
-						'lean' ) ); ?></div>
-					<?php } ?>
-				</nav><!-- #comment-nav-above -->
-			<?php endif; // check for comment navigation. ?>
+	<?php if ( have_comments() ) : ?>
 
-			<ol class="comment-list">
-				<?php
-				wp_list_comments( array(
-					'style'      => 'ol',
-					'short_ping' => true,
-				) );
-				?>
-			</ol><!-- .comment-list -->
+		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through. ?>
+			<nav class="comment-navigation" id="comment-nav-above">
+				<h3 class="sr-only sr-only-focusable"><?php esc_html_e( 'Comment navigation', 'lean' ); ?></h3>
+				<?php if ( get_previous_comments_link() ) { ?>
+					<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments',
+					'lean' ) ); ?></div>
+				<?php }
+if ( get_next_comments_link() ) { ?>
+					<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;',
+					'lean' ) ); ?></div>
+				<?php } ?>
+			</nav><!-- #comment-nav-above -->
+		<?php endif; // check for comment navigation. ?>
 
-			<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through. ?>
-				<nav class="comment-navigation" id="comment-nav-below">
-					<h1 class="sr-only sr-only-focusable"><?php esc_html_e( 'Comment navigation', 'lean' ); ?></h1>
-					<?php if ( get_previous_comments_link() ) { ?>
-						<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments',
-						'lean' ) ); ?></div>
-					<?php }
-	if ( get_next_comments_link() ) { ?>
-						<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;',
-						'lean' ) ); ?></div>
-					<?php } ?>
-				</nav><!-- #comment-nav-below -->
-			<?php endif; // check for comment navigation. ?>
-
-		<?php endif; // endif have_comments(). ?>
-
-		<?php
-		// If comments are closed and there are comments, let's leave a little note, shall we?
-		if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
+		<ol class="comment-list">
+			<?php
+			wp_list_comments( array(
+				'style'      => 'ol',
+				'short_ping' => true,
+			) );
 			?>
+		</ol><!-- .comment-list -->
 
-			<p class="no-comments"><?php esc_html_e( '评论被关闭.', 'lean' ); ?></p>
+		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through. ?>
+			<nav class="comment-navigation" id="comment-nav-below">
+				<h1 class="sr-only sr-only-focusable"><?php esc_html_e( 'Comment navigation', 'lean' ); ?></h1>
+				<?php if ( get_previous_comments_link() ) { ?>
+					<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments',
+					'lean' ) ); ?></div>
+				<?php }
+if ( get_next_comments_link() ) { ?>
+					<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;',
+					'lean' ) ); ?></div>
+				<?php } ?>
+			</nav><!-- #comment-nav-below -->
+		<?php endif; // check for comment navigation. ?>
 
-		<?php endif; ?>
-	</div>
+	<?php endif; // endif have_comments(). ?>
+
+	<?php
+	// If comments are closed and there are comments, let's leave a little note, shall we?
+	if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
+		?>
+
+		<p class="no-comments"><?php esc_html_e( '评论被关闭.', 'lean' ); ?></p>
+
+	<?php endif; ?>
 </div><!-- #comments -->
