@@ -11,7 +11,7 @@
 			<div class="line-clamp-4 text-overflow-ellipsis">
 				<?php the_content(); ?>
 			</div>
-			<?php the_title( sprintf( '<footer class="blockquote-footer mt-3 line-clamp-2 text-overflow-ellipsis text-link-color"><cite><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></cite></footer>' ); ?>
+			<?php the_title( sprintf( '<footer class="blockquote-footer mt-3 line-clamp-2 text-overflow-ellipsis l-link-dark"><cite><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></cite></footer>' ); ?>
 		</blockquote>
 	</div>
 </div>

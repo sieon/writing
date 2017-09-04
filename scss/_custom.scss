@@ -3,13 +3,44 @@
 // Copy variables from `_variables.scss` to this file to override default values
 // without modifying source files.
 
+$h1-font-size: 2.5rem !default;
+$h2-font-size: 2rem !default;
+$h3-font-size: 1.75rem !default;
+$h4-font-size: 1.5rem !default;
+$h5-font-size: 1.25rem !default;
+$h6-font-size: 1rem !default;
+
 $small-font-size: 87.5% !default;
 //$line-height-base: 1.8 !default;
 
-//$navbar-padding-x: 3rem !default;
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 3)
+) !default;
+
+
+$nav-link-padding-y:            1rem !default;
+$nav-link-padding-x:            2rem !default;
+
+$navbar-padding-y:                  0 !default;
+$navbar-padding-x:                  $spacer !default;
+
 $navbar-nav-link-padding-x: .5rem !default;
 
+
+
 $grid-gutter-width: 20px !default;
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px
+) !default;
 
 $posts-blockquote: 1rem !default;
 
@@ -17,3 +48,23 @@ $blockquote-font-size:    1rem !default;
 
 $card-border-color:        #e7eaf1 !default;
 $card-columns-gap:         1.25rem !default;
+
+$table-cell-padding:            .5rem !default;
+$table-cell-padding-sm:         .3rem !default;
+
+// Color Gray
+$g-color-gray-light-v1: #bbb !default; // $g-color-gray-light-v3
+$g-color-gray-light-v2: #ccc !default; // $g-color-gray-light-v4
+$g-color-gray-light-v3: #ddd !default; // $g-color-gray-light-v6
+$g-color-gray-light-v4: #eee !default; // $g-color-gray-light-v7
+$g-color-gray-light-v5: #f7f7f7 !default; // $g-color-gray-light-v9
+
+$g-color-gray-dark-v1: #111 !default; // $g-color-gray-dark-v4:
+$g-color-gray-dark-v2: #333 !default; // $g-color-gray-dark-v2:
+$g-color-gray-dark-v3: #555 !default; // $g-color-gray-dark-v1:
+$g-color-gray-dark-v4: #777 !default; // $g-color-gray:
+$g-color-gray-dark-v5: #999 !default; // $g-color-gray-light-v1:
+
+.g-color-gray-light-v5 {
+  color: $g-color-gray-light-v5 !important;
+}

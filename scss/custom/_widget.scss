@@ -1,3 +1,18 @@
+
+// 标签云
+.hot-tags {
+  a {
+    margin-top: 5px ;
+    margin-bottom: 5px;
+  }
+}
+
+/**tag**/
+.tag-tip {
+  font-size: 1.1rem;
+  color: #68727d;
+}
+
 .widget-search {
   position: relative;
   display: flex;
@@ -12,7 +27,7 @@
   background-color: #fff;
   border: 1px solid $card-border-color;
   border-radius: 0.25rem;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   ul {
     padding-left: 0;
     list-style: none;
@@ -36,9 +51,22 @@
   }
 }
 
-@media (max-width: 767px) {
-  .widget {
-      margin: 40px 0;
+// Card deck
+
+@include media-breakpoint-up(sm) {
+  .widget-deck {
+    display: flex;
+    flex-flow: row wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+
+    .widget {
+      display: flex;
+      flex: 1 0 0%;
+      flex-direction: column;
+      margin-right: 15px;
+      margin-left: 15px;
+    }
   }
 }
 
@@ -47,8 +75,8 @@
 *****************************/
 
 table#wp-calendar {
-  width: 100%;
   margin-bottom: 0;
+  font-size: 87.5%;
 }
 
 td#next {

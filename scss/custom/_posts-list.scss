@@ -1,0 +1,27 @@
+// .posts-list {
+//   position: relative;
+//   display: flex;
+//   flex-direction: column;
+//   min-width: 0;
+//   word-wrap: break-word;
+//   background-color: $card-bg;
+//   background-clip: border-box;
+//   //border: $card-border-width solid $card-border-color;
+//   //@include border-radius($card-border-radius);
+// }
+
+.g-pos-rel {
+  position: relative !important;
+}
+
+.g-pos-abs {
+  position: absolute !important;
+}
+
+.g-left-20 {
+  left: .5rem;
+}
+
+.g-top-20 {
+  top: .5rem;
+}

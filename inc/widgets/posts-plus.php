@@ -106,7 +106,7 @@ class LeanPostsList extends WP_Widget {
 							<?php endif; ?>
 						</a>
 
-						<p class="card-text text-link-color text-overflow-ellipsis line-clamp-2 mt-2">
+						<p class="card-text l-link-dark text-overflow-ellipsis line-clamp-2 mt-2">
 							<small>
 								<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a>
 							</small>

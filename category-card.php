@@ -4,7 +4,7 @@
 
 <div class="container mt-4">
   <div class="main-content">
-    <header class="jumbotron bg-white border card-shadow mb-4 py-4 pl-2">
+    <header class="jumbotron bg-white border l-shadow-v28 mb-4 py-4 pl-2">
       <div class="container">
         <?php
         lean_the_archive_title( '<h1>', '</h1>' );

@@ -1,0 +1,29 @@
+.text-overflow-ellipsis {
+  text-overflow: ellipsis;
+}
+
+.nowrap {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box!important;
+  -webkit-line-clamp: 2!important;
+  -webkit-box-orient: vertical!important;
+}
+
+.line-clamp-4 {
+  overflow: hidden;
+  display: -webkit-box!important;
+  -webkit-line-clamp: 4!important;
+  -webkit-box-orient: vertical!important;
+}
+
+.line-clamp-8 {
+  overflow: hidden;
+  display: -webkit-box!important;
+  -webkit-line-clamp: 8!important;
+  -webkit-box-orient: vertical!important;
+}

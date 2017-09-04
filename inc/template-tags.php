@@ -22,17 +22,14 @@ function lean_the_post_navigation() {
 		return;
 	}
 	?>
-	<nav class="post-navigation card" role="navigation">
-		<div class="card-body">
-			<h4 class="sr-only sr-only-focusable"><?php esc_html_e( 'Post navigation', 'lean' ); ?></h3>
-			<div class="nav-links clearfix">
-				<?php
-					previous_post_link( '<div class="nav-previous float-left">&larr; %link</div>', '%title' );
-					next_post_link( '<div class="nav-next float-right">%link &rarr;</div>', '%title' );
-				?>
-			</div><!-- .nav-links -->
-
-		</div>
+	<nav class="bg-white w-100 mb-4 p-4 border rounded l-shadow" role="navigation">
+		<h4 class="sr-only sr-only-focusable"><?php esc_html_e( '文章导航', 'lean' ); ?></h3>
+		<div class="line-h-1-8 clearfix">
+			<?php
+				previous_post_link( '<div class="float-left">&larr; %link</div>', '%title' );
+				next_post_link( '<div class="float-right">%link &rarr;</div>', '%title' );
+			?>
+		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
 	<?php
 }
@@ -42,56 +39,36 @@ endif;
  * 固定时间格式，只显示日期
  */
 
-function lean_filter_time() {
-  global $post ;
-  echo get_the_time(get_option('date_format'));
-}
-add_filter('the_time','lean_filter_time');
+// function lean_filter_time() {
+//   global $post ;
+//   echo get_the_time(get_option('date_format'));
+// }
+// add_filter('the_time','lean_filter_time');
 
 /**
- *  Meta
+ *  entry Meta
  */
 if ( ! function_exists( 'lean_entry_meta' ) ) :
 /**
- * Prints HTML with meta information for the categories, tags.
+ * Prints HTML with meta information for the time,comment counts numbers.
  *
  * @since lean 1.0
  */
 function lean_entry_meta() {
 
-	if ( is_sticky() && is_home() && ! is_paged() ) {
-		printf( '<span class="sticky-post hidden-sm-down">%s<span class="oblique-line">&nbsp;&bull;&nbsp;</span></span> ', __( '特色', 'lean' ) );
-	}
+	echo '<ul class="list-inline small l-link-v6"><li class="list-inline-item mr-3"><span class="oi oi-clock mr-1"></span>';
+	the_time('Y-m-d g:i');
+	echo '</li>';
 
-	// if ( get_theme_mod( 'post-author') == yes ) {
-	// 	if (!is_author()) {
-	// 		if ( is_singular() || is_multi_author() ) {
-	// 			printf( '<span class="post-author hidden-sm-down"><span class="author vcard"><span class="sr-only sr-only-focusable">%1$s </span><a class="url" href="%2$s">%3$s</a>&nbsp;&bull;&nbsp;</span></span>',
-	// 				_x( '作者', 'Used before post author name.', 'lean' ),
-	// 				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-	// 				get_the_author()
-	// 			);
-	// 		}
-	// 	}
-	// }
-
-	echo '<span class="post-time">';
-  echo the_time();
-	echo '</span>';
-
-  if (!is_author()) {
-		echo '&nbsp;&bull;&nbsp;';
-    echo the_category(' ');
+  if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+		echo '<li class="list-inline-item hidden-sm-down"><a class="l-link" href="';
+		comments_link();
+		echo '"><span class="oi oi-chat mr-1"></span>';
+		echo get_comments_number();
+		echo '</a></li></ul>';
   }
 
-  if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-    echo '<span class="ml-3 comments-link hidden-sm-down">';
-    comments_popup_link( sprintf( __( '去抢首评', 'lean' ), get_the_title() ) );
-    // comments_popup_link( sprintf( __( '去抢首评<span class="sr-only sr-only-focusable"> on %s</span>', 'lean' ), get_the_title() ) );
-    echo '</span>';
-  }
-
-	edit_post_link( '编辑', '<span class="edit-link hidden-sm-down">&nbsp;&bull;&nbsp;', '</span>' );
+	//edit_post_link( '编辑', '<li class="list-inline-item hidden-sm-down">', '</li>' );
 
 }
 endif;

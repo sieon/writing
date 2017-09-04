@@ -7,12 +7,18 @@
     <div class="row">
       <div class="col-lg-8">
         <main class="main-content">
-          <header class="jumbotron bg-white card-shadow border mb-3 py-4 pl-3">
-            <p class="tag-tip"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;标签</p>
-            <?php
-            lean_the_archive_title( '<div class="single-header-title"><h1 class="d-inline">', '</h1>&nbsp;<span>相关的文章</span></div>' );
-            lean_the_archive_description( '<div class="text-muted mt-3">', '</div>' );
-            ?>
+
+          <header class="media bg-white l-shadow border rounded mb-4 p-4">
+            <div class="bg-light p-4 d-flex mr-3">
+              <span class="oi oi-tag"></span>
+            </div>
+            <div class="media-body">
+              <?php
+              lean_the_archive_title( '<h1 class="">', '</h1>' );
+              lean_the_archive_description( '<div class="text-muted mt-3">', '</div>' );
+              ?>
+            </div>
+
           </header>
 
           <?php if ( have_posts() ) : ?>

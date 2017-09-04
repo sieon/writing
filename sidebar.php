@@ -1,5 +1,9 @@
-<div class="col-lg-4 hidden-md-down">
-  <div class="sidebar">
-    <?php if ( !dynamic_sidebar('sidebar-1') ) { _e('','lean'); } ?>
+<?php if ( is_active_sidebar( 'sidebar-1' ) ) :?>
+
+  <div class="col-lg-4">
+    <div class="sidebar">
+       <?php dynamic_sidebar( 'sidebar-1' ); ?>
+    </div>
   </div>
-</div>
+
+<?php endif; ?>

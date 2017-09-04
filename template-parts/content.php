@@ -4,18 +4,12 @@
  * @package lean
  */
 ?>
-<div class="card card-shadow">
-	<div class="card-body">
 
-		<?php if(is_single()): ?>
+<?php if(is_single()): ?>
+	<article class="bg-white w-100 mb-4 p-4 border rounded l-shadow-v28">
+		<?php the_title( '<h1 class="h2 mb-4">','</h1>' ); ?>
 
-		<?php the_title( '<h1 class="card-title mb-4">','</h1>' ); ?>
-
-		<p class="card-text text-link-color-muted">
-			<small>
-				<?php lean_entry_meta(); ?>
-			</small>
-		</p>
+		<?php lean_entry_meta(); ?>
 
 		<div class="entry-content pt-3">
 
@@ -23,9 +17,9 @@
 			if ( get_theme_mod( 'post-tags')==top ) {
 				$posttags = get_the_tags();
 				if ( $posttags ) {
-					echo '<div class="post-tags mb-3">';
+					echo '<div class="mb-3">';
 					foreach( $posttags as $tag ) {
-						echo '<a href="' . get_tag_link( $tag->term_id ) . '" class="btn btn-light btn-sm mr-3 mb-2">' . $tag->name . '</a>';
+						echo '<a href="' . get_tag_link( $tag->term_id ) . '" class="btn btn-outline-secondary btn-sm mr-3 mb-3">' . $tag->name . '</a>';
 					}
 					echo '</div>';
 				}
@@ -47,56 +41,59 @@
 			} ?>
 
 		</div>
+	</article>
 
-		<?php else: // not single ?>
+<?php else: // not single ?>
 
-			<?php if( has_post_thumbnail() ) : ?>
+	<?php if( has_post_thumbnail() ) : ?>
 
+		<article class="w-100 bg-white p-4 mb-4 rounded border l-shadow">
 			<div class="row">
-
 				<div class="col-4">
-					<a class="entry-img" href="<?php the_permalink(); ?>">
-						<?php the_post_thumbnail('medium', ['class' => 'img-fluid']); ?>
-					</a>
+					<figure class="g-pos-rel mb-0">
+						<?php the_post_thumbnail('medium', ['class' => 'img-fluid w-100']); ?>
+						<figcaption class="g-pos-abs g-left-20 g-top-20">
+							<?php
+							$categories = get_the_category();
+							if ( ! empty( $categories ) ) {
+								echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '" class="badge badge-dark text-uppercase rounded-0">' . esc_html( $categories[0]->name ) . '</a>';
+							} ?>
+						</figcaption>
+					</figure>
 				</div>
 
-				<div class="col-8">
-					<?php the_title( sprintf( '<h2 class="card-title h5 text-link-color line-clamp-2 text-overflow-ellipsis mb-3"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+				<div class="col-8 align-self-center">
+
+					<?php the_title( sprintf( '<h2 class="h5 line-height-1-5 l-link-v9 line-clamp-2 text-overflow-ellipsis mb-3"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+
+					<?php lean_entry_meta(); ?>
 
 					<?php if ( get_theme_mod( 'posts_list_excerpt')==yes ) { ?>
-					<p class="card-text mt-3 hidden-sm-down">
+					<p class="l-color-v7 hidden-sm-down mb-0">
 						<?php echo wp_trim_words( get_the_excerpt(), get_theme_mod( 'excerpt_length'), '...' );?>
 					</p>
-					<?php } else {
-						echo '';
-					 } ?>
-
-					 <p class="card-text text-link-color-muted">
-		 				<small>
-		 					<?php lean_entry_meta(); ?>
-		 				</small>
-		 			</p>
+					<?php } else { echo ''; } ?>
 
 				</div>
 			</div><!-- ./row -->
+		</article>
 
-			<?php else: ?>
+	<?php else: ?>
 
-			<?php the_title( sprintf( '<h2 class="card-title h5 text-link-color line-clamp-2 text-overflow-ellipsis"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+		<article class="bg-white mb-4 p-4 rounded border l-shadow">
+
+			<?php the_title( sprintf( '<h2 class="h5 l-link-v9 line-clamp-2 text-overflow-ellipsis mb-3"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+
+			<?php lean_entry_meta(); ?>
 
 			<?php if ( get_theme_mod( 'posts_list_excerpt')==yes ) { ?>
-			<p class="card-text hidden-sm-down">
+			<p class="l-color-v7 mb-0 hidden-sm-down">
 				<?php echo wp_trim_words( get_the_excerpt(), get_theme_mod( 'excerpt_length'), '...' );?>
 			</p>
 			<?php } else { echo ''; } ?>
 
-			<p class="card-text text-link-color-muted">
-				<small>
-					<?php lean_entry_meta(); ?>
-				</small>
-			</p>
+		</article>
 
-			<?php endif; //end thumbnail ?>
-		<?php endif; // end is_single ?>
-	</div>
-</div>
+	<?php endif; //end thumbnail ?>
+
+<?php endif; // end is_single ?>
