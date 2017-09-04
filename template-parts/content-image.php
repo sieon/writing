@@ -50,11 +50,11 @@
 
 	<article class="bg-white mb-4 p-4 rounded border l-shadow">
 
-		<?php the_title( sprintf( '<h2 class="h5 l-link-v9 line-clamp-2 text-overflow-ellipsis mb-2"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+		<?php the_title( sprintf( '<h2 class="h5 line-height-1-5 l-link-v9 line-clamp-2 text-overflow-ellipsis mb-3"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 		<?php lean_entry_meta(); ?>
 
-		<a class="entry-img height-300 mb-3" href="<?php the_permalink(); ?>">
+		<a class="entry-img mb-3" href="<?php the_permalink(); ?>">
 			<?php the_post_thumbnail('medium', ['class' => 'img-fluid w-100']); ?>
 		</a>
 

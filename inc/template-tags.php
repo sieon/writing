@@ -22,12 +22,12 @@ function lean_the_post_navigation() {
 		return;
 	}
 	?>
-	<nav class="w-100 mb-4 p-4 border rounded l-shadow-v28" role="navigation">
+	<nav class="bg-white w-100 mb-4 p-4 border rounded l-shadow" role="navigation">
 		<h4 class="sr-only sr-only-focusable"><?php esc_html_e( '文章导航', 'lean' ); ?></h3>
-		<div class="nav-links clearfix">
+		<div class="line-h-1-8 clearfix">
 			<?php
-				previous_post_link( '<div class="nav-previous float-left">&larr; %link</div>', '%title' );
-				next_post_link( '<div class="nav-next float-right">%link &rarr;</div>', '%title' );
+				previous_post_link( '<div class="float-left">&larr; %link</div>', '%title' );
+				next_post_link( '<div class="float-right">%link &rarr;</div>', '%title' );
 			?>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->

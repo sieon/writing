@@ -18,7 +18,7 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div class="comments-area w-100 mb-4 p-4 border rounded l-shadow-v28" id="comments">
+<div class="bg-white comments-area w-100 mb-4 p-4 border rounded l-shadow" id="comments">
 
 	<?php comment_form(); // Render comments form. ?>
 

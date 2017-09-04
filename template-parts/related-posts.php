@@ -10,11 +10,11 @@
 
 		<a href="<?php the_permalink(); ?>">
 			<figure class="entry-img">
-				<?php the_post_thumbnail( 'medium', ['class' => 'card-img rounded-0'] ); ?>
+				<?php the_post_thumbnail( 'medium', ['class' => ''] ); ?>
 			</figure>
 	  </a>
 
-		<?php the_title( sprintf( '<p class="l-link-dark line-clamp-2 text-overflow-ellipsis"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></p>' ); ?>
+		<?php the_title( sprintf( '<p class="l-link-v9 line-clamp-2 text-overflow-ellipsis"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></p>' ); ?>
 
 	<?php else: // no thumbnail ?>
 
@@ -28,7 +28,7 @@
 			</figure>
 		</a>
 
-		<?php the_title( sprintf( '<p class="l-link-dark line-clamp-2 text-overflow-ellipsis"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></p>' ); ?>
+		<?php the_title( sprintf( '<p class="l-link-v9 line-clamp-2 text-overflow-ellipsis"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></p>' ); ?>
 
 	<?php endif; ?>
 

@@ -6,10 +6,10 @@
 ?>
 
 <?php if(is_single()): ?>
-	<article class="w-100 mb-4 p-4 border rounded l-shadow-v28">
+	<article class="bg-white w-100 mb-4 p-4 border rounded l-shadow-v28">
 		<?php the_title( '<h1 class="h2 mb-4">','</h1>' ); ?>
 
-		<ul class="list-inline small"><?php lean_entry_meta(); ?></ul>
+		<?php lean_entry_meta(); ?>
 
 		<div class="entry-content pt-3">
 
@@ -49,7 +49,7 @@
 
 		<article class="w-100 bg-white p-4 mb-4 rounded border l-shadow">
 			<div class="row">
-				<div class="col-sm-4">
+				<div class="col-4">
 					<figure class="g-pos-rel mb-0">
 						<?php the_post_thumbnail('medium', ['class' => 'img-fluid w-100']); ?>
 						<figcaption class="g-pos-abs g-left-20 g-top-20">
@@ -62,7 +62,7 @@
 					</figure>
 				</div>
 
-				<div class="col-sm-8">
+				<div class="col-8 align-self-center">
 
 					<?php the_title( sprintf( '<h2 class="h5 line-height-1-5 l-link-v9 line-clamp-2 text-overflow-ellipsis mb-3"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 

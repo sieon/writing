@@ -2,7 +2,7 @@
 
 function related_posts( $post_num = 6 ) {
 	global $post;
-    echo '<div class="w-100 mb-4 p-4 border rounded l-shadow-v28"><h4 class="h6 mb-4">你可能喜欢：</h3><div class="row">';
+    echo '<div class="bg-white w-100 mb-4 px-4 pt-4 pb-1 border rounded l-shadow"><h4 class="h6 mb-3">你可能喜欢：</h3><div class="row">';
     $exclude_id = $post->ID;
     $posttags = get_the_tags(); $i = 0;
     if ( $posttags ) {
@@ -35,9 +35,27 @@ function related_posts( $post_num = 6 ) {
 				);
         query_posts($args);
         while( have_posts() ) { the_post(); ?>
-					<div class="col-md-4 col-6">
-						<?php get_template_part( 'template-parts/related', 'posts'); ?>
+
+					<div class="col-lg-4">
+						<article class="mb-3">
+
+							<?php
+							// $categories = get_the_category();
+							// if ( ! empty( $categories ) ) {
+							// 	echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '" class="btn btn-success btn-sm mb-3">' . esc_html( $categories[0]->name ) . '</a>';
+							// } ?>
+
+							<?php the_title( sprintf( '<h6 class="line-h-1-8 line-clamp-2 text-overflow-ellipsis small"><a class="l-link-v9" href="%s">', esc_url( get_permalink() ) ), '</a></h6>' ); ?>
+
+							<small class="l-link-v6">
+								<span class="oi oi-clock align-middle g-mr-5"></span> <?php the_time('Y-m-d'); ?>
+							</small>
+
+						</article>
 					</div>
+
+
+
             <?php
             $exclude_id .= ',' . $post->ID; $i ++;
         }
@@ -72,13 +90,21 @@ function related_posts( $post_num = 6 ) {
 				);
         query_posts($args);
         while( have_posts() ) { the_post(); ?>
-          <div class="col-md-4 col-6">
-						<?php get_template_part( 'template-parts/related', 'posts' ); ?>
-          </div>
+					<div class="col-lg-4">
+						<article class="mb-3">
+
+							<?php the_title( sprintf( '<h6 class="line-h-1-8 line-clamp-2 text-overflow-ellipsis small"><a class="l-link-v9" href="%s">', esc_url( get_permalink() ) ), '</a></h6>' ); ?>
+
+							<small class="l-link-v6">
+								<i class="oi oi-clock align-middle g-mr-5"></i> <?php the_time('Y-m-d'); ?>
+							</small>
+
+						</article>
+					</div>
             <?php $i++;
         }
 		wp_reset_query();
     }
-    if ( $i  == 0 )  echo '<div class="col-12"><p>没有相关文章!</p></div>';
+    if ( $i  == 0 )  echo '<div class="col-12">没有相关文章!</div>';
     echo '</div></div>';
 }
