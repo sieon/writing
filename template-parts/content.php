@@ -6,8 +6,8 @@
 ?>
 
 <?php if(is_single()): ?>
-	<article class="bg-white w-100 mb-4 p-4 border rounded l-shadow-v28">
-		<?php the_title( '<h1 class="h2 mb-4">','</h1>' ); ?>
+	<article class="bg-white w-100 mb-4 p-4 border rounded l-shadow">
+		<?php the_title( '<h1 class="mb-4">','</h1>' ); ?>
 
 		<?php lean_entry_meta(); ?>
 
@@ -65,7 +65,7 @@
 
 				<div class="col-8 align-self-center">
 
-					<?php the_title( sprintf( '<h2 class="h5 line-height-1-5 l-link-v9 line-clamp-2 text-overflow-ellipsis mb-3"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+					<?php the_title( sprintf( '<h2 class="h4 line-height-1-5 l-link-v9 line-clamp-2 text-overflow-ellipsis mb-3"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 					<?php lean_entry_meta(); ?>
 
@@ -83,7 +83,7 @@
 
 		<article class="bg-white mb-4 p-4 rounded border l-shadow">
 
-			<?php the_title( sprintf( '<h2 class="h5 l-link-v9 line-clamp-2 text-overflow-ellipsis mb-3"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+			<?php the_title( sprintf( '<h2 class="h4 l-link-v9 line-clamp-2 text-overflow-ellipsis mb-3"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 			<?php lean_entry_meta(); ?>
 
