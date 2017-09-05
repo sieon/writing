@@ -129,23 +129,23 @@ function lean_the_archive_title( $before = '', $after = '' ) {
 		$title = sprintf( esc_html__( '日: %s', 'lean' ), get_the_date( esc_html_x( 'F j, Y', 'daily archives date format', 'lean' ) ) );
 	} elseif ( is_tax( 'post_format' ) ) {
 		if ( is_tax( 'post_format', 'post-format-aside' ) ) {
-			$title = esc_html_x( 'Asides', 'post format archive title', 'lean' );
+			$title = esc_html_x( '日志', 'post format archive title', 'lean' );
 		} elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) {
-			$title = esc_html_x( 'Galleries', 'post format archive title', 'lean' );
+			$title = esc_html_x( '相册', 'post format archive title', 'lean' );
 		} elseif ( is_tax( 'post_format', 'post-format-image' ) ) {
-			$title = esc_html_x( 'Images', 'post format archive title', 'lean' );
+			$title = esc_html_x( '图片', 'post format archive title', 'lean' );
 		} elseif ( is_tax( 'post_format', 'post-format-video' ) ) {
-			$title = esc_html_x( 'Videos', 'post format archive title', 'lean' );
+			$title = esc_html_x( '视频', 'post format archive title', 'lean' );
 		} elseif ( is_tax( 'post_format', 'post-format-quote' ) ) {
-			$title = esc_html_x( 'Quotes', 'post format archive title', 'lean' );
+			$title = esc_html_x( '引语', 'post format archive title', 'lean' );
 		} elseif ( is_tax( 'post_format', 'post-format-link' ) ) {
-			$title = esc_html_x( 'Links', 'post format archive title', 'lean' );
+			$title = esc_html_x( '链接', 'post format archive title', 'lean' );
 		} elseif ( is_tax( 'post_format', 'post-format-status' ) ) {
-			$title = esc_html_x( 'Statuses', 'post format archive title', 'lean' );
+			$title = esc_html_x( '状态', 'post format archive title', 'lean' );
 		} elseif ( is_tax( 'post_format', 'post-format-audio' ) ) {
-			$title = esc_html_x( 'Audio', 'post format archive title', 'lean' );
+			$title = esc_html_x( '音频', 'post format archive title', 'lean' );
 		} elseif ( is_tax( 'post_format', 'post-format-chat' ) ) {
-			$title = esc_html_x( 'Chats', 'post format archive title', 'lean' );
+			$title = esc_html_x( '聊天', 'post format archive title', 'lean' );
 		}
 	} elseif ( is_post_type_archive() ) {
 		$title = sprintf( esc_html__( '%s', 'lean' ), post_type_archive_title( '', false ) );
@@ -154,7 +154,7 @@ function lean_the_archive_title( $before = '', $after = '' ) {
 		/* translators: 1: Taxonomy singular name, 2: Current taxonomy term */
 		$title = sprintf( esc_html__( '%1$s: %2$s', 'lean' ), $tax->labels->singular_name, single_term_title( '', false ) );
 	} else {
-		$title = esc_html__( 'Archives', 'lean' );
+		$title = esc_html__( '归档', 'lean' );
 	}
 
 	/**

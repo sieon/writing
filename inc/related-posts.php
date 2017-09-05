@@ -45,7 +45,7 @@ function related_posts( $post_num = 6 ) {
 							// 	echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '" class="btn btn-success btn-sm mb-3">' . esc_html( $categories[0]->name ) . '</a>';
 							// } ?>
 
-							<?php the_title( sprintf( '<h6 class="line-h-1-8 line-clamp-2 text-overflow-ellipsis small"><a class="l-link-v9" href="%s">', esc_url( get_permalink() ) ), '</a></h6>' ); ?>
+							<?php the_title( sprintf( '<p class="line-h-1-8 line-clamp-2 text-overflow-ellipsis mb-2"><a class="l-link-v9" href="%s">', esc_url( get_permalink() ) ), '</a></p>' ); ?>
 
 							<small class="l-link-v6">
 								<span class="oi oi-clock align-middle g-mr-5"></span> <?php the_time('Y-m-d'); ?>
@@ -93,7 +93,7 @@ function related_posts( $post_num = 6 ) {
 					<div class="col-lg-4">
 						<article class="mb-3">
 
-							<?php the_title( sprintf( '<h6 class="line-h-1-8 line-clamp-2 text-overflow-ellipsis small"><a class="l-link-v9" href="%s">', esc_url( get_permalink() ) ), '</a></h6>' ); ?>
+							<?php the_title( sprintf( '<p class="line-h-1-8 line-clamp-2 text-overflow-ellipsis"><a class="l-link-v9" href="%s">', esc_url( get_permalink() ) ), '</a></p>' ); ?>
 
 							<small class="l-link-v6">
 								<i class="oi oi-clock align-middle g-mr-5"></i> <?php the_time('Y-m-d'); ?>

@@ -52,13 +52,14 @@
 				<div class="col-4">
 					<figure class="g-pos-rel mb-0">
 						<?php the_post_thumbnail('medium', ['class' => 'img-fluid w-100']); ?>
-						<figcaption class="g-pos-abs g-left-20 g-top-20">
+						<figcaption class="g-pos-abs g-left-20 g-top-20 z-101">
 							<?php
 							$categories = get_the_category();
 							if ( ! empty( $categories ) ) {
 								echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '" class="badge badge-dark text-uppercase rounded-0">' . esc_html( $categories[0]->name ) . '</a>';
 							} ?>
 						</figcaption>
+						<a class="g-pos-abs l-link-v0" href="<?php echo get_permalink(); ?>"></a>
 					</figure>
 				</div>
 
