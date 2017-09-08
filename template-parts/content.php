@@ -52,11 +52,20 @@
 				<div class="col-4">
 					<figure class="g-pos-rel mb-0">
 						<?php the_post_thumbnail('medium', ['class' => 'img-fluid w-100']); ?>
-						<figcaption class="g-pos-abs g-left-20 g-top-20 z-101">
+						<figcaption class="g-pos-abs g-left-0 g-top-0 z-101 hidden-sm-down">
 							<?php
 							$categories = get_the_category();
+							$arraybtn =array();
+							$arraybtn["primary"]="primary";
+							$arraybtn["secondary"]="secondary";
+							$arraybtn["success"]="success";
+							$arraybtn["danger"]="danger";
+							$arraybtn["warning"]="warning";
+							$arraybtn["info"]="info";
+							$arraybtn["dark"]="dark";
+							$catbg = array_rand($arraybtn,1);
 							if ( ! empty( $categories ) ) {
-								echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '" class="badge badge-dark text-uppercase rounded-0">' . esc_html( $categories[0]->name ) . '</a>';
+								echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '" class="btn btn-'.$catbg.' btn-sm text-uppercase rounded-0">' . esc_html( $categories[0]->name ) . '</a>';
 							} ?>
 						</figcaption>
 						<a class="g-pos-abs l-link-v0" href="<?php echo get_permalink(); ?>"></a>

@@ -18,6 +18,38 @@
   font-weight: 400;
 }
 
+.g-pos-rel {
+  position: relative !important;
+}
+
+.g-pos-abs {
+  position: absolute !important;
+}
+
+.g-left-20 {
+  left: .5rem;
+}
+
+.g-top-20 {
+  top: .5rem;
+}
+
+.g-left-0 {
+  left: 0;
+}
+
+.g-top-0 {
+  top: 0;
+}
+
+.g-right-0 {
+  top: 0;
+}
+
+.g-bottom-0 {
+  top: 0;
+}
+
 /*------------------------------------
   Typography Font Weight
 ------------------------------------*/

@@ -5,7 +5,7 @@
 get_header(); ?>
 <div class="container mt-4">
   <div class="site-main">
-    <main class="main-content bg-white rounded p-4 l-shadow">
+    <main class="main-content bg-white border rounded p-4 l-shadow">
       <h1 class="mb-4">标签云</h1>
       <hr class="mb-4">
 
