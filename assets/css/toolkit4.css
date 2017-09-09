@@ -337,19 +337,19 @@ h1, h2, h3, h4, h5, h6,
   color: inherit; }
 
 h1, .h1 {
-  font-size: 2.5rem; }
-
-h2, .h2 {
   font-size: 2rem; }
 
-h3, .h3 {
+h2, .h2 {
   font-size: 1.75rem; }
 
-h4, .h4 {
+h3, .h3 {
   font-size: 1.5rem; }
 
-h5, .h5 {
+h4, .h4 {
   font-size: 1.25rem; }
+
+h5, .h5 {
+  font-size: 1.125rem; }
 
 h6, .h6 {
   font-size: 1rem; }
@@ -386,7 +386,7 @@ hr {
 
 small,
 .small {
-  font-size: 87.5%;
+  font-size: 80%;
   font-weight: normal; }
 
 mark,
@@ -6716,6 +6716,9 @@ table#wp-calendar caption {
   .footer-inverse a {
     color: #fff; }
 
+/*------------------------------------
+  Link
+------------------------------------*/
 .l-color-v5 {
   color: #adb5bd; }
 
@@ -6777,6 +6780,15 @@ table#wp-calendar caption {
     .l-link-v3 a:focus, .l-link-v3 a:hover {
       color: #20c997;
       text-decoration: none; }
+
+.l-link-v0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden; }
 
 .widget ul li a {
   text-decoration: none;
@@ -7203,18 +7215,6 @@ img {
 .l-shadow-v29 {
   box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.1); }
 
-.g-pos-rel {
-  position: relative !important; }
-
-.g-pos-abs {
-  position: absolute !important; }
-
-.g-left-20 {
-  left: .5rem; }
-
-.g-top-20 {
-  top: .5rem; }
-
 /*****************************
  ~~ WordPress Config Specific
 *****************************/
@@ -7414,6 +7414,67 @@ a img.aligncenter {
 .mx--3 {
   margin-left: -1rem;
   margin-right: -1rem; }
+
+.z-100 {
+  z-index: 100; }
+
+.z-101 {
+  z-index: 101;
+  font-weight: 400; }
+
+.g-pos-rel {
+  position: relative !important; }
+
+.g-pos-abs {
+  position: absolute !important; }
+
+.g-left-20 {
+  left: .5rem; }
+
+.g-top-20 {
+  top: .5rem; }
+
+.g-left-0 {
+  left: 0; }
+
+.g-top-0 {
+  top: 0; }
+
+.g-right-0 {
+  top: 0; }
+
+.g-bottom-0 {
+  top: 0; }
+
+/*------------------------------------
+  Typography Font Weight
+------------------------------------*/
+.g-font-weight-100 {
+  font-weight: 100; }
+
+.g-font-weight-200 {
+  font-weight: 200; }
+
+.g-font-weight-300 {
+  font-weight: 300; }
+
+.g-font-weight-400 {
+  font-weight: 400; }
+
+.g-font-weight-500 {
+  font-weight: 500; }
+
+.g-font-weight-600 {
+  font-weight: 600; }
+
+.g-font-weight-700 {
+  font-weight: 700; }
+
+.g-font-weight-800 {
+  font-weight: 800; }
+
+.g-font-weight-900 {
+  font-weight: 900; }
 
 .text-white {
   color: #fff; }
