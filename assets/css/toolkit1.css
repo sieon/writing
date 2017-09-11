@@ -7441,10 +7441,10 @@ a img.aligncenter {
   top: 0; }
 
 .g-right-0 {
-  top: 0; }
+  right: 0; }
 
 .g-bottom-0 {
-  top: 0; }
+  bottom: 0; }
 
 /*------------------------------------
   Typography Font Weight
@@ -7475,9 +7475,6 @@ a img.aligncenter {
 
 .g-font-weight-900 {
   font-weight: 900; }
-
-.text-white {
-  color: #fff; }
 
 .text-gray200 {
   color: #e9ecef; }
