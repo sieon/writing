@@ -9,7 +9,6 @@ get_header(); ?>
 <div class="container mt-4">
   <div class="site-main">
     <main class="main-content">
-
       <div class="row mt-4">
         <div class="col-6">
           <?php
