@@ -5,7 +5,7 @@
     <div class="col-lg-8">
       <div class="main-content">
 
-        <header class="jumbotron bg-white border l-shadow mb-3 p-4">
+        <header class="jumbotron bg-white border mb-3 p-4 l-shadow">
           <?php
           lean_the_archive_title( '<h1>', '</h1>' );
           lean_the_archive_description( '<div class="text-muted">', '</div>' );

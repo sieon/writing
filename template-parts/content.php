@@ -6,8 +6,8 @@
 ?>
 
 <?php if(is_single()): ?>
-	<article class="bg-white w-100 mb-4 p-4 border rounded l-shadow-v28">
-		<?php the_title( '<h1 class="h2 mb-4">','</h1>' ); ?>
+	<article class="bg-white w-100 mb-4 p-4 border rounded l-shadow">
+		<?php the_title( '<h1 class="mb-4">','</h1>' ); ?>
 
 		<?php lean_entry_meta(); ?>
 
@@ -52,19 +52,29 @@
 				<div class="col-4">
 					<figure class="g-pos-rel mb-0">
 						<?php the_post_thumbnail('medium', ['class' => 'img-fluid w-100']); ?>
-						<figcaption class="g-pos-abs g-left-20 g-top-20">
+						<figcaption class="g-pos-abs g-left-0 g-top-0 z-101 hidden-sm-down">
 							<?php
 							$categories = get_the_category();
+							$arraybtn =array();
+							$arraybtn["primary"]="primary";
+							$arraybtn["secondary"]="secondary";
+							$arraybtn["success"]="success";
+							$arraybtn["danger"]="danger";
+							$arraybtn["warning"]="warning";
+							$arraybtn["info"]="info";
+							$arraybtn["dark"]="dark";
+							$catbg = array_rand($arraybtn,1);
 							if ( ! empty( $categories ) ) {
-								echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '" class="badge badge-dark text-uppercase rounded-0">' . esc_html( $categories[0]->name ) . '</a>';
+								echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '" class="btn btn-'.$catbg.' btn-sm text-uppercase rounded-0">' . esc_html( $categories[0]->name ) . '</a>';
 							} ?>
 						</figcaption>
+						<a class="g-pos-abs l-link-v0" href="<?php echo get_permalink(); ?>"></a>
 					</figure>
 				</div>
 
 				<div class="col-8 align-self-center">
 
-					<?php the_title( sprintf( '<h2 class="h5 line-height-1-5 l-link-v9 line-clamp-2 text-overflow-ellipsis mb-3"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+					<?php the_title( sprintf( '<h2 class="h4 line-height-1-5 l-link-v9 line-clamp-2 text-overflow-ellipsis mb-3"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 					<?php lean_entry_meta(); ?>
 
@@ -82,7 +92,7 @@
 
 		<article class="bg-white mb-4 p-4 rounded border l-shadow">
 
-			<?php the_title( sprintf( '<h2 class="h5 l-link-v9 line-clamp-2 text-overflow-ellipsis mb-3"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+			<?php the_title( sprintf( '<h2 class="h4 l-link-v9 line-clamp-2 text-overflow-ellipsis mb-3"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 			<?php lean_entry_meta(); ?>
 

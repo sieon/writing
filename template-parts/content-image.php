@@ -7,7 +7,7 @@
 
 <?php if(is_single()): ?>
 
-	<div class="w-100 mb-4 p-4 border rounded l-shadow-v28">
+	<div class="bg-white w-100 mb-4 p-4 border rounded l-shadow-v28">
 
 		<?php the_title( '<h1 class="h2 mb-4">','</h1>' ); ?>
 

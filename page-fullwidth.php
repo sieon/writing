@@ -9,12 +9,12 @@ get_header(); ?>
     <main class="main-content">
 
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-      <div class="card l-shadow-v28">
-        <h1 class="card-header bg-white py-4"><?php the_title(); ?></h1>
-        <div class="card-body">
-          <div class="entry-content">
-            <?php the_content(); ?>
-          </div>
+      <div class="w-100 bg-white border rounded mb-4 p-4 l-shadow">
+        <h1 class="mb-4"><?php the_title(); ?></h1>
+        <hr class="mb-4">
+
+        <div class="entry-content">
+          <?php the_content(); ?>
         </div>
       </div>
       <?php

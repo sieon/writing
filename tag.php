@@ -8,13 +8,13 @@
       <div class="col-lg-8">
         <main class="main-content">
 
-          <header class="media bg-white l-shadow border rounded mb-4 p-4">
+          <header class="media bg-white border rounded mb-4 p-4 l-shadow">
             <div class="bg-light p-4 d-flex mr-3">
               <span class="oi oi-tag"></span>
             </div>
             <div class="media-body">
               <?php
-              lean_the_archive_title( '<h1 class="">', '</h1>' );
+              lean_the_archive_title( '<h1>', '</h1>' );
               lean_the_archive_description( '<div class="text-muted mt-3">', '</div>' );
               ?>
             </div>
