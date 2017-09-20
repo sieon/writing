@@ -1,2 +1,10 @@
 @import "colors";
 @import "fonts";
+@import "spacer";
+@import "grid";
+
+// override
+html {
+  // set optimal base size
+  font-size: $font-size-root;
+}

@@ -1,35 +1,16 @@
-/*--------------------------------------------------------------
-# Default Bootstrap Colors
---------------------------------------------------------------*/
-// Start with assigning color names to specific hex values.
-// $white:  #fff !default;
-// $gray-100: #f8f9fa !default;
-// $gray-200: #e9ecef !default;
-// $gray-300: #dee2e6 !default;
-// $gray-400: #ced4da !default;
-// $gray-500: #adb5bd !default;
-// $gray-600: #868e96 !default;
-// $gray-700: #495057 !default;
-// $gray-800: #343a40 !default;
-// $gray-900: #212529 !default;
-// $black:  #000 !default;
+// Color Gray
+$g-color-gray-light-v1: #bbb !default; // $g-color-gray-light-v3
+$g-color-gray-light-v2: #ccc !default; // $g-color-gray-light-v4
+$g-color-gray-light-v3: #ddd !default; // $g-color-gray-light-v6
+$g-color-gray-light-v4: #eee !default; // $g-color-gray-light-v7
+$g-color-gray-light-v5: #f7f7f7 !default; // $g-color-gray-light-v9
 
+$g-color-gray-dark-v1: #111 !default; // $g-color-gray-dark-v4:
+$g-color-gray-dark-v2: #333 !default; // $g-color-gray-dark-v2:
+$g-color-gray-dark-v3: #555 !default; // $g-color-gray-dark-v1:
+$g-color-gray-dark-v4: #777 !default; // $g-color-gray:
+$g-color-gray-dark-v5: #999 !default; // $g-color-gray-light-v1:
 
-// $blue:    #007bff !default;
-// $indigo:  #6610f2 !default;
-// $purple:  #6f42c1 !default;
-// $pink:    #e83e8c !default;
-// $red:     #dc3545 !default;
-// $orange:  #fd7e14 !default;
-// $yellow:  #ffc107 !default;
-// $green:   #28a745 !default;
-// $teal:    #20c997 !default;
-// $cyan:    #17a2b8 !default;
-
-// Reassign color vars to semantic color scheme
-// $brand-primary:             $blue !default;
-// $brand-success:             $green !default;
-// $brand-info:                $teal !default;
-// $brand-warning:             $orange !default;
-// $brand-danger:              $red !default;
-// $brand-inverse:             $gray-dark !default;
+.g-color-gray-light-v5 {
+  color: $g-color-gray-light-v5 !important;
+}
