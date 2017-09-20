@@ -8,7 +8,7 @@ Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: strappress
-Tags:hehe
+Tags:
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -6929,14 +6929,136 @@ a.text-dark:focus, a.text-dark:hover {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
-.comments-area {
-  margin-top: 2em; }
+/**
+ * 11.4 - Comments
+ */
+.comment-respond {
+  margin-bottom: 1rem; }
 
-.comment-content a {
-  word-wrap: break-word; }
+.comment-list + .comment-respond,
+.comment-navigation + .comment-respond {
+  padding-top: 1rem; }
 
-.bypostauthor {
-  display: block; }
+.comments-title {
+  margin-bottom: 1rem; }
+
+.comment-list {
+  list-style: none;
+  margin: 0;
+  padding-left: 0; }
+  .comment-list article,
+  .comment-list .pingback,
+  .comment-list .trackback {
+    border-bottom: 1px solid #d1d1d1;
+    padding: 1rem 0; }
+  .comment-list .children {
+    list-style: none;
+    margin: 0; }
+
+.comment-author {
+  color: #1a1a1a;
+  margin-bottom: 0.4375em; }
+  .comment-author .avatar {
+    float: left;
+    height: 28px;
+    margin-right: 0.875em;
+    position: relative;
+    width: 28px; }
+
+.comment-meta {
+  font-size: .85rem; }
+
+.comment-metadata,
+.pingback .edit-link {
+  color: #999; }
+
+.comment-metadata {
+  margin-bottom: .5rem; }
+
+.comment-metadata a,
+.pingback .comment-edit-link {
+  color: #999; }
+
+.comment-metadata a:hover,
+.comment-metadata a:focus,
+.pingback .comment-edit-link:hover,
+.pingback .comment-edit-link:focus {
+  color: #007acc; }
+
+.comment-metadata .edit-link,
+.pingback .edit-link {
+  display: inline-block; }
+
+.comment-body {
+  position: relative; }
+  .comment-body .reply {
+    position: absolute;
+    right: 0;
+    top: 1rem; }
+
+.comment-content {
+  color: #666;
+  font-size: 87.5%; }
+  .comment-content p:last-child {
+    margin-bottom: 0; }
+  .comment-content ul,
+  .comment-content ol {
+    margin: 0 0 1.5em 1.25em; }
+  .comment-content li > ul,
+  .comment-content li > ol {
+    margin-bottom: 0; }
+
+.comment-form {
+  padding-top: .5rem; }
+  .comment-form label {
+    color: #686868;
+    display: block;
+    font-size: 13px;
+    font-size: 0.8125rem;
+    letter-spacing: 0.076923077em;
+    line-height: 1.6153846154;
+    margin-bottom: 0.5384615385em;
+    text-transform: uppercase; }
+
+.comment-list .comment-form {
+  padding-bottom: .5rem; }
+
+.comment-notes,
+.comment-awaiting-moderation,
+.logged-in-as,
+.form-allowed-tags {
+  color: #686868;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 1.6153846154;
+  margin-bottom: 2.1538461538em; }
+
+.no-comments {
+  border-top: 1px solid #d1d1d1;
+  font-weight: 700;
+  margin: 0;
+  padding-top: 1.75em; }
+
+.comment-navigation + .no-comments {
+  border-top: 0;
+  padding-top: 0; }
+
+.form-allowed-tags code {
+  font-family: Inconsolata, monospace; }
+
+.required {
+  color: #007acc; }
+
+.comment-list .comment-reply-title {
+  margin-top: 1rem; }
+
+.comment-reply-title {
+  font-size: 1rem; }
+  .comment-reply-title small a {
+    float: right; }
+
+.fn {
+  margin-right: .5rem; }
 
 /*--------------------------------------------------------------
 ## Posts and Pages
@@ -7025,28 +7147,6 @@ a.text-dark:focus, a.text-dark:hover {
 /*--------------------------------------------------------------
 ## Widgets
 --------------------------------------------------------------*/
-.widget {
-  margin: 0 0 2em;
-  /* Make sure select elements fit in widgets. */ }
-  .widget select {
-    max-width: 100%; }
-  .widget #wp-calendar {
-    width: 100%; }
-  .widget .card-header {
-    font-size: 1.25rem; }
-  .widget .tagcloud,
-  .widget .textwidget,
-  .widget .calendar_wrap {
-    padding: 1.25rem; }
-  .widget ul {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    margin-bottom: 0; }
-  .widget.widget_search {
-    border: none; }
-  .widget .tagcloud a {
-    margin-bottom: .5rem; }
-
 /*--------------------------------------------------------------
 ## Header
 --------------------------------------------------------------*/
@@ -7056,10 +7156,15 @@ a.text-dark:focus, a.text-dark:hover {
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
-.site-footer {
-  padding: 4rem 0;
-  margin-top: 4rem;
-  background-color: #f8f9fa; }
+/*****************************
+ ~~ html specific
+*****************************/
+.footer-inverse {
+  background: #2a2730; }
+  .footer-inverse p {
+    color: #99979c; }
+  .footer-inverse a {
+    color: #fff; }
 
 body {
   padding-top: 3.5rem; }
@@ -7254,15 +7359,6 @@ table#wp-calendar caption {
 .post_format-post-format-gallery > div > dl.gallery-item:active > dt > a > img {
   border-color: #337ab7; }
 
-.comments-area {
-  margin-top: 2em; }
-
-.comment-content a {
-  word-wrap: break-word; }
-
-.bypostauthor {
-  display: block; }
-
 .card {
   margin-bottom: 20px;
   width: 100%; }
@@ -7310,10 +7406,15 @@ table#wp-calendar caption {
   box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.08);
   border-color: rgba(0, 0, 0, 0.08); }
 
-.site-footer {
-  padding: 4rem 0;
-  margin-top: 4rem;
-  background-color: #f8f9fa; }
+/*****************************
+ ~~ html specific
+*****************************/
+.footer-inverse {
+  background: #2a2730; }
+  .footer-inverse p {
+    color: #99979c; }
+  .footer-inverse a {
+    color: #fff; }
 
 /*------------------------------------
   Link

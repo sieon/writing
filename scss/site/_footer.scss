@@ -1,5 +1,20 @@
-.site-footer {
-	padding: 4rem 0;
-    margin-top: 4rem;
-    background-color: $gray-100;
+/*****************************
+ ~~ html specific
+*****************************/
+
+// .footer-b {
+//   color: $gray-200;
+//   a {
+//     color: $gray-200;
+//   }
+// }
+
+.footer-inverse {
+  background: #2a2730;
+  p {
+    color: #99979c;
+  }
+  a {
+    color: #fff;
+  }
 }
