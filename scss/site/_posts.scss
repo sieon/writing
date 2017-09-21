@@ -1,0 +1,26 @@
+
+
+// single
+.entry-content {
+
+  font-size: 125%;
+
+  h2 {
+    margin: 30px 0;
+  }
+
+  h3,h4,h5,h6 {
+    margin: 20px 0;
+  }
+
+  p {
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+  ul li,ol li {
+    line-height: 1.8;
+  }
+}

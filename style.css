@@ -1,30 +1,19 @@
+@charset "UTF-8";
 /*
 Theme Name: writing
-Theme URI: http://strappress.com
-Author: Brad Williams
-Author URI: http://braginteractive.com
-Description: Bootstrap 4 WordPress Theme
-Version: 1.0.0
+Theme URI: http://qingzhuti.com/theme/writing
+Author: mxy
+Author URI: http://qingzhuti.com
+Description: 这是一个简洁的WordPress博客主题，为专注写作而设计。
+Version: 0.8.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: strappress
+Text Domain: lean
 Tags:
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
-StrapPress is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 /*--------------------------------------------------------------
-# Variables
+# 变量
 --------------------------------------------------------------*/
-.g-color-gray-light-v5 {
-  color: #f7f7f7 !important; }
-
 html {
   font-size: 14px; }
 
@@ -6880,7 +6869,7 @@ a.text-dark:focus, a.text-dark:hover {
   visibility: hidden !important; }
 
 /*--------------------------------------------------------------
-# Theme Styles and Layout
+# 样式和布局
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 ## Layouts
@@ -7159,16 +7148,6 @@ body {
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
-/*****************************
- ~~ html specific
-*****************************/
-.footer-inverse {
-  background: #2a2730; }
-  .footer-inverse p {
-    color: #99979c; }
-  .footer-inverse a {
-    color: #fff; }
-
 .admin-bar .fixed-top {
   margin-top: 32px; }
 
@@ -7177,26 +7156,6 @@ body {
 
 .mt--0-5 {
   margin-top: -0.5rem; }
-
-.jumbotron p:last-child {
-  margin-bottom: 0; }
-
-.profile-header {
-  background-size: cover;
-  background-color: #8d9093;
-  height: 400px;
-  color: #fff;
-  display: table-cell;
-  width: 1000000px;
-  text-align: center;
-  vertical-align: middle; }
-  .profile-header .avatar {
-    margin: 0 auto;
-    margin-bottom: 2rem; }
-
-.profile-header-container {
-  max-width: 300px;
-  margin: 0 auto; }
 
 .hot-tags a {
   margin-top: 5px;
@@ -7315,6 +7274,88 @@ table#wp-calendar caption {
 .comment-author-link {
   margin-right: .25rem; }
 
+.card {
+  margin-bottom: 20px;
+  width: 100%; }
+  .card p:last-child {
+    margin-bottom: 0; }
+
+.posts blockquote {
+  font-size: 1rem; }
+
+.card-block ul {
+  margin-bottom: 0; }
+
+.card-img-overlay {
+  background: rgba(5, 5, 5, 0.4); }
+
+.posts-card .row > div[class*='col-'] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.posts-card .card {
+  transition: all .5s ease; }
+
+.posts-card .card-footer {
+  color: #999;
+  margin-bottom: 0; }
+  .posts-card .card-footer a {
+    color: #aaa; }
+
+.l-shadow--hover:hover {
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.08); }
+
+/*****************************
+ ~~ html specific
+*****************************/
+.footer-inverse {
+  background: #2a2730; }
+  .footer-inverse p {
+    color: #99979c; }
+  .footer-inverse a {
+    color: #fff; }
+
+.text-overflow-ellipsis {
+  text-overflow: ellipsis; }
+
+.nowrap {
+  overflow: hidden;
+  white-space: nowrap; }
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important; }
+
+.line-clamp-4 {
+  overflow: hidden;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 4 !important;
+  -webkit-box-orient: vertical !important; }
+
+.line-clamp-8 {
+  overflow: hidden;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 8 !important;
+  -webkit-box-orient: vertical !important; }
+
+.entry-content {
+  font-size: 125%; }
+  .entry-content h2 {
+    margin: 30px 0; }
+  .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
+    margin: 20px 0; }
+  .entry-content p {
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word; }
+  .entry-content ul li, .entry-content ol li {
+    line-height: 1.8; }
+
 /*****************************
 ~~ Post Format: aside
 *****************************/
@@ -7359,53 +7400,6 @@ table#wp-calendar caption {
 .post_format-post-format-gallery > div > dl.gallery-item:active > dt > a > img {
   border-color: #337ab7; }
 
-.card {
-  margin-bottom: 20px;
-  width: 100%; }
-  .card p:last-child {
-    margin-bottom: 0; }
-
-.posts blockquote {
-  font-size: 1rem; }
-
-.card-block ul {
-  margin-bottom: 0; }
-
-.card-img-overlay {
-  background: rgba(5, 5, 5, 0.4); }
-
-.entry-content {
-  font-size: 100%; }
-  .entry-content h2 {
-    margin: 30px 0; }
-  .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
-    margin: 20px 0; }
-  .entry-content p {
-    line-height: 1.8;
-    margin-bottom: 1.25rem;
-    -ms-word-wrap: break-word;
-    word-wrap: break-word; }
-  .entry-content ul li, .entry-content ol li {
-    line-height: 1.8; }
-
-.posts-card .row > div[class*='col-'] {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
-.posts-card .card {
-  transition: all .5s ease; }
-
-.posts-card .card-footer {
-  color: #999;
-  margin-bottom: 0; }
-  .posts-card .card-footer a {
-    color: #aaa; }
-
-.l-shadow--hover:hover {
-  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.08);
-  border-color: rgba(0, 0, 0, 0.08); }
-
 /*****************************
  ~~ html specific
 *****************************/
@@ -7415,6 +7409,228 @@ table#wp-calendar caption {
     color: #99979c; }
   .footer-inverse a {
     color: #fff; }
+
+/*****************************
+ ~~ WordPress Config Specific
+*****************************/
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+  max-width: 100%;
+  height: auto; }
+
+.hide-bullets {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+ul.hide-bullets li.col-sm-4 {
+  padding: 0; }
+
+.screen-reader-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  border: 0; }
+  .screen-reader-text:active, .screen-reader-text:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    -webkit-clip-path: none;
+            clip-path: none; }
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em; }
+
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em; }
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.alignnone {
+  margin: 5px 20px 20px 0; }
+
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto; }
+
+.alignright {
+  float: right;
+  margin: 5px 0 20px 20px; }
+
+.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0; }
+
+a img.alignright {
+  float: right;
+  margin: 5px 0 20px 20px; }
+
+a img.alignnone {
+  margin: 5px 20px 20px 0; }
+
+a img.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0; }
+
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.wp-caption.alignnone {
+  margin: 5px 20px 20px 0; }
+
+.wp-caption.alignleft {
+  margin: 5px 20px 20px 0; }
+
+.wp-caption.alignright {
+  margin: 5px 0 20px 20px; }
+
+.ml--3 {
+  margin-left: -1rem; }
+
+.mx--3 {
+  margin-left: -1rem;
+  margin-right: -1rem; }
+
+.z-100 {
+  z-index: 100; }
+
+.z-101 {
+  z-index: 101;
+  font-weight: 400; }
+
+.g-pos-rel {
+  position: relative !important; }
+
+.g-pos-abs {
+  position: absolute !important; }
+
+.g-left-20 {
+  left: .5rem; }
+
+.g-top-20 {
+  top: .5rem; }
+
+.g-left-0 {
+  left: 0; }
+
+.g-top-0 {
+  top: 0; }
+
+.g-right-0 {
+  right: 0; }
+
+.g-bottom-0 {
+  bottom: 0; }
+
+/*------------------------------------
+  Typography Font Weight
+------------------------------------*/
+.g-font-weight-100 {
+  font-weight: 100; }
+
+.g-font-weight-200 {
+  font-weight: 200; }
+
+.g-font-weight-300 {
+  font-weight: 300; }
+
+.g-font-weight-400 {
+  font-weight: 400; }
+
+.g-font-weight-500 {
+  font-weight: 500; }
+
+.g-font-weight-600 {
+  font-weight: 600; }
+
+.g-font-weight-700 {
+  font-weight: 700; }
+
+.g-font-weight-800 {
+  font-weight: 800; }
+
+.g-font-weight-900 {
+  font-weight: 900; }
+
+.text-gray200 {
+  color: #e9ecef; }
+
+.text-gray300 {
+  color: #dee2e6; }
+
+.text-gray400 {
+  color: #ced4da; }
+
+.text-gray500 {
+  color: #adb5bd; }
+
+.text-gray600 {
+  color: #868e96; }
+
+.text-gray700 {
+  color: #495057; }
+
+.text-gray800 {
+  color: #343a40; }
+
+.g-color-gray-light-v5 {
+  color: #f7f7f7 !important; }
+
+.bg-white {
+  background-color: #fff; }
+
+.bg-gray200 {
+  background-color: #e9ecef; }
+
+.bg-gray300 {
+  background-color: #dee2e6; }
+
+.bg-gray400 {
+  background-color: #ced4da; }
+
+.bg-gray500 {
+  background-color: #adb5bd; }
+
+.bg-gray600 {
+  background-color: #868e96; }
+
+.bg-gray700 {
+  background-color: #495057; }
+
+.bg-gray800 {
+  background-color: #343a40; }
+
+.border-bottom-1 {
+  border-bottom: 1px solid #e9ecef; }
+
+.border-top-1 {
+  border-top: 1px solid #e9ecef; }
 
 /*------------------------------------
   Link
@@ -7504,61 +7720,6 @@ table#wp-calendar caption {
   .widget_recent_comments .recentcomments a:focus, .widget_recent_comments .recentcomments a:hover {
     color: #007bff;
     text-decoration: none; }
-
-.text-overflow-ellipsis {
-  text-overflow: ellipsis; }
-
-.nowrap {
-  overflow: hidden;
-  white-space: nowrap; }
-
-.line-clamp-2 {
-  overflow: hidden;
-  display: -webkit-box !important;
-  -webkit-line-clamp: 2 !important;
-  -webkit-box-orient: vertical !important; }
-
-.line-clamp-4 {
-  overflow: hidden;
-  display: -webkit-box !important;
-  -webkit-line-clamp: 4 !important;
-  -webkit-box-orient: vertical !important; }
-
-.line-clamp-8 {
-  overflow: hidden;
-  display: -webkit-box !important;
-  -webkit-line-clamp: 8 !important;
-  -webkit-box-orient: vertical !important; }
-
-.bg-white {
-  background-color: #fff; }
-
-.bg-gray200 {
-  background-color: #e9ecef; }
-
-.bg-gray300 {
-  background-color: #dee2e6; }
-
-.bg-gray400 {
-  background-color: #ced4da; }
-
-.bg-gray500 {
-  background-color: #adb5bd; }
-
-.bg-gray600 {
-  background-color: #868e96; }
-
-.bg-gray700 {
-  background-color: #495057; }
-
-.bg-gray800 {
-  background-color: #343a40; }
-
-.border-bottom-1 {
-  border-bottom: 1px solid #e9ecef; }
-
-.border-top-1 {
-  border-top: 1px solid #e9ecef; }
 
 .entry-img {
   display: block;
@@ -7887,200 +8048,11 @@ table#wp-calendar caption {
 .l-shadow-v29 {
   box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.1); }
 
-/*****************************
- ~~ WordPress Config Specific
-*****************************/
-.size-auto,
-.size-full,
-.size-large,
-.size-medium,
-.size-thumbnail {
-  max-width: 100%;
-  height: auto; }
-
-.hide-bullets {
-  list-style-type: none;
-  margin: 0;
-  padding: 0; }
-
-ul.hide-bullets li.col-sm-4 {
-  padding: 0; }
-
-.screen-reader-text {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
-  border: 0; }
-  .screen-reader-text:active, .screen-reader-text:focus {
-    position: static;
-    width: auto;
-    height: auto;
-    overflow: visible;
-    clip: auto;
-    white-space: normal;
-    -webkit-clip-path: none;
-            clip-path: none; }
-
-/*--------------------------------------------------------------
-# Alignments
---------------------------------------------------------------*/
-.alignleft {
-  display: inline;
-  float: left;
-  margin-right: 1.5em; }
-
-.alignright {
-  display: inline;
-  float: right;
-  margin-left: 1.5em; }
-
-.aligncenter {
-  clear: both;
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
-
-.alignnone {
-  margin: 5px 20px 20px 0; }
-
-.aligncenter,
-div.aligncenter {
-  display: block;
-  margin: 5px auto 5px auto; }
-
-.alignright {
-  float: right;
-  margin: 5px 0 20px 20px; }
-
-.alignleft {
-  float: left;
-  margin: 5px 20px 20px 0; }
-
-a img.alignright {
-  float: right;
-  margin: 5px 0 20px 20px; }
-
-a img.alignnone {
-  margin: 5px 20px 20px 0; }
-
-a img.alignleft {
-  float: left;
-  margin: 5px 20px 20px 0; }
-
-a img.aligncenter {
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
-
-.wp-caption.alignnone {
-  margin: 5px 20px 20px 0; }
-
-.wp-caption.alignleft {
-  margin: 5px 20px 20px 0; }
-
-.wp-caption.alignright {
-  margin: 5px 0 20px 20px; }
-
-.ml--3 {
-  margin-left: -1rem; }
-
-.mx--3 {
-  margin-left: -1rem;
-  margin-right: -1rem; }
-
-.z-100 {
-  z-index: 100; }
-
-.z-101 {
-  z-index: 101;
-  font-weight: 400; }
-
-.g-pos-rel {
-  position: relative !important; }
-
-.g-pos-abs {
-  position: absolute !important; }
-
-.g-left-20 {
-  left: .5rem; }
-
-.g-top-20 {
-  top: .5rem; }
-
-.g-left-0 {
-  left: 0; }
-
-.g-top-0 {
-  top: 0; }
-
-.g-right-0 {
-  right: 0; }
-
-.g-bottom-0 {
-  bottom: 0; }
-
-/*------------------------------------
-  Typography Font Weight
-------------------------------------*/
-.g-font-weight-100 {
-  font-weight: 100; }
-
-.g-font-weight-200 {
-  font-weight: 200; }
-
-.g-font-weight-300 {
-  font-weight: 300; }
-
-.g-font-weight-400 {
-  font-weight: 400; }
-
-.g-font-weight-500 {
-  font-weight: 500; }
-
-.g-font-weight-600 {
-  font-weight: 600; }
-
-.g-font-weight-700 {
-  font-weight: 700; }
-
-.g-font-weight-800 {
-  font-weight: 800; }
-
-.g-font-weight-900 {
-  font-weight: 900; }
-
-.text-gray200 {
-  color: #e9ecef; }
-
-.text-gray300 {
-  color: #dee2e6; }
-
-.text-gray400 {
-  color: #ced4da; }
-
-.text-gray500 {
-  color: #adb5bd; }
-
-.text-gray600 {
-  color: #868e96; }
-
-.text-gray700 {
-  color: #495057; }
-
-.text-gray800 {
-  color: #343a40; }
-
 .site-content {
   word-break: break-word; }
 
 /*--------------------------------------------------------------
-# Media
+# 媒体
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 ## Galleries

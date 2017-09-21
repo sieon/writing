@@ -1,27 +1,18 @@
 /*
 Theme Name: writing
-Theme URI: http://strappress.com
-Author: Brad Williams
-Author URI: http://braginteractive.com
-Description: Bootstrap 4 WordPress Theme
-Version: 1.0.0
+Theme URI: http://qingzhuti.com/theme/writing
+Author: mxy
+Author URI: http://qingzhuti.com
+Description: 这是一个简洁的WordPress博客主题，为专注写作而设计。
+Version: 0.8.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: strappress
+Text Domain: lean
 Tags:
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
-StrapPress is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 
 /*--------------------------------------------------------------
-# Variables
+# 变量
 --------------------------------------------------------------*/
 @import "vars/vars";
 
@@ -31,11 +22,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "bootstrap";
 
 /*--------------------------------------------------------------
-# Theme Styles and Layout
+# 样式和布局
 --------------------------------------------------------------*/
 @import "site/site";
 
 /*--------------------------------------------------------------
-# Media
+# 媒体
 --------------------------------------------------------------*/
 @import "media/media";
