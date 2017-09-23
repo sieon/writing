@@ -30,7 +30,7 @@ var browserSyncWatchFiles = [
 // see: https://www.browsersync.io/docs/options/
 var browserSyncOptions = {
   watchTask: true,
-  proxy: "http://qzt.dev/~maxiangyang/"
+  proxy: "http://wp.dev/"
 }
 
 // Default error handler
@@ -143,7 +143,7 @@ gulp.task('images', function() {
 gulp.task('critical', function (cb) {
     critical.generate({
         base: './',
-        src: 'http://qzt.dev/~maxiangyang/',
+        src: 'http://wp.dev/',
         dest: 'css/home.min.css',
         ignore: ['@font-face'],
         dimensions: [{
