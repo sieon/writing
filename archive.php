@@ -2,8 +2,7 @@
 
 <div class="container mt-4">
   <div class="row">
-    <div class="col-lg-8">
-      <div class="main-content">
+    <div class="content-area">
 
         <header class="jumbotron bg-white border mb-3 p-4 l-shadow">
           <?php
@@ -27,7 +26,7 @@
         <?php else : ?>
           <?php get_template_part( 'template-parts/content', 'none' ); ?>
         <?php endif; wp_reset_postdata();?>
-      </div>
+
     </div>
 
     <?php get_sidebar();?>

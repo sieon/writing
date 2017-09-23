@@ -6886,33 +6886,33 @@ body {
   min-height: 1px;
   padding-right: 10px;
   padding-left: 10px; }
-  @media (min-width: 576px) {
+  @media (min-width: 768px) {
     .content-area {
       -webkit-box-flex: 0;
           -ms-flex: 0 0 100%;
               flex: 0 0 100%;
       max-width: 100%; } }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .content-area {
       -webkit-box-flex: 0;
           -ms-flex: 0 0 66.66666667%;
               flex: 0 0 66.66666667%;
       max-width: 66.66666667%; } }
 
-.widget-area {
+.sidebar {
   position: relative;
   width: 100%;
   min-height: 1px;
   padding-right: 10px;
   padding-left: 10px; }
-  @media (min-width: 576px) {
-    .widget-area {
+  @media (min-width: 768px) {
+    .sidebar {
       -webkit-box-flex: 0;
           -ms-flex: 0 0 100%;
               flex: 0 0 100%;
       max-width: 100%; } }
-  @media (min-width: 768px) {
-    .widget-area {
+  @media (min-width: 992px) {
+    .sidebar {
       -webkit-box-flex: 0;
           -ms-flex: 0 0 33.33333333%;
               flex: 0 0 33.33333333%;
