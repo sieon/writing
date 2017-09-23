@@ -6,8 +6,14 @@
 function customizer_library_lean_options() {
 
 	// Theme defaults
-	$primary_color = '#5bc08c';
-	$secondary_color = '#666';
+	$primary_color = '#007bff';
+	$secondary_color = '#868e96';
+  $success_color = '#28a745';
+  $info_color = '#17a2b8';
+  $warning_color = '#ffc107';
+  $danger_color = '#dc3545';
+  $light_color = '#f8f9fa';
+  $dark_color = '#343a40';
 
 	// Stores all the controls that will be added
 	$options = array();
@@ -40,23 +46,17 @@ function customizer_library_lean_options() {
 	// );
 
 	$style_clolors_choices = array(
-		'navbar-light bg-white'=> '白',
-		'navbar-light bg-light' => '浅灰',
-		'navbar-dark bg-primary' => '蓝',
-		'navbar-dark bg-info' => '浅蓝',
-		'navbar-dark bg-dark' => '黑',
-		'navbar-dark bg-success' => '绿',
-		'navbar-dark bg-warning' => '橙',
-		'navbar-dark bg-danger' => '红'
+		'navbar-light'=> '浅色导航',
+		'navbar-dark' => '暗色导航',
 	);
 
 	$options['style-colors'] = array(
 		'id' => 'style-colors',
-		'label'   => __( '主题色', 'lean' ),
+		'label'   => __( '导航颜色', 'lean' ),
 		'section' => $section,
 		'type'    => 'select',
 		'choices' => $style_clolors_choices,
-		'default' => 'navbar-light bg-white'
+		'default' => 'navbar-light'
 	);
 
 	// $options['author_bg'] = array(
@@ -85,7 +85,7 @@ function customizer_library_lean_options() {
 	// 	'default' => '',
 	// );
 
-	// // Colors
+	// Colors
 	// $section = 'colors';
 	//
 	// $sections[] = array(
@@ -94,29 +94,29 @@ function customizer_library_lean_options() {
 	// 	'priority' => '80'
 	// );
 	//
-	// $options['primary-color'] = array(
-	// 	'id' => 'primary-color',
-	// 	'label'   => __( 'Primary Color', 'lean' ),
-	// 	'section' => $section,
-	// 	'type'    => 'color',
-	// 	'default' => $primary_color,
-	// );
+	$options['primary-color'] = array(
+		'id' => 'primary-color',
+		'label'   => __( 'Primary Color', 'lean' ),
+		'section' => $section,
+		'type'    => 'color',
+		'default' => $primary_color,
+	);
 	//
-	// $options['secondary-color'] = array(
-	// 	'id' => 'secondary-color',
-	// 	'label'   => __( 'Secondary Color', 'lean' ),
-	// 	'section' => $section,
-	// 	'type'    => 'color',
-	// 	'default' => $secondary_color,
-	// );
+	$options['secondary-color'] = array(
+		'id' => 'secondary-color',
+		'label'   => __( 'Secondary Color', 'lean' ),
+		'section' => $section,
+		'type'    => 'color',
+		'default' => $secondary_color,
+	);
 	//
-	// $options['border'] = array(
-	// 	'id' => 'border',
-	// 	'label'   => __( 'Border Color', 'lean' ),
-	// 	'section' => $section,
-	// 	'type'    => 'color',
-	// 	'default' => $primary_color,
-	// );
+	$options['border'] = array(
+		'id' => 'border',
+		'label'   => __( 'Border Color', 'lean' ),
+		'section' => $section,
+		'type'    => 'color',
+		'default' => $primary_color,
+	);
 
 	// More Examples
 	// $section = '主题配色';

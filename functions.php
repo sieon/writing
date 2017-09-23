@@ -41,3 +41,4 @@ require THEME_DIR . '/inc/customizer-library/customizer-library.php';
 
 // Define options for the theme customizer.
 require THEME_DIR . '/inc/customizer-options.php';
+require THEME_DIR . '/inc/styles.php';

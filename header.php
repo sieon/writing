@@ -8,7 +8,7 @@
 </head>
 <body <?php body_class( $class ); ?> >
   <header class="header">
-    <nav class="navbar navbar-expand-lg navbar-shadow <?php echo get_theme_mod( 'style-colors' ); ?> fixed-top" id="primary-navbar" role="navigation">
+    <nav class="navbar navbar-expand-lg navbar-shadow <?php echo get_theme_mod( 'style-colors' ); ?> navbar-bg fixed-top" id="primary-navbar" role="navigation">
       <div class="container">
 
 
