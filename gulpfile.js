@@ -23,7 +23,7 @@ var config = {
 // automatically reloads the page when files changed
 var browserSyncWatchFiles = [
   './*.min.css',
-  './**/*.min.js',
+  './assets/js/**/*.min.js',
   './**/*.php'
 ];
 
@@ -44,17 +44,17 @@ gulp.task('zip', function () {
  return gulp.src([
    '*',
    './assets/css/*',
+   './assets/js/**/*',
    './assets/fonts/*',
    './assets/img/*',
    './inc/**/*',
-   './assets/js/**/*',
    './languages/*',
    './scss/**/*',
    './template-parts/*',
    '!bower_components',
    '!node_modules',
   ], {base: "."})
-  .pipe(zip('strappress.zip'))
+  .pipe(zip('writing.zip'))
   .pipe(gulp.dest('.'));
 });
 

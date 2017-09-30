@@ -7,13 +7,12 @@
   <?php wp_head(); ?>
 </head>
 <body <?php body_class( $class ); ?> >
-  <header class="header">
-    <nav class="navbar navbar-expand-lg navbar-shadow <?php echo get_theme_mod( 'style-colors' ); ?> navbar-bg fixed-top" id="primary-navbar" role="navigation">
-      <div class="container">
+  <div id="page" class="site">
 
-
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg navbar-shadow <?php echo get_theme_mod( 'style-colors' ); ?> navbar-bg fixed-top" id="primary-navbar" role="navigation">
+        <div class="container">
           <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-
             <?php if ( get_theme_mod( 'custom_logo') ) {
               $custom_logo_id = get_theme_mod( 'custom_logo' );
               $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
@@ -21,7 +20,6 @@
             } else {
               echo esc_attr( get_bloginfo( 'name', 'display' ) );
             } ?>
-
           </a>
 
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,13 +45,8 @@
             </form>
           </div>
 
-      </div>
-    </nav>
-  </header><!-- ./header -->
+        </div>
+      </nav>
+    </header><!-- .header -->
 
-  <main class="site-content">
-  <!-- 上面是复用的头部 -->
-
-  <!-- <div class="header-bg">
-
-  </div> -->
+    <div class="site-content">

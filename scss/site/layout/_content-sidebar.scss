@@ -2,6 +2,9 @@ body {
   padding-top: 3.5rem;
 }
 
+.site-header {
+	margin-bottom: 3em;
+}
 
 /*--------------------------------------------------------------
 # Content on Left with Sidebar on Right
@@ -18,7 +21,7 @@ body {
 	}
 }
 
-.sidebar {
+.widget-area {
 	@include make-col-ready();
 
     @include media-breakpoint-up(md) {
