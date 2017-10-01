@@ -14,7 +14,7 @@
             <?php if ( have_posts() ) : ?>
               <div class="posts">
                 <?php while ( have_posts() ) : the_post();
-                get_template_part( 'template-parts/content', get_post_format() );
+                get_template_part( 'template-parts/post/content', get_post_format() );
               endwhile; ?>
               </div>
 
@@ -24,7 +24,7 @@
         </div>
 
         <?php else : ?>
-          <?php get_template_part( 'template-parts/content', 'none' ); ?>
+          <?php get_template_part( 'template-parts/post/content', 'none' ); ?>
         <?php endif; wp_reset_postdata();?>
 
     </div>

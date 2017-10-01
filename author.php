@@ -46,7 +46,7 @@ get_header();
       </div>
 
     <?php else : ?>
-      <?php get_template_part( 'template-parts/content', 'none' ); ?>
+      <?php get_template_part( 'template-parts/post/content', 'none' ); ?>
     <?php endif;     // Reset Post Data
     wp_reset_postdata();?>
 

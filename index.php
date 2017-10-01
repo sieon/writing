@@ -13,7 +13,7 @@
           <?php lean_pagination();?>
         </div>
       <?php else :
-        get_template_part( 'template-parts/content', 'none' );
+        get_template_part( 'template-parts/post/content', 'none' );
       endif;wp_reset_postdata();
       ?>
     </div>
