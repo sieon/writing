@@ -10,7 +10,7 @@
   <div id="page" class="site">
 
     <header class="site-header">
-      <nav class="navbar navbar-expand-lg navbar-shadow <?php echo get_theme_mod( 'style-colors' ); ?> navbar-bg fixed-top" id="primary-navbar" role="navigation">
+      <nav class="navbar navbar-expand-lg navbar-shadow <?php echo get_theme_mod( 'navbar-styles' ); ?> <?php echo get_theme_mod( 'navbar-bg-color' ); ?> fixed-top" id="primary-navbar" role="navigation">
         <div class="container">
           <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
             <?php if ( get_theme_mod( 'custom_logo') ) {
