@@ -8,7 +8,7 @@ Description: 这是一个简洁的WordPress博客主题，为专注写作而设�
 Version: 0.8.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: lean
+Text Domain: writing
 Tags:
 */
 /*--------------------------------------------------------------
@@ -7453,19 +7453,20 @@ table#wp-calendar caption {
   -webkit-line-clamp: 8 !important;
   -webkit-box-orient: vertical !important; }
 
-.entry-content {
-  font-size: 125%; }
-  .entry-content h2 {
-    margin: 30px 0; }
-  .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
-    margin: 20px 0; }
-  .entry-content p {
-    line-height: 1.8;
-    margin-bottom: 1.25rem;
-    -ms-word-wrap: break-word;
-    word-wrap: break-word; }
-  .entry-content ul li, .entry-content ol li {
-    line-height: 1.8; }
+.entry-content h2 {
+  margin: 30px 0; }
+
+.entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
+  margin: 20px 0; }
+
+.entry-content p {
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word; }
+
+.entry-content ul li, .entry-content ol li {
+  line-height: 1.8; }
 
 /*****************************
 ~~ Post Format: aside

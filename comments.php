@@ -5,7 +5,7 @@
  * The area of the page that contains both current comments
  * and the comment form.
  *
- * @package lean
+ * @package writing
  */
 
 /*
@@ -18,7 +18,7 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div class="bg-white comments-area w-100 mb-4 p-4 border rounded l-shadow" id="comments">
+<div id="comments" class="comments-area bg-white w-100 mb-4 p-4 border rounded l-shadow">
 
 	<?php comment_form(); // Render comments form. ?>
 
@@ -28,14 +28,14 @@ if ( post_password_required() ) {
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through. ?>
 			<nav class="comment-navigation" id="comment-nav-above">
-				<h3 class="sr-only sr-only-focusable"><?php esc_html_e( 'Comment navigation', 'lean' ); ?></h3>
+				<h3 class="sr-only sr-only-focusable"><?php esc_html_e( 'Comment navigation', 'writing' ); ?></h3>
 				<?php if ( get_previous_comments_link() ) { ?>
 					<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments',
-					'lean' ) ); ?></div>
+					'writing' ) ); ?></div>
 				<?php }
 if ( get_next_comments_link() ) { ?>
 					<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;',
-					'lean' ) ); ?></div>
+					'writing' ) ); ?></div>
 				<?php } ?>
 			</nav><!-- #comment-nav-above -->
 		<?php endif; // check for comment navigation. ?>
@@ -51,14 +51,14 @@ if ( get_next_comments_link() ) { ?>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through. ?>
 			<nav class="comment-navigation" id="comment-nav-below">
-				<h1 class="sr-only sr-only-focusable"><?php esc_html_e( 'Comment navigation', 'lean' ); ?></h1>
+				<h1 class="sr-only sr-only-focusable"><?php esc_html_e( 'Comment navigation', 'writing' ); ?></h1>
 				<?php if ( get_previous_comments_link() ) { ?>
 					<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments',
-					'lean' ) ); ?></div>
+					'writing' ) ); ?></div>
 				<?php }
 if ( get_next_comments_link() ) { ?>
 					<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;',
-					'lean' ) ); ?></div>
+					'writing' ) ); ?></div>
 				<?php } ?>
 			</nav><!-- #comment-nav-below -->
 		<?php endif; // check for comment navigation. ?>
@@ -70,7 +70,7 @@ if ( get_next_comments_link() ) { ?>
 	if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 		?>
 
-		<p class="no-comments"><?php esc_html_e( '评论被关闭.', 'lean' ); ?></p>
+		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'writing' ); ?></p>
 
 	<?php endif; ?>
 </div><!-- #comments -->

@@ -41,7 +41,7 @@
             );
             ?>
             <form class="form-inline" role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
-              <input class="form-control mr-sm-2" type="text" placeholder="搜索..." aria-label="搜索" name="s">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search..." aria-label="Search" name="s">
             </form>
           </div>
 
