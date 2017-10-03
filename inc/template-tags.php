@@ -197,7 +197,7 @@ function lean_the_archive_description( $before = '', $after = '' ) {
 }
 endif;
 
-if ( ! function_exists( 'lean_excerpt_more' ) && ! is_admin() ) :
+if ( ! function_exists( 'writing_excerpt_more' ) && ! is_admin() ) :
 /**
  * Replaces "[...]" (appended to automatically generated excerpts) with ... and
  * a 'Continue reading' link.
@@ -208,7 +208,7 @@ if ( ! function_exists( 'lean_excerpt_more' ) && ! is_admin() ) :
  *
  * @return string 'Continue reading' link prepended with an ellipsis.
  */
-function lean_excerpt_more() {
+function writing_excerpt_more() {
 	$link = sprintf( '<br/><br/><a href="%1$s" class="more-link btn btn-warning btn-sm">%2$s</a>',
 		esc_url( get_permalink( get_the_ID() ) ),
 		/* translators: %s: Name of current post */
@@ -217,5 +217,6 @@ function lean_excerpt_more() {
 	//return ' &hellip; ' . $link;
   return ' &hellip; ';
 }
-add_filter( 'excerpt_more', 'lean_excerpt_more' );
+add_filter( 'excerpt_more', 'writing_excerpt_more' );
+
 endif;
