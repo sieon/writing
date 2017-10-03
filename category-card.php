@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="container mt-4">
+<div class="container">
     <div class="main-content">
         <header class="jumbotron bg-white border l-shadow mb-4 py-4 pl-2">
             <div class="container">

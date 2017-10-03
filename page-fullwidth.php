@@ -4,7 +4,7 @@
  */
 get_header(); ?>
 
-<div class="container mt-4">
+<div class="container">
     <main class="w-100">
 		<?php while ( have_posts() ) : the_post(); ?>
             <div class="w-100 bg-white border rounded mb-4 p-4 l-shadow">
