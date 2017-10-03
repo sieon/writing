@@ -73,9 +73,6 @@
 .error404 {
 	.content-area {
 		@include make-col-ready();
-		@include make-col(12);	
+		@include make-col(12);
 	}
 }
-
-
-

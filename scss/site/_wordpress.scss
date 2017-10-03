@@ -21,11 +21,6 @@ ul.hide-bullets li.col-sm-4 {
   padding: 0;
 }
 
-.screen-reader-text {
-  @include sr-only();
-  @include sr-only-focusable();
-}
-
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
