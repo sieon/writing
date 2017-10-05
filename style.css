@@ -347,19 +347,19 @@ h1, h2, h3, h4, h5, h6,
   color: inherit; }
 
 h1, .h1 {
-  font-size: 2.5rem; }
-
-h2, .h2 {
   font-size: 2rem; }
 
-h3, .h3 {
-  font-size: 1.75rem; }
-
-h4, .h4 {
+h2, .h2 {
   font-size: 1.5rem; }
 
-h5, .h5 {
+h3, .h3 {
   font-size: 1.25rem; }
+
+h4, .h4 {
+  font-size: 1.15rem; }
+
+h5, .h5 {
+  font-size: 1rem; }
 
 h6, .h6 {
   font-size: 1rem; }
@@ -7453,20 +7453,19 @@ table#wp-calendar caption {
   -webkit-line-clamp: 8 !important;
   -webkit-box-orient: vertical !important; }
 
-.entry-content h2 {
-  margin: 30px 0; }
-
-.entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
-  margin: 20px 0; }
-
-.entry-content p {
-  line-height: 1.8;
-  margin-bottom: 1.25rem;
-  -ms-word-wrap: break-word;
-  word-wrap: break-word; }
-
-.entry-content ul li, .entry-content ol li {
-  line-height: 1.8; }
+.entry-content {
+  font-size: 115%; }
+  .entry-content h2 {
+    margin: 30px 0; }
+  .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
+    margin: 20px 0; }
+  .entry-content p {
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word; }
+  .entry-content ul li, .entry-content ol li {
+    line-height: 1.8; }
 
 /*****************************
 ~~ Post Format: aside

@@ -1,6 +1,6 @@
     </div><!-- .site-content -->
 
-    <footer id="colophon" class="site-footer footer-inverse l-link-v3 mt-3">
+    <footer id="colophon" class="site-footer l-link-v3 mt-3">
         <div class="container">
             <div class="footer-b-body py-4">
 	            <?php wp_nav_menu(
@@ -20,7 +20,7 @@
                     </a>.
                     <a href="http://www.miitbeian.gov.cn/" rel="external nofollow" target="_blank">
                         <?php echo get_option( 'zh_cn_l10n_icp_num' );?>
-                    </a>.
+                    </a>
                     Design by <a href="http://qingzhuti.com/" target="_blank">qingzhuti.com</a>.
                 </p>
             </div>

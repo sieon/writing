@@ -118,15 +118,6 @@ function customizer_library_lean_options() {
 		'bottom' => '文章底部'
 	);
 
-	$options['post-tags'] = array(
-		'id' => 'post-tags',
-		'label'   => __( '标签位置', 'lean' ),
-		'section' => $section,
-		'type'    => 'select',
-		'choices' => $post_tags_radio_choices,
-		'default' => 'bottom'
-	);
-
 	$options['post-nav'] = array(
 		'id' => 'post-nav',
 		'label'   => __( '是否显示上一篇／下一篇', 'lean' ),
