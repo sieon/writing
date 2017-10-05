@@ -7,6 +7,11 @@
   }
 }
 
+// 体现分类层级关系
+.cat-item .children {
+  margin-left: 1rem;
+}
+
 /**tag**/
 .tag-tip {
   font-size: 1.1rem;
