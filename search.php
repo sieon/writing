@@ -6,7 +6,7 @@ get_header(); ?>
 
 <?php if ( have_posts() ) : ?>
 
-<div class="container">
+<div class="container mt-4">
 	<div class="row justify-content-center">
 		<main class="content-area">
 

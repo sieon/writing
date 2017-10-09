@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="container">
+<div class="container mt-4">
     <div class="row">
         <div class="content-area">
             <div class="w-100 bg-white border rounded mb-4 p-4 l-shadow">
