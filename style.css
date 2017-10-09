@@ -6877,9 +6877,6 @@ a.text-dark:focus, a.text-dark:hover {
 body {
   padding-top: 3.5rem; }
 
-.site-header {
-  margin-bottom: 1.5rem; }
-
 /*--------------------------------------------------------------
 # Content on Left with Sidebar on Right
 --------------------------------------------------------------*/
@@ -7146,6 +7143,9 @@ body {
   margin-top: 5px;
   margin-bottom: 5px; }
 
+.cat-item .children {
+  margin-left: 1rem; }
+
 /**tag**/
 .tag-tip {
   font-size: 1.1rem;
@@ -7274,6 +7274,9 @@ table#wp-calendar caption {
 .hot-tags a {
   margin-top: 5px;
   margin-bottom: 5px; }
+
+.cat-item .children {
+  margin-left: 1rem; }
 
 /**tag**/
 .tag-tip {
@@ -7511,6 +7514,19 @@ table#wp-calendar caption {
 .post_format-post-format-gallery > div > dl.gallery-item:active > dt > a > img {
   border-color: #337ab7; }
 
+.entry-img {
+  display: block;
+  overflow: hidden; }
+  .entry-img img {
+    transition: all .5s ease; }
+
+.entry-img:hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1); }
+
+.l-shadow {
+  box-shadow: 0 2px 4px rgba(0, 37, 55, 0.05); }
+
 .footer-inverse {
   background: #2a2730; }
   .footer-inverse p {
@@ -7606,6 +7622,9 @@ a img.aligncenter {
 
 .z-100 {
   z-index: 100; }
+
+.g-oc-0-5 {
+  opacity: .9; }
 
 .z-101 {
   z-index: 101;

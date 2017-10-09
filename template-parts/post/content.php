@@ -9,7 +9,33 @@
     <article class="bg-white w-100 mb-4 p-4 border rounded l-shadow">
         <?php the_title( '<h1 class="mb-4">','</h1>' ); ?>
 
-		<?php lean_entry_meta(); ?>
+		<?php //lean_entry_meta(); ?>
+
+    <?php
+    if ( 'post' === get_post_type() ) {
+      echo '<div class="entry-meta l-link-v4"><ul class="list-inline">';
+        if ( is_single() ) {
+          writing_posted_on();
+        } else {
+          echo writing_time_link();
+          //wiring_edit_link();
+        };
+
+      echo '<li class="list-inline-item"> &bull; </li>';
+
+        $categories = get_the_category();
+        $separator = ' ';
+        $output = '';
+        if ( ! empty( $categories ) ) {
+            foreach( $categories as $category ) {
+                $output .= '<li class="list-inline-item"><a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a></li>' . $separator;
+            }
+            echo trim( $output, $separator );
+        }
+
+      echo '</ul></div><!-- .entry-meta -->';
+
+    }; ?>
 
 		<div class="entry-content clearfix pt-3">
             <?php the_content(); ?>
@@ -31,7 +57,7 @@
 
 	<?php if( has_post_thumbnail() ) : ?>
 
-		<article class="w-100 bg-white mb-4 p-4 rounded border l-shadow">
+		<article id="post-<?php the_ID(); ?>" <?php post_class('w-100 bg-white mb-4 p-4 rounded border l-shadow'); ?>>
 			<div class="row">
                 <div class="col-4">
                     <figure class="g-pos-rel mb-0">
@@ -41,22 +67,70 @@
 				</div>
 
 				<div class="col-8 align-self-center">
-                    <?php the_title( sprintf( '<h2 class="l-link-v9 mb-3"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-                    <?php lean_entry_meta(); ?>
-                    <p class="l-color-v7 hidden-sm-down mt-3 mb-0">
-                        <?php echo wp_trim_words( get_the_excerpt(), get_theme_mod( 'excerpt_length'), '...' );?>
-					</p>
-                </div>
+          <?php the_title( sprintf( '<h2 class="l-link-v9 mb-3"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+          <?php
+          if ( 'post' === get_post_type() ) {
+            echo '<div class="entry-meta l-link-v4"><ul class="list-inline">';
+              if ( is_single() ) {
+                writing_posted_on();
+              } else {
+                echo writing_time_link();
+                //wiring_edit_link();
+              };
+
+            echo '<li class="list-inline-item"> &bull; </li>';
+
+              $categories = get_the_category();
+              $separator = ' ';
+              $output = '';
+              if ( ! empty( $categories ) ) {
+                  foreach( $categories as $category ) {
+                      $output .= '<li class="list-inline-item"><a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a></li>' . $separator;
+                  }
+                  echo trim( $output, $separator );
+              }
+
+            echo '</ul></div><!-- .entry-meta -->';
+
+          }; ?>
+          <p class="l-color-v7 hidden-sm-down mt-3 mb-0">
+            <?php echo wp_trim_words( get_the_excerpt(), get_theme_mod( 'excerpt_length'), '...' );?>
+          </p>
+        </div>
 			</div><!-- .row -->
 		</article>
 
 	<?php else: ?>
 
-		<article class="w-100 bg-white mb-4 p-4 rounded border l-shadow">
+		<article id="post-<?php the_ID(); ?>" <?php post_class('w-100 bg-white mb-4 p-4 rounded border l-shadow')?>>
 
 			<?php the_title( sprintf( '<h2 class="l-link-v9 mb-3"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-			<?php lean_entry_meta(); ?>
+      <?php
+      if ( 'post' === get_post_type() ) {
+        echo '<div class="entry-meta l-link-v4"><ul class="list-inline">';
+          if ( is_single() ) {
+            writing_posted_on();
+          } else {
+            echo writing_time_link();
+            //wiring_edit_link();
+          };
+
+        echo '<li class="list-inline-item"> &bull; </li>';
+
+          $categories = get_the_category();
+          $separator = ' ';
+          $output = '';
+          if ( ! empty( $categories ) ) {
+              foreach( $categories as $category ) {
+                  $output .= '<li class="list-inline-item"><a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a></li>' . $separator;
+              }
+              echo trim( $output, $separator );
+          }
+
+        echo '</ul></div><!-- .entry-meta -->';
+
+      }; ?>
 
 			<p class="l-color-v7 mt-3 mb-0 hidden-sm-down">
 				<?php echo wp_trim_words( get_the_excerpt(), get_theme_mod( 'excerpt_length'), '...' );?>

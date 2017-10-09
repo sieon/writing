@@ -5,7 +5,7 @@
  */
 ?>
 
-<div class="card l-shadow-v1-4">
+<div class="card l-shadow-v1-4 g-oc-0-5">
 	<?php if( has_post_thumbnail() ) : ?>
 
 		<a class="entry-img card-img-top" href="<?php the_permalink(); ?>">

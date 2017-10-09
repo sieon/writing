@@ -35,19 +35,9 @@ function lean_the_post_navigation() {
 }
 endif;
 
-/**
- * 固定时间格式，只显示日期
- */
-
-// function lean_filter_time() {
-//   global $post ;
-//   echo get_the_time(get_option('date_format'));
-// }
-// add_filter('the_time','lean_filter_time');
-
-/**
- *  entry Meta
- */
+/****************
+ *  entry Meta ***
+*****/
 if ( ! function_exists( 'lean_entry_meta' ) ) :
 /**
  * Prints HTML with meta information for the time,comment counts numbers.
@@ -56,8 +46,11 @@ if ( ! function_exists( 'lean_entry_meta' ) ) :
  */
 function lean_entry_meta() {
 
+	the_author();
+
 	echo '<ul class="list-inline small l-link-v6"><li class="list-inline-item mr-3"><span class="oi oi-clock mr-1"></span>';
-	the_time('Y-m-d g:i');
+	the_time('Y-m-d');
+	//the_time('Y-m-d g:i');
 	echo '</li>';
 
   if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
@@ -65,11 +58,79 @@ function lean_entry_meta() {
 		comments_link();
 		echo '"><span class="oi oi-chat mr-1"></span>';
 		echo get_comments_number();
-		echo '</a></li></ul>';
+		echo '</a></li>';
   }
 
-	//edit_post_link( '编辑', '<li class="list-inline-item hidden-sm-down">', '</li>' );
+	edit_post_link( 'Edit', '<li class="list-inline-item hidden-sm-down">', '</li></ul>' );
 
+}
+endif;
+
+if ( ! function_exists( 'writing_posted_on' ) ) :
+/**
+ * Prints HTML with meta information for the current post-date/time and author.
+ */
+function writing_posted_on() {
+
+	// Get the author name; wrap it in a link.
+	$byline = sprintf(
+		/* translators: %s: post author */
+		//__( 'by %s', 'writing' ),
+		'<li class="list-inline-item author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . get_the_author() . '</a></li>'
+	);
+
+	// Finally, let's write all of this to the page.
+	//echo '<li class="list-inline-item posted-on">' . writing_time_link() . '</li><li class="list-inline-item"> &bull; </li><li class="list-inline-item byline"> ' . $byline . '</li>';
+	echo '<li class="list-inline-item byline"> ' . $byline . '</li><li class="list-inline-item"> &bull; </li><li class="list-inline-item posted-on">' . writing_time_link() . '</li>';
+}
+endif;
+
+
+if ( ! function_exists( 'writing_time_link' ) ) :
+/**
+ * Gets a nicely formatted string for the published date.
+ */
+function writing_time_link() {
+	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+	}
+
+	$time_string = sprintf( $time_string,
+		get_the_date( DATE_W3C ),
+		get_the_date(),
+		get_the_modified_date( DATE_W3C ),
+		get_the_modified_date()
+	);
+
+	// Wrap the time string in a link, and preface it with 'Posted on'.
+	return sprintf(
+		/* translators: %s: post date */
+		__( '<span class="screen-reader-text">Posted on</span> %s', 'twentyseventeen' ),
+		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+	);
+}
+endif;
+
+if ( ! function_exists( 'writing_edit_link' ) ) :
+/**
+ * Returns an accessibility-friendly link to edit a post or page.
+ *
+ * This also gives us a little context about what exactly we're editing
+ * (post or page?) so that users understand a bit more where they are in terms
+ * of the template hierarchy and their content. Helpful when/if the single-page
+ * layout with multiple posts/pages shown gets confusing.
+ */
+function writing_edit_link() {
+	edit_post_link(
+		sprintf(
+			/* translators: %s: Name of current post */
+			__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'writing' ),
+			get_the_title()
+		),
+		'<span class="edit-link">',
+		'</span>'
+	);
 }
 endif;
 
