@@ -96,9 +96,17 @@ function customizer_library_lean_options() {
 		'type'    => 'text',
 	);
 
+	$options['author_bg'] = array(
+		'id' => 'author_bg',
+		'label'   => __( '作者背景', 'writing' ),
+		'section' => $section,
+		'type'    => 'image',
+		'default' => ''
+	);
+
 	$options['placeholder'] = array(
 		'id' => 'placeholder',
-		'label'   => __( '文章默认特色图像', 'lean' ),
+		'label'   => __( '文章默认特色图像', 'writing' ),
 		'section' => $section,
 		'type'    => 'image',
 		'default' => ''

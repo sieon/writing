@@ -1,11 +1,9 @@
-
-@import "variables";
 .profile-header {
   position: relative;
   display: table;
   width: 100%;
   height: 300px;
-  padding-bottom: ($jumbotron-padding * 1.6);
+  padding-bottom: 3.2rem;
   margin-bottom: 0;
   text-align: center;
   background-size: cover;
@@ -22,7 +20,7 @@
   max-width: 300px;
   margin: 0 auto;
 }
-.profile-header .media-object {
+.profile-header .avatar {
   display: inline-block;
   width: 80px;
   margin-right: 0;
@@ -44,9 +42,9 @@
 }
 @include media-breakpoint-up(md) {
   .profile-header {
-    height: 500px;
+    height: 400px;
   }
-  .profile-header .media-object {
+  .profile-header .avatar {
     width: 110px;
   }
 }
@@ -87,7 +85,7 @@
   margin-left: -10px;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-bottom: 10px solid $nav-tabs-active-link-hover-bg;
+  border-bottom: 10px solid $nav-tabs-link-active-bg;
 }
 @include media-breakpoint-up(md) {
   .profile-header-nav .nav > li > a {

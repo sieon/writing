@@ -10,21 +10,30 @@
 get_header();
 ?>
 
-<div class="bg-white profile-header px-5" <?php if ( get_theme_mod( 'author_bg') ) { echo 'style="background-image:url(' . esc_url( get_theme_mod( 'author_bg' ) ) . ');"'; } else { echo ''; } ?>>
+<div <?php if ( get_theme_mod( 'author_bg') ) { echo 'class="profile-header" style="background-image:url(' . esc_url( get_theme_mod( 'author_bg' ) ) . ');"'; } else { echo 'class="profile-header bg-dark"'; } ?>>
   <div class="container">
-    <div class="profile-header-container">
+    <div class="container-inner">
       <?php echo get_avatar( get_the_author_meta( $curauth->ID ), 80 ); ?>
 
       <?php $curauth = ( isset( $_GET['author_name'] ) ) ? get_user_by( 'slug', $author_name ) : get_userdata( intval( $author ) ); ?>
-
-      <h1 class="profile-header-author mt-2"><?php echo esc_html( $curauth->nickname ); ?></h1>
-
+      <!-- <img class="rounded-circle media-object" src="../assets/img/avatar-dhg.png"> -->
+      <h3 class="profile-header-user"><?php echo esc_html( $curauth->nickname ); ?></h3>
       <?php if ( ! empty( $curauth->user_description ) ) : ?>
-        <p class="profile-header-bio"><?php echo esc_html( $curauth->user_description ); ?></p>
+      <p class="profile-header-bio">
+        <?php echo esc_html( $curauth->user_description ); ?>
+      </p>
       <?php endif; ?>
     </div>
   </div>
-</div><!-- .profile-header -->
+
+  <nav class="profile-header-nav">
+    <ul class="nav nav-tabs justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">他发表的文章</a>
+      </li>
+    </ul>
+  </nav>
+</div>
 
 <div class="container mt-4">
   <?php if ( have_posts() ) : ?>
