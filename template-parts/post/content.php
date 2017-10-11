@@ -40,17 +40,17 @@
 		<div class="entry-content clearfix pt-3">
             <?php the_content(); ?>
 		</div>
-	    <?php
-	    if ( get_theme_mod( 'post-tags')==bottom ) {
-		    $posttags = get_the_tags();
-		    if ( $posttags ) {
-			    echo '<div class="post-tags mt-4 mb-3">';
-			    foreach( $posttags as $tag ) {
-				    echo '<a href="' . get_tag_link( $tag->term_id ) . '" class="btn btn-light btn-sm mr-2 mb-2">' . $tag->name . '</a>';
-			    }
-			    echo '</div>';
-		    }
-	    } ?>
+
+    <?php
+    $posttags = get_the_tags();
+    if ( $posttags ) {
+      echo '<div class="post-tags mt-4 mb-3">';
+      foreach( $posttags as $tag ) {
+        echo '<a href="' . get_tag_link( $tag->term_id ) . '" class="btn btn-outline-dark btn-sm mr-2 mb-2">' . $tag->name . '</a>';
+      }
+      echo '</div>';
+    }
+    ?>
 	</article>
 
 <?php else: // not single ?>

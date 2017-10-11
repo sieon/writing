@@ -40,17 +40,16 @@
 		<div class="entry-content pt-3 clearfix">
 			<?php the_content(); ?>
 		</div>
-        <?php
-		if ( get_theme_mod( 'post-tags')==bottom ) {
-			$posttags = get_the_tags();
-			if ( $posttags ) {
-				echo '<div class="post-tags mt-4 mb-3">';
-				foreach( $posttags as $tag ) {
-					echo '<a href="' . get_tag_link( $tag->term_id ) . '" class="btn btn-light btn-sm mr-2 mb-2">' . $tag->name . '</a>';
-				}
-				echo '</div>';
-			}
-		} ?>
+		<?php
+    $posttags = get_the_tags();
+    if ( $posttags ) {
+      echo '<div class="post-tags mt-4 mb-3">';
+      foreach( $posttags as $tag ) {
+        echo '<a href="' . get_tag_link( $tag->term_id ) . '" class="btn btn-outline-dark btn-sm mr-2 mb-2">' . $tag->name . '</a>';
+      }
+      echo '</div>';
+    }
+    ?>
     </div>
 
 <?php else: // not single ?>
@@ -67,19 +66,35 @@
 		}
 		?>
 
-		<?php lean_entry_meta(); ?>
+		<?php
+    if ( 'post' === get_post_type() ) {
+      echo '<div class="entry-meta l-link-v4"><ul class="list-inline">';
+        if ( is_single() ) {
+          writing_posted_on();
+        } else {
+          echo writing_time_link();
+          //wiring_edit_link();
+        };
+
+      echo '<li class="list-inline-item"> &bull; </li>';
+
+        $categories = get_the_category();
+        $separator = ' ';
+        $output = '';
+        if ( ! empty( $categories ) ) {
+            foreach( $categories as $category ) {
+                $output .= '<li class="list-inline-item"><a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a></li>' . $separator;
+            }
+            echo trim( $output, $separator );
+        }
+
+      echo '</ul></div><!-- .entry-meta -->';
+
+    }; ?>
 
 		<a class="entry-img mb-3" href="<?php the_permalink(); ?>">
 			<?php the_post_thumbnail('medium', ['class' => 'img-fluid w-100']); ?>
 		</a>
-
-		<?php if ( get_theme_mod( 'posts_list_excerpt')==yes ) { ?>
-			<p class="l-color-v7 hidden-sm-down">
-				<?php echo wp_trim_words( get_the_excerpt(), get_theme_mod( 'excerpt_length'), '...' );?>
-			</p>
-		<?php } else {
-			echo '';
-		} ?>
 
 		<a class="" href="<?php echo get_permalink(); ?>">阅读全文</a>
 	</article>
