@@ -31,7 +31,7 @@
 
 	<?php endif; ?>
 
-	<div class="card-footer bg-transparent l-link-v3">
+	<div class="card-footer bg-transparent l-link-v4">
 		<small class="d-flex justify-content-between">
 			<span><?php the_time(); ?></span>
 			<?php

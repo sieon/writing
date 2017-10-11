@@ -8,11 +8,37 @@
 <?php if(is_single()): ?>
 
 	<div class="bg-white w-100 mb-4 p-4 border rounded l-shadow-v28">
-        <?php the_title( '<h1 class="mb-4">','</h1>' ); ?>
 
-        <?php lean_entry_meta(); ?>
-        <div class="entry-content pt-3">
-            <?php the_content(); ?>
+		<?php the_title( '<h1 class="mb-4">','</h1>' ); ?>
+
+		<?php
+    if ( 'post' === get_post_type() ) {
+      echo '<div class="entry-meta l-link-v4"><ul class="list-inline">';
+        if ( is_single() ) {
+          writing_posted_on();
+        } else {
+          echo writing_time_link();
+          //wiring_edit_link();
+        };
+
+      echo '<li class="list-inline-item"> &bull; </li>';
+
+        $categories = get_the_category();
+        $separator = ' ';
+        $output = '';
+        if ( ! empty( $categories ) ) {
+            foreach( $categories as $category ) {
+                $output .= '<li class="list-inline-item"><a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a></li>' . $separator;
+            }
+            echo trim( $output, $separator );
+        }
+
+      echo '</ul></div><!-- .entry-meta -->';
+
+    }; ?>
+
+		<div class="entry-content pt-3 clearfix">
+			<?php the_content(); ?>
 		</div>
         <?php
 		if ( get_theme_mod( 'post-tags')==bottom ) {
