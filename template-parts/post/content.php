@@ -6,10 +6,8 @@
 ?>
 
 <?php if(is_single()): ?>
-    <article class="bg-white w-100 mb-4 p-4 border rounded l-shadow">
-        <?php the_title( '<h1 class="mb-4">','</h1>' ); ?>
-
-		<?php //lean_entry_meta(); ?>
+  <article class="bg-white w-100 mb-4 p-4 border rounded l-shadow">
+    <?php the_title( '<h1 class="mb-4">','</h1>' ); ?>
 
     <?php
     if ( 'post' === get_post_type() ) {
@@ -55,18 +53,18 @@
 
 <?php else: // not single ?>
 
-	<?php if( has_post_thumbnail() ) : ?>
+  <?php if( has_post_thumbnail() ) : ?>
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class('w-100 bg-white mb-4 p-4 rounded border l-shadow'); ?>>
 			<div class="row">
-                <div class="col-4">
-                    <figure class="g-pos-rel mb-0">
-						<?php the_post_thumbnail('medium', ['class' => 'img-fluid w-100']); ?>
-						<a class="g-pos-abs l-link-v0" href="<?php echo get_permalink(); ?>"></a>
-					</figure>
-				</div>
+        <div class="col-4">
+          <figure class="g-pos-rel mb-0">
+            <?php the_post_thumbnail('medium', ['class' => 'img-fluid w-100']); ?>
+            <a class="g-pos-abs l-link-v0" href="<?php echo get_permalink(); ?>"></a>
+          </figure>
+        </div>
 
-				<div class="col-8 align-self-center">
+				<div class="col-8">
           <?php the_title( sprintf( '<h2 class="l-link-v9 mb-3"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
           <?php
           if ( 'post' === get_post_type() ) {
@@ -93,7 +91,7 @@
             echo '</ul></div><!-- .entry-meta -->';
 
           }; ?>
-          <p class="l-color-v7 hidden-sm-down mt-3 mb-0">
+          <p class="l-color-v7 d-md-none d-lg-block mb-0">
             <?php echo wp_trim_words( get_the_excerpt(), get_theme_mod( 'excerpt_length'), '...' );?>
           </p>
         </div>
@@ -132,7 +130,7 @@
 
       }; ?>
 
-			<p class="l-color-v7 mt-3 mb-0 hidden-sm-down">
+			<p class="l-color-v7 mt-3 mb-0 d-md-none d-lg-block">
 				<?php echo wp_trim_words( get_the_excerpt(), get_theme_mod( 'excerpt_length'), '...' );?>
 			</p>
 
