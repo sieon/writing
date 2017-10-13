@@ -55,7 +55,7 @@
 
   <?php if( has_post_thumbnail() ) : ?>
 
-		<article id="post-<?php the_ID(); ?>" <?php post_class('w-100 bg-white mb-4 p-4 rounded border l-shadow'); ?>>
+		<article class="w-100 bg-white mb-20 p-20 rounded border l-shadow">
 			<div class="row">
         <div class="col-4">
           <figure class="g-pos-rel mb-0">
@@ -91,16 +91,16 @@
             echo '</ul></div><!-- .entry-meta -->';
 
           }; ?>
-          <p class="l-color-v7 d-md-none d-lg-block mb-0">
+          <div class="l-color-v7 d-md-none d-lg-block">
             <?php echo wp_trim_words( get_the_excerpt(), get_theme_mod( 'excerpt_length'), '...' );?>
-          </p>
+          </div>
         </div>
 			</div><!-- .row -->
 		</article>
 
 	<?php else: ?>
 
-		<article id="post-<?php the_ID(); ?>" <?php post_class('w-100 bg-white mb-4 p-4 rounded border l-shadow')?>>
+		<article class="w-100 bg-white mb-20 p-20 rounded border l-shadow">
 
 			<?php the_title( sprintf( '<h2 class="l-link-v9 mb-3"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
@@ -130,9 +130,9 @@
 
       }; ?>
 
-			<p class="l-color-v7 mt-3 mb-0 d-md-none d-lg-block">
-				<?php echo wp_trim_words( get_the_excerpt(), get_theme_mod( 'excerpt_length'), '...' );?>
-			</p>
+      <div class="l-color-v7 d-md-none d-lg-block">
+        <?php echo wp_trim_words( get_the_excerpt(), get_theme_mod( 'excerpt_length'), '...' );?>
+      </div>
 
 		</article>
 

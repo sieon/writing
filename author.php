@@ -37,12 +37,14 @@ get_header();
 
 <div class="container mt-4">
   <?php if ( have_posts() ) : ?>
-  <div class="card-columns">
-    <?php while ( have_posts() ) : the_post(); ?>
-
-        <?php get_template_part( 'template-parts/content-card', get_post_format() ); ?>
-
-    <?php endwhile; ?>
+  <div class="posts-card">
+    <div class="row">
+      <?php while ( have_posts() ) : the_post(); ?>
+        <div class="col-lg-3">
+          <?php get_template_part( 'template-parts/content-card', get_post_format() ); ?>
+        </div>
+      <?php endwhile; ?>
+    </div>
   </div>
 
   <div class="pagination pt-2 mt-2">

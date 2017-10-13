@@ -1,16 +1,18 @@
 <?php get_header(); ?>
 
+
+<?php while ( have_posts() ) : the_post(); ?>
+  <div class="jumbotron rounded-0 bg-dark border-0 text-white d-flex justify-content-center l-shadow">
+    <div class="container">
+      <h1 class=""><?php the_title(); ?></h1>
+    </div>
+  </div>
+
+
 <div class="container mt-4">
     <div class="row">
         <div class="content-area">
             <div class="w-100 bg-white border rounded mb-4 p-4 l-shadow">
-
-				<?php while ( have_posts() ) : the_post(); ?>
-
-                <h1 class="mb-4"><?php the_title(); ?></h1>
-
-                <hr class="mb-4">
-
                 <div class="entry-content clearfix">
                     <?php the_content(); ?>
                 </div>

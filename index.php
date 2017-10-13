@@ -1,6 +1,18 @@
 <?php get_header(); ?>
 
-<div class="container mt-4">
+<div class="jumbotron bg-dark text-white d-flex justify-content-center">
+  <div class="container">
+    <h1 class="display-4 text-center">Writing</h1>
+    <p class="lead mt-4 text-center">为写作而设计的WordPress主题</p>
+    <!-- <hr class="my-4">
+    <p class="text-center">It uses utility classes for typography and spacing to space content out within the larger container.</p> -->
+    <p class="mt-5 text-center">
+      <a class="btn btn-outline-light btn-lg" href="#" role="button">下载</a>
+    </p>
+  </div>
+</div>
+
+<div class="container">
     <div class="row">
 
         <div class="content-area">

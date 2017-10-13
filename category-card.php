@@ -1,15 +1,16 @@
 <?php get_header(); ?>
 
-<div class="container">
+<header class="jumbotron rounded-0 bg-dark border-0 text-white text-center l-shadow d-flex justify-content-center">
+  <div class="container">
+    <?php
+    lean_the_archive_title( '<h1>', '</h1>' );
+    lean_the_archive_description( '<div>', '</div>' );
+    ?>
+  </div>
+</header>
+
+<div class="container mt-4">
     <div class="main-content">
-        <header class="jumbotron bg-white border l-shadow mb-4 py-4 pl-2">
-            <div class="container">
-                <?php
-                lean_the_archive_title( '<h1>', '</h1>' );
-                lean_the_archive_description( '<div>', '</div>' );
-                ?>
-            </div>
-        </header>
 
         <?php if ( have_posts() ) : ?>
         <div class="posts posts-card">

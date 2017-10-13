@@ -84,34 +84,16 @@
 .g-font-weight-900 {
   font-weight: 900; }
 
-.text-gray200 {
-  color: $gray-200;
+// padding and margin
+.p-10 {
+  padding: 10px;
 }
-
-.text-gray300 {
-  color: $gray-300;
+.p-15 {
+  padding: 15px;
 }
-
-.text-gray400 {
-  color: $gray-400;
+.p-20 {
+  padding: 20px;
 }
-
-.text-gray500 {
-  color: $gray-500;
-}
-
-.text-gray600 {
-  color: $gray-600;
-}
-
-.text-gray700 {
-  color: $gray-700;
-}
-
-.text-gray800 {
-  color: $gray-800;
-}
-
-.g-color-gray-light-v5 {
-  color: $g-color-gray-light-v5 !important;
+.mb-20 {
+  margin-bottom: 20px;
 }
