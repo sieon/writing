@@ -515,10 +515,10 @@ pre {
       max-width: 720px; } }
   @media (min-width: 992px) {
     .container {
-      max-width: 990px; } }
+      max-width: 960px; } }
   @media (min-width: 1200px) {
     .container {
-      max-width: 1230px; } }
+      max-width: 1140px; } }
 
 .container-fluid {
   width: 100%;
@@ -6731,8 +6731,8 @@ table#wp-calendar caption {
 
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav .nav-link {
-    padding-right: 1.5rem;
-    padding-left: 1.5rem; } }
+    padding-right: .75rem;
+    padding-left: .75rem; } }
 
 .hot-tags a {
   margin-top: 5px;
@@ -7230,6 +7230,9 @@ a img.aligncenter {
 
 .mb-20 {
   margin-bottom: 20px; }
+
+.p-mb-0 p:last-child {
+  margin-bottom: 0; }
 
 .bg-white {
   background-color: #fff; }

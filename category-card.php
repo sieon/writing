@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<header class="jumbotron rounded-0 bg-dark border-0 text-white text-center l-shadow d-flex justify-content-center">
+<header class="jumbotron rounded-0 bg-dark border-0 text-white">
   <div class="container">
     <?php
     lean_the_archive_title( '<h1>', '</h1>' );

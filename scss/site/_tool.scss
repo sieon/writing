@@ -97,3 +97,9 @@
 .mb-20 {
   margin-bottom: 20px;
 }
+// fix p tag margin bottom 1rem
+.p-mb-0 {
+  p:last-child {
+    margin-bottom: 0;
+  }
+}

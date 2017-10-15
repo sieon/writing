@@ -49,6 +49,6 @@ function bootstrap3_comment_form( $args ) {
     <label for="comment">' . _x( '评论内容', 'noun', 'lean' ) . ( ' <span class="required">*</span>' ) . '</label>
     <textarea class="form-control" id="comment" name="comment" aria-required="true" cols="45" rows="4"></textarea>
     </div>';
-	$args['class_submit']  = 'btn btn-outline-secondary'; // since WP 4.1.
+	$args['class_submit']  = 'btn btn-secondary'; // since WP 4.1.
 	return $args;
 }
