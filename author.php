@@ -1,8 +1,8 @@
 <?php
 /**
- * 作者页面模板
+ * Author template
  *
- * 学习更多: https://codex.wordpress.org/Author_Templates
+ * more: https://codex.wordpress.org/Author_Templates
  *
  * @package writing
  */
