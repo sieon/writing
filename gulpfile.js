@@ -18,7 +18,7 @@ var browserSyncWatchFiles = [
 // browser-sync options
 // see: https://www.browsersync.io/docs/options/
 var browserSyncOptions = {
-    proxy: "localhost/wordpress/",
+    proxy: "http://wp-dev.roots/",
     notify: false
 };
 
@@ -175,7 +175,7 @@ gulp.task('cleancss', function() {
 });
 
 gulp.task('styles', function(callback){ gulpSequence('sass', 'minify-css')(callback) });
- 
+
 
 // Run:
 // gulp browser-sync
@@ -191,8 +191,8 @@ gulp.task('browser-sync', function() {
 gulp.task('watch-bs', ['browser-sync', 'watch', 'scripts'], function () { });
 
 
-// Run: 
-// gulp scripts. 
+// Run:
+// gulp scripts.
 // Uglifies and concat all JS files into one
 gulp.task('scripts', function() {
     var scripts = [
@@ -231,7 +231,7 @@ gulp.task('copy-assets', ['clean-source'], function() {
 
     var stream = gulp.src(basePaths.node + 'bootstrap/dist/js/**/*.js')
        .pipe(gulp.dest(basePaths.dev + '/js/bootstrap4'));
-  
+
 // Copy all Bootstrap SCSS files
     gulp.src(basePaths.node + 'bootstrap/scss/**/*.scss')
        .pipe(gulp.dest(basePaths.dev + '/sass/bootstrap4'));
@@ -261,7 +261,7 @@ gulp.task('copy-assets', ['clean-source'], function() {
 // Copy Popper JS files
     gulp.src(basePaths.node + 'popper.js/dist/umd/popper.min.js')
         .pipe(gulp.dest(basePaths.js));
-        
+
     gulp.src(basePaths.node + 'popper.js/dist/umd/popper.js')
         .pipe(gulp.dest(basePaths.js));
     return stream;
