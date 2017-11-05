@@ -1,187 +1,295 @@
-// Load all the modules from package.json
-var gulp = require( 'gulp' ),
-  plumber = require( 'gulp-plumber' ),
-  autoprefixer = require('gulp-autoprefixer'),
-  watch = require( 'gulp-watch' ),
-  jshint = require( 'gulp-jshint' ),
-  stylish = require( 'jshint-stylish' ),
-  uglify = require( 'gulp-uglify' ),
-  rename = require( 'gulp-rename' ),
-  notify = require( 'gulp-notify' ),
-  include = require( 'gulp-include' ),
-  sass = require( 'gulp-sass' ),
-  imageoptim = require('gulp-imageoptim'),
-  browserSync = require('browser-sync').create(),
-  critical = require('critical'),
-  zip = require('gulp-zip');
-
-var config = {
-  nodeDir: './node_modules' 
-}
+// Defining base paths
+var basePaths = {
+    js: './js/',
+    node: './node_modules/',
+    dev: './src/'
+};
 
 
+// browser-sync watched files
 // automatically reloads the page when files changed
 var browserSyncWatchFiles = [
-  './*.min.css',
-  './assets/js/**/*.min.js',
-  './**/*.php'
+    './css/*.min.css',
+    './js/*.min.js',
+    './**/*.php'
 ];
 
+
+// browser-sync options
 // see: https://www.browsersync.io/docs/options/
 var browserSyncOptions = {
-  watchTask: true,
-  proxy: "http://wp.dev/"
-}
-
-// Default error handler
-var onError = function( err ) {
-  console.log( 'An error occured:', err.message );
-  this.emit('end');
-}
-
-// Zip files up
-gulp.task('zip', function () {
- return gulp.src([
-   '*',
-   './assets/css/*',
-   './assets/js/**/*',
-   './assets/fonts/*',
-   './assets/img/*',
-   './inc/**/*',
-   './languages/*',
-   './scss/**/*',
-   './template-parts/*',
-   '!bower_components',
-   '!node_modules',
-  ], {base: "."})
-  .pipe(zip('writing.zip'))
-  .pipe(gulp.dest('.'));
-});
-
-// Jshint outputs any kind of javascript problems you might have
-// Only checks javascript files inside /src directory
-gulp.task( 'jshint', function() {
-  return gulp.src( './assets/js/src/*.js' )
-    .pipe( jshint() )
-    .pipe( jshint.reporter( stylish ) )
-    .pipe( jshint.reporter( 'fail' ) );
-})
-
-
-// Concatenates all files that it finds in the manifest
-// and creates two versions: normal and minified.
-// It's dependent on the jshint task to succeed.
-gulp.task( 'scripts', ['jshint'], function() {
-  return gulp.src( './assets/js/manifest.js' )
-    .pipe( include() )
-    .pipe( rename( { basename: 'scripts' } ) )
-    .pipe( gulp.dest( './assets/js' ) )
-    // Normal done, time to create the minified javascript (scripts.min.js)
-    // remove the following 3 lines if you don't want it
-    .pipe( uglify() )
-    .pipe( rename( { suffix: '.min' } ) )
-    .pipe( gulp.dest( './assets/js' ) )
-    .pipe(browserSync.reload({stream: true}))
-    .pipe( notify({ message: 'scripts task complete' }));
-} );
-
-// Different options for the Sass tasks
-var options = {};
-options.sass = {
-  errLogToConsole: true,
-  precision: 8,
-  noCache: true,
-  //imagePath: 'assets/img',
-  includePaths: [
-    config.nodeDir + '/bootstrap/scss',
-  ]
+    proxy: "localhost/wordpress/",
+    notify: false
 };
 
-options.sassmin = {
-  errLogToConsole: true,
-  precision: 8,
-  noCache: true,
-  outputStyle: 'compressed',
-  //imagePath: 'assets/img',
-  includePaths: [
-    config.nodeDir + '/bootstrap/scss',
-  ]
-};
 
-// Sass
-gulp.task('sass', function() {
-  return gulp.src('./scss/style.scss')
-    .pipe(plumber())
-    .pipe(sass(options.sass).on('error', sass.logError))
-    .pipe(autoprefixer())
-    .pipe(gulp.dest('.'))
-    .pipe(browserSync.reload({stream: true}))
-    .pipe(notify({ title: 'Sass', message: 'sass task complete'  }));
-});
+// Defining requirements
+var gulp = require('gulp');
+var plumber = require('gulp-plumber');
+var sass = require('gulp-sass');
+var watch = require('gulp-watch');
+var cssnano = require('gulp-cssnano');
+var rename = require('gulp-rename');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+var merge2 = require('merge2');
+var imagemin = require('gulp-imagemin');
+var ignore = require('gulp-ignore');
+var rimraf = require('gulp-rimraf');
+var clone = require('gulp-clone');
+var merge = require('gulp-merge');
+var sourcemaps = require('gulp-sourcemaps');
+var browserSync = require('browser-sync').create();
+var del = require('del');
+var cleanCSS = require('gulp-clean-css');
+var gulpSequence = require('gulp-sequence');
 
-// Sass-min - Release build minifies CSS after compiling Sass
-gulp.task('sass-min', function() {
-  return gulp.src('./scss/style.scss')
-    .pipe(plumber())
-    .pipe(sass(options.sassmin).on('error', sass.logError))
-    .pipe(autoprefixer())
-    .pipe(rename( { suffix: '.min' } ) )
-    .pipe(gulp.dest('.'))
-    .pipe(browserSync.reload({stream: true}))
-    .pipe(notify({ title: 'Sass', message: 'sass-min task complete' }));
-});
 
-// Optimize Images
-gulp.task('images', function() {
-  return gulp.src('./assets/img/**/*')
-    .pipe(imageoptim.optimize({jpegmini: true}))
-    .pipe(gulp.dest('./assets/img'))
-    .pipe( notify({ message: 'Images task complete' }));
-});
+// Run:
+// gulp sass + cssnano + rename
+// Prepare the min.css for production (with 2 pipes to be sure that "theme.css" == "theme.min.css")
+gulp.task('scss-for-prod', function() {
+    var source =  gulp.src('./sass/*.scss')
+        .pipe(plumber({
+            errorHandler: function (err) {
+                console.log(err);
+                this.emit('end');
+            }
+        }))
+        .pipe(sourcemaps.init({loadMaps: true}))
+        .pipe(sass());
 
-// Generate & Inline Critical-path CSS
-gulp.task('critical', function (cb) {
-    critical.generate({
-        base: './',
-        src: 'http://wp.dev/',
-        dest: 'css/home.min.css',
-        ignore: ['@font-face'],
-        dimensions: [{
-          width: 320,
-          height: 480
-        },{
-          width: 768,
-          height: 1024
-        },{
-          width: 1280,
-          height: 960
-        }],
-        minify: true
-    });
+    var pipe1 = source.pipe(clone())
+        .pipe(sourcemaps.write(undefined, { sourceRoot: null }))
+        .pipe(gulp.dest('./css'))
+        .pipe(rename('custom-editor-style.css'))
+
+
+    var pipe2 = source.pipe(clone())
+        .pipe(minify-css())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest('./css'));
+
+    return merge(pipe1, pipe2);
 });
 
 
+// Run:
+// gulp sourcemaps + sass + reload(browserSync)
+// Prepare the child-theme.css for the development environment
+gulp.task('scss-for-dev', function() {
+    gulp.src('./sass/*.scss')
+        .pipe(plumber({
+            errorHandler: function (err) {
+                console.log(err);
+                this.emit('end');
+            }
+        }))
+        .pipe(sourcemaps.init({loadMaps: true}))
+        .pipe(sass())
+        .pipe(sourcemaps.write(undefined, { sourceRoot: null }))
+        .pipe(gulp.dest('./css'))
+});
+
+gulp.task('watch-scss', ['browser-sync'], function () {
+    gulp.watch('./sass/**/*.scss', ['scss-for-dev']);
+});
+
+
+// Run:
+// gulp sass
+// Compiles SCSS files in CSS
+gulp.task('sass', function () {
+    var stream = gulp.src('./sass/*.scss')
+        .pipe(plumber({
+            errorHandler: function (err) {
+                console.log(err);
+                this.emit('end');
+            }
+        }))
+        .pipe(sass())
+        .pipe(gulp.dest('./css'))
+        .pipe(rename('custom-editor-style.css'))
+    return stream;
+});
+
+
+// Run:
+// gulp watch
+// Starts watcher. Watcher runs gulp sass task on changes
+gulp.task('watch', function () {
+    gulp.watch('./sass/**/*.scss', ['styles']);
+    gulp.watch([basePaths.dev + 'js/**/*.js','js/**/*.js','!js/theme.js','!js/theme.min.js'], ['scripts']);
+
+    //Inside the watch task.
+    gulp.watch('./img/**', ['imagemin'])
+});
+
+// Run:
+// gulp imagemin
+// Running image optimizing task
+gulp.task('imagemin', function(){
+    gulp.src('img/src/**')
+    .pipe(imagemin())
+    .pipe(gulp.dest('img'))
+});
+
+
+// Run:
+// gulp cssnano
+// Minifies CSS files
+gulp.task('cssnano', function(){
+  return gulp.src('./css/theme.css')
+    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(plumber({
+            errorHandler: function (err) {
+                console.log(err);
+                this.emit('end');
+            }
+        }))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(cssnano({discardComments: {removeAll: true}}))
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest('./css/'))
+});
+
+gulp.task('minify-css', function() {
+  return gulp.src('./css/theme.css')
+  .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(cleanCSS({compatibility: '*'}))
+    .pipe(plumber({
+            errorHandler: function (err) {
+                console.log(err);
+                this.emit('end');
+            }
+        }))
+    .pipe(rename({suffix: '.min'}))
+     .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest('./css/'));
+});
+
+gulp.task('cleancss', function() {
+  return gulp.src('./css/*.min.css', { read: false }) // much faster
+    .pipe(ignore('theme.css'))
+    .pipe(rimraf());
+});
+
+gulp.task('styles', function(callback){ gulpSequence('sass', 'minify-css')(callback) });
+ 
+
+// Run:
+// gulp browser-sync
 // Starts browser-sync task for starting the server.
 gulp.task('browser-sync', function() {
     browserSync.init(browserSyncWatchFiles, browserSyncOptions);
 });
 
 
-// Start the livereload server and watch files for change
-gulp.task( 'watch', function() {
-
-  // don't listen to whole js folder, it'll create an infinite loop
-  gulp.watch( [ './assets/js/**/*.js', '!./assets/js/*.js' ], [ 'scripts' ] )
-
-  gulp.watch( './scss/**/*.scss', ['sass', 'sass-min'] );
-
-  gulp.watch( './assets/img/**/*', ['images']);
-
-  //gulp.watch( './**/*.php' ).on('change', browserSync.reload);
-
-} );
+// Run:
+// gulp watch-bs
+// Starts watcher with browser-sync. Browser-sync reloads page automatically on your browser
+gulp.task('watch-bs', ['browser-sync', 'watch', 'scripts'], function () { });
 
 
-gulp.task( 'default', ['watch', 'browser-sync'], function() {
- // Does nothing in this task, just triggers the dependent 'watch'
-} );
+// Run: 
+// gulp scripts. 
+// Uglifies and concat all JS files into one
+gulp.task('scripts', function() {
+    var scripts = [
+
+        // Start - All BS4 stuff
+        basePaths.dev + 'js/bootstrap4/bootstrap.js',
+
+        // End - All BS4 stuff
+
+        basePaths.dev + 'js/skip-link-focus-fix.js'
+    ];
+  gulp.src(scripts)
+    .pipe(concat('theme.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./js/'));
+
+  gulp.src(scripts)
+    .pipe(concat('theme.js'))
+    .pipe(gulp.dest('./js/'));
+});
+
+// Deleting any file inside the /src folder
+gulp.task('clean-source', function () {
+  return del(['src/**/*',]);
+});
+
+// Run:
+// gulp copy-assets.
+// Copy all needed dependency assets files from bower_component assets to themes /js, /scss and /fonts folder. Run this task after bower install or bower update
+
+////////////////// All Bootstrap SASS  Assets /////////////////////////
+gulp.task('copy-assets', ['clean-source'], function() {
+
+////////////////// All Bootstrap 4 Assets /////////////////////////
+// Copy all JS files
+
+    var stream = gulp.src(basePaths.node + 'bootstrap/dist/js/**/*.js')
+       .pipe(gulp.dest(basePaths.dev + '/js/bootstrap4'));
+  
+// Copy all Bootstrap SCSS files
+    gulp.src(basePaths.node + 'bootstrap/scss/**/*.scss')
+       .pipe(gulp.dest(basePaths.dev + '/sass/bootstrap4'));
+
+////////////////// End Bootstrap 4 Assets /////////////////////////
+
+// Copy all Font Awesome Fonts
+    gulp.src(basePaths.node + 'font-awesome/fonts/**/*.{ttf,woff,woff2,eof,svg}')
+        .pipe(gulp.dest('./fonts'));
+
+// Copy all Font Awesome SCSS files
+    gulp.src(basePaths.node + 'font-awesome/scss/*.scss')
+        .pipe(gulp.dest(basePaths.dev + '/sass/fontawesome'));
+
+// Copy jQuery
+    gulp.src(basePaths.node + 'jquery/dist/*.js')
+        .pipe(gulp.dest(basePaths.js));
+
+// _s SCSS files
+    gulp.src(basePaths.node + 'undescores-for-npm/sass/**/*.scss')
+        .pipe(gulp.dest(basePaths.dev + '/sass/underscores'));
+
+// _s JS files
+    gulp.src(basePaths.node + 'undescores-for-npm/js/*.js')
+        .pipe(gulp.dest(basePaths.dev + '/js'));
+
+// Copy Popper JS files
+    gulp.src(basePaths.node + 'popper.js/dist/umd/popper.min.js')
+        .pipe(gulp.dest(basePaths.js));
+        
+    gulp.src(basePaths.node + 'popper.js/dist/umd/popper.js')
+        .pipe(gulp.dest(basePaths.js));
+    return stream;
+});
+
+
+// Run
+// gulp dist
+// Copies the files to the /dist folder for distribution as simple theme
+gulp.task('dist', ['clean-dist'], function() {
+    gulp.src(['**/*','!bower_components','!bower_components/**','!node_modules','!node_modules/**','!src','!src/**','!dist','!dist/**','!dist-product','!dist-product/**','!sass','!sass/**','!readme.txt','!readme.md','!package.json','!gulpfile.js','!CHANGELOG.md','!.travis.yml','!jshintignore', '!codesniffer.ruleset.xml', '*'])
+    .pipe(gulp.dest('dist/'))
+});
+
+// Deleting any file inside the /src folder
+gulp.task('clean-dist', function () {
+  return del(['dist/**/*',]);
+});
+
+// Run
+// gulp dist-product
+// Copies the files to the /dist-prod folder for distribution as theme with all assets
+gulp.task('dist-product', ['clean-dist-product'], function() {
+    gulp.src(['**/*','!bower_components','!bower_components/**','!node_modules','!node_modules/**','!dist','!dist/**','!dist-product','!dist-product/**', '*'])
+    .pipe(gulp.dest('dist-product/'))
+});
+
+// Deleting any file inside the /src folder
+gulp.task('clean-dist-product', function () {
+  return del(['dist-product/**/*',]);
+});

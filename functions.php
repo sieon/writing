@@ -1,44 +1,73 @@
 <?php
 /**
- * @package lean
+ * Understrap functions and definitions
+ *
+ * @package understrap
  */
-
-define("THEME_URI", get_template_directory_uri() );
-define("THEME_DIR", get_template_directory() );
-
-
-require THEME_DIR . '/inc/setup.php';
-require THEME_DIR . '/inc/enqueue.php';// 加载 js 和 css
 
 /**
- *   边栏与小工具
+ * Theme setup and custom theme supports.
  */
-require THEME_DIR . '/inc/widget.php'; // 注册小工具
-load_template( THEME_DIR . '/inc/widgets/tagcloud.php' );
-load_template( THEME_DIR . '/inc/widgets/posts-plus.php' );
-/**
- *   支持 Bootstrap
- */
-require THEME_DIR . '/inc/bootstrap-wp-navwalker.php'; //支持bs4 navbar
-require THEME_DIR . '/inc/bootstrap.php'; //给日历添加样式
+require get_template_directory() . '/inc/setup.php';
 
 /**
- *   功能与其他
+ * Register widget area.
+ *
+ * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
-require THEME_DIR . '/inc/extras.php'; //Custom functions that act independently of the theme templates.
-require THEME_DIR . '/inc/custom-comments.php'; //评论
+require get_template_directory() . '/inc/widgets.php';
 
 /**
- *   模板标签
+ * Load functions to secure your WP install.
  */
-require THEME_DIR . '/inc/template-tags.php'; //模板常用标签
-require THEME_DIR . '/inc/pagination.php';// 支持 Bs4 翻页
-require THEME_DIR . '/inc/related-posts.php';// 相关文章
-require THEME_DIR . '/inc/get-avatar.php'; //头像
+require get_template_directory() . '/inc/security.php';
 
-// Helper library for the theme customizer.
-require THEME_DIR . '/inc/customizer-library/customizer-library.php';
+/**
+ * Enqueue scripts and styles.
+ */
+require get_template_directory() . '/inc/enqueue.php';
 
-// Define options for the theme customizer.
-require THEME_DIR . '/inc/customizer-options.php';
-require THEME_DIR . '/inc/styles.php';
+/**
+ * Custom template tags for this theme.
+ */
+require get_template_directory() . '/inc/template-tags.php';
+
+/**
+ * Custom template tags for this theme.
+ */
+require get_template_directory() . '/inc/pagination.php';
+
+/**
+ * Custom functions that act independently of the theme templates.
+ */
+require get_template_directory() . '/inc/extras.php';
+
+/**
+ * Customizer additions.
+ */
+require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Custom Comments file.
+ */
+require get_template_directory() . '/inc/custom-comments.php';
+
+/**
+ * Load Jetpack compatibility file.
+ */
+require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Load custom WordPress nav walker.
+ */
+require get_template_directory() . '/inc/bootstrap-wp-navwalker.php';
+
+/**
+ * Load WooCommerce functions.
+ */
+require get_template_directory() . '/inc/woocommerce.php';
+
+/**
+ * Load Editor functions.
+ */
+require get_template_directory() . '/inc/editor.php';

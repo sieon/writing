@@ -2,7 +2,7 @@
 /**
  * Pagination layout.
  *
- * @package lean
+ * @package understrap
  */
 
 /**
@@ -10,8 +10,8 @@
  * Credits to http://www.wpbeginner.com/wp-themes/how-to-add-numeric-pagination-in-your-wordpress-theme/
  */
 
-if ( ! function_exists( 'lean_pagination' ) ) :
-function lean_pagination() {
+if ( ! function_exists( 'understrap_pagination' ) ) :
+function understrap_pagination() {
 	if ( is_singular() ) {
 		return;
 	}
@@ -48,12 +48,12 @@ function lean_pagination() {
 	if ( ! in_array( 1, $links ) ) {
 		$class = 1 == $paged ? ' class="active page-item"' : ' class="page-item"';
 
-		printf( '<li %s><a class="page-link" href="%s">第一页</a></li>' . "\n",
+		printf( '<li %s><a class="page-link" href="%s"><i class="fa fa-step-backward" aria-hidden="true"></i></a></li>' . "\n",
 		$class, esc_url( get_pagenum_link( 1 ) ), '1' );
 
 		/**    Previous Post Link */
 		if ( get_previous_posts_link() ) {
-			printf( '<li class="page-item"><span class="page-link">%1$s</span></li> ' . "\n",
+			printf( '<li class="page-item page-item-direction page-item-prev"><span class="page-link">%1$s</span></li> ' . "\n",
 			get_previous_posts_link( '<span aria-hidden="true">&laquo;</span><span class="sr-only">Previous page</span>' ) );
 		}
 
@@ -72,7 +72,7 @@ function lean_pagination() {
 
 	// Next Post Link.
 	if ( get_next_posts_link() ) {
-		printf( '<li class="page-item"><span class="page-link">%s</span></li>' . "\n",
+		printf( '<li class="page-item page-item-direction page-item-next"><span class="page-link">%s</span></li>' . "\n",
 			get_next_posts_link( '<span aria-hidden="true">&raquo;</span><span class="sr-only">Next page</span>' ) );
 	}
 
@@ -83,7 +83,7 @@ function lean_pagination() {
 		}
 
 		$class = $paged == $max ? ' class="active "' : ' class="page-item"';
-		printf( '<li %s><a class="page-link" href="%s" aria-label="Next"><span aria-hidden="true">最后一页</span><span class="sr-only">%s</span></a></li>' . "\n",
+		printf( '<li %s><a class="page-link" href="%s" aria-label="Next"><span aria-hidden="true"><i class="fa fa-step-forward" aria-hidden="true"></i></span><span class="sr-only">%s</span></a></li>' . "\n",
 		$class . '', esc_url( get_pagenum_link( esc_html( $max ) ) ), esc_html( $max ) );
 	}
 

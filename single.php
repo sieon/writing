@@ -1,35 +1,56 @@
-<?php get_header();?>
+<?php
+/**
+ * The template for displaying all single posts.
+ *
+ * @package understrap
+ */
 
-<div class="container mt-4">
-    <div class="row">
-        <div class="content-area">
+get_header();
+$container   = get_theme_mod( 'understrap_container_type' );
+$sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
+?>
 
-			<?php while ( have_posts() ) : the_post();
-			    get_template_part( 'template-parts/post/content', get_post_format() );
+<div class="wrapper" id="single-wrapper">
 
-				//上一篇、下一篇
-				if ( get_theme_mod( 'post-nav')==yes ) {
-				    lean_the_post_navigation();
-				}
+	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
-				//相关文章
-				if ( get_theme_mod( 'related_posts')==yes ) {
-					if ( !has_post_format( 'aside' ) && !has_post_format( 'status' )) {
-						related_posts();
-					}
-				}
+		<div class="row">
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
+			<!-- Do the left sidebar check -->
+			<?php get_template_part( 'global-templates/left-sidebar-check', 'none' ); ?>
 
-            endwhile; // end of the loop. ?>
+			<main class="site-main" id="main">
 
-        </div>
+				<?php while ( have_posts() ) : the_post(); ?>
 
-		<?php get_sidebar();?>
+					<?php get_template_part( 'loop-templates/content', 'single' ); ?>
 
-    </div><!-- .row -->
-</div><!-- .container -->
-<?php get_footer();?>
+						<?php understrap_post_nav(); ?>
+
+					<?php
+					// If comments are open or we have at least one comment, load up the comment template.
+					if ( comments_open() || get_comments_number() ) :
+						comments_template();
+					endif;
+					?>
+
+				<?php endwhile; // end of the loop. ?>
+
+			</main><!-- #main -->
+
+		</div><!-- #primary -->
+
+		<!-- Do the right sidebar check -->
+		<?php if ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ) : ?>
+
+			<?php get_sidebar( 'right' ); ?>
+
+		<?php endif; ?>
+
+	</div><!-- .row -->
+
+</div><!-- Container end -->
+
+</div><!-- Wrapper end -->
+
+<?php get_footer(); ?>

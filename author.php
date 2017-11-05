@@ -1,58 +1,103 @@
 <?php
 /**
- * Author template
+ * The template for displaying the author pages.
  *
- * more: https://codex.wordpress.org/Author_Templates
+ * Learn more: https://codex.wordpress.org/Author_Templates
  *
- * @package writing
+ * @package understrap
  */
 
 get_header();
+$container   = get_theme_mod( 'understrap_container_type' );
+$sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 ?>
 
-<div <?php if ( get_theme_mod( 'author_bg') ) { echo 'class="profile-header" style="background-image:url(' . esc_url( get_theme_mod( 'author_bg' ) ) . ');"'; } else { echo 'class="profile-header bg-dark"'; } ?>>
-  <div class="container">
-    <div class="container-inner">
-      <?php echo get_avatar( get_the_author_meta( $curauth->ID ), 80 ); ?>
 
-      <?php $curauth = ( isset( $_GET['author_name'] ) ) ? get_user_by( 'slug', $author_name ) : get_userdata( intval( $author ) ); ?>
-      <!-- <img class="rounded-circle media-object" src="../assets/img/avatar-dhg.png"> -->
-      <h3 class="profile-header-user"><?php echo esc_html( $curauth->nickname ); ?></h3>
-      <?php if ( ! empty( $curauth->user_description ) ) : ?>
-      <p class="profile-header-bio">
-        <?php echo esc_html( $curauth->user_description ); ?>
-      </p>
-      <?php endif; ?>
-    </div>
-  </div>
+<div class="wrapper" id="author-wrapper">
 
-  <nav class="profile-header-nav">
-    <ul class="nav nav-tabs justify-content-center">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">他发表的文章</a>
-      </li>
-    </ul>
-  </nav>
-</div>
+	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
-<div class="container mt-4">
-  <?php if ( have_posts() ) : ?>
-  <div class="posts-card">
-    <div class="row">
-      <?php while ( have_posts() ) : the_post(); ?>
-        <div class="col-lg-3">
-          <?php get_template_part( 'template-parts/card/card', get_post_format() ); ?>
-        </div>
-      <?php endwhile; ?>
-    </div>
-  </div>
+		<div class="row">
 
-  <div class="pagination pt-2 mt-2">
-    <?php lean_pagination();?>
-  </div>
-  <?php else : ?>
-    <?php get_template_part( 'template-parts/post/content', 'none' ); ?>
-  <?php endif; ?>
+			<!-- Do the left sidebar check -->
+			<?php get_template_part( 'global-templates/left-sidebar-check', 'none' ); ?>
+
+			<main class="site-main" id="main">
+
+				<header class="page-header author-header">
+
+					<?php
+					$curauth = ( isset( $_GET['author_name'] ) ) ? get_user_by( 'slug',
+						$author_name ) : get_userdata( intval( $author ) );
+					?>
+
+					<h1><?php esc_html_e( 'About:', 'understrap' ); ?><?php echo esc_html( $curauth->nickname ); ?></h1>
+
+					<?php if ( ! empty( $curauth->ID ) ) : ?>
+						<?php echo get_avatar( $curauth->ID ); ?>
+					<?php endif; ?>
+
+					<dl>
+						<?php if ( ! empty( $curauth->user_url ) ) : ?>
+							<dt><?php esc_html_e( 'Website', 'understrap' ); ?></dt>
+							<dd>
+								<a href="<?php echo esc_url( $curauth->user_url ); ?>"><?php echo esc_html( $curauth->user_url ); ?></a>
+							</dd>
+						<?php endif; ?>
+
+						<?php if ( ! empty( $curauth->user_description ) ) : ?>
+							<dt><?php esc_html_e( 'Profile', 'understrap' ); ?></dt>
+							<dd><?php echo esc_html( $curauth->user_description ); ?></dd>
+						<?php endif; ?>
+					</dl>
+
+					<h2><?php esc_html_e( 'Posts by', 'understrap' ); ?> <?php echo esc_html( $curauth->nickname ); ?>
+						:</h2>
+
+				</header><!-- .page-header -->
+
+				<ul>
+
+					<!-- The Loop -->
+					<?php if ( have_posts() ) : ?>
+						<?php while ( have_posts() ) : the_post(); ?>
+							<li>
+								<a rel="bookmark" href="<?php the_permalink() ?>"
+								   title="Permanent Link: <?php the_title(); ?>">
+									<?php the_title(); ?></a>,
+								<?php understrap_posted_on(); ?> <?php esc_html_e( 'in',
+								'understrap' ); ?> <?php the_category( '&' ); ?>
+							</li>
+						<?php endwhile; ?>
+
+					<?php else : ?>
+
+						<?php get_template_part( 'loop-templates/content', 'none' ); ?>
+
+					<?php endif; ?>
+
+					<!-- End Loop -->
+
+				</ul>
+
+			</main><!-- #main -->
+
+			<!-- The pagination component -->
+			<?php understrap_pagination(); ?>
+
+		</div><!-- #primary -->
+
+		<!-- Do the right sidebar check -->
+		<?php if ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ) : ?>
+
+			<?php get_sidebar( 'right' ); ?>
+
+		<?php endif; ?>
+
+	</div> <!-- .row -->
+
 </div><!-- Container end -->
+
+</div><!-- Wrapper end -->
 
 <?php get_footer(); ?>

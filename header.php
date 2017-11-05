@@ -1,52 +1,82 @@
+<?php
+/**
+ * The header for our theme.
+ *
+ * Displays all of the <head> section and everything up till <div id="content">
+ *
+ * @package understrap
+ */
+
+$container = get_theme_mod( 'understrap_container_type' );
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <?php wp_head(); ?>
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-title" content="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<?php wp_head(); ?>
 </head>
-<body <?php body_class( $class ); ?> >
-  <div id="page" class="site">
 
-    <header class="site-header">
-      <nav class="navbar navbar-expand-lg navbar-shadow <?php echo get_theme_mod( 'navbar-styles' ); ?> <?php echo get_theme_mod( 'navbar-bg-color' ); ?> fixed-top" id="primary-navbar" role="navigation">
-        <div class="container">
-          <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-            <?php if ( get_theme_mod( 'custom_logo') ) {
-              $custom_logo_id = get_theme_mod( 'custom_logo' );
-              $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-              echo '<img src="' . $image[0] . '" alt=">' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '">';
-            } else {
-              echo esc_attr( get_bloginfo( 'name', 'display' ) );
-            } ?>
-          </a>
+<body <?php body_class(); ?>>
 
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+<div class="hfeed site" id="page">
 
-          <div id="navbarNavDropdown" class="collapse navbar-collapse">
-            <?php wp_nav_menu(
-              array(
-                'theme_location'  => 'primary',
-                'depth'           => '2',
-                  'container'       => 'div',
-                  'container_class' => 'mr-auto',
-                  'container_id'    => '',
-                  'menu_class'      => 'navbar-nav mr-auto',
-                  'menu_id'         => 'main-nav',
-                'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-                'walker'          => new WP_Bootstrap_Navwalker())
-            );
-            ?>
-            <form class="form-inline" role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
-              <input class="form-control mr-sm-2" type="text" placeholder="Search..." aria-label="Search" name="s">
-            </form>
-          </div>
+	<!-- ******************* The Navbar Area ******************* -->
+	<div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar">
 
-        </div>
-      </nav>
-    </header><!-- .header -->
+		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content',
+		'understrap' ); ?></a>
 
-    <div class="site-content">
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
+		<?php if ( 'container' == $container ) : ?>
+			<div class="container">
+		<?php endif; ?>
+
+					<!-- Your site title as branding in the menu -->
+					<?php if ( ! has_custom_logo() ) { ?>
+
+						<?php if ( is_front_page() && is_home() ) : ?>
+
+							<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+							
+						<?php else : ?>
+
+							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
+						
+						<?php endif; ?>
+						
+					
+					<?php } else {
+						the_custom_logo();
+					} ?><!-- end custom logo -->
+
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<!-- The WordPress Menu goes here -->
+				<?php wp_nav_menu(
+					array(
+						'theme_location'  => 'primary',
+						'container_class' => 'collapse navbar-collapse',
+						'container_id'    => 'navbarNavDropdown',
+						'menu_class'      => 'navbar-nav',
+						'fallback_cb'     => '',
+						'menu_id'         => 'main-menu',
+						'walker'          => new WP_Bootstrap_Navwalker(),
+					)
+				); ?>
+			<?php if ( 'container' == $container ) : ?>
+			</div><!-- .container -->
+			<?php endif; ?>
+
+		</nav><!-- .site-navigation -->
+
+	</div><!-- .wrapper-navbar end -->

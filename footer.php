@@ -1,34 +1,59 @@
-    </div><!-- .site-content -->
+<?php
+/**
+ * The template for displaying the footer.
+ *
+ * Contains the closing of the #content div and all content after
+ *
+ * @package understrap
+ */
 
-    <footer id="colophon" class="site-footer l-link-v4 mt-3">
-        <div class="container">
-            <div class="footer-b-body py-4">
-	            <?php wp_nav_menu(
-		            array(
-			            'theme_location'  => 'footer-nav',
-			            'container_class' => 'mb-2',
-			            'container_id'    => '',
-			            'menu_class'      => 'nav ml--3',
-			            'fallback_cb'     => '',
-			            'menu_id'         => 'main-nav',
-			            'walker'          => new WP_Bootstrap_Navwalker(),
-		            ) ); ?>
-                <p class="site-info mb-0">
-                    &copy; 2012-2017
-                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-                        <?php bloginfo( 'name' ); ?>
-                    </a>.
-                    <a href="http://www.miitbeian.gov.cn/" rel="external nofollow" target="_blank">
-                        <?php echo get_option( 'zh_cn_l10n_icp_num' );?>
-                    </a>
-                    Design by <a href="http://qingzhuti.com/" target="_blank">qingzhuti.com</a>.
-                </p>
-            </div>
-        </div>
-    </footer><!-- #colophon -->
+$the_theme = wp_get_theme();
+$container = get_theme_mod( 'understrap_container_type' );
+?>
 
-</div><!-- #page -->
+<?php get_sidebar( 'footerfull' ); ?>
+
+<div class="wrapper" id="wrapper-footer">
+
+	<div class="<?php echo esc_attr( $container ); ?>">
+
+		<div class="row">
+
+			<div class="col-md-12">
+
+				<footer class="site-footer" id="colophon">
+
+					<div class="site-info">
+
+							<a href="<?php  echo esc_url( __( 'http://wordpress.org/','understrap' ) ); ?>"><?php printf( 
+							/* translators:*/
+							esc_html__( 'Proudly powered by %s', 'understrap' ),'WordPress' ); ?></a>
+								<span class="sep"> | </span>
+					
+							<?php printf( // WPCS: XSS ok.
+							/* translators:*/
+								esc_html__( 'Theme: %1$s by %2$s.', 'understrap' ), $the_theme->get( 'Name' ),  '<a href="'.esc_url( __('http://understrap.com', 'understrap')).'">understrap.com</a>' ); ?> 
+				
+							(<?php printf( // WPCS: XSS ok.
+							/* translators:*/
+								esc_html__( 'Version: %1$s', 'understrap' ), $the_theme->get( 'Version' ) ); ?>)
+					</div><!-- .site-info -->
+
+				</footer><!-- #colophon -->
+
+			</div><!--col end -->
+
+		</div><!-- row end -->
+
+	</div><!-- container end -->
+
+</div><!-- wrapper end -->
+
+</div><!-- #page we need this extra closing tag here -->
 
 <?php wp_footer(); ?>
+
 </body>
+
 </html>
+

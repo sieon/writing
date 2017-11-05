@@ -1,40 +1,61 @@
 <?php
 /**
- * Page
+ * The template for displaying all pages.
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site will use a
+ * different template.
+ *
+ * @package understrap
  */
-get_header(); ?>
 
-<?php while ( have_posts() ) : the_post(); ?>
-  <div class="jumbotron rounded-0 bg-dark border-0 text-white mb-20 l-shadow">
-    <div class="container">
-      <h1><?php the_title(); ?></h1>
-    </div>
-  </div>
+get_header();
 
-  <div class="container">
-    <div class="">
-      <div class="row">
-        <div class="content-area">
-          <div class="w-100 bg-white border-bottom-1 mb-4 p-4">
-            <div class="entry-content clearfix">
-              <?php the_content(); ?>
-            </div>
-          </div>
+$container   = get_theme_mod( 'understrap_container_type' );
+$sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
-          <?php
-            // If comments are open or we have at least one comment, load up the comment template
-            if ( comments_open() || get_comments_number() ) :
-              comments_template();
-            endif; ?>
-          <?php endwhile;?>
-        </div>
+?>
 
-        <div class="widget-area hidden-md-down">
-          <?php if ( !dynamic_sidebar('sidebar-2') ) { _e('','lean'); } ?>
-        </div>
-      </div>
+<div class="wrapper" id="page-wrapper">
 
-    </div>
-  </div><!--./container -->
+	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+
+		<div class="row">
+
+			<!-- Do the left sidebar check -->
+			<?php get_template_part( 'global-templates/left-sidebar-check', 'none' ); ?>
+
+			<main class="site-main" id="main">
+
+				<?php while ( have_posts() ) : the_post(); ?>
+
+					<?php get_template_part( 'loop-templates/content', 'page' ); ?>
+
+					<?php
+					// If comments are open or we have at least one comment, load up the comment template.
+					if ( comments_open() || get_comments_number() ) :
+						comments_template();
+					endif;
+					?>
+
+				<?php endwhile; // end of the loop. ?>
+
+			</main><!-- #main -->
+
+		</div><!-- #primary -->
+
+		<!-- Do the right sidebar check -->
+		<?php if ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ) : ?>
+
+			<?php get_sidebar( 'right' ); ?>
+
+		<?php endif; ?>
+
+	</div><!-- .row -->
+
+</div><!-- Container end -->
+
+</div><!-- Wrapper end -->
 
 <?php get_footer(); ?>

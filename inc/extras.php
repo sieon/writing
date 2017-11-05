@@ -1,72 +1,109 @@
 <?php
 /**
- * Custom functions that act independently of the theme templates
+ * Custom functions that act independently of the theme templates.
  *
- * Eventually, some of the functionality here could be replaced by core features
+ * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package lean
+ * @package understrap
  */
 
-
-//显示设置多媒体上传目录
-if(get_option('upload_path')=='wp-content/uploads' || get_option('upload_path')==null) :
-  update_option('upload_path',WP_CONTENT_DIR.'/uploads');
-endif;
-
-if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
+if ( ! function_exists( 'understrap_body_classes' ) ) {
 	/**
-	 * Filters wp_title to print a neat <title> tag based on what is being viewed.
+	 * Adds custom classes to the array of body classes.
 	 *
-	 * @param string $title Default title text for current view.
-	 * @param string $sep Optional separator.
-	 * @return string The filtered title.
+	 * @param array $classes Classes for the body element.
+	 *
+	 * @return array
 	 */
-	function lean_wp_title( $title, $sep ) {
-		if ( is_feed() ) {
-			return $title;
+	function understrap_body_classes( $classes ) {
+		// Adds a class of group-blog to blogs with more than 1 published author.
+		if ( is_multi_author() ) {
+			$classes[] = 'group-blog';
+		}
+		// Adds a class of hfeed to non-singular pages.
+		if ( ! is_singular() ) {
+			$classes[] = 'hfeed';
 		}
 
-		global $page, $paged;
-
-		// Add the blog name
-		$title .= get_bloginfo( 'name', 'display' );
-
-		// Add the blog description for the home/front page.
-		$site_description = get_bloginfo( 'description', 'display' );
-		if ( $site_description && ( is_home() || is_front_page() ) ) {
-			$title .= " $sep $site_description";
-		}
-
-		// Add a page number if necessary:
-		if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
-			$title .= " $sep " . sprintf( esc_html__( 'Page %s', 'start' ), max( $paged, $page ) );
-		}
-
-		return $title;
+		return $classes;
 	}
-	add_filter( 'wp_title', 'lean_wp_title', 10, 2 );
+}
+add_filter( 'body_class', 'understrap_body_classes' );
 
+// Removes tag class from the body_class array to avoid Bootstrap markup styling issues.
+add_filter( 'body_class', 'adjust_body_class' );
+
+if ( ! function_exists( 'adjust_body_class' ) ) {
 	/**
-	 * Title shim for sites older than WordPress 4.1.
+	 * Setup body classes.
 	 *
-	 * @link https://make.wordpress.org/core/2014/10/29/title-tags-in-4-1/
-	 * @todo Remove this function when WordPress 4.3 is released.
+	 * @param string $classes CSS classes.
+	 *
+	 * @return mixed
 	 */
-	function lean_render_title() {
-		?>
-		<title><?php wp_title( '|', true, 'right' ); ?></title>
-		<?php
+	function adjust_body_class( $classes ) {
+
+		foreach ( $classes as $key => $value ) {
+			if ( 'tag' == $value ) {
+				unset( $classes[ $key ] );
+			}
+		}
+
+		return $classes;
+
 	}
-	add_action( 'wp_head', 'lean_render_title' );
-endif;
+}
+
+// Filter custom logo with correct classes.
+add_filter( 'get_custom_logo', 'change_logo_class' );
+
+if ( ! function_exists( 'change_logo_class' ) ) {
+	/**
+	 * Replaces logo CSS class.
+	 *
+	 * @param string $html Markup.
+	 *
+	 * @return mixed
+	 */
+	function change_logo_class( $html ) {
+
+		$html = str_replace( 'class="custom-logo"', 'class="img-fluid"', $html );
+		$html = str_replace( 'class="custom-logo-link"', 'class="navbar-brand custom-logo-link"', $html );
+		$html = str_replace( 'alt=""', 'title="Home" alt="logo"' , $html );
+
+		return $html;
+	}
+}
 
 /**
- * 移除菜单的多余CSS选择器
- * From https://www.wpdaxue.com/remove-wordpress-nav-classes.html
+ * Display navigation to next/previous post when applicable.
  */
-// add_filter('nav_menu_css_class', 'my_css_attributes_filter', 100, 1);
-add_filter('nav_menu_item_id', 'my_css_attributes_filter', 100, 1);
-// add_filter('page_css_class', 'my_css_attributes_filter', 100, 1);
-// function my_css_attributes_filter($var) {
-// 	return is_array($var) ? array_intersect($var, array('nav-item','active','dropdown','dropdown-menu')) : '';
-// }
+if ( ! function_exists( 'understrap_post_nav' ) ) :
+
+	function understrap_post_nav() {
+		// Don't print empty markup if there's nowhere to navigate.
+		$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
+		$next     = get_adjacent_post( false, '', false );
+
+		if ( ! $next && ! $previous ) {
+			return;
+		}
+		?>
+				<nav class="container navigation post-navigation">
+					<h2 class="sr-only"><?php _e( 'Post navigation', 'understrap' ); ?></h2>
+					<div class="row nav-links justify-content-between">
+						<?php
+
+							if ( get_previous_post_link() ) {
+								previous_post_link( '<span class="nav-previous">%link</span>', _x( '<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'understrap' ) );
+							}
+							if ( get_next_post_link() ) {
+								next_post_link( '<span class="nav-next">%link</span>',     _x( '%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'understrap' ) );
+							}
+						?>
+					</div><!-- .nav-links -->
+				</nav><!-- .navigation -->
+
+		<?php
+	}
+endif;
