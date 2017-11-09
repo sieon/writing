@@ -6,39 +6,41 @@
  */
 
 ?>
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class('card mb-4'); ?> id="post-<?php the_ID(); ?>">
 
-	<header class="entry-header">
+	<div class="card-body">
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<header class="entry-header">
 
-		<div class="entry-meta">
+			<?php the_title( '<h1 class="entry-title mb-4">', '</h1>' ); ?>
 
-			<?php understrap_posted_on(); ?>
+			<div class="entry-meta mb-4">
 
-		</div><!-- .entry-meta -->
+				<?php understrap_posted_on(); ?>
 
-	</header><!-- .entry-header -->
+			</div><!-- .entry-meta -->
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+		</header><!-- .entry-header -->
 
-	<div class="entry-content">
+		<div class="entry-content">
 
-		<?php the_content(); ?>
+			<?php the_content(); ?>
 
-		<?php
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-			'after'  => '</div>',
-		) );
-		?>
+			<?php
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+				'after'  => '</div>',
+			) );
+			?>
 
-	</div><!-- .entry-content -->
+		</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
+		<footer class="entry-footer">
 
-		<?php understrap_entry_footer(); ?>
+			<?php understrap_entry_footer(); ?>
 
-	</footer><!-- .entry-footer -->
+		</footer><!-- .entry-footer -->
+
+	</div>
 
 </article><!-- #post-## -->

@@ -6,33 +6,37 @@
  */
 
 ?>
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class('card'); ?> id="post-<?php the_ID(); ?>">
 
-	<header class="entry-header">
+	<div class="card-body">
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<header class="entry-header">
 
-	</header><!-- .entry-header -->
+			<?php the_title( '<h1 class="entry-title mb-4">', '</h1>' ); ?>
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+		</header><!-- .entry-header -->
 
-	<div class="entry-content">
+		<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
-		<?php the_content(); ?>
+		<div class="entry-content">
 
-		<?php
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-			'after'  => '</div>',
-		) );
-		?>
+			<?php the_content(); ?>
 
-	</div><!-- .entry-content -->
+			<?php
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+				'after'  => '</div>',
+			) );
+			?>
 
-	<footer class="entry-footer">
+		</div><!-- .entry-content -->
 
-		<?php edit_post_link( __( 'Edit', 'understrap' ), '<span class="edit-link">', '</span>' ); ?>
+		<footer class="entry-footer">
 
-	</footer><!-- .entry-footer -->
+			<?php edit_post_link( __( 'Edit', 'understrap' ), '<span class="edit-link">', '</span>' ); ?>
+
+		</footer><!-- .entry-footer -->
+
+	</div>
 
 </article><!-- #post-## -->

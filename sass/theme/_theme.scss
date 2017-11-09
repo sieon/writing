@@ -1,1 +1,75 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+
+
+// margin-bottom
+
+.mb-0-p {
+  p {
+    margin-bottom: 0;
+  }
+}
+
+// widget
+
+.widget {
+  ul {
+    margin-bottom: 0;
+  }
+}
+
+.card-horizontal {
+  flex-direction: row;
+}
+
+.card-horizontal-sm-up {
+
+}
+.card-horizontal-md-up {
+
+}
+
+.card-horizontal .card-img {
+  flex: 0 0 32%;
+}
+.card-horizontal .card-body {
+  flex: 0 0 68%;
+}
+
+/** Media **/
+.media img {
+  margin-right: 20px;
+}
+
+.comments-title {
+  border-bottom: 1px solid #ddd;
+}
+
+.comment-list .media {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+// .card-body .comment-respond {
+//   flex: 1 1 auto;
+//   padding: 0;
+// }
+//
+// .comment-respond {
+//   flex: 1 1 auto;
+//   padding: 1.25rem;
+// }
+
+.comment-reply-title {
+  font-size: 1.5rem;
+  small {
+    font-size: 1rem;
+  }
+}
+
+.logged-in-as {
+  font-size: .875rem;
+  color: #666;
+  a {
+    color: #666;
+  }
+}

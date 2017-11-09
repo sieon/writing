@@ -9416,6 +9416,43 @@ a.skip-link {
 .gallery-caption {
   display: block; }
 
+.mb-0-p p {
+  margin-bottom: 0; }
+
+.widget ul {
+  margin-bottom: 0; }
+
+.card-horizontal {
+  flex-direction: row; }
+
+.card-horizontal .card-img {
+  flex: 0 0 32%; }
+
+.card-horizontal .card-body {
+  flex: 0 0 68%; }
+
+/** Media **/
+.media img {
+  margin-right: 20px; }
+
+.comments-title {
+  border-bottom: 1px solid #ddd; }
+
+.comment-list .media {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px; }
+
+.comment-reply-title {
+  font-size: 1.5rem; }
+  .comment-reply-title small {
+    font-size: 1rem; }
+
+.logged-in-as {
+  font-size: .875rem;
+  color: #666; }
+  .logged-in-as a {
+    color: #666; }
+
 /*
 * Use existing Bootstrap 4 classes and
 * variables to extend - override CF7 style

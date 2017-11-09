@@ -30,7 +30,7 @@ if ( ! function_exists( 'slbd_count_widgets' ) ) {
 				// If two widgets are published
 				$widget_classes .= ' col-md-2';
 			elseif ( $widget_count >= 3 ) :
-				// Three widgets per row if there's three or more widgets 
+				// Three widgets per row if there's three or more widgets
 				$widget_classes .= ' col-md-4';
 			elseif ( 2 == $widget_count ) :
 				// If two widgets are published
@@ -38,7 +38,7 @@ if ( ! function_exists( 'slbd_count_widgets' ) ) {
 			elseif ( 1 == $widget_count ) :
 				// If just on widget is active
 				$widget_classes .= ' col-md-12';
-			endif; 
+			endif;
 			return $widget_classes;
 		endif;
 	}
@@ -53,9 +53,9 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 			'name'          => __( 'Right Sidebar', 'understrap' ),
 			'id'            => 'right-sidebar',
 			'description'   => 'Right sidebar widget area',
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</aside>',
-			'before_title'  => '<h3 class="widget-title">',
+			'before_widget' => '<aside id="%1$s" class="card %2$s mb-4"><div class="card-body">',
+			'after_widget'  => '</div></aside>',
+			'before_title'  => '<h3 class="card-title h6">',
 			'after_title'   => '</h3>',
 		) );
 
@@ -83,9 +83,9 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 			'name'          => __( 'Hero Static', 'understrap' ),
 			'id'            => 'statichero',
 			'description'   => 'Static Hero widget. no slider functionallity',
-		    'before_widget'  => '<div id="%1$s" class="static-hero-widget %2$s '. slbd_count_widgets( 'statichero' ) .'">', 
-		    'after_widget'   => '</div><!-- .static-hero-widget -->', 
-		    'before_title'   => '<h3 class="widget-title">', 
+		    'before_widget'  => '<div id="%1$s" class="static-hero-widget %2$s '. slbd_count_widgets( 'statichero' ) .'">',
+		    'after_widget'   => '</div><!-- .static-hero-widget -->',
+		    'before_title'   => '<h3 class="widget-title h6">',
 		    'after_title'    => '</h3>',
 		) );
 
@@ -93,13 +93,12 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 			'name'          => __( 'Footer Full', 'understrap' ),
 			'id'            => 'footerfull',
 			'description'   => 'Widget area below main content and above footer',
-		    'before_widget'  => '<div id="%1$s" class="footer-widget %2$s '. slbd_count_widgets( 'footerfull' ) .'">', 
-		    'after_widget'   => '</div><!-- .footer-widget -->', 
-		    'before_title'   => '<h3 class="widget-title">', 
-		    'after_title'    => '</h3>', 
+		    'before_widget'  => '<div id="%1$s" class="footer-widget %2$s '. slbd_count_widgets( 'footerfull' ) .'">',
+		    'after_widget'   => '</div><!-- .footer-widget -->',
+		    'before_title'   => '<h3 class="widget-title h6">',
+		    'after_title'    => '</h3>',
 		) );
 
 	}
 } // endif function_exists( 'understrap_widgets_init' ).
 add_action( 'widgets_init', 'understrap_widgets_init' );
-

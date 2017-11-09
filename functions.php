@@ -4,7 +4,7 @@
  *
  * @package understrap
  */
-
+ 
 /**
  * Theme setup and custom theme supports.
  */

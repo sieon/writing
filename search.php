@@ -24,9 +24,9 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 				<?php if ( have_posts() ) : ?>
 
-					<header class="page-header">
-						
-							<h1 class="page-title"><?php printf(
+					<header class="page-header card mb-4">
+
+							<h1 class="page-title card-body mb-0"><?php printf(
 							/* translators:*/
 							 esc_html__( 'Search Results for: %s', 'understrap' ),
 								'<span>' . get_search_query() . '</span>' ); ?></h1>
@@ -42,7 +42,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 						 * If you want to overload this in a child theme then include a file
 						 * called content-search.php and that will be used instead.
 						 */
-						get_template_part( 'loop-templates/content', 'search' );
+						get_template_part( 'loop-templates/content-card', 'search' );
 						?>
 
 					<?php endwhile; ?>
