@@ -12,7 +12,7 @@
 
 		<header class="entry-header">
 
-			<?php the_title( '<h1 class="entry-title mb-4">', '</h1>' ); ?>
+			<?php the_title( '<h1 class="entry-title h3 mb-4">', '</h1>' ); ?>
 
 		</header><!-- .entry-header -->
 

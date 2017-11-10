@@ -28,7 +28,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 				<?php if ( have_posts() ) : ?>
 
-					<header class="page-header card mb-4">
+					<header class="page-header card l-shadow-v0 mb-4">
 						<div class="card-body">
 							<?php
 							the_archive_title( '<h1 class="page-title h3 mb-3">', '</h1>' );

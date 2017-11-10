@@ -9,7 +9,7 @@
 
 <article <?php post_class('mb-4'); ?> id="post-<?php the_ID(); ?>">
 
-	<div class="card card-horizontal p-3">
+	<div class="card l-shadow-v0 card-horizontal p-3">
 		<div class="card-img">
 			<?php if( has_post_thumbnail() ) : ?>
 
@@ -32,7 +32,7 @@
 		<div class="card-body py-0 pr-0 pl-3">
 			<header class="entry-header mb-3">
 
-				<?php the_title( sprintf( '<h2 class="entry-title h5"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+				<?php the_title( sprintf( '<h2 class="entry-title h4"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
 				'</a></h2>' ); ?>
 
 				<?php if ( 'post' == get_post_type() ) : ?>
@@ -60,7 +60,7 @@
 
 			</div><!-- .entry-content -->
 
-			<footer class="entry-footer">
+			<footer class="entry-footer l-link-v4">
 
 				<?php understrap_entry_footer(); ?>
 

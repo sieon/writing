@@ -64,8 +64,14 @@ function lean_comment($comment, $args, $depth) {
           <div class="comment-meta commentmetadata small text-muted mt-1"><?php echo get_comment_time('Y-m-d H:i'); ?></div>
         </div>
         <div class="ml-auto">
-          <?php edit_comment_link('修改'); ?>
-          <?php comment_reply_link(array_merge( $args, array('reply_text' => '回复','depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+          <?php edit_comment_link( __( 'Edit Comment', 'understrap' ), '', '' ); ?>
+          <?php //comment_reply_link(array_merge( $args, array('reply_text' => '回复','depth' => $depth, 'max_depth' => $args['max_depth'])))
+					comment_reply_link( array_merge($args, array(
+    'reply_text' => __('<i class="fa fa-edit ml-3"></i> 回复', 'understrap'),
+    'depth'      => $depth,
+    'max_depth'  => $args['max_depth']
+    )
+)); ?>
         </div>
       </div>
       <div class="comment_text">

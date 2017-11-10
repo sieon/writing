@@ -9422,6 +9422,39 @@ a.skip-link {
 .widget ul {
   margin-bottom: 0; }
 
+.widget_categories .card-body {
+  padding: 0; }
+
+.widget_categories .card-title {
+  padding: 1.25rem;
+  margin-bottom: 0;
+  background-color: #f5f8fa; }
+
+.widget_categories ul {
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 0; }
+  .widget_categories ul li {
+    line-height: 3;
+    padding-left: 1.25rem;
+    border-top: 1px solid #ddd; }
+
+.widget_meta .card-body {
+  padding: 0; }
+
+.widget_meta .card-title {
+  padding: 1.25rem;
+  margin-bottom: 0; }
+
+.widget_meta ul {
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 0; }
+  .widget_meta ul li {
+    line-height: 3;
+    padding-left: 1.25rem;
+    border-top: 1px solid #ddd; }
+
 .card-horizontal {
   flex-direction: row; }
 
@@ -9452,6 +9485,33 @@ a.skip-link {
   color: #666; }
   .logged-in-as a {
     color: #666; }
+
+/** 效果 **/
+.img-grow {
+  display: block;
+  overflow: hidden; }
+  .img-grow img {
+    transition: all .5s ease;
+    width: 100%; }
+
+.img-grow:hover img {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  transform: scale(1.1); }
+
+.l-shadow-v0 {
+  box-shadow: 0 2px 4px rgba(0, 37, 55, 0.05); }
+
+/** link **/
+.l-link-v4 {
+  color: #999; }
+  .l-link-v4 a {
+    color: #999;
+    text-decoration: none;
+    transition: all 0.3s ease; }
+  .l-link-v4 a:hover,
+  .l-link-v4 a:focus {
+    color: #007bff; }
 
 /*
 * Use existing Bootstrap 4 classes and

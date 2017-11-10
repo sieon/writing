@@ -9,7 +9,7 @@
 
 <article <?php post_class('mb-4'); ?> id="post-<?php the_ID(); ?>">
 
-	<div class="card">
+	<div class="card l-shadow-v0">
 
 		<div class="card-body">
 			<header class="entry-header mb-3">
@@ -31,18 +31,18 @@
 				<?php if( has_post_thumbnail() ) : ?>
 
 					<a href="<?php the_permalink(); ?>">
-						<figure class="entry-img">
+						<figure class="img-grow">
 							<?php the_post_thumbnail( 'full', ['class' => ''] ); ?>
 						</figure>
 					</a>
 
-				<?php else: // no thumbnail ?>
+				<!-- <?php //else: // no thumbnail ?>
 
-					<a href="<?php the_permalink(); ?>">
-						<figure class="entry-img">
-							<img src="<?php echo get_theme_file_uri( 'img/placeholder.png' ); ?>" alt="图片占位符">
+					<a href="<?php// the_permalink(); ?>">
+						<figure class="img-grow">
+							<img src="<?php// echo get_theme_file_uri( 'img/placeholder.png' ); ?>" alt="图片占位符">
 						</figure>
-					</a>
+					</a> -->
 				<?php endif; ?>
 			</div>
 
@@ -61,7 +61,9 @@
 
 			</div><!-- .entry-content -->
 
-			<footer class="entry-footer">
+			<hr>
+
+			<footer class="entry-footer small l-link-v4">
 
 				<?php understrap_entry_footer(); ?>
 

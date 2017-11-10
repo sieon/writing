@@ -45,16 +45,16 @@ function understrap_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( esc_html__( ', ', 'understrap' ) );
 		if ( $categories_list && understrap_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'understrap' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+			printf( '<span class="cat-links mr-3"><i class="fa fa-archive mr-1"></i>' . esc_html__( '%1$s', 'understrap' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'understrap' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'understrap' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			printf( '<span class="tags-links mr-3"><i class="fa fa-tags mr-1"></i>' . esc_html__( '%1$s', 'understrap' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		echo '<span class="comments-link">';
+		echo '<span class="comments-link mr-3"><i class="fa fa-comments mr-1"></i>';
 		comments_popup_link( esc_html__( 'Leave a comment', 'understrap' ), esc_html__( '1 Comment', 'understrap' ), esc_html__( '% Comments', 'understrap' ) );
 		echo '</span>';
 	}
@@ -64,7 +64,7 @@ function understrap_entry_footer() {
 			esc_html__( 'Edit %s', 'understrap' ),
 			the_title( '<span class="sr-only">"', '"</span>', false )
 		),
-		'<span class="edit-link">',
+		'<span class="edit-link"><i class="fa fa-edit mr-1"></i>',
 		'</span>'
 	);
 }

@@ -18,7 +18,7 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div class="comments-area card" id="comments">
+<div class="comments-area card l-shadow-v0" id="comments">
 	<div class="card-body">
 
 	<?php // You can start editing here -- including this comment! ?>
@@ -55,9 +55,9 @@ if ( post_password_required() ) {
 
 			<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through. ?>
 
-				<nav class="comment-navigation" id="comment-nav-above">
+				<nav class="comment-navigation mb-3" id="comment-nav-above">
 
-					<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'understrap' ); ?></h1>
+					<h4 class="sr-only"><?php esc_html_e( 'Comment navigation', 'understrap' ); ?></h4>
 
 					<?php if ( get_previous_comments_link() ) { ?>
 						<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments',
@@ -86,9 +86,9 @@ if ( post_password_required() ) {
 
 			<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through. ?>
 
-				<nav class="comment-navigation" id="comment-nav-below">
+				<nav class="comment-navigation mb-3" id="comment-nav-below">
 
-					<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'understrap' ); ?></h1>
+					<h4 class="sr-only"><?php esc_html_e( 'Comment navigation', 'understrap' ); ?></h4>
 
 					<?php if ( get_previous_comments_link() ) { ?>
 						<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments',

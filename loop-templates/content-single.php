@@ -6,13 +6,13 @@
  */
 
 ?>
-<article <?php post_class('card mb-4'); ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class('card l-shadow-v0 mb-4'); ?> id="post-<?php the_ID(); ?>">
 
 	<div class="card-body">
 
 		<header class="entry-header">
 
-			<?php the_title( '<h1 class="entry-title mb-4">', '</h1>' ); ?>
+			<?php the_title( '<h1 class="entry-title h3 mb-4">', '</h1>' ); ?>
 
 			<div class="entry-meta mb-4">
 
@@ -35,7 +35,9 @@
 
 		</div><!-- .entry-content -->
 
-		<footer class="entry-footer">
+		<hr>
+
+		<footer class="entry-footer l-link-v4 small">
 
 			<?php understrap_entry_footer(); ?>
 

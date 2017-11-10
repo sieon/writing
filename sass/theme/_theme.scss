@@ -17,6 +17,47 @@
   }
 }
 
+.widget_categories {
+  .card-body {
+    padding: 0;
+  }
+  .card-title {
+    padding: 1.25rem;
+    margin-bottom: 0;
+    background-color: #f5f8fa;
+  }
+  ul {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 0;
+    li {
+      line-height: 3;
+      padding-left: 1.25rem;
+      border-top: 1px solid #ddd;
+    }
+  }
+}
+
+.widget_meta {
+  .card-body {
+    padding: 0;
+  }
+  .card-title {
+    padding: 1.25rem;
+    margin-bottom: 0;
+  }
+  ul {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 0;
+    li {
+      line-height: 3;
+      padding-left: 1.25rem;
+      border-top: 1px solid #ddd;
+    }
+  }
+}
+
 .card-horizontal {
   flex-direction: row;
 }
@@ -71,5 +112,40 @@
   color: #666;
   a {
     color: #666;
+  }
+}
+
+/** 效果 **/
+
+.img-grow {
+  display: block;
+  overflow:hidden;
+  img {
+    transition: all .5s ease;
+    width: 100%;
+  }
+}
+
+.img-grow:hover img {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.l-shadow-v0 {
+  box-shadow: 0 2px 4px rgba(0, 37, 55, .05);
+}
+
+/** link **/
+.l-link-v4 {
+  color: #999;
+  a {
+    color: #999;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  a:hover,
+  a:focus {
+    color: #007bff;
   }
 }
