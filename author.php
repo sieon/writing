@@ -12,6 +12,48 @@ $container   = get_theme_mod( 'understrap_container_type' );
 $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 ?>
 
+<header class="jumbotron rounded-0 bg-dark border-0 text-white mb-20 page-header author-header l-shadow-v0">
+
+	<div class="container">
+
+		<?php
+		$curauth = ( isset( $_GET['author_name'] ) ) ? get_user_by( 'slug',
+			$author_name ) : get_userdata( intval( $author ) );
+		?>
+
+		<div class="media">
+
+			<?php if ( ! empty( $curauth->ID ) ) : ?>
+				<?php echo get_avatar( $curauth->ID ); ?>
+			<?php endif; ?>
+
+			<div class="media-body">
+
+				<h1 class="h2"><?php echo esc_html( $curauth->nickname ); ?></h1>
+
+				<ul class="list-unstyled mt-3 mb-0">
+					<?php if ( ! empty( $curauth->user_url ) ) : ?>
+						<li>
+							<?php esc_html_e( 'Website', 'understrap' ); ?>
+							<a class="ml-3" href="<?php echo esc_url( $curauth->user_url ); ?>"><?php echo esc_html( $curauth->user_url ); ?></a>
+						</li>
+					<?php endif; ?>
+
+					<?php if ( ! empty( $curauth->user_description ) ) : ?>
+						<li class="mt-3">
+							<?php esc_html_e( 'Profile', 'understrap' ); ?>
+							<span class="ml-3"><?php echo esc_html( $curauth->user_description ); ?></span>
+						</li>
+					<?php endif; ?>
+				</ul>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</header><!-- .page-header -->
 
 <div class="wrapper" id="author-wrapper">
 
@@ -24,55 +66,8 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 			<main class="site-main" id="main">
 
-				<header class="page-header author-header card l-shadow-v0">
 
-					<div class="card-body">
-
-						<?php
-						$curauth = ( isset( $_GET['author_name'] ) ) ? get_user_by( 'slug',
-							$author_name ) : get_userdata( intval( $author ) );
-						?>
-
-						<div class="media">
-
-							<?php if ( ! empty( $curauth->ID ) ) : ?>
-								<?php echo get_avatar( $curauth->ID ); ?>
-							<?php endif; ?>
-
-							<div class="media-body">
-
-								<h1 class="h2"><?php echo esc_html( $curauth->nickname ); ?></h1>
-
-								<ul class="list-unstyled mt-3 mb-0">
-									<?php if ( ! empty( $curauth->user_url ) ) : ?>
-										<li>
-											<?php esc_html_e( 'Website', 'understrap' ); ?>
-											<a class="ml-3" href="<?php echo esc_url( $curauth->user_url ); ?>"><?php echo esc_html( $curauth->user_url ); ?></a>
-										</li>
-									<?php endif; ?>
-
-									<?php if ( ! empty( $curauth->user_description ) ) : ?>
-										<li class="mt-3">
-											<?php esc_html_e( 'Profile', 'understrap' ); ?>
-											<span class="ml-3"><?php echo esc_html( $curauth->user_description ); ?></span>
-										</li>
-									<?php endif; ?>
-								</ul>
-
-							</div>
-
-						</div>
-
-					</div>
-
-				</header><!-- .page-header -->
-
-
-				<div class="posts mt-4">
-
-					<div class="card mb-4">
-						<h3 class="card-body mb-0">他发表的文章</h2>
-					</div>
+				<div class="posts">
 
 					<!-- The Loop -->
 					<?php if ( have_posts() ) : ?>

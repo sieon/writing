@@ -7,12 +7,10 @@
 
 ?>
 
-
-
 <article <?php post_class('mb-4'); ?> id="post-<?php the_ID(); ?>">
 
 	<?php if( has_post_thumbnail() ) : ?>
-	<div class="card card-horizontal l-shadow-v0 p-4">
+	<div class="card card-horizontal border-0">
 
 		<div class="card-img">
 
@@ -30,8 +28,8 @@
 
 			<header class="entry-header mb-3">
 
-				<?php the_title( sprintf( '<h2 class="entry-title h5 mb-3"><a class="text-dark" href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
-				'</a></h2>' ); ?>
+				<?php the_title( sprintf( '<h3 class="entry-title h5 mb-3"><a class="text-dark" href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+				'</a></h3>' ); ?>
 
 				<?php if ( 'post' == get_post_type() ) : ?>
 
@@ -68,13 +66,13 @@
 
 	<?php else: ?>
 
-		<div class="card l-shadow-v0">
+		<div class="card border-0">
 
-			<div class="card-body">
+
 
 				<header class="entry-header mb-3">
 
-					<?php the_title( sprintf( '<h2 class="entry-title h5 mb-3"><a class="text-dark" href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+					<?php the_title( sprintf( '<h2 class="entry-title h4 mb-3"><a class="text-dark" href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
 					'</a></h2>' ); ?>
 
 					<?php if ( 'post' == get_post_type() ) : ?>
@@ -99,8 +97,6 @@
 					?>
 
 				</div><!-- .entry-content -->
-
-			</div>
 
 		</div>
 

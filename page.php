@@ -10,12 +10,18 @@
  * @package understrap
  */
 
-get_header();
+get_header('front-page');
 
 $container   = get_theme_mod( 'understrap_container_type' );
 $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 ?>
+<?php while ( have_posts() ) : the_post(); ?>
+<div class="jumbotron rounded-0 bg-dark border-0 text-white mb-20 l-shadow">
+	<div class="container">
+		<h1><?php the_title(); ?></h1>
+	</div>
+</div>
 
 <div class="wrapper" id="page-wrapper">
 
@@ -28,7 +34,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 			<main class="site-main" id="main">
 
-				<?php while ( have_posts() ) : the_post(); ?>
+
 
 					<?php get_template_part( 'loop-templates/content', 'page' ); ?>
 

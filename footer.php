@@ -50,6 +50,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php wp_footer(); ?>
 
+<script type="text/javascript">
+    //initializing jQuery
+    jQuery(function($) {
+      $(document).ready( function() {
+        //enabling stickUp on the '.navbar-wrapper' class
+        $('.widget-area').stickUp({
+          //enabling marginTop with the 'auto' setting
+          marginTop: 'auto'
+        });
+    });
+  });
+
+  </script>
+
 </body>
 
 </html>

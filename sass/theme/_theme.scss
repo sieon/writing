@@ -1,5 +1,8 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
 
+// body {
+//   padding-top: 3.5rem;
+// }
 
 // margin-bottom
 
@@ -9,22 +12,47 @@
   }
 }
 
+.navbar {
+  transition: .5s;
+}
+
+.jumbotron {
+  padding-top: 5.5rem;
+  padding-bottom: 2rem;
+}
+
 // widget
 
 .widget {
+  .card-title {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background-color: rgba(0,0,0,.03);
+  }
   ul {
     margin-bottom: 0;
   }
 }
 
-.widget_categories {
+.widget-area {
+  .widget {
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.widget_categories,
+.widget_meta,
+.widget_recent_comments,
+.widget_recent_entries,
+.widget_nav_menu,
+.widget_archive,
+.widget_pages {
   .card-body {
     padding: 0;
-  }
-  .card-title {
-    padding: 1.25rem;
-    margin-bottom: 0;
-    background-color: #f5f8fa;
   }
   ul {
     padding-left: 0;
@@ -34,28 +62,61 @@
       line-height: 3;
       padding-left: 1.25rem;
       border-top: 1px solid #ddd;
+      a {
+        color: #666;
+      }
     }
   }
 }
 
-.widget_meta {
+.widget_recent_entries {
+  .post-date {
+    font-size: 85%;
+    color: #8e9191;
+  }
+}
+
+.widget_media_image {
+  .card-body {
+    padding:0;
+    img {
+      border-radius: 4px;
+    }
+  }
+}
+
+.widget_tag_cloud,
+.widget_text,
+.widget_custom_html {
+  .card-title {
+    border-bottom: 1px solid rgba(0,0,0,.125);;
+  }
   .card-body {
     padding: 0;
   }
-  .card-title {
-    padding: 1.25rem;
-    margin-bottom: 0;
+}
+
+.tagcloud,
+.textwidget {
+  padding: 1.25rem;
+}
+
+.static-hero-widget {
+  i {
+    color: rgb(103, 190, 233);
+    font-size: 60px;
   }
-  ul {
-    padding-left: 0;
-    list-style: none;
-    margin-bottom: 0;
-    li {
-      line-height: 3;
-      padding-left: 1.25rem;
-      border-top: 1px solid #ddd;
-    }
+  .textwidget {
+    padding: 0;
   }
+}
+
+.carousel .textwidget {
+  padding: 0;
+}
+
+#wp-calendar {
+  width: 100%;
 }
 
 .card-horizontal {
@@ -70,10 +131,10 @@
 }
 
 .card-horizontal .card-img {
-  flex: 0 0 32%;
+  flex: 0 0 25%;
 }
 .card-horizontal .card-body {
-  flex: 0 0 68%;
+  flex: 0 0 75%;
 }
 
 /** Media **/

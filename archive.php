@@ -15,6 +15,15 @@ $container   = get_theme_mod( 'understrap_container_type' );
 $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 ?>
 
+<header class="jumbotron rounded-0 bg-dark border-0 text-white mb-20">
+  <div class="container">
+		<?php
+		the_archive_title( '<h1 class="page-title h3 mb-3">', '</h1>' );
+		the_archive_description( '<div class="taxonomy-description mb-0-p">', '</div>' );
+		?>
+  </div>
+</header>
+
 <div class="wrapper" id="archive-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
@@ -27,15 +36,6 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 			<main class="site-main" id="main">
 
 				<?php if ( have_posts() ) : ?>
-
-					<header class="page-header card l-shadow-v0 mb-4">
-						<div class="card-body">
-							<?php
-							the_archive_title( '<h1 class="page-title h3 mb-3">', '</h1>' );
-							the_archive_description( '<div class="taxonomy-description mb-0-p">', '</div>' );
-							?>
-						</div>
-					</header><!-- .page-header -->
 
 					<?php /* Start the Loop */ ?>
 					<?php while ( have_posts() ) : the_post(); ?>

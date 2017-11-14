@@ -17,9 +17,14 @@ $container   = get_theme_mod( 'understrap_container_type' );
 $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 ?>
 
-<?php if ( is_front_page() && is_home() ) : ?>
-	<?php get_template_part( 'global-templates/hero', 'none' ); ?>
-<?php endif; ?>
+<header class="jumbotron rounded-0 bg-dark border-0 text-white mb-20">
+  <div class="container">
+		<?php
+		the_archive_title( '<h1 class="page-title h3 mb-3">', '</h1>' );
+		the_archive_description( '<div class="taxonomy-description mb-0-p">', '</div>' );
+		?>
+  </div>
+</header>
 
 <div class="wrapper" id="wrapper-index">
 

@@ -47,7 +47,7 @@ add_filter( 'comment_form_defaults', 'bootstrap3_comment_form' );
 function bootstrap3_comment_form( $args ) {
 	$args['comment_field'] = '<div class="form-group comment-form-comment">
     <label for="comment">' . _x( 'Comment', 'noun', 'understrap' ) . ( ' <span class="required">*</span>' ) . '</label>
-    <textarea class="form-control" id="comment" name="comment" aria-required="true" cols="45" rows="8"></textarea>
+    <textarea class="form-control" id="comment" name="comment" aria-required="true" cols="45" rows="5"></textarea>
     </div>';
 	$args['class_submit']  = 'btn btn-secondary'; // since WP 4.1.
 	return $args;
@@ -63,7 +63,7 @@ function lean_comment($comment, $args, $depth) {
           <?php printf(__('<cite class="author_name">%s</cite>'), get_comment_author_link()); ?>
           <div class="comment-meta commentmetadata small text-muted mt-1"><?php echo get_comment_time('Y-m-d H:i'); ?></div>
         </div>
-        <div class="ml-auto">
+        <div class="ml-auto small">
           <?php edit_comment_link( __( 'Edit Comment', 'understrap' ), '', '' ); ?>
           <?php //comment_reply_link(array_merge( $args, array('reply_text' => '回复','depth' => $depth, 'max_depth' => $args['max_depth'])))
 					comment_reply_link( array_merge($args, array(
@@ -74,7 +74,7 @@ function lean_comment($comment, $args, $depth) {
 )); ?>
         </div>
       </div>
-      <div class="comment_text">
+      <div class="text-secondary">
         <?php if ($comment->comment_approved == '0') : ?>
           <em>你的评论正在审核，稍后会显示出来！</em><br />
         <?php endif; ?>
