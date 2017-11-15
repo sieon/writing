@@ -23,12 +23,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class('pt-3-5'); ?>>
 
 <div class="hfeed site" id="page">
 
 	<!-- ******************* The Navbar Area ******************* -->
-	<div class="wrapper-fluid wrapper-navbar mb-5" id="wrapper-navbar">
+	<div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar">
 
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content',
 		'understrap' ); ?></a>
@@ -70,7 +70,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							'container'       => '',
 							'container_class' => '',
 							'container_id'    => '',
-							'menu_class'      => 'navbar-nav ml-auto',
+							'menu_class'      => 'navbar-nav',
 							'fallback_cb'     => '',
 							'menu_id'         => 'main-menu',
 							'walker'          => new WP_Bootstrap_Navwalker(),

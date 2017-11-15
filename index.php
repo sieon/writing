@@ -17,8 +17,8 @@ $container   = get_theme_mod( 'understrap_container_type' );
 $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 ?>
 
-<header class="jumbotron rounded-0 bg-dark border-0 text-white mb-20">
-  <div class="container">
+<header class="bg-dark text-white mb-20">
+  <div class="<?php echo esc_attr( $container ); ?> py-5">
 		<?php
 		the_archive_title( '<h1 class="page-title h3 mb-3">', '</h1>' );
 		the_archive_description( '<div class="taxonomy-description mb-0-p">', '</div>' );

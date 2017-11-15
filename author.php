@@ -14,7 +14,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 <header class="jumbotron rounded-0 bg-dark border-0 text-white mb-20 page-header author-header l-shadow-v0">
 
-	<div class="container">
+	<div class="<?php echo esc_attr( $container ); ?>">
 
 		<?php
 		$curauth = ( isset( $_GET['author_name'] ) ) ? get_user_by( 'slug',

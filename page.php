@@ -17,8 +17,8 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 ?>
 <?php while ( have_posts() ) : the_post(); ?>
-<div class="jumbotron rounded-0 bg-dark border-0 text-white mb-20 l-shadow">
-	<div class="container">
+<div class="bg-dark text-white pt-6-5 pb-5" style="background-image:url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'full'); ?>);background-size: cover;">
+	<div class="<?php echo esc_attr( $container ); ?>">
 		<h1><?php the_title(); ?></h1>
 	</div>
 </div>

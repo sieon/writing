@@ -53,10 +53,10 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 			'name'          => __( 'Right Sidebar', 'understrap' ),
 			'id'            => 'right-sidebar',
 			'description'   => 'Right sidebar widget area',
-			'before_widget' => '<aside id="%1$s" class="widget card l-shadow-v0 %2$s mb-4"><div class="card-body">',
+			'before_widget' => '<aside id="%1$s" class="widget card l-shadow-v0 %2$s mb-4">',
 			'after_widget'  => '</div></aside>',
-			'before_title'  => '<h3 class="card-title h6">',
-			'after_title'   => '</h3>',
+			'before_title'  => '<h3 class="card-header h6">',
+			'after_title'   => '</h3><div class="card-body">',
 		) );
 
 		register_sidebar( array(
@@ -103,9 +103,9 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 			'name'          => __( 'Footer Full', 'understrap' ),
 			'id'            => 'footerfull',
 			'description'   => 'Widget area below main content and above footer',
-		    'before_widget'  => '<div id="%1$s" class="footer-widget %2$s '. slbd_count_widgets( 'footerfull' ) .'">',
+		    'before_widget'  => '<div id="%1$s" class="footer-widget card bg-transparent border-0 %2$s '. slbd_count_widgets( 'footerfull' ) .'">',
 		    'after_widget'   => '</div><!-- .footer-widget -->',
-		    'before_title'   => '<h3 class="widget-title h6 mb-4">',
+		    'before_title'   => '<h3 class="card-title h6 py-2">',
 		    'after_title'    => '</h3>',
 		) );
 

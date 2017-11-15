@@ -33,7 +33,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content',
 		'understrap' ); ?></a>
 
-		<nav class="navbar navbar-expand-md navbar-dark bg-transparent fixed-top">
+		<nav class="change-nav navbar navbar-expand-md navbar-dark bg-transparent fixed-top">
 
 		<?php if ( 'container' == $container ) : ?>
 			<div class="container">
@@ -70,7 +70,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							'container'       => '',
 							'container_class' => '',
 							'container_id'    => '',
-							'menu_class'      => 'navbar-nav ml-auto',
+							'menu_class'      => 'navbar-nav',
 							'fallback_cb'     => '',
 							'menu_id'         => 'main-menu',
 							'walker'          => new WP_Bootstrap_Navwalker(),
