@@ -22,7 +22,6 @@ class LeanPostsList extends WP_Widget {
     return array(
       'title'       => '',
       // Posts
-      'posts_thumb'     => 1,
       //'posts_category'  => 1,
       //'posts_excerpt'  => 0,
       'posts_date'    => 1,
@@ -30,7 +29,7 @@ class LeanPostsList extends WP_Widget {
       'posts_cat_id'    => '0',
       'posts_orderby'   => 'date',
       'posts_time'    => '0',
-			'posts_col'     => '2',
+			'posts_style'     => '2',
     );
   }
 
@@ -69,20 +68,34 @@ class LeanPostsList extends WP_Widget {
 		) );
 	?>
 
-	<?php if($instance['posts_thumb']){ ?>
+	<?php if( $instance['posts_style'] == 1 ){ ?>
 
 		<div class="card-body">
 			<div class="row">
-				<?php while ($posts->have_posts()): $posts->the_post(); ?>
-					<div class="col-md-<?php if($instance['posts_col']) { echo $instance['posts_col']; } ?> col-6">
-						<?php get_template_part( 'loop-templates/content-card-group', get_post_format() ); ?>
-					</div><!---col -->
-				<?php endwhile; ?>
+				<?php while ($posts->have_posts()): $posts->the_post();
+					get_template_part( 'loop-templates/widgets-posts/posts', 'style1' );
+				endwhile; ?>
 				<?php wp_reset_postdata(); ?>
-			</div><!--row-->
+			</div>
 		</div>
 
-	<?php }else{ ?>
+	<?php } elseif( $instance['posts_style'] == 2 ) { ?>
+			<?php while ($posts->have_posts()): $posts->the_post();
+				get_template_part( 'loop-templates/widgets-posts/posts', 'style2' );
+			endwhile; ?>
+			<?php wp_reset_postdata(); ?>
+
+	<?php } elseif( $instance['posts_style'] == 3 ) { ?>
+			<div class="card-body">
+				<div class="row">
+			<?php while ($posts->have_posts()): $posts->the_post();
+				get_template_part( 'loop-templates/widgets-posts/posts', 'style3' );
+			endwhile; ?>
+			<?php wp_reset_postdata(); ?>
+			</div>
+		</div>
+
+	<?php } elseif( $instance['posts_style'] == 4 ) { ?>
 		<ul class="list-unstyled">
 			<?php while ($posts->have_posts()): $posts->the_post(); ?>
 				<li>
@@ -106,7 +119,6 @@ class LeanPostsList extends WP_Widget {
 		$instance = $old;
 		$instance['title'] = strip_tags($new['title']);
 	// Posts
-		$instance['posts_thumb'] = $new['posts_thumb']?1:0;
 		//$instance['posts_category'] = $new['posts_category']?1:0;
     //$instance['posts_excerpt'] = $new['posts_excerpt']?1:0;
 		$instance['posts_date'] = $new['posts_date']?1:0;
@@ -114,8 +126,7 @@ class LeanPostsList extends WP_Widget {
 		$instance['posts_cat_id'] = strip_tags($new['posts_cat_id']);
 		$instance['posts_orderby'] = strip_tags($new['posts_orderby']);
 		$instance['posts_time'] = strip_tags($new['posts_time']);
-		$instance['posts_col'] = strip_tags($new['posts_col']);
-		//$instance['posts_overlay_bottom'] = $new['posts_overlay_bottom']?1:0;
+		$instance['posts_style'] = strip_tags($new['posts_style']);
 		return $instance;
 	}
 
@@ -143,13 +154,8 @@ class LeanPostsList extends WP_Widget {
 		<h4>文章列表</h4>
 
 		<p>
-			<input type="checkbox" class="checkbox" id="<?php echo esc_attr( $this->get_field_id('posts_thumb') ); ?>" name="<?php echo esc_attr( $this->get_field_name('posts_thumb') ); ?>" <?php checked( (bool) $instance["posts_thumb"], true ); ?>>
-			<label for="<?php echo esc_attr( $this->get_field_id('posts_thumb') ); ?>">显示缩略图</label>
-		</p>
-
-		<p>
-			<label style="width: 55%; display: inline-block;" for="<?php echo esc_attr( $this->get_field_id("posts_col") ); ?>">一行几个</label>
-			<input style="width:20%;" id="<?php echo esc_attr( $this->get_field_id("posts_col") ); ?>" name="<?php echo esc_attr( $this->get_field_name("posts_col") ); ?>" type="text" value="<?php echo absint($instance["posts_col"]); ?>" size='3' />
+			<label style="width: 55%; display: inline-block;" for="<?php echo esc_attr( $this->get_field_id("posts_style") ); ?>">列表类型</label>
+			<input style="width:20%;" id="<?php echo esc_attr( $this->get_field_id("posts_style") ); ?>" name="<?php echo esc_attr( $this->get_field_name("posts_style") ); ?>" type="text" value="<?php echo absint($instance["posts_style"]); ?>" size='3' />
 		</p>
 
 		<p>
@@ -179,16 +185,6 @@ class LeanPostsList extends WP_Widget {
 			  <option value="1 day ago"<?php selected( $instance["posts_time"], "1 day ago" ); ?>>过去24小时</option>
 			</select>
 		</p>
-
-		<hr>
-		<h4>文章信息</h4>
-
-		<p>
-			<input type="checkbox" class="checkbox" id="<?php echo esc_attr( $this->get_field_id('posts_date') ); ?>" name="<?php echo esc_attr( $this->get_field_name('posts_date') ); ?>" <?php checked( (bool) $instance["posts_date"], true ); ?>>
-			<label for="<?php echo esc_attr( $this->get_field_id('posts_date') ); ?>">显示日期</label>
-		</p>
-
-		<hr>
 
 	</div>
 <?php
