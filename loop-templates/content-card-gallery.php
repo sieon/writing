@@ -9,7 +9,7 @@
 
 <article <?php post_class('mb-4'); ?> id="post-<?php the_ID(); ?>">
 
-	<div class="card l-shadow-v0">
+	<div class="card">
 
 		<div class="card-body">
 			<header class="entry-header mb-3">

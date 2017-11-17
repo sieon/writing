@@ -18,7 +18,7 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div class="comments-area card l-shadow-v0" id="comments">
+<div class="comments-area card" id="comments">
 	<div class="card-body">
 
 		<?php comment_form(); // Render comments form. ?>

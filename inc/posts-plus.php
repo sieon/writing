@@ -71,7 +71,7 @@ class LeanPostsList extends WP_Widget {
 	<?php if( $instance['posts_style'] == 1 ){ ?>
 
 		<div class="card-body">
-			<div class="row">
+			<div class="card-columns">
 				<?php while ($posts->have_posts()): $posts->the_post();
 					get_template_part( 'loop-templates/widgets-posts/posts', 'style1' );
 				endwhile; ?>
@@ -80,10 +80,13 @@ class LeanPostsList extends WP_Widget {
 		</div>
 
 	<?php } elseif( $instance['posts_style'] == 2 ) { ?>
+
+		<div class="card-body">
 			<?php while ($posts->have_posts()): $posts->the_post();
 				get_template_part( 'loop-templates/widgets-posts/posts', 'style2' );
 			endwhile; ?>
 			<?php wp_reset_postdata(); ?>
+		</div>
 
 	<?php } elseif( $instance['posts_style'] == 3 ) { ?>
 			<div class="card-body">

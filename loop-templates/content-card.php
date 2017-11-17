@@ -12,7 +12,7 @@
 <article <?php post_class('mb-4'); ?> id="post-<?php the_ID(); ?>">
 
 	<?php if( has_post_thumbnail() ) : ?>
-	<div class="card card-horizontal l-shadow-v0 p-4">
+	<div class="card card-horizontal p-4">
 
 		<div class="card-img">
 

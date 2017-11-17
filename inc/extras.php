@@ -89,7 +89,7 @@ if ( ! function_exists( 'understrap_post_nav' ) ) :
 			return;
 		}
 		?>
-				<nav class="card navigation l-shadow-v0 post-navigation mb-4">
+				<nav class="card navigation post-navigation mb-4">
 					<div class="card-body">
 						<h2 class="sr-only"><?php _e( 'Post navigation', 'understrap' ); ?></h2>
 						<div class="nav-links d-flex justify-content-between">

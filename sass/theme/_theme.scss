@@ -277,7 +277,8 @@
 }
 
 /** Media **/
-.media img {
+
+.media .avatar {
   margin-right: 20px;
 }
 
@@ -348,4 +349,37 @@
   a:focus {
     color: #007bff;
   }
+}
+
+// height and width
+
+.l-w-90 {
+  width: 100px;
+}
+
+.l-h-50 {
+  height: 50px;
+}
+
+.text-overflow-ellipsis {
+  text-overflow: ellipsis;
+}
+
+.nowrap {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box!important;
+  -webkit-line-clamp: 2!important;
+  -webkit-box-orient: vertical!important;
+}
+
+.line-clamp-4 {
+  overflow: hidden;
+  display: -webkit-box!important;
+  -webkit-line-clamp: 4!important;
+  -webkit-box-orient: vertical!important;
 }

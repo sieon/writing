@@ -14,13 +14,11 @@
 
 		<div class="card-img">
 
-
 				<a href="<?php the_permalink(); ?>">
 					<figure class="img-grow">
 						<?php the_post_thumbnail( 'full', ['class' => ''] ); ?>
 					</figure>
 				</a>
-
 
 		</div>
 

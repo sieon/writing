@@ -6,7 +6,7 @@
  */
 
 ?>
-<article <?php post_class('card l-shadow-v0 mb-4'); ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class('card mb-4'); ?> id="post-<?php the_ID(); ?>">
 
 	<div class="card-body">
 

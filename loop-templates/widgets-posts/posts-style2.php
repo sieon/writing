@@ -7,18 +7,16 @@
 
 ?>
 
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class('mb-4'); ?> id="post-<?php the_ID(); ?>">
 
 	<?php if( has_post_thumbnail() ) : ?>
-	<div class="card card-horizontal border-0 p-4">
+	<div class="card card-horizontal border-0">
 
 		<div class="card-img">
 
-				<a href="<?php the_permalink(); ?>">
-					<figure class="img-grow">
-						<?php the_post_thumbnail( 'full', ['class' => ''] ); ?>
-					</figure>
-				</a>
+			<a class="img-grow" href="<?php the_permalink(); ?>">
+				<?php the_post_thumbnail( 'full', ['class' => ''] ); ?>
+			</a>
 
 		</div>
 
@@ -26,7 +24,7 @@
 
 			<header class="entry-header mb-3">
 
-				<?php the_title( sprintf( '<h2 class="entry-title h5 mb-3"><a class="text-dark" href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+				<?php the_title( sprintf( '<h2 class="entry-title h6 mb-3"><a class="text-dark" href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
 				'</a></h2>' ); ?>
 
 				<?php if ( 'post' == get_post_type() ) : ?>
@@ -52,12 +50,6 @@
 
 			</div><!-- .entry-content -->
 
-			<!-- <footer class="entry-footer small l-link-v4">
-
-				<?php //understrap_entry_footer(); ?>
-
-			</footer> -->
-
 		</div>
 
 	</div>
@@ -70,7 +62,7 @@
 
 				<header class="entry-header mb-3">
 
-					<?php the_title( sprintf( '<h2 class="entry-title h5 mb-3"><a class="text-dark" href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+					<?php the_title( sprintf( '<h2 class="entry-title h6 mb-3"><a class="text-dark" href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
 					'</a></h2>' ); ?>
 
 					<?php if ( 'post' == get_post_type() ) : ?>

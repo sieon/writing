@@ -6,10 +6,10 @@
  */
 
 ?>
-<article <?php post_class('card'); ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class('card mb-4'); ?> id="post-<?php the_ID(); ?>">
 
 	<div class="card-body">
-		
+
 		<div class="entry-content">
 
 			<?php the_content(); ?>
