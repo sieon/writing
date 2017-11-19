@@ -9479,11 +9479,6 @@ button.list-group-item-dark {
   .widget_media_image .card-body img {
     border-radius: 4px; }
 
-.widget_tag_cloud .card-title,
-.widget_text .card-title,
-.widget_custom_html .card-title {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
-
 .widget_tag_cloud .card-body,
 .widget_text .card-body,
 .widget_custom_html .card-body {
@@ -9532,6 +9527,9 @@ button.list-group-item-dark {
 
 #wp-calendar {
   width: 100%; }
+
+.footer-widget .textwidget {
+  padding: 0; }
 
 .card > .list-group:first-child .list-group-item:first-child {
   border-top-left-radius: 0.25rem;

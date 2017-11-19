@@ -195,9 +195,6 @@
 .widget_tag_cloud,
 .widget_text,
 .widget_custom_html {
-  .card-title {
-    border-bottom: 1px solid rgba(0,0,0,.125);;
-  }
   .card-body {
     padding: 0;
   }
@@ -265,6 +262,12 @@
 
 #wp-calendar {
   width: 100%;
+}
+
+.footer-widget {
+  .textwidget {
+    padding: 0;
+  }
 }
 
 .card {
