@@ -9508,6 +9508,10 @@ button.list-group-item-dark {
 .calendar_wrap {
   padding: 1.25rem; }
 
+.widget .gallery {
+  padding: 1.25rem 1.25rem 0 1.25rem;
+  margin-bottom: 0; }
+
 .widget_media_image img {
   width: 100%;
   border-radius: 4px; }
@@ -9528,7 +9532,8 @@ button.list-group-item-dark {
 #wp-calendar {
   width: 100%; }
 
-.footer-widget .textwidget {
+.footer-widget .textwidget,
+.footer-widget .tagcloud {
   padding: 0; }
 
 .card > .list-group:first-child .list-group-item:first-child {

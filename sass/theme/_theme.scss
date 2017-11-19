@@ -233,6 +233,13 @@
   padding: 1.25rem;
 }
 
+.widget {
+  .gallery {
+    padding: 1.25rem 1.25rem 0 1.25rem;
+    margin-bottom: 0;
+  }
+}
+
 .widget_media_image {
   img {
     width: 100%;
@@ -265,7 +272,8 @@
 }
 
 .footer-widget {
-  .textwidget {
+  .textwidget,
+  .tagcloud {
     padding: 0;
   }
 }
