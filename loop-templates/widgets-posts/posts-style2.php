@@ -15,7 +15,7 @@
 		<div class="card-img">
 
 			<a class="img-grow" href="<?php the_permalink(); ?>">
-				<?php the_post_thumbnail( 'full', ['class' => ''] ); ?>
+				<?php the_post_thumbnail( 'news-thumb-v1', ['class' => ''] ); ?>
 			</a>
 
 		</div>
@@ -24,8 +24,8 @@
 
 			<header class="entry-header mb-3">
 
-				<?php the_title( sprintf( '<h2 class="entry-title h6 mb-3"><a class="text-dark" href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
-				'</a></h2>' ); ?>
+				<?php the_title( sprintf( '<h3 class="entry-title h5 line-clamp-2 mb-3"><a class="text-dark" href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+				'</a></h3>' ); ?>
 
 				<?php if ( 'post' == get_post_type() ) : ?>
 
@@ -62,7 +62,7 @@
 
 				<header class="entry-header mb-3">
 
-					<?php the_title( sprintf( '<h2 class="entry-title h6 mb-3"><a class="text-dark" href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+					<?php the_title( sprintf( '<h2 class="entry-title h6 line-clamp-2 mb-3"><a class="text-dark" href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
 					'</a></h2>' ); ?>
 
 					<?php if ( 'post' == get_post_type() ) : ?>

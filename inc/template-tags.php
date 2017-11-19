@@ -109,3 +109,22 @@ function understrap_category_transient_flusher() {
 }
 add_action( 'edit_category', 'understrap_category_transient_flusher' );
 add_action( 'save_post',     'understrap_category_transient_flusher' );
+
+if ( ! function_exists( 'writing_entry_tags' ) ) :
+/**
+ * Prints HTML with meta information for the categories, tags and comments.
+ */
+function writing_entry_tags() {
+	if ( 'post' === get_post_type() ) {
+		/* translators: used between list items, there is a space after the comma */
+		$posttags = get_the_tags();
+    if ( $posttags ) {
+      echo '<ul class="list-inline mb-0">';
+      foreach( $posttags as $tag ) {
+        echo '<li class="list-inline-item"><a href="' . get_tag_link( $tag->term_id ) . '" class="btn btn-outline-secondary btn-sm mr-2 mb-2"><i class="fa fa-tag mr-2"></i>' . $tag->name . '</a></li>';
+      }
+      echo '</ul>';
+    }
+	}
+}
+endif;

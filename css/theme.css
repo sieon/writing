@@ -72,7 +72,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.8;
   color: #212529;
   text-align: left;
   background-color: #fff; }
@@ -1280,7 +1280,7 @@ pre {
   width: 100%;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.8;
   color: #495057;
   background-color: #fff;
   background-image: none;
@@ -1391,7 +1391,7 @@ pre {
 
 select.form-control:not([size]):not([multiple]),
 .wpcf7 select:not([size]):not([multiple]) {
-  height: calc(2.25rem + 2px); }
+  height: calc(2.55rem + 2px); }
 
 select.form-control:focus::-ms-value,
 .wpcf7 select:focus::-ms-value {
@@ -1406,13 +1406,13 @@ select.form-control:focus::-ms-value,
   padding-top: calc(0.375rem + 1px);
   padding-bottom: calc(0.375rem + 1px);
   margin-bottom: 0;
-  line-height: 1.5; }
+  line-height: 1.8; }
 
 .col-form-label-lg {
   padding-top: calc(0.5rem + 1px);
   padding-bottom: calc(0.5rem + 1px);
   font-size: 1.25rem;
-  line-height: 1.5; }
+  line-height: 1.8; }
 
 .col-form-label-sm {
   padding-top: calc(0.25rem + 1px);
@@ -1430,7 +1430,7 @@ select.form-control:focus::-ms-value,
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
   margin-bottom: 0;
-  line-height: 1.5;
+  line-height: 1.8;
   background-color: transparent;
   border: solid transparent;
   border-width: 1px 0; }
@@ -1533,14 +1533,14 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 .input-group-lg > .input-group-btn > input[type=submit] {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
-  line-height: 1.5;
+  line-height: 1.8;
   border-radius: 0.3rem; }
 
 select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.form-control:not([size]):not([multiple]),
 .wpcf7 .input-group-lg > select:not([size]):not([multiple]),
 .input-group-lg > select.input-group-addon:not([size]):not([multiple]),
 .input-group-lg > .input-group-btn > select.btn:not([size]):not([multiple]) {
-  height: calc(2.875rem + 2px); }
+  height: calc(3.25rem + 2px); }
 
 .form-group, .wpcf7 .wpcf7-form p {
   margin-bottom: 1rem; }
@@ -2272,7 +2272,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   border: 1px solid transparent;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.8;
   border-radius: 0.25rem;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   .btn:focus, .wpcf7 input[type=submit]:focus, .btn:hover, .wpcf7 input[type=submit]:hover {
@@ -2636,7 +2636,7 @@ fieldset[disabled] a.btn {
 .btn-lg, .btn-group-lg > .btn, .wpcf7 .btn-group-lg > input[type=submit] {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
-  line-height: 1.5;
+  line-height: 1.8;
   border-radius: 0.3rem; }
 
 .btn-sm, .btn-group-sm > .btn, .wpcf7 .btn-group-sm > input[type=submit] {
@@ -3230,7 +3230,7 @@ tbody.collapse.show {
   margin-bottom: 0;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.8;
   color: #495057;
   text-align: center;
   background-color: #e9ecef;
@@ -3439,7 +3439,7 @@ tbody.collapse.show {
 .custom-control {
   position: relative;
   display: inline-flex;
-  min-height: 1.5rem;
+  min-height: 1.8rem;
   padding-left: 1.5rem;
   margin-right: 1rem; }
 
@@ -3462,7 +3462,7 @@ tbody.collapse.show {
 
 .custom-control-indicator {
   position: absolute;
-  top: 0.25rem;
+  top: 0.4rem;
   left: 0;
   display: block;
   width: 1rem;
@@ -3501,9 +3501,9 @@ tbody.collapse.show {
 .custom-select {
   display: inline-block;
   max-width: 100%;
-  height: calc(2.25rem + 2px);
+  height: calc(2.55rem + 2px);
   padding: 0.375rem 1.75rem 0.375rem 0.75rem;
-  line-height: 1.5;
+  line-height: 1.8;
   color: #495057;
   vertical-align: middle;
   background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
@@ -3536,13 +3536,13 @@ tbody.collapse.show {
   position: relative;
   display: inline-block;
   max-width: 100%;
-  height: calc(2.25rem + 2px);
+  height: calc(2.55rem + 2px);
   margin-bottom: 0; }
 
 .custom-file-input {
   min-width: 14rem;
   max-width: 100%;
-  height: calc(2.25rem + 2px);
+  height: calc(2.55rem + 2px);
   margin: 0;
   opacity: 0; }
   .custom-file-input:focus ~ .custom-file-control {
@@ -3554,9 +3554,9 @@ tbody.collapse.show {
   right: 0;
   left: 0;
   z-index: 5;
-  height: calc(2.25rem + 2px);
+  height: calc(2.55rem + 2px);
   padding: 0.375rem 0.75rem;
-  line-height: 1.5;
+  line-height: 1.8;
   color: #495057;
   pointer-events: none;
   user-select: none;
@@ -3572,9 +3572,9 @@ tbody.collapse.show {
     bottom: -1px;
     z-index: 6;
     display: block;
-    height: calc(2.25rem + 2px);
+    height: calc(2.55rem + 2px);
     padding: 0.375rem 0.75rem;
-    line-height: 1.5;
+    line-height: 1.8;
     color: #495057;
     background-color: #e9ecef;
     border: 1px solid #ced4da;
@@ -3660,8 +3660,8 @@ tbody.collapse.show {
 
 .navbar-brand {
   display: inline-block;
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
+  padding-top: 0.275rem;
+  padding-bottom: 0.275rem;
   margin-right: 1rem;
   font-size: 1.25rem;
   line-height: inherit;
@@ -3940,7 +3940,7 @@ tbody.collapse.show {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 1px solid rgba(0, 0, 0, 0.075);
   border-radius: 0.25rem; }
   .card > hr {
     margin-right: 0;
@@ -3976,7 +3976,7 @@ tbody.collapse.show {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
   background-color: rgba(0, 0, 0, 0.03);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
+  border-bottom: 1px solid rgba(0, 0, 0, 0.075); }
   .card-header:first-child {
     border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0; }
   .card-header + .list-group .list-group-item:first-child {
@@ -3985,7 +3985,7 @@ tbody.collapse.show {
 .card-footer {
   padding: 0.75rem 1.25rem;
   background-color: rgba(0, 0, 0, 0.03);
-  border-top: 1px solid rgba(0, 0, 0, 0.125); }
+  border-top: 1px solid rgba(0, 0, 0, 0.075); }
   .card-footer:last-child {
     border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px); }
 
@@ -4162,7 +4162,7 @@ tbody.collapse.show {
 .pagination-lg .page-link {
   padding: 0.75rem 1.5rem;
   font-size: 1.25rem;
-  line-height: 1.5; }
+  line-height: 1.8; }
 
 .pagination-lg .page-item:first-child .page-link {
   border-top-left-radius: 0.3rem;
@@ -4498,7 +4498,7 @@ button.close {
 
 .modal-title {
   margin-bottom: 0;
-  line-height: 1.5; }
+  line-height: 1.8; }
 
 .modal-body {
   position: relative;
@@ -4542,7 +4542,7 @@ button.close {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-style: normal;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.8;
   text-align: left;
   text-align: start;
   text-decoration: none;
@@ -4623,7 +4623,7 @@ button.close {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-style: normal;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.8;
   text-align: left;
   text-align: start;
   text-decoration: none;
@@ -6788,9 +6788,14 @@ a.text-dark:focus, a.text-dark:hover {
 
 .wp-caption {
   font-size: inherit; }
+  .wp-caption img {
+    margin-bottom: 0.5rem;
+    line-height: 1; }
 
 .wp-caption-text {
-  font-size: inherit; }
+  font-size: inherit;
+  font-size: 90%;
+  color: #868e96; }
 
 .screen-reader-text {
   font-size: inherit; }
@@ -6798,15 +6803,21 @@ a.text-dark:focus, a.text-dark:hover {
 .alignleft {
   display: inline;
   float: left;
-  margin-right: 1.5em; }
+  margin-right: 1.5rem; }
 
 .alignright {
   display: inline;
   float: right;
-  margin-left: 1.5em; }
+  margin-left: 1.5rem; }
+
+img.alignright,
+img.alignleft,
+img.alignnone {
+  margin-bottom: 1.5rem; }
 
 .aligncenter {
-  margin: 0px auto; }
+  margin-left: auto;
+  margin-right: auto; }
 
 .entry-footer span {
   padding-right: 10px; }
@@ -9191,13 +9202,21 @@ a.skip-link {
   clip: auto; }
 
 .gallery {
-  margin-bottom: 1.5em; }
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -10px;
+  margin-left: -10px; }
 
 .gallery-item {
   display: inline-block;
   text-align: center;
   vertical-align: top;
-  width: 100%; }
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px; }
   .gallery-columns-2 .gallery-item {
     max-width: 50%; }
   .gallery-columns-3 .gallery-item {
@@ -9253,7 +9272,7 @@ a.skip-link {
   display: block;
   padding: 0.75rem 1.25rem;
   margin-bottom: -1px;
-  border: 1px solid rgba(0, 0, 0, 0.125); }
+  border: 1px solid rgba(0, 0, 0, 0.075); }
   .widget ul li:first-child {
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem; }
@@ -9482,6 +9501,13 @@ button.list-group-item-dark {
   padding: 0.75rem 0;
   margin-bottom: -1px; }
 
+#wrapper-footer {
+  background-color: #ddd;
+  padding: 20px 0;
+  color: #777; }
+  #wrapper-footer a {
+    color: #666; }
+
 .tagcloud,
 .textwidget {
   padding: 1.25rem; }
@@ -9543,22 +9569,22 @@ button.list-group-item-dark {
   display: block;
   overflow: hidden; }
   .img-grow img {
-    transition: all .5s ease;
-    width: 100%; }
+    transition: all .5s ease; }
 
 .img-grow:hover img {
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
   transform: scale(1.1); }
 
+/** shadow **/
 .l-shadow-v0 {
   box-shadow: 0 2px 4px rgba(0, 37, 55, 0.05); }
 
 /** link **/
 .l-link-v4 {
-  color: #999; }
+  color: #868e96; }
   .l-link-v4 a {
-    color: #999;
+    color: #868e96;
     text-decoration: none;
     transition: all 0.3s ease; }
   .l-link-v4 a:hover,
@@ -9570,6 +9596,9 @@ button.list-group-item-dark {
 
 .l-h-50 {
   height: 50px; }
+
+.l-h-2-4 {
+  height: 2.4rem; }
 
 .text-overflow-ellipsis {
   text-overflow: ellipsis; }
@@ -9589,6 +9618,12 @@ button.list-group-item-dark {
   display: -webkit-box !important;
   -webkit-line-clamp: 4 !important;
   -webkit-box-orient: vertical !important; }
+
+.fw-400 {
+  font-weight: 400; }
+
+.tc-v2 {
+  color: #666; }
 
 /*
 * Use existing Bootstrap 4 classes and

@@ -32,9 +32,6 @@
 		<div class="card-body py-0 pr-0 pl-3">
 			<header class="entry-header mb-3">
 
-				<?php the_title( sprintf( '<h2 class="entry-title h4"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
-				'</a></h2>' ); ?>
-
 				<?php if ( 'post' == get_post_type() ) : ?>
 
 					<div class="entry-meta">
@@ -48,14 +45,7 @@
 			<div class="entry-content">
 
 				<?php
-				the_excerpt();
-				?>
-
-				<?php
-				wp_link_pages( array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-					'after'  => '</div>',
-				) );
+				the_content();
 				?>
 
 			</div><!-- .entry-content -->

@@ -16,13 +16,11 @@
 
 		<div class="card-img">
 
-
-				<a href="<?php the_permalink(); ?>">
-					<figure class="img-grow">
-						<?php the_post_thumbnail( 'full', ['class' => ''] ); ?>
-					</figure>
-				</a>
-
+			<a href="<?php the_permalink(); ?>">
+				<figure class="img-grow">
+					<?php the_post_thumbnail( 'v1', ['class' => ''] ); ?>
+				</figure>
+			</a>
 
 		</div>
 
@@ -68,7 +66,7 @@
 
 	<?php else: ?>
 
-		<div class="card l-shadow-v0">
+		<div class="card">
 
 			<div class="card-body">
 

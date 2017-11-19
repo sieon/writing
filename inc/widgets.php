@@ -63,10 +63,10 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 			'name'          => __( 'Left Sidebar', 'understrap' ),
 			'id'            => 'left-sidebar',
 			'description'   => 'Left sidebar widget area',
-			'before_widget' => '<aside id="%1$s" class="widget card l-shadow-v0 %2$s mb-4"><div class="card-body">',
+			'before_widget' => '<aside id="%1$s" class="widget card l-shadow-v0 %2$s mb-4">',
 			'after_widget'  => '</div></aside>',
-			'before_title'  => '<h3 class="card-title h6">',
-			'after_title'   => '</h3>',
+			'before_title'  => '<h3 class="card-header h6">',
+			'after_title'   => '</h3><div class="card-body">',
 		) );
 
 		register_sidebar( array(

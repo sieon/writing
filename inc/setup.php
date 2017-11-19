@@ -61,6 +61,8 @@ if ( ! function_exists( 'understrap_setup' ) ) :
 		 * Adding Thumbnail basic support
 		 */
 		add_theme_support( 'post-thumbnails' );
+		add_image_size( 'news-thumb-v0', 180 );
+		add_image_size( 'news-thumb-v1', 380 );
 
 		/*
 		 * Adding support for Widget edit icons in customizer

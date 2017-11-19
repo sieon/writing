@@ -5,7 +5,7 @@
 
       <a href="<?php the_permalink(); ?>">
         <figure class="img-grow">
-          <?php the_post_thumbnail( 'full', ['class' => ''] ); ?>
+          <?php the_post_thumbnail( 'news-thumb-v1', ['class' => ''] ); ?>
         </figure>
       </a>
 
@@ -21,8 +21,8 @@
 
   <header class="entry-header mb-3">
 
-    <?php the_title( sprintf( '<h2 class="entry-title h6 nowrap line-clamp-2 text-overflow-ellipsis"><a class="text-dark" href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
-    '</a></h2>' ); ?>
+    <?php the_title( sprintf( '<h3 class="entry-title fw-400 h6 l-h-2-4 line-clamp-2"><a class="text-dark" href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+    '</a></h3>' ); ?>
 
     <?php if ( 'post' == get_post_type() ) : ?>
 

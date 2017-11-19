@@ -14,7 +14,7 @@
 
 			<?php the_title( '<h1 class="entry-title h3 mb-4">', '</h1>' ); ?>
 
-			<div class="entry-meta mb-4">
+			<div class="entry-meta small mb-4">
 
 				<?php understrap_posted_on(); ?>
 
@@ -35,11 +35,9 @@
 
 		</div><!-- .entry-content -->
 
-		<hr>
+		<footer class="entry-footer">
 
-		<footer class="entry-footer l-link-v4 small">
-
-			<?php understrap_entry_footer(); ?>
+			<?php writing_entry_tags(); ?>
 
 		</footer><!-- .entry-footer -->
 

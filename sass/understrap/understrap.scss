@@ -20,25 +20,45 @@
 #wrapper-static-hero { background-color: $gray-200; }
 
 // Necessary WP classes
-.wp-caption { font-size: inherit; }
+.wp-caption {
+  font-size: inherit;
+  img {
+    margin-bottom: ($spacer / 2);
+    line-height: 1;
+  }
+}
 
-.wp-caption-text { font-size: inherit; }
+.wp-caption-text {
+  font-size: inherit;
+  font-size: $figure-caption-font-size;
+  color: $figure-caption-color;
+}
+
 
 .screen-reader-text { font-size: inherit; }
 
 .alignleft {
   display: inline;
   float: left;
-  margin-right: 1.5em;
+  margin-right: 1.5rem;
 }
 
 .alignright {
   display: inline;
   float: right;
-  margin-left: 1.5em;
+  margin-left: 1.5rem;
 }
 
-.aligncenter { margin: 0px auto; }
+img.alignright,
+img.alignleft,
+img.alignnone {
+  margin-bottom: 1.5rem;
+}
+
+.aligncenter {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 // Post design
 .entry-footer span { padding-right: 10px; }

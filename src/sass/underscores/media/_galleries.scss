@@ -1,5 +1,9 @@
 .gallery {
-	margin-bottom: 1.5em;
+	margin-bottom: 1.5rem;
+	display: flex;
+  flex-wrap: wrap;
+  margin-right: -10px;
+  margin-left: -10px;
 }
 
 .gallery-item {
@@ -7,6 +11,10 @@
 	text-align: center;
 	vertical-align: top;
 	width: 100%;
+	position: relative;
+	min-height: 1px;
+	padding-right: 10px;
+	padding-left: 10px;
 
 	.gallery-columns-2 & {
 		max-width: 50%;
