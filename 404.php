@@ -52,14 +52,14 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 								</div>
 							</div>
 
-							<div class="card-group mt-4">
+							<div class="card-group mt-5">
 
 								<?php
 								$args = array(
 									'before_widget' => '<div class="card widget %s">',
-									'after_widget' => '</div>',
-									'before_title' => '<h2 class="card-title h5">',
-									'after_title' => '</h2>'
+									'after_widget' => '</div></div>',
+									'before_title' => '<h2 class="card-header h5">',
+									'after_title' => '</h2><div class="card-body">'
 								);
 								$instance = array(
 									'title' => '最新发表',
@@ -73,19 +73,21 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 										<div class="widget card widget_categories">
 
-											<h2 class="card-title h5"><?php esc_html_e( 'Most Used Categories', 'understrap' ); ?></h2>
+											<h2 class="card-header h5"><?php esc_html_e( 'Most Used Categories', 'understrap' ); ?></h2>
 
-											<ul>
-												<?php
-												wp_list_categories( array(
-													'orderby'    => 'count',
-													'order'      => 'DESC',
-													'show_count' => 1,
-													'title_li'   => '',
-													'number'     => 10,
-												) );
-												?>
-											</ul>
+											<div class="card-body">
+												<ul>
+													<?php
+													wp_list_categories( array(
+														'orderby'    => 'count',
+														'order'      => 'DESC',
+														'show_count' => 1,
+														'title_li'   => '',
+														'number'     => 10,
+													) );
+													?>
+												</ul>
+											</div>
 
 										</div><!-- .widget -->
 
@@ -101,7 +103,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 									$args = array(
 										'before_widget' => '<div class="card widget">',
 								    'after_widget' => '</div></div>',
-								    'before_title' => '<h2 class="card-title h5" style="border-bottom:1px solid #ddd;">',
+								    'before_title' => '<h2 class="card-header h5">',
 								    'after_title' => '</h2><div class="card-body">'.$archive_content
 									);
 
@@ -111,9 +113,9 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 									<?php
 									$args = array(
 										'before_widget' => '<div class="widget card %s">',
-										'after_widget' => '</div>',
-										'before_title' => '<h2 class="card-title h5">',
-										'after_title' => '</h2>'
+										'after_widget' => '</div></div>',
+										'before_title' => '<h2 class="card-header h5">',
+										'after_title' => '</h2><div class="card-body">'
 									);
 									$instance = array(
 										'title' => '标签云',
