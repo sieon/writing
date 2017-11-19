@@ -75,6 +75,7 @@ if ( ! function_exists( 'understrap_setup' ) ) :
 		 */
 		add_theme_support( 'post-formats', array(
 			'aside',
+			'status',
 			'image',
 			'video',
 			'quote',
