@@ -7,9 +7,17 @@
  * @package understrap
  */
 
-get_header();
+get_header('front-page');
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
+
+<?php while ( have_posts() ) : the_post(); ?>
+
+	<div class="bg-dark text-white pt-6-5 pb-5" style="background-image:url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'full'); ?>);background-size: cover;">
+		<div class="<?php echo esc_attr( $container ); ?>">
+			<h1><?php the_title(); ?></h1>
+		</div>
+	</div>
 
 <div class="wrapper" id="full-width-page-wrapper">
 
@@ -21,7 +29,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<main class="site-main" id="main" role="main">
 
-					<?php while ( have_posts() ) : the_post(); ?>
+
 
 						<?php get_template_part( 'loop-templates/content', 'page' ); ?>
 
