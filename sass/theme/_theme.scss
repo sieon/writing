@@ -231,8 +231,22 @@
 }
 
 .tagcloud,
-.textwidget {
+.textwidget,
+.calendar_wrap {
   padding: 1.25rem;
+}
+
+.widget_media_image {
+  img {
+    width: 100%;
+    border-radius: 4px;
+  }
+}
+
+.widget-lean-posts {
+  .card-body {
+    padding-bottom: 0;
+  }
 }
 
 .static-hero-widget {
@@ -405,4 +419,13 @@
 
 .tc-v2 {
   color: #666;
+}
+
+.entry-content {
+  h1,h2,h3,h4 {
+    margin: 1.5rem 0;
+  }
+  h5,h6 {
+    margin: 1rem 0;
+  }
 }

@@ -54,9 +54,9 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 			'id'            => 'right-sidebar',
 			'description'   => 'Right sidebar widget area',
 			'before_widget' => '<aside id="%1$s" class="widget card l-shadow-v0 %2$s mb-4">',
-			'after_widget'  => '</div></aside>',
+			'after_widget'  => '</aside>',
 			'before_title'  => '<h3 class="card-header h6">',
-			'after_title'   => '</h3><div class="card-body">',
+			'after_title'   => '</h3>',
 		) );
 
 		register_sidebar( array(
@@ -64,9 +64,9 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 			'id'            => 'left-sidebar',
 			'description'   => 'Left sidebar widget area',
 			'before_widget' => '<aside id="%1$s" class="widget card l-shadow-v0 %2$s mb-4">',
-			'after_widget'  => '</div></aside>',
+			'after_widget'  => '</aside>',
 			'before_title'  => '<h3 class="card-header h6">',
-			'after_title'   => '</h3><div class="card-body">',
+			'after_title'   => '</h3>',
 		) );
 
 		register_sidebar( array(
