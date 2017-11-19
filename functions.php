@@ -76,8 +76,3 @@ require get_template_directory() . '/inc/editor.php';
  * Load Editor functions.
  */
 require get_template_directory() . '/inc/custom-tags.php';
-
-/**
- * Load Editor functions.
- */
-require get_template_directory() . '/inc/posts-plus.php';
