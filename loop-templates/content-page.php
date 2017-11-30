@@ -6,9 +6,7 @@
  */
 
 ?>
-<article <?php post_class('card mb-4'); ?> id="post-<?php the_ID(); ?>">
-
-	<div class="card-body">
+<article <?php post_class('mb-4'); ?> id="post-<?php the_ID(); ?>">
 
 		<div class="entry-content">
 
@@ -28,7 +26,5 @@
 			<?php edit_post_link( __( 'Edit', 'understrap' ), '<span class="edit-link">', '</span>' ); ?>
 
 		</footer><!-- .entry-footer -->
-
-	</div>
 
 </article><!-- #post-## -->

@@ -73,6 +73,11 @@ require get_template_directory() . '/inc/woocommerce.php';
 require get_template_directory() . '/inc/editor.php';
 
 /**
- * Load Editor functions.
+ * Custom Tags functions.
  */
 require get_template_directory() . '/inc/custom-tags.php';
+
+/**
+ * Related Posts functions.
+ */
+require get_template_directory() . '/inc/related-posts.php';

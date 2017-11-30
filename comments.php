@@ -18,8 +18,7 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div class="comments-area card" id="comments">
-	<div class="card-body">
+<div class="comments-area" id="comments">
 
 		<?php comment_form(); // Render comments form. ?>
 
@@ -115,7 +114,5 @@ if ( post_password_required() ) {
 			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'understrap' ); ?></p>
 
 		<?php endif; ?>
-
-	</div>
 
 </div><!-- #comments -->

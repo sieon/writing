@@ -18,7 +18,7 @@ var browserSyncWatchFiles = [
 // browser-sync options
 // see: https://www.browsersync.io/docs/options/
 var browserSyncOptions = {
-    proxy: "http://wp-dev.roots/",
+    proxy: "http://wp.dev/",
     notify: false
 };
 

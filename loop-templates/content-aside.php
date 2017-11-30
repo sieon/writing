@@ -2,8 +2,7 @@
 /**
  * Post rendering content according to caller of get_template_part.
  *
- * @package writing
- * @subpackage LeanTheme
+ * @package understrap
  */
 
 ?>
@@ -12,7 +11,9 @@
 
 	<div class="entry-content">
 
-		<?php the_content(); ?>
+		<?php
+		the_content();
+		?>
 
 	</div><!-- .entry-content -->
 

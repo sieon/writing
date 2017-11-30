@@ -53,9 +53,9 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 			'name'          => __( 'Right Sidebar', 'understrap' ),
 			'id'            => 'right-sidebar',
 			'description'   => 'Right sidebar widget area',
-			'before_widget' => '<aside id="%1$s" class="widget card l-shadow-v0 %2$s mb-4">',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s mb-4">',
 			'after_widget'  => '</aside>',
-			'before_title'  => '<h3 class="card-header h6">',
+			'before_title'  => '<h3 class="h5 d-inline-block py-2 l-title-v0 mb-3">',
 			'after_title'   => '</h3>',
 		) );
 
@@ -63,32 +63,11 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 			'name'          => __( 'Left Sidebar', 'understrap' ),
 			'id'            => 'left-sidebar',
 			'description'   => 'Left sidebar widget area',
-			'before_widget' => '<aside id="%1$s" class="widget card l-shadow-v0 %2$s mb-4">',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s mb-4">',
 			'after_widget'  => '</aside>',
-			'before_title'  => '<h3 class="card-header h6">',
+			'before_title'  => '<h3 class="h5 d-inline-block py-2 l-title-v0 mb-3">',
 			'after_title'   => '</h3>',
 		) );
-
-		register_sidebar( array(
-			'name'          => __( 'Front Page Main Content', 'understrap' ),
-			'id'            => 'front-page-main-content-widgets',
-			'description'   => 'Right sidebar widget area',
-			'before_widget' => '<aside id="%1$s" class="%2$s mb-4">',
-			'after_widget'  => '</aside>',
-			'before_title'  => '<h2 class="card-header h6"><i class="fa fa-archive mr-2"></i>',
-			'after_title'   => '</h2>',
-		) );
-
-		register_sidebar( array(
-			'name'          => __( 'Footer Full', 'understrap' ),
-			'id'            => 'footerfull',
-			'description'   => 'Widget area below main content and above footer',
-		    'before_widget'  => '<div id="%1$s" class="footer-widget card bg-transparent border-0 %2$s '. slbd_count_widgets( 'footerfull' ) .'">',
-		    'after_widget'   => '</div><!-- .footer-widget -->',
-		    'before_title'   => '<h3 class="card-title h6 py-2">',
-		    'after_title'    => '</h3>',
-		) );
-
 	}
 } // endif function_exists( 'understrap_widgets_init' ).
 add_action( 'widgets_init', 'understrap_widgets_init' );

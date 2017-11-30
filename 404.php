@@ -52,76 +52,78 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 								</div>
 							</div>
 
-							<div class="card-group mt-5">
+							<div class="row mt-5">
 
-								<?php
-								$args = array(
-									'before_widget' => '<div class="card widget %s">',
-									'after_widget' => '</div></div>',
-									'before_title' => '<h2 class="card-header h5">',
-									'after_title' => '</h2><div class="card-body">'
-								);
-								$instance = array(
-									'title' => '最新发表',
-									'text' => 'Text'
-								);
-								the_widget( 'WP_Widget_Recent_Posts',$instance,$args ); ?>
+								<div class="col-md-3">
+									<?php
+									$args = array(
+										'before_widget' => '<div class="widget %s">',
+										'after_widget' => '</div>',
+										'before_title' => '<h2 class="h5 d-inline-block py-2 l-title-v0 mb-3">',
+										'after_title' => '</h2>'
+									);
+									$instance = array(
+										'title' => '最新发表',
+										'text' => 'Text'
+									);
+									the_widget( 'WP_Widget_Recent_Posts',$instance,$args ); ?>
+								</div>
 
-
-
+								<div class="col-md-3">
 									<?php if ( understrap_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
 
-										<div class="widget card widget_categories">
+										<div class="widget widget_categories">
 
-											<h2 class="card-header h5"><?php esc_html_e( 'Most Used Categories', 'understrap' ); ?></h2>
+											<h2 class="h5 d-inline-block py-2 l-title-v0 mb-3"><?php esc_html_e( 'Most Used Categories', 'understrap' ); ?></h2>
 
-											<div class="card-body">
-												<ul>
-													<?php
-													wp_list_categories( array(
-														'orderby'    => 'count',
-														'order'      => 'DESC',
-														'show_count' => 1,
-														'title_li'   => '',
-														'number'     => 10,
-													) );
-													?>
-												</ul>
-											</div>
+											<ul>
+												<?php
+												wp_list_categories( array(
+													'orderby'    => 'count',
+													'order'      => 'DESC',
+													'show_count' => 1,
+													'title_li'   => '',
+													'number'     => 10,
+												) );
+												?>
+											</ul>
 
 										</div><!-- .widget -->
 
 									<?php endif; ?>
+								</div>
 
-
-
+								<div class="col-md-3">
 									<?php
 
 									/* translators: %1$s: smiley */
 									$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'understrap' ), convert_smilies( ':)' ) ) . '</p>';
 
 									$args = array(
-										'before_widget' => '<div class="card widget">',
-								    'after_widget' => '</div></div>',
-								    'before_title' => '<h2 class="card-header h5">',
-								    'after_title' => '</h2><div class="card-body">'.$archive_content
+										'before_widget' => '<div class="widget">',
+										'after_widget' => '</div>',
+										'before_title' => '<h2 class="h5 d-inline-block py-2 l-title-v0 mb-3">',
+										'after_title' => '</h2>'.$archive_content
 									);
 
 									the_widget( 'WP_Widget_Archives', 'dropdown=1', $args );
 									?>
+								</div>
 
+								<div class="col-md-3">
 									<?php
 									$args = array(
-										'before_widget' => '<div class="widget card %s">',
-										'after_widget' => '</div></div>',
-										'before_title' => '<h2 class="card-header h5">',
-										'after_title' => '</h2><div class="card-body">'
+										'before_widget' => '<div class="widget %s">',
+										'after_widget' => '</div>',
+										'before_title' => '<h2 class="h5 d-inline-block py-2 l-title-v0 mb-3">',
+										'after_title' => '</h2>'
 									);
 									$instance = array(
 										'title' => '标签云',
 										'text' => 'Text'
 									);
 									the_widget( 'WP_Widget_Tag_Cloud',$instance,$args ); ?>
+								</div>
 
 
 							</div>

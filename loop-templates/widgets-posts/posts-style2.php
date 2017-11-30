@@ -7,8 +7,6 @@
 
 ?>
 
-
-
 <article <?php post_class('entry'); ?> id="post-<?php the_ID(); ?>">
 
 	<?php if( has_post_thumbnail() ) : ?>
@@ -16,10 +14,8 @@
 
 		<div class="col-4">
 
-			<a href="<?php the_permalink(); ?>">
-				<figure class="img-grow mb-0">
-					<?php the_post_thumbnail( 'v1', ['class' => ''] ); ?>
-				</figure>
+			<a class="img-grow" href="<?php the_permalink(); ?>">
+				<?php the_post_thumbnail( 'news-thumb-v1', ['class' => ''] ); ?>
 			</a>
 
 		</div>
@@ -28,12 +24,20 @@
 
 			<header class="entry-header mb-3">
 
-				<?php the_title( sprintf( '<h2 class="entry-title h5 mb-3"><a class="text-dark" href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
-				'</a></h2>' ); ?>
+				<?php the_title( sprintf( '<h3 class="entry-title h5 line-clamp-2 mb-3"><a class="text-dark" href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+				'</a></h3>' ); ?>
+
+				<?php if ( 'post' == get_post_type() ) : ?>
+
+					<div class="entry-meta small">
+						<?php understrap_posted_on(); ?>
+					</div><!-- .entry-meta -->
+
+				<?php endif; ?>
 
 			</header><!-- .entry-header -->
 
-			<div class="entry-content text-secondary mb-3">
+			<div class="entry-content">
 
 				<?php echo wp_trim_words( get_the_excerpt(), 45, '...' );?>
 
@@ -46,14 +50,6 @@
 
 			</div><!-- .entry-content -->
 
-			<?php if ( 'post' == get_post_type() ) : ?>
-
-				<div class="entry-meta small">
-					<?php understrap_posted_on(); ?>
-				</div><!-- .entry-meta -->
-
-			<?php endif; ?>
-
 		</div>
 
 	</div>
@@ -62,12 +58,20 @@
 
 		<header class="entry-header mb-3">
 
-			<?php the_title( sprintf( '<h2 class="entry-title h5 mb-3"><a class="text-dark" href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+			<?php the_title( sprintf( '<h2 class="entry-title h5 line-clamp-2 mb-3"><a class="text-dark" href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
 			'</a></h2>' ); ?>
+
+			<?php if ( 'post' == get_post_type() ) : ?>
+
+				<div class="entry-meta small">
+					<?php understrap_posted_on(); ?>
+				</div><!-- .entry-meta -->
+
+			<?php endif; ?>
 
 		</header><!-- .entry-header -->
 
-		<div class="entry-content mb-3">
+		<div class="entry-content">
 
 			<?php echo wp_trim_words( get_the_excerpt(), 90, '...' );?>
 
@@ -79,14 +83,6 @@
 			?>
 
 		</div><!-- .entry-content -->
-
-		<?php if ( 'post' == get_post_type() ) : ?>
-
-			<div class="entry-meta small">
-				<?php understrap_posted_on(); ?>
-			</div><!-- .entry-meta -->
-
-		<?php endif; ?>
 
 	<?php endif; ?>
 

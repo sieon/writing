@@ -42,7 +42,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 						 * If you want to overload this in a child theme then include a file
 						 * called content-search.php and that will be used instead.
 						 */
-						get_template_part( 'loop-templates/content-card', 'search' );
+						get_template_part( 'loop-templates/content', get_post_format() );
 						?>
 
 					<?php endwhile; ?>
